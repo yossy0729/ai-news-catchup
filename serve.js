@@ -352,7 +352,10 @@ function resolveRequestPath(urlPath) {
   const requestPath = decoded === "/" ? "/index.html" : decoded;
   const absolutePath = path.resolve(root, `.${requestPath}`);
 
-  if (!absolutePath.startsWith(root)) {
+  // root と完全一致、または root + 区切り文字で始まる場合のみ許可。
+  // 単純な startsWith(root) だと "AI-News-Catchup-secret" のような
+  // 隣接フォルダを誤って許可してしまうため、区切り文字まで含めて検査する。
+  if (absolutePath !== root && !absolutePath.startsWith(root + path.sep)) {
     return null;
   }
 
