@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-06-20",
+  "currency": "USD",
+  "unit": "per 1M tokens",
+  "note": "価格はサンプル枠です。各 sourceUrl の公式pricingページで確認し、inputPer1M / outputPer1M / asOf を更新してください（誤値防止のため未確認は null=「要確認」と表示されます）。",
+  "models": [
+    {
+      "vendor": "OpenAI",
+      "model": "gpt-5.4",
+      "inputPer1M": null,
+      "outputPer1M": null,
+      "context": "256K",
+      "asOf": null,
+      "sourceUrl": "https://openai.com/api/pricing/",
+      "verified": false
+    },
+    {
+      "vendor": "OpenAI",
+      "model": "gpt-5.4-mini",
+      "inputPer1M": null,
+      "outputPer1M": null,
+      "context": "128K",
+      "asOf": null,
+      "sourceUrl": "https://openai.com/api/pricing/",
+      "verified": false
+    },
+    {
+      "vendor": "OpenAI",
+      "model": "gpt-5.4-nano",
+      "inputPer1M": null,
+      "outputPer1M": null,
+      "context": "128K",
+      "asOf": null,
+      "sourceUrl": "https://openai.com/api/pricing/",
+      "verified": false
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "Claude Opus 4.8",
+      "inputPer1M": null,
+      "outputPer1M": null,
+      "context": "500K",
+      "asOf": null,
+      "sourceUrl": "https://www.anthropic.com/pricing",
+      "verified": false
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "Claude Sonnet 4.6",
+      "inputPer1M": null,
+      "outputPer1M": null,
+      "context": "500K",
+      "asOf": null,
+      "sourceUrl": "https://www.anthropic.com/pricing",
+      "verified": false
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "Claude Haiku 4.5",
+      "inputPer1M": null,
+      "outputPer1M": null,
+      "context": "200K",
+      "asOf": null,
+      "sourceUrl": "https://www.anthropic.com/pricing",
+      "verified": false
+    },
+    {
+      "vendor": "Google",
+      "model": "Gemini (最新)",
+      "inputPer1M": null,
+      "outputPer1M": null,
+      "context": "1M",
+      "asOf": null,
+      "sourceUrl": "https://ai.google.dev/pricing",
+      "verified": false
+    }
+  ]
+}

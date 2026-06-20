@@ -640,6 +640,62 @@ h1 {
   color: var(--muted);
 }
 
+/* モデル価格早見表 */
+.pricing-board {
+  margin-top: 24px;
+}
+
+.pricing-note {
+  margin: 4px 0 12px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.pricing-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 9px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.pricing-table thead th {
+  font-size: 0.76rem;
+  color: var(--muted);
+  background: var(--surface-soft);
+}
+
+.pricing-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.pricing-table .pricing-num {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.pricing-table .needs-check {
+  color: var(--amber);
+}
+
+.pricing-table tr.is-unverified td:first-child::before {
+  content: "•";
+  margin-right: 6px;
+  color: var(--amber);
+}
+
 .category-column .category-group {
   color: var(--accent);
 }

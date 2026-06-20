@@ -6,11 +6,13 @@ let officialItems = [];
 let officialDataVendors = [];
 let officialShownUrls = new Set();
 let aiSignals = [];
+let pricingData = { models: [] };
 
 const dataPath = "data/news.json";
 const mediaPath = "data/media-news.json";
 const officialPath = "data/official-news.json";
 const signalPath = "data/ai-signals.json";
+const pricingPath = "data/pricing.json";
 const categoryGrid = document.querySelector("#categoryGrid");
 const categoryTemplate = document.querySelector("#categoryTemplate");
 const newsTemplate = document.querySelector("#newsTemplate");
@@ -29,6 +31,9 @@ const sourceSearchResults = document.querySelector("#sourceSearchResults");
 const searchStatus = document.querySelector("#searchStatus");
 const runUpdate = document.querySelector("#runUpdate");
 const mediaFreshness = document.querySelector("#mediaFreshness");
+const pricingTable = document.querySelector("#pricingTable");
+const pricingNote = document.querySelector("#pricingNote");
+const pricingFreshness = document.querySelector("#pricingFreshness");
 const tickerTrack = document.querySelector("#tickerTrack");
 const tickerToggle = document.querySelector("#tickerToggle");
 const tickerLaneButtons = Array.from(document.querySelectorAll(".ticker-lane"));
@@ -679,7 +684,95 @@ function setActiveTab(nextTab) {
   renderCategories(nextTab);
 }
 
-function renderApp(newsData, mediaData, officialData, signalData) {
+function formatPrice(value) {
+  if (value === null || value === undefined || value === "") return "要確認";
+  const num = Number(value);
+  return Number.isFinite(num) ? `$${num.toFixed(2)}` : "要確認";
+}
+
+function renderPricing() {
+  if (!pricingTable) return;
+
+  const models = Array.isArray(pricingData.models) ? pricingData.models : [];
+  const unit = pricingData.unit || "per 1M tokens";
+
+  if (pricingNote) {
+    const asOf = pricingData.asOf ? `（基準: ${pricingData.asOf}時点 / 単位: ${unit}）` : "";
+    pricingNote.textContent = `${pricingData.note || "公式pricingで要確認"}${asOf}`;
+  }
+  if (pricingFreshness) {
+    const verifiedCount = models.filter((m) => m.verified).length;
+    pricingFreshness.textContent = verifiedCount ? `確認済 ${verifiedCount}/${models.length}` : "参考";
+    pricingFreshness.classList.toggle("good", verifiedCount === models.length && models.length > 0);
+    pricingFreshness.classList.toggle("stale", verifiedCount < models.length);
+  }
+
+  if (!models.length) {
+    const empty = document.createElement("div");
+    empty.className = "empty-note";
+    empty.textContent = "価格データがありません。data/pricing.json を確認してください。";
+    pricingTable.replaceChildren(empty);
+    return;
+  }
+
+  const table = document.createElement("table");
+  table.className = "pricing-table";
+
+  const thead = document.createElement("thead");
+  const headRow = document.createElement("tr");
+  ["ベンダー", "モデル", `入力 (${unit})`, `出力 (${unit})`, "コンテキスト", "出典"].forEach((label) => {
+    const th = document.createElement("th");
+    th.textContent = label;
+    headRow.append(th);
+  });
+  thead.append(headRow);
+
+  const tbody = document.createElement("tbody");
+  models.forEach((m) => {
+    const row = document.createElement("tr");
+    if (!m.verified) row.classList.add("is-unverified");
+
+    const cells = [m.vendor || "", m.model || ""];
+    cells.forEach((text) => {
+      const td = document.createElement("td");
+      td.textContent = text;
+      row.append(td);
+    });
+
+    [m.inputPer1M, m.outputPer1M].forEach((value) => {
+      const td = document.createElement("td");
+      td.className = "pricing-num";
+      const text = formatPrice(value);
+      td.textContent = text;
+      if (text === "要確認") td.classList.add("needs-check");
+      row.append(td);
+    });
+
+    const ctx = document.createElement("td");
+    ctx.textContent = m.context || "—";
+    row.append(ctx);
+
+    const src = document.createElement("td");
+    if (m.sourceUrl) {
+      const link = document.createElement("a");
+      link.href = m.sourceUrl;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.textContent = "公式";
+      src.append(link);
+    } else {
+      src.textContent = "—";
+    }
+    row.append(src);
+
+    tbody.append(row);
+  });
+
+  table.append(thead, tbody);
+  pricingTable.replaceChildren(table);
+}
+
+function renderApp(newsData, mediaData, officialData, signalData, pricing) {
   today = newsData.generatedDate || mediaData.generatedDate || officialData.generatedDate || signalData.generatedDate;
   categories = newsData.categories || [];
   mediaItems = mediaData.items || [];
@@ -687,6 +780,7 @@ function renderApp(newsData, mediaData, officialData, signalData) {
   officialItems = officialData.items || [];
   officialDataVendors = officialData.vendors || [];
   aiSignals = signalData.items || [];
+  pricingData = pricing || { models: [] };
   todayLabel.textContent = formatFullDate(today);
   freshnessLabel.textContent = "自動収集中";
   freshnessLabel.classList.remove("error");
@@ -694,6 +788,7 @@ function renderApp(newsData, mediaData, officialData, signalData) {
   renderTicker();
   renderMediaRadar();
   renderPriority();
+  renderPricing();
   setActiveTab(document.querySelector(".tab.active")?.dataset.tab || "all");
 }
 
@@ -722,13 +817,14 @@ async function loadJson(path, fallback) {
 
 async function loadAllData() {
   freshnessLabel.textContent = "読み込み中";
-  const [newsData, mediaData, officialData, signalData] = await Promise.all([
+  const [newsData, mediaData, officialData, signalData, pricing] = await Promise.all([
     loadJson(dataPath),
     loadJson(mediaPath, { generatedDate: "", items: [] }),
     loadJson(officialPath, { generatedDate: "", vendors: [], items: [] }),
-    loadJson(signalPath, { generatedDate: "", items: [] })
+    loadJson(signalPath, { generatedDate: "", items: [] }),
+    loadJson(pricingPath, { models: [] })
   ]);
-  return [newsData, mediaData, officialData, signalData];
+  return [newsData, mediaData, officialData, signalData, pricing];
 }
 
 tabs.forEach((tab) => {
@@ -863,8 +959,8 @@ runUpdate.addEventListener("click", async () => {
 
     const promoted = result.summary?.promoted?.promoted ?? 0;
     freshnessLabel.textContent = `更新完了 ${promoted}件`;
-    const [newsData, mediaData, officialData, signalData] = await loadAllData();
-    renderApp(newsData, mediaData, officialData, signalData);
+    const [newsData, mediaData, officialData, signalData, pricing] = await loadAllData();
+    renderApp(newsData, mediaData, officialData, signalData, pricing);
   } catch (error) {
     console.error(error);
     freshnessLabel.textContent = "取得失敗";
@@ -876,5 +972,5 @@ runUpdate.addEventListener("click", async () => {
 });
 
 loadAllData()
-  .then(([newsData, mediaData, officialData, signalData]) => renderApp(newsData, mediaData, officialData, signalData))
+  .then(([newsData, mediaData, officialData, signalData, pricing]) => renderApp(newsData, mediaData, officialData, signalData, pricing))
   .catch(renderLoadError);
