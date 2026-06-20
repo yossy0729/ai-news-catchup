@@ -1,9 +1,10 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "asOf": "2026-06-20",
-  "note": "SOTA（最高性能）は各 sourceUrl のリーダーボードで確認し、topModel / score / asOf を更新してください（誤値防止のため未確認は「要確認」と表示）。数値はベンチマークと指標の組で初めて意味を持ちます。",
+  "note": "SOTA（最高性能）は各 sourceUrl のリーダーボードで確認し、topModel / score / asOf を更新してください（誤値防止のため未確認は「要確認」と表示）。数値はベンチマークと指標の組で初めて意味を持ちます。全網羅は狙わず、各ドメイン少数の代表ベンチに絞ります。",
   "entries": [
     {
+      "domain": "llm",
       "task": "LLM総合知識",
       "benchmark": "MMLU-Pro",
       "metric": "正解率 (%)",
@@ -14,6 +15,7 @@
       "verified": false
     },
     {
+      "domain": "llm",
       "task": "大学院レベル推論",
       "benchmark": "GPQA Diamond",
       "metric": "正解率 (%)",
@@ -24,16 +26,7 @@
       "verified": false
     },
     {
-      "task": "ソフトウェア課題解決",
-      "benchmark": "SWE-bench Verified",
-      "metric": "解決率 (%)",
-      "topModel": null,
-      "score": null,
-      "asOf": null,
-      "sourceUrl": "https://www.swebench.com/",
-      "verified": false
-    },
-    {
+      "domain": "llm",
       "task": "数学",
       "benchmark": "AIME 2025",
       "metric": "正解率 (%)",
@@ -44,6 +37,18 @@
       "verified": false
     },
     {
+      "domain": "agent",
+      "task": "ソフトウェア課題解決",
+      "benchmark": "SWE-bench Verified",
+      "metric": "解決率 (%)",
+      "topModel": null,
+      "score": null,
+      "asOf": null,
+      "sourceUrl": "https://www.swebench.com/",
+      "verified": false
+    },
+    {
+      "domain": "vision",
       "task": "物体検出",
       "benchmark": "COCO test-dev",
       "metric": "box AP",
@@ -54,6 +59,7 @@
       "verified": false
     },
     {
+      "domain": "vision",
       "task": "画像分類",
       "benchmark": "ImageNet",
       "metric": "Top-1 (%)",
@@ -61,6 +67,28 @@
       "score": null,
       "asOf": null,
       "sourceUrl": "https://paperswithcode.com/sota/image-classification-on-imagenet",
+      "verified": false
+    },
+    {
+      "domain": "audio",
+      "task": "音声認識",
+      "benchmark": "LibriSpeech (test-clean)",
+      "metric": "WER (%・低いほど良い)",
+      "topModel": null,
+      "score": null,
+      "asOf": null,
+      "sourceUrl": "https://paperswithcode.com/sota/speech-recognition-on-librispeech-test-clean",
+      "verified": false
+    },
+    {
+      "domain": "multimodal",
+      "task": "画像理解・推論",
+      "benchmark": "MMMU",
+      "metric": "正解率 (%)",
+      "topModel": null,
+      "score": null,
+      "asOf": null,
+      "sourceUrl": "https://paperswithcode.com/dataset/mmmu",
       "verified": false
     }
   ]

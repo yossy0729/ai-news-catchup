@@ -645,6 +645,33 @@ h1 {
   margin-top: 24px;
 }
 
+.sota-board {
+  margin-top: 24px;
+}
+
+.sota-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.sota-tab {
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.sota-tab.active {
+  color: var(--surface);
+  background: var(--green);
+  border-color: var(--green);
+}
+
 .pricing-note {
   margin: 4px 0 12px;
   font-size: 0.8rem;

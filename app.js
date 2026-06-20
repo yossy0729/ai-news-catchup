@@ -39,6 +39,7 @@ const pricingFreshness = document.querySelector("#pricingFreshness");
 const sotaTable = document.querySelector("#sotaTable");
 const sotaNote = document.querySelector("#sotaNote");
 const sotaFreshness = document.querySelector("#sotaFreshness");
+const sotaTabs = document.querySelector("#sotaTabs");
 const tickerTrack = document.querySelector("#tickerTrack");
 const tickerToggle = document.querySelector("#tickerToggle");
 const tickerLaneButtons = Array.from(document.querySelectorAll(".ticker-lane"));
@@ -47,6 +48,16 @@ let activeTab = "all";
 let activeQuery = "";
 let latestSourceSearch = null;
 let activeTickerLane = "core";
+let activeSotaDomain = "all";
+
+// SOTAドメインの表示順とラベル。sota.json の domain キーと対応。
+const sotaDomainLabels = {
+  llm: "言語・推論",
+  vision: "画像・映像",
+  audio: "音声",
+  multimodal: "マルチモーダル",
+  agent: "コード・エージェント"
+};
 
 const officialVendors = [
   {
@@ -777,10 +788,48 @@ function renderPricing() {
   pricingTable.replaceChildren(table);
 }
 
+function renderSotaTabs(allEntries) {
+  if (!sotaTabs) return;
+
+  // データに存在するドメインを、sotaDomainLabels の定義順で抽出。
+  const present = Object.keys(sotaDomainLabels).filter((key) =>
+    allEntries.some((e) => e.domain === key)
+  );
+  const tabKeys = ["all", ...present];
+
+  // 現在の選択が消えた場合は all に戻す。
+  if (activeSotaDomain !== "all" && !present.includes(activeSotaDomain)) {
+    activeSotaDomain = "all";
+  }
+
+  sotaTabs.replaceChildren(
+    ...tabKeys.map((key) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "sota-tab";
+      button.classList.toggle("active", key === activeSotaDomain);
+      const count = key === "all"
+        ? allEntries.length
+        : allEntries.filter((e) => e.domain === key).length;
+      button.textContent = `${key === "all" ? "すべて" : sotaDomainLabels[key]} (${count})`;
+      button.addEventListener("click", () => {
+        activeSotaDomain = key;
+        renderSota();
+      });
+      return button;
+    })
+  );
+}
+
 function renderSota() {
   if (!sotaTable) return;
 
-  const entries = Array.isArray(sotaData.entries) ? sotaData.entries : [];
+  const allEntries = Array.isArray(sotaData.entries) ? sotaData.entries : [];
+  renderSotaTabs(allEntries);
+
+  const entries = activeSotaDomain === "all"
+    ? allEntries
+    : allEntries.filter((e) => e.domain === activeSotaDomain);
 
   if (sotaNote) {
     const asOf = sotaData.asOf ? `（基準: ${sotaData.asOf}時点）` : "";
