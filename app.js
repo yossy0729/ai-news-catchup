@@ -307,7 +307,7 @@ function renderTicker() {
   ).slice(0, 12);
 
   if (!candidates.length) {
-    tickerTrack.textContent = "検証済みのAI速報はまだ取得されていません。今すぐ取得で更新してください。";
+    tickerTrack.textContent = "AI速報はまだ取得されていません。今すぐ取得で更新してください。";
     return;
   }
 
@@ -351,8 +351,8 @@ function renderMediaRadar() {
     const todayCount = mediaItems.filter((item) => item.date === today).length;
     const recentCount = mediaItems.length;
     mediaFreshness.textContent = todayCount
-      ? `本日公開 ${todayCount}件 / 検証済み ${recentCount}件`
-      : `検証済み ${recentCount}件`;
+      ? `本日公開 ${todayCount}件 / 収集済み ${recentCount}件`
+      : `収集済み ${recentCount}件`;
     mediaFreshness.classList.toggle("stale", recentCount === 0);
     mediaFreshness.classList.toggle("good", recentCount > 0);
   }
@@ -362,7 +362,7 @@ function renderMediaRadar() {
     empty.className = "empty-state load-error";
     empty.textContent = activeQuery
       ? "速報記事に一致するものはありません。検索語を変えてください。"
-      : "検証済みのメディア速報はまだ取得されていません。「今すぐ取得」で更新してください。";
+      : "メディア速報はまだ取得されていません。「今すぐ取得」で更新してください。";
     mediaGrid.replaceChildren(empty);
     return;
   }
@@ -625,7 +625,12 @@ function renderCategories(nextTab = "all") {
       const column = fragment.querySelector(".category-column");
       column.dataset.accent = category.accent;
       const hasToday = category.items.some((item) => item.date === today);
+      const isEmpty = category.items.length === 0;
       const status = fragment.querySelector(".status-chip");
+
+      // 0件カテゴリは折りたたみ表示にする。ヘッダーは残して網羅性を示しつつ、
+      // 大きな空メッセージは出さず視覚的に小さくたたむ（is-collapsed）。
+      column.classList.toggle("is-collapsed", isEmpty);
 
       fragment.querySelector(".category-group").textContent = category.group;
       fragment.querySelector("h3").textContent = category.title;
@@ -633,11 +638,11 @@ function renderCategories(nextTab = "all") {
       status.classList.add(hasToday ? "good" : "stale");
 
       const list = fragment.querySelector(".news-list");
-      if (category.items.length === 0) {
-        const empty = document.createElement("div");
-        empty.className = "empty-state";
-        empty.textContent = "本日の一次情報は未検出です。速報枠に今日のメディア記事を表示します。";
-        list.append(empty);
+      if (isEmpty) {
+        const note = document.createElement("div");
+        note.className = "empty-note";
+        note.textContent = "本日は未取得（速報枠を確認）";
+        list.append(note);
       } else {
         category.items.slice(0, 3).forEach((item) => list.append(renderNewsCard(item, category.accent)));
       }
