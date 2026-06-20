@@ -156,6 +156,41 @@ function extractCandidatesFromHtml(html, source, query) {
   return candidates;
 }
 
+// 外部ソースHTMLの取り込み上限（メモリ保護）。巨大ページは途中で打ち切る。
+const MAX_HTML_BYTES = 5_000_000;
+
+// response.body をストリームで読み、上限バイト数に達したら打ち切る。
+// 全文をメモリに展開してから切るのではなく、読み取り時点で上限をかける。
+async function readCappedText(response, maxBytes) {
+  const reader = response.body?.getReader?.();
+  if (!reader) {
+    const text = await response.text();
+    return text.length > maxBytes ? text.slice(0, maxBytes) : text;
+  }
+
+  const decoder = new TextDecoder("utf-8");
+  let received = 0;
+  let text = "";
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    received += value.length;
+    text += decoder.decode(value, { stream: true });
+    if (received >= maxBytes) {
+      try {
+        await reader.cancel();
+      } catch {
+        // キャンセル失敗は無視（既に読み終えている等）
+      }
+      break;
+    }
+  }
+
+  text += decoder.decode();
+  return text;
+}
+
 async function fetchSourceHtml(source) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);
@@ -177,7 +212,7 @@ async function fetchSourceHtml(source) {
       ok: true,
       source,
       status: response.status,
-      html: await response.text()
+      html: await readCappedText(response, MAX_HTML_BYTES)
     };
   } catch (error) {
     return { ok: false, source, status: "ERROR", error: error.message, candidates: [] };
