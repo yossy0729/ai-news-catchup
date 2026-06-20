@@ -1,0 +1,19 @@
+{
+  "name": "ai-news-catchup",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AIコンサルタントが毎日5分でAIの主要動向を把握するためのUI/UXプロトタイプ",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node serve.js",
+    "validate": "node scripts/validate-data.js",
+    "daily-update": "node scripts/daily-update.js",
+    "daily-update:dry": "node scripts/daily-update.js --dry-run",
+    "collect": "node scripts/collect-news.js",
+    "prepare-review": "node scripts/prepare-review.js",
+    "promote-review": "node scripts/promote-review.js"
+  }
+}

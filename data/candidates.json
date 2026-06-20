@@ -1,0 +1,2170 @@
+{
+  "schemaVersion": 1,
+  "updatedDate": "2026-06-20",
+  "items": [
+    {
+      "id": "16f9544453cd2bcae7c7b1b0",
+      "query": "daily-auto",
+      "title": "Bringing the latest Gemini models to Apple developers",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/bringing-gemini-models-to-apple-developers",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "product-release",
+        "global-cases",
+        "global-research",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "ab88a3c87c1e088bcf590d3e",
+      "query": "daily-auto",
+      "title": "DiffusionGemma: 4x faster text generation",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "product-release",
+        "global-cases",
+        "global-research",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "ff2cf2734996aacc4506b3c7",
+      "query": "daily-auto",
+      "title": "Four MTIA Chips in Two Years: Scaling AI Experiences for Billions",
+      "url": "https://ai.meta.com/blog/meta-mtia-scale-ai-chips-for-billions",
+      "sourceId": "meta-ai-blog",
+      "sourceName": "Meta AI Blog",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "product-release"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "ded81620235e6d9d1b7f7387",
+      "query": "daily-auto",
+      "title": "How Alta Daily Uses Meta’s Segment Anything to Reimagine the Digital Closet",
+      "url": "https://ai.meta.com/blog/alta-daily-fashion-app-segment-anything",
+      "sourceId": "meta-ai-blog",
+      "sourceName": "Meta AI Blog",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "product-release"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "2e5ac777df91ff1b3cfe6c7c",
+      "query": "daily-auto",
+      "title": "Introducing Muse Spark: Scaling Towards Personal Superintelligence",
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-msl",
+      "sourceId": "meta-ai-blog",
+      "sourceName": "Meta AI Blog",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "product-release"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "ab1c94455bc55d2287704565",
+      "query": "daily-auto",
+      "title": "AI test, evaluation, validation and verification (TEVV)",
+      "url": "https://www.nist.gov/ai-test-evaluation-validation-and-verification-tevv",
+      "sourceId": "nist-ai",
+      "sourceName": "NIST Artificial Intelligence",
+      "sourceType": "standards_body",
+      "categories": [
+        "global-governance",
+        "security",
+        "global-research"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "94173523d006b3b44d03dc3e",
+      "query": "daily-auto",
+      "title": "Center for AI Standards and Innovation",
+      "url": "https://www.nist.gov/caisi",
+      "sourceId": "nist-ai",
+      "sourceName": "NIST Artificial Intelligence",
+      "sourceType": "standards_body",
+      "categories": [
+        "global-governance",
+        "security",
+        "global-research"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "af6f046a3bd824ddc2202364",
+      "query": "daily-auto",
+      "title": "Concept Note: AI RMF Profile on Trustworthy AI in Critical Infrastructure",
+      "url": "https://www.nist.gov/programs-projects/concept-note-ai-rmf-profile-trustworthy-ai-critical-infrastructure",
+      "sourceId": "nist-ai",
+      "sourceName": "NIST Artificial Intelligence",
+      "sourceType": "standards_body",
+      "categories": [
+        "global-governance",
+        "security",
+        "global-research"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "299db76a419076648f405c82",
+      "query": "daily-auto",
+      "title": "45 papers have been accepted at ICML 2026",
+      "url": "https://aip.riken.jp/news/icml2026",
+      "sourceId": "riken-aip-jp",
+      "sourceName": "理化学研究所 革新知能統合研究センター",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "e87b2a26e437b6431a2ae2dd",
+      "query": "daily-auto",
+      "title": "Request for Donations: Support for Future AI Talent",
+      "url": "https://aip.riken.jp/pressrelease/donations/?lang=en",
+      "sourceId": "riken-aip-jp",
+      "sourceName": "理化学研究所 革新知能統合研究センター",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "952ed32494e0b2baa75f057a",
+      "query": "daily-auto",
+      "title": "Team Sakura, including Adam Nohejl of the Explainable AI Team, won the Open Track of the BEA 2026 Shared Task（May, 2026)",
+      "url": "https://aip.riken.jp/news/bea2026",
+      "sourceId": "riken-aip-jp",
+      "sourceName": "理化学研究所 革新知能統合研究センター",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "9880c4c71e6bf0ac42816b45",
+      "query": "daily-auto",
+      "title": "NAVER Expands AI Infrastructure With NVIDIA to Serve Surging Global AI Demand",
+      "url": "https://nvidianews.nvidia.com/news/naver-ai-infrastructure",
+      "sourceId": "nvidia-newsroom",
+      "sourceName": "NVIDIA Newsroom",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "infrastructure",
+        "business",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:13:05.818Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "b365d87dc83b3c59af917100",
+      "query": "daily-auto",
+      "title": "NVIDIA and SK hynix Announce Multiyear Technology Partnership to Advance Memory for AI Factories",
+      "url": "https://nvidianews.nvidia.com/news/sk-hynix-ai-factory",
+      "sourceId": "nvidia-newsroom",
+      "sourceName": "NVIDIA Newsroom",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "infrastructure",
+        "business",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:13:05.818Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "65c6ef60768a4c4d44a68647",
+      "query": "daily-auto",
+      "title": "SK Telecom and NVIDIA Build AI Infrastructure to Power Korea’s AI Innovation",
+      "url": "https://nvidianews.nvidia.com/news/sk-telecom-ai-infrastructure",
+      "sourceId": "nvidia-newsroom",
+      "sourceName": "NVIDIA Newsroom",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "infrastructure",
+        "business",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:13:05.818Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "b59b3271b775356f43c3e1f3",
+      "query": "daily-auto",
+      "title": "announcement agents mcp Agentic Resource Discovery: Let agents search 8 June 17, 2026",
+      "url": "https://huggingface.co/blog/agentic-resource-discovery-launch",
+      "sourceId": "huggingface-blog",
+      "sourceName": "Hugging Face Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "global-research",
+        "product-release",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 90,
+      "publishedDate": "2026-06-17",
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T04:20:16.008Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "270262b3426624723b51ff57",
+      "query": "daily-auto",
+      "title": "From the Hugging Face Hub to robot hardware with Strands Agents and LeRobot 11 June 17, 2026",
+      "url": "https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware",
+      "sourceId": "huggingface-blog",
+      "sourceName": "Hugging Face Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "global-research",
+        "product-release",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 90,
+      "publishedDate": "2026-06-17",
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "8e5019b6c9475b8ead966f42",
+      "query": "daily-auto",
+      "title": "AI alone won’t change your business. The system running it will.",
+      "url": "https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will",
+      "sourceId": "microsoft-ai-blog",
+      "sourceName": "Microsoft AI Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "global-cases",
+        "product-release",
+        "business",
+        "global-governance"
+      ],
+      "trustLevel": "primary",
+      "score": 80,
+      "publishedDate": "2026-06-02",
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "eef9527c7b75b65ab8c9f5dc",
+      "query": "daily-auto",
+      "title": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026",
+      "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
+      "sourceId": "apple-ml-research",
+      "sourceName": "Apple Machine Learning Research",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "product-release"
+      ],
+      "trustLevel": "primary",
+      "score": 28,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "72c805579f21b6e81058f27d",
+      "query": "daily-auto",
+      "title": "Jun 11, 2026 Announcements Introducing Claude Corps",
+      "url": "https://www.anthropic.com/news/claude-corps",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "product-release",
+        "global-research",
+        "global-governance",
+        "security",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 90,
+      "publishedDate": "2026-06-11",
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.426Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "432c23c0dd1c00f1ba41d7bd",
+      "query": "daily-auto",
+      "title": "agents transformers evaluation Is it agentic enough? Benchmarking open models on your own tooling 15 June 18, 2026",
+      "url": "https://huggingface.co/blog/is-it-agentic-enough",
+      "sourceId": "huggingface-blog",
+      "sourceName": "Hugging Face Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "global-research",
+        "product-release",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 90,
+      "publishedDate": "2026-06-18",
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T20:53:47.406Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "0ccd1fb16a800c05f7530852",
+      "query": "daily-auto",
+      "title": "AI Excellence: Enabling conditions for AI’s development and uptake",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/enabling-ai",
+      "sourceId": "eu-ai-act",
+      "sourceName": "European Commission AI",
+      "sourceType": "regulator",
+      "categories": [
+        "global-governance",
+        "security"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:13:05.818Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "d974301f422f3094c8569dec",
+      "query": "daily-auto",
+      "title": "AI Factories and gigafactories",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-factories",
+      "sourceId": "eu-ai-act",
+      "sourceName": "European Commission AI",
+      "sourceType": "regulator",
+      "categories": [
+        "global-governance",
+        "security"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:13:05.818Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "3c37532039cf5c1d42bdc1e0",
+      "query": "daily-auto",
+      "title": "See what 3 builders are making with Gemma 4",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4-builders",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "product-release",
+        "global-cases",
+        "global-research",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "22d53f65a76e434c0cd4eea5",
+      "query": "daily-auto",
+      "title": "2025.10.10 Release データマイニング分野のトップカンファレンス「CIKM 2025」にて2本の論文採択",
+      "url": "https://research.cyberagent.ai/news/5580",
+      "sourceId": "cyberagent-ai-lab-jp",
+      "sourceName": "CyberAgent AI Lab",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "jp-cases",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "c950f100f8155db756d7f934",
+      "query": "daily-auto",
+      "title": "2025.10.14 Release コンピュータグラフィックス分野のトップカンファレンス「SIGGRAPH Asia 2025」にて論文採択",
+      "url": "https://research.cyberagent.ai/news/5583",
+      "sourceId": "cyberagent-ai-lab-jp",
+      "sourceName": "CyberAgent AI Lab",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "jp-cases",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "e923f1526c8496e5329c8995",
+      "query": "daily-auto",
+      "title": "2025.10.17 Release 理論計算機科学分野のトップカンファレンス「FOCS 2025」にて論文採択",
+      "url": "https://research.cyberagent.ai/news/5606",
+      "sourceId": "cyberagent-ai-lab-jp",
+      "sourceName": "CyberAgent AI Lab",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "jp-cases",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "5667bb6f16f0ac6a01a7dd17",
+      "query": "daily-auto",
+      "title": "PFN Tests AI-Based Liquidity Forecasting for National Bank of Cambodia through JICA",
+      "url": "https://www.preferred.jp/en/news/pr20260126",
+      "sourceId": "preferred-networks-news",
+      "sourceName": "Preferred Networks News",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "jp-research",
+        "jp-cases",
+        "business",
+        "infrastructure"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "1c4c71c6fc1a090f465e3978",
+      "query": "daily-auto",
+      "title": "PFN’s PLaMo Translate to Be Adopted by Japan’s Government AI Project “Gennai”",
+      "url": "https://www.preferred.jp/en/news/pr20251202",
+      "sourceId": "preferred-networks-news",
+      "sourceName": "Preferred Networks News",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "jp-research",
+        "jp-cases",
+        "business",
+        "infrastructure"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:26:35.396Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "30d30365a817128c57d13a5f",
+      "query": "daily-auto",
+      "title": "「HFS Horizons: Agentic Services, 2026」においてマーケットリーダーの1社に選出",
+      "url": "https://www.nttdata.com/global/ja/news/evaluation/2026/060801",
+      "sourceId": "nttdata-news-jp",
+      "sourceName": "NTT DATA ニュース",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "jp-cases",
+        "business",
+        "infrastructure"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:45:04.582Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "0c39b8985af22217cb94be39",
+      "query": "daily-auto",
+      "title": "パロアルトネットワークスのManaged Security Service Providersで最高ランクに認定",
+      "url": "https://www.nttdata.com/global/ja/news/evaluation/2026/060800",
+      "sourceId": "nttdata-news-jp",
+      "sourceName": "NTT DATA ニュース",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "jp-cases",
+        "business",
+        "infrastructure"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:45:04.582Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "4eddb65339beaed4d62bb44f",
+      "query": "daily-auto",
+      "title": "フォーティエンスコンサルティング、AI時代の成果創出を加速するFDE型コンサルティングを提供開始（フォーティエンスコンサルティング株式会社）",
+      "url": "https://www.nttdata.com/global/ja/news/group/2026/061600",
+      "sourceId": "nttdata-news-jp",
+      "sourceName": "NTT DATA ニュース",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "jp-cases",
+        "business",
+        "infrastructure"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:45:04.582Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "6baafb7900f196f9b16c50e3",
+      "query": "daily-auto",
+      "title": "Adaptive Volumetric Mechanical Property Fields Invariant to Resolution",
+      "url": "https://huggingface.co/papers/2606.18231",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "paper_index",
+      "categories": [
+        "global-research",
+        "jp-research",
+        "product-release"
+      ],
+      "trustLevel": "canonical_index",
+      "score": 55,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-19T03:57:01.968Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "e9bc1a82946d9cce28fd0d05",
+      "query": "daily-auto",
+      "title": "Beyond Static Leaderboards: Predictive Validity for the Evaluation of LLM Agents",
+      "url": "https://huggingface.co/papers/2606.19704",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "paper_index",
+      "categories": [
+        "global-research",
+        "jp-research",
+        "product-release"
+      ],
+      "trustLevel": "canonical_index",
+      "score": 55,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-19T03:57:01.968Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "f342c0da2a940ff2a6faa4a6",
+      "query": "daily-auto",
+      "title": "Commission presents AI Literacy Framework with the OECD to prepare learners for the age of artificial intelligence",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-presents-ai-literacy-framework-oecd-prepare-learners-age-artificial-intelligence",
+      "sourceId": "eu-ai-act",
+      "sourceName": "European Commission AI",
+      "sourceType": "regulator",
+      "categories": [
+        "global-governance",
+        "security"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-19T11:52:30.422Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "7f42ae0d5b44a6eff498ea81",
+      "query": "daily-auto",
+      "title": "Jun 12, 2026 Announcements TCS and Anthropic partner to bring Claude to regulated industries",
+      "url": "https://www.anthropic.com/news/tcs-anthropic-partnership",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "product-release",
+        "global-research",
+        "global-governance",
+        "security",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 90,
+      "publishedDate": "2026-06-12",
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "ecc901b8b9d7b19b9f5b3982",
+      "query": "daily-auto",
+      "title": "Configurable Clinical Information Extraction with Agentic RAG: What Works, What Breaks, and Why",
+      "url": "https://huggingface.co/papers/2606.19602",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "paper_index",
+      "categories": [
+        "global-research",
+        "jp-research",
+        "product-release"
+      ],
+      "trustLevel": "canonical_index",
+      "score": 55,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-19T23:02:11.255Z",
+      "lastSeenAt": "2026-06-20T04:15:45.694Z"
+    },
+    {
+      "id": "47e96fb85bcbcad48e728a49",
+      "query": "daily-auto",
+      "title": "Jun 17, 2026 Announcements Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem",
+      "url": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "product-release",
+        "global-research",
+        "global-governance",
+        "security",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 90,
+      "publishedDate": "2026-06-17",
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-20T04:15:45.693Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "73a16db15fb7ec87c1aee9f4",
+      "query": "daily-auto",
+      "title": "Current World Models Lack a Persistent State Core",
+      "url": "https://huggingface.co/papers/2606.20545",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "paper_index",
+      "categories": [
+        "global-research",
+        "jp-research",
+        "product-release"
+      ],
+      "trustLevel": "canonical_index",
+      "score": 55,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-19T03:57:01.968Z",
+      "lastSeenAt": "2026-06-19T11:52:30.422Z"
+    },
+    {
+      "id": "5ed4081dd6d994dfc18faebd",
+      "query": "daily-auto",
+      "title": "AI Board convenes its eighth meeting",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/ai-board-convenes-its-eighth-meeting",
+      "sourceId": "eu-ai-act",
+      "sourceName": "European Commission AI",
+      "sourceType": "regulator",
+      "categories": [
+        "global-governance",
+        "security"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:13:05.818Z",
+      "lastSeenAt": "2026-06-19T05:01:54.721Z"
+    },
+    {
+      "id": "1f9539af69c7a867c126d09a",
+      "query": "daily-auto",
+      "title": "1688 multimodal & industrial AI",
+      "url": "https://huggingface.co/alibaba-multimodal-industrial-ai",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "paper_index",
+      "categories": [
+        "global-research",
+        "jp-research",
+        "product-release"
+      ],
+      "trustLevel": "canonical_index",
+      "score": 55,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T23:32:22.796Z"
+    },
+    {
+      "id": "798cbc4b638f53a882deccfc",
+      "query": "daily-auto",
+      "title": "A Benchmark and Framework for Evaluating Next Action Predictions in Spreadsheets",
+      "url": "https://huggingface.co/papers/2606.13802",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "paper_index",
+      "categories": [
+        "global-research",
+        "jp-research",
+        "product-release"
+      ],
+      "trustLevel": "canonical_index",
+      "score": 55,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T20:53:47.406Z",
+      "lastSeenAt": "2026-06-18T23:32:22.796Z"
+    },
+    {
+      "id": "5adce24c8c44f7e42f554a4f",
+      "query": "daily-auto",
+      "title": "Bag of Dims: Training-Free Mechanistic Interpretability via Dimension-Level Sign Patterns",
+      "url": "https://huggingface.co/papers/2606.12629",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "paper_index",
+      "categories": [
+        "global-research",
+        "jp-research",
+        "product-release"
+      ],
+      "trustLevel": "canonical_index",
+      "score": 55,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T20:53:47.406Z",
+      "lastSeenAt": "2026-06-18T23:32:22.796Z"
+    },
+    {
+      "id": "b531a6249412cc4f4209ed36",
+      "query": "daily-auto",
+      "title": "Jun 3, 2026 Policy What we learned mapping a year’s worth of AI-enabled cyber threats",
+      "url": "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "product-release",
+        "global-research",
+        "global-governance",
+        "security",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 82,
+      "publishedDate": "2026-06-03",
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "1229e29c141fd7c875a11c8c",
+      "query": "daily-auto",
+      "title": "Beyond Alignment: Value Diversity as a Collective Property in Multicultural Agent Systems",
+      "url": "https://huggingface.co/papers/2606.05985",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "paper_index",
+      "categories": [
+        "global-research",
+        "jp-research",
+        "product-release"
+      ],
+      "trustLevel": "canonical_index",
+      "score": 55,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z"
+    },
+    {
+      "id": "538605f2e85403b8a718f8d1",
+      "query": "daily-auto",
+      "title": "Beyond the Current Observation: Evaluating Multimodal Large Language Models in Controllable Non-Markov Games",
+      "url": "https://huggingface.co/papers/2606.19338",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "paper_index",
+      "categories": [
+        "global-research",
+        "jp-research",
+        "product-release"
+      ],
+      "trustLevel": "canonical_index",
+      "score": 55,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z"
+    },
+    {
+      "id": "02b9c90015956d47433b2536",
+      "query": "daily-auto",
+      "title": "announcement open-source community The Open Source Community is backing OpenEnv for Agentic RL +14 88 June 8, 2026",
+      "url": "https://huggingface.co/blog/openenv-agentic-rl",
+      "sourceId": "huggingface-blog",
+      "sourceName": "Hugging Face Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "global-research",
+        "product-release",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 82,
+      "publishedDate": "2026-06-08",
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T04:20:16.008Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z"
+    },
+    {
+      "id": "2eb5bcc3ad88b97ec36616da",
+      "query": "daily-auto",
+      "title": "MosaicLeaks: Can your research agent keep a secret? June 18, 2026",
+      "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+      "sourceId": "huggingface-blog",
+      "sourceName": "Hugging Face Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "global-research",
+        "product-release",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 90,
+      "publishedDate": "2026-06-18",
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "c265f4d09da60a8497d8b1be",
+      "query": "daily-auto",
+      "title": "Jun 3, 2026 Announcements Introducing the Services Track and Partner Hub of the Claude Partner Network",
+      "url": "https://www.anthropic.com/news/services-track-partner-hub",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "product-release",
+        "global-research",
+        "global-governance",
+        "security",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 82,
+      "publishedDate": "2026-06-03",
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "0a6b7f0bd53369db4518c992",
+      "query": "daily-auto",
+      "title": "SAM 3.1: Faster and More Accessible Real-Time Video Detection and Tracking With Multiplexing and Global Reasoning",
+      "url": "https://ai.meta.com/blog/segment-anything-model-3",
+      "sourceId": "meta-ai-blog",
+      "sourceName": "Meta AI Blog",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "product-release"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z"
+    },
+    {
+      "id": "1f85c944026fa57d1c4bd3af",
+      "query": "daily-auto",
+      "title": "Scaling How We Build and Test Our Most Advanced AI",
+      "url": "https://ai.meta.com/blog/scaling-how-we-build-test-advanced-ai",
+      "sourceId": "meta-ai-blog",
+      "sourceName": "Meta AI Blog",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "product-release"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z"
+    },
+    {
+      "id": "467f1753c2cb1095fbd466ce",
+      "query": "daily-auto",
+      "title": "2025.10.27 Release 機械学習分野のトップカンファレンス「NeurIPS 2025」にて７本の論文採択",
+      "url": "https://research.cyberagent.ai/news/5609",
+      "sourceId": "cyberagent-ai-lab-jp",
+      "sourceName": "CyberAgent AI Lab",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "jp-cases",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z"
+    },
+    {
+      "id": "9645f1ee5fe8167cf6111dcf",
+      "query": "daily-auto",
+      "title": "2025.10.3 Release 自然言語処理分野のトップカンファレンス「EMNLP 2025」にて5本の論文採択",
+      "url": "https://research.cyberagent.ai/news/5571",
+      "sourceId": "cyberagent-ai-lab-jp",
+      "sourceName": "CyberAgent AI Lab",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "jp-cases",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z",
+      "acceptedAt": "2026-06-18T23:32:49.975Z"
+    },
+    {
+      "id": "cd2175443d9a68d443d1974a",
+      "query": "daily-auto",
+      "title": "Support ecosystem for AI innovation in Europe",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/support-ecosystem-ai-innovation-europe",
+      "sourceId": "eu-ai-act",
+      "sourceName": "European Commission AI",
+      "sourceType": "regulator",
+      "categories": [
+        "global-governance",
+        "security"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z",
+      "acceptedAt": "2026-06-18T23:32:49.975Z"
+    },
+    {
+      "id": "68b153667f7eb59c5f54282e",
+      "query": "daily-auto",
+      "title": "Congressional Mandates & Executive Orders",
+      "url": "https://www.nist.gov/artificial-intelligence/ai-congressional-mandates-executive-orders-and-actions",
+      "sourceId": "nist-ai",
+      "sourceName": "NIST Artificial Intelligence",
+      "sourceType": "standards_body",
+      "categories": [
+        "global-governance",
+        "security",
+        "global-research"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z",
+      "acceptedAt": "2026-06-18T23:32:49.975Z"
+    },
+    {
+      "id": "02022124289b2361343ce3de",
+      "query": "daily-auto",
+      "title": "AI Continent action plan",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/ai-continent-action-plan",
+      "sourceId": "eu-ai-act",
+      "sourceName": "European Commission AI",
+      "sourceType": "regulator",
+      "categories": [
+        "global-governance",
+        "security"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z",
+      "acceptedAt": "2026-06-18T23:32:49.975Z"
+    },
+    {
+      "id": "adec0fd325a40b85054c391d",
+      "query": "daily-auto",
+      "title": "【Event Report】The 8th Annual Meeting of Japanese Association for Medical Artificial Intelligence (JMAI) (June 5-6, 2026, Tokyo)",
+      "url": "https://aip.riken.jp/news/jmai_2026",
+      "sourceId": "riken-aip-jp",
+      "sourceName": "理化学研究所 革新知能統合研究センター",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research"
+      ],
+      "trustLevel": "primary",
+      "score": 46,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "175dda63002511e0cb09e8fd",
+      "query": "daily-auto",
+      "title": "NVIDIA Stockholder Meeting Set for June 24; Individuals Can Participate Online",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-stockholder-meeting-set-for-june-24-individuals-can-participate-online",
+      "sourceId": "nvidia-newsroom",
+      "sourceName": "NVIDIA Newsroom",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "infrastructure",
+        "business",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 38,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z"
+    },
+    {
+      "id": "b94d30a9092b8bbbd2a388f4",
+      "query": "daily-auto",
+      "title": "All Coverage",
+      "url": "https://nvidianews.nvidia.com/in-the-news",
+      "sourceId": "nvidia-newsroom",
+      "sourceName": "NVIDIA Newsroom",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "infrastructure",
+        "business",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 34,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z"
+    },
+    {
+      "id": "8f6f38f461f26650732084fa",
+      "query": "daily-auto",
+      "title": "Center Director, Masashi Sugiyama delivered an ELLIS Distinguished Lecture (May 11, 2026, Finland)",
+      "url": "https://aip.riken.jp/news/20260511ellis-f-d-lecture",
+      "sourceId": "riken-aip-jp",
+      "sourceName": "理化学研究所 革新知能統合研究センター",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research"
+      ],
+      "trustLevel": "primary",
+      "score": 34,
+      "publishedDate": "2026-05-11",
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z"
+    },
+    {
+      "id": "14eba0bb1c5842eb02909c9a",
+      "query": "daily-auto",
+      "title": "View more from Developer tools",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "product-release",
+        "global-cases",
+        "global-research",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:26:35.396Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z"
+    },
+    {
+      "id": "321c94fe877d4d36bd1a402d",
+      "query": "daily-auto",
+      "title": "Preferred Networks, GMO Internet Group and GMO Cybersecurity by Ierae to Establish Joint Venture GMO Preferred Security",
+      "url": "https://www.preferred.jp/en/news/pr20260306",
+      "sourceId": "preferred-networks-news",
+      "sourceName": "Preferred Networks News",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "jp-research",
+        "jp-cases",
+        "business",
+        "infrastructure"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:26:35.396Z",
+      "lastSeenAt": "2026-06-18T21:26:35.396Z"
+    },
+    {
+      "id": "347ee01caead5eab38280bea",
+      "query": "daily-auto",
+      "title": "Digitize your paper notes with Gemini.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/digitize-notes-gemini-study-guide",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "product-release",
+        "global-cases",
+        "global-research",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "707e6c047c917db51a2f9d5a",
+      "query": "daily-auto",
+      "title": "Boosting MoE Training Throughput with Advanced Fusion Kernels",
+      "url": "https://developer.nvidia.com/blog/boosting-moe-training-throughput-with-advanced-fusion-kernels",
+      "sourceId": "nvidia-developer-ai",
+      "sourceName": "NVIDIA Technical Blog AI",
+      "sourceType": "official_blog",
+      "categories": [
+        "infrastructure",
+        "product-release",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "6c1843b0c650dfcc0a7f37d9",
+      "query": "daily-auto",
+      "title": "Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA",
+      "url": "https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia",
+      "sourceId": "nvidia-developer-ai",
+      "sourceName": "NVIDIA Technical Blog AI",
+      "sourceType": "official_blog",
+      "categories": [
+        "infrastructure",
+        "product-release",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "07fe3fe577b3e39e4925c436",
+      "query": "daily-auto",
+      "title": "Building AI Agents for AR Glasses and XR Devices with NVIDIA XR AI",
+      "url": "https://developer.nvidia.com/blog/building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai",
+      "sourceId": "nvidia-developer-ai",
+      "sourceName": "NVIDIA Technical Blog AI",
+      "sourceType": "official_blog",
+      "categories": [
+        "infrastructure",
+        "product-release",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "7bb500f39dc0d185f4b85431",
+      "query": "daily-auto",
+      "title": "Generative AI Foundation Models",
+      "url": "https://www.preferred.jp/en/business/genai",
+      "sourceId": "preferred-networks-news",
+      "sourceName": "Preferred Networks News",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "jp-research",
+        "jp-cases",
+        "business",
+        "infrastructure"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "34f8ef8be3ccfee9e80e5ad8",
+      "query": "daily-auto",
+      "title": "Policy on the AI Exponential",
+      "url": "https://www.anthropic.com/policy-on-the-ai-exponential",
+      "sourceId": "anthropic-research",
+      "sourceName": "Anthropic Research",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "security",
+        "global-governance"
+      ],
+      "trustLevel": "primary",
+      "score": 54,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z",
+      "acceptedAt": "2026-06-18T23:32:49.975Z"
+    },
+    {
+      "id": "d0ba81cc7a8fdb2b044686bd",
+      "query": "daily-auto",
+      "title": "Responsible Scaling Policy",
+      "url": "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy",
+      "sourceId": "anthropic-research",
+      "sourceName": "Anthropic Research",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "security",
+        "global-governance"
+      ],
+      "trustLevel": "primary",
+      "score": 54,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "e8cc10e9c8e71cfa9c9c53af",
+      "query": "daily-auto",
+      "title": "AI for education",
+      "url": "https://www.microsoft.com/en-us/education/ai-in-education",
+      "sourceId": "microsoft-research-ai",
+      "sourceName": "Microsoft Research AI",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "global-cases",
+        "product-release"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "94fe270aec7f7ecbaad7ae8e",
+      "query": "daily-auto",
+      "title": "Microsoft AI",
+      "url": "https://www.microsoft.com/en-us/ai?icid=DSM_AllCommercial_AI",
+      "sourceId": "microsoft-research-ai",
+      "sourceName": "Microsoft Research AI",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "global-cases",
+        "product-release"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "7ec57bfb9440139d1da79fc0",
+      "query": "daily-auto",
+      "title": "Microsoft AI",
+      "url": "https://www.microsoft.com/en-us/ai?icid=DSM_Footer_AI",
+      "sourceId": "microsoft-research-ai",
+      "sourceName": "Microsoft Research AI",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "global-cases",
+        "product-release"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "0c980d657266969d32e3d4d6",
+      "query": "daily-auto",
+      "title": "【Sakana AI Applied Case Interview】銀行業務へのAIエージェント実装に向けた開発の舞台裏",
+      "url": "https://sakana.ai/mufg-ai-lending-interview",
+      "sourceId": "sakana-ai",
+      "sourceName": "Sakana AI",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "product-release",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:48:28.429Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "cc5fa3d281f20ae05fdc85ab",
+      "query": "daily-auto",
+      "title": "AI CUDA Engineer続報：堅牢なベンチマークの構築と中間報告",
+      "url": "https://sakana.ai/ai-cuda-engineer-update",
+      "sourceId": "sakana-ai",
+      "sourceName": "Sakana AI",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "product-release",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:48:28.429Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "d9f411e6a0d41f670cee415a",
+      "query": "daily-auto",
+      "title": "AIによるAI研究の実現へ：AIサイエンティスト論文がNature誌に掲載",
+      "url": "https://sakana.ai/ai-scientist-nature-jp",
+      "sourceId": "sakana-ai",
+      "sourceName": "Sakana AI",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "product-release",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:48:28.429Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "185487b0a16625f2d4820ce3",
+      "query": "daily-auto",
+      "title": "Save time and grow your business with new Gemini tools",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-features-for-businesses",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "product-release",
+        "global-cases",
+        "global-research",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "d18e690d4cd63750be267205",
+      "query": "daily-auto",
+      "title": "Delivering Lifecycle Control for AI Infrastructure at Scale with NVIDIA DGX Spark Enterprise Manageability",
+      "url": "https://developer.nvidia.com/blog/delivering-lifecycle-control-for-ai-infrastructure-at-scale-with-nvidia-dgx-spark-enterprise-manageability",
+      "sourceId": "nvidia-developer-ai",
+      "sourceName": "NVIDIA Technical Blog AI",
+      "sourceType": "official_blog",
+      "categories": [
+        "infrastructure",
+        "product-release",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "ac9d048bf4ae9dfe6154a8e4",
+      "query": "daily-auto",
+      "title": "Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure",
+      "url": "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure",
+      "sourceId": "nvidia-developer-ai",
+      "sourceName": "NVIDIA Technical Blog AI",
+      "sourceType": "official_blog",
+      "categories": [
+        "infrastructure",
+        "product-release",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z",
+      "acceptedAt": "2026-06-20T04:16:13.005Z"
+    },
+    {
+      "id": "b3713ef439bc522160d7a457",
+      "query": "daily-auto",
+      "title": "MUFGとSakana AIの「AI融資エキスパート」、実案件での検証フェーズへ",
+      "url": "https://sakana.ai/mufg-ai-lending",
+      "sourceId": "sakana-ai",
+      "sourceName": "Sakana AI",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "product-release",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "4bfe34de9e334d92e926dcf0",
+      "query": "daily-auto",
+      "title": "Sakana AI and Daiwa Securities Group to Develop AI for Advanced Asset Consulting",
+      "url": "https://sakana.ai/daiwa-securities",
+      "sourceId": "sakana-ai",
+      "sourceName": "Sakana AI",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "product-release",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 58,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "7305e968587f31c11a64be14",
+      "query": "daily-auto",
+      "title": "サイバーセキュリティ",
+      "url": "https://jpn.nec.com/press/category/security.html",
+      "sourceId": "nec-press-jp",
+      "sourceName": "NEC ニュースリリース",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "jp-cases",
+        "business",
+        "infrastructure",
+        "jp-governance"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z",
+      "acceptedAt": "2026-06-18T21:24:15.300Z"
+    },
+    {
+      "id": "80766a11d26ea49321b97859",
+      "query": "daily-auto",
+      "title": "AI Agents Platform",
+      "url": "https://www.pkshatech.com/ai-saas",
+      "sourceId": "pksha-news-jp",
+      "sourceName": "PKSHA ニュース",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "jp-cases",
+        "business",
+        "product-release"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z",
+      "acceptedAt": "2026-06-18T21:24:15.300Z"
+    },
+    {
+      "id": "08f4cb076e72361ce3474409",
+      "query": "daily-auto",
+      "title": "AIとの共存社会を支える次世代社会インフラの実現",
+      "url": "https://www.softbank.jp/corp/sustainability/materiality/next-gen-infra",
+      "sourceId": "softbank-press-jp",
+      "sourceName": "ソフトバンク プレスリリース",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "jp-cases",
+        "business",
+        "infrastructure"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z",
+      "acceptedAt": "2026-06-18T21:27:06.061Z"
+    },
+    {
+      "id": "44bc0503c358ac97ee6501c1",
+      "query": "daily-auto",
+      "title": "ESG方針・体制",
+      "url": "https://www.softbank.jp/corp/sustainability/policy",
+      "sourceId": "softbank-press-jp",
+      "sourceName": "ソフトバンク プレスリリース",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "jp-cases",
+        "business",
+        "infrastructure"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z",
+      "acceptedAt": "2026-06-18T21:27:06.061Z"
+    },
+    {
+      "id": "735c821db3a3176a77cacffa",
+      "query": "daily-auto",
+      "title": "サステナビリティ 報告方針",
+      "url": "https://www.softbank.jp/corp/sustainability/policy/reporting-policy",
+      "sourceId": "softbank-press-jp",
+      "sourceName": "ソフトバンク プレスリリース",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "jp-cases",
+        "business",
+        "infrastructure"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z",
+      "acceptedAt": "2026-06-18T21:24:15.300Z"
+    },
+    {
+      "id": "df41b55da51184446db69724",
+      "query": "daily-auto",
+      "title": "Support for AI marketplace apps",
+      "url": "https://www.microsoft.com/software-development-companies/offers-benefits/isv-success?icid=DSM_Footer_SupportAIMarketplace&ocid=cmm3atxvn98",
+      "sourceId": "microsoft-research-ai",
+      "sourceName": "Microsoft Research AI",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "global-cases",
+        "product-release"
+      ],
+      "trustLevel": "primary",
+      "score": 48,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "4b5cc4d0076d94a9e2aa5ded",
+      "query": "daily-auto",
+      "title": "成長戦略「Activate AI for Society」",
+      "url": "https://www.softbank.jp/corp/philosophy/strategy",
+      "sourceId": "softbank-press-jp",
+      "sourceName": "ソフトバンク プレスリリース",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "jp-cases",
+        "business",
+        "infrastructure"
+      ],
+      "trustLevel": "primary",
+      "score": 48,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z",
+      "acceptedAt": "2026-06-18T21:27:06.061Z"
+    },
+    {
+      "id": "e7fbcf35208b7a385f0d0691",
+      "query": "daily-auto",
+      "title": "Inside Claude Code",
+      "url": "https://www.anthropic.com/product/claude-code",
+      "sourceId": "anthropic-research",
+      "sourceName": "Anthropic Research",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "security",
+        "global-governance"
+      ],
+      "trustLevel": "primary",
+      "score": 46,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "612e89f46ad58734053c0fdf",
+      "query": "daily-auto",
+      "title": "Inside Claude Cowork",
+      "url": "https://www.anthropic.com/product/claude-cowork",
+      "sourceId": "anthropic-research",
+      "sourceName": "Anthropic Research",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "security",
+        "global-governance"
+      ],
+      "trustLevel": "primary",
+      "score": 46,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z",
+      "acceptedAt": "2026-06-18T23:32:49.975Z"
+    },
+    {
+      "id": "713847fb69200fdc64bf8ecd",
+      "query": "daily-auto",
+      "title": "Microsoft Security",
+      "url": "https://www.microsoft.com/en-us/security",
+      "sourceId": "microsoft-research-ai",
+      "sourceName": "Microsoft Research AI",
+      "sourceType": "research_lab",
+      "categories": [
+        "global-research",
+        "global-cases",
+        "product-release"
+      ],
+      "trustLevel": "primary",
+      "score": 44,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T21:23:38.246Z",
+      "lastSeenAt": "2026-06-18T21:23:38.246Z"
+    },
+    {
+      "id": "44ea8bee2d6c6c65db886819",
+      "query": "daily-auto",
+      "title": "グレーゾーン解消制度・規制のサンドボックス制度",
+      "url": "https://www.ppc.go.jp/application/kisei_kaikaku",
+      "sourceId": "ppc-jp",
+      "sourceName": "個人情報保護委員会",
+      "sourceType": "regulator",
+      "categories": [
+        "jp-governance",
+        "security"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:44:04.337Z",
+      "acceptedAt": "2026-06-18T10:44:17.617Z",
+      "rejectedAt": "2026-06-18T10:45:46.121Z"
+    },
+    {
+      "id": "e677f8954faaed9bfe1f4865",
+      "query": "daily-auto",
+      "title": "マイナンバー制度・マイナンバーカード マイナンバー制度・マイナンバーカード マイナンバー制度・マイナンバーカードの概要・安全性・利用シーン等の解説やご質問にお答えします。",
+      "url": "https://www.digital.go.jp/policies/mynumber",
+      "sourceId": "digital-agency-jp",
+      "sourceName": "デジタル庁",
+      "sourceType": "government",
+      "categories": [
+        "jp-cases",
+        "jp-governance"
+      ],
+      "trustLevel": "primary",
+      "score": 48,
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:44:04.337Z",
+      "acceptedAt": "2026-06-18T10:45:52.472Z",
+      "rejectedAt": "2026-06-18T10:46:14.675Z"
+    },
+    {
+      "id": "03dae34e77b9292919099847",
+      "query": "daily-auto",
+      "title": "外国公務員贈賄防止",
+      "url": "https://www.meti.go.jp/policy/external_economy/zouwai/index.html",
+      "sourceId": "meti-ai-jp",
+      "sourceName": "経済産業省",
+      "sourceType": "government",
+      "categories": [
+        "jp-cases",
+        "jp-governance",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:19:46.625Z",
+      "lastSeenAt": "2026-06-18T10:44:04.337Z",
+      "acceptedAt": "2026-06-18T10:44:17.617Z",
+      "rejectedAt": "2026-06-18T10:45:46.121Z"
+    },
+    {
+      "id": "ba99f00c18dac9bb8ab93e59",
+      "query": "daily-auto",
+      "title": "外国人材（製造業）",
+      "url": "https://www.meti.go.jp/policy/mono_info_service/gaikokujinzai/index.html",
+      "sourceId": "meti-ai-jp",
+      "sourceName": "経済産業省",
+      "sourceType": "government",
+      "categories": [
+        "jp-cases",
+        "jp-governance",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:19:46.625Z",
+      "lastSeenAt": "2026-06-18T10:44:04.337Z",
+      "acceptedAt": "2026-06-18T10:44:17.617Z",
+      "rejectedAt": "2026-06-18T10:45:46.121Z"
+    },
+    {
+      "id": "66a950b9301f323f394549a2",
+      "query": "daily-auto",
+      "title": "「特定個人情報の適正な取扱いに関するガイドライン（事業者編）」及び「（別冊）金融業務における特定個人情報の適正な取扱いに関するガイドライン」 に関するQ＆A",
+      "url": "https://www.ppc.go.jp/legal/policy/faq",
+      "sourceId": "ppc-jp",
+      "sourceName": "個人情報保護委員会",
+      "sourceType": "regulator",
+      "categories": [
+        "jp-governance",
+        "security"
+      ],
+      "trustLevel": "primary",
+      "score": 48,
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:19:46.625Z",
+      "lastSeenAt": "2026-06-18T10:44:04.337Z",
+      "acceptedAt": "2026-06-18T10:44:17.617Z",
+      "rejectedAt": "2026-06-18T10:45:46.121Z"
+    },
+    {
+      "id": "418c55b20962637b93df380d",
+      "query": "daily-auto",
+      "title": "2026/05/29 AIから学術基盤までNIIの活動を幅広く紹介！ 研究者・学生・一般市民が集う「NIIウィークス2026」 ～学術情報基盤オープンフォーラム(6/8-10)、オープンハウス(6/12-13)、ジャパン・オープンサイエンス・サミット(6/22-26)を開催～",
+      "url": "https://www.nii.ac.jp/news/release/2026/0529.html",
+      "sourceId": "nii-jp",
+      "sourceName": "国立情報学研究所",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research"
+      ],
+      "trustLevel": "primary",
+      "score": 70,
+      "publishedDate": "2026-05-29",
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:44:04.336Z"
+    },
+    {
+      "id": "fb584c90bac0ab980c04fcf6",
+      "query": "daily-auto",
+      "title": "ビジネスの方へ プロジェクト相談・ 研究依頼・各種協業相談",
+      "url": "https://www.aist.go.jp/aist_j/business/index.html",
+      "sourceId": "aist-jp",
+      "sourceName": "産業技術総合研究所",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "jp-cases",
+        "infrastructure"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:44:04.336Z"
+    },
+    {
+      "id": "e2bc2874ac4f879226ca2bde",
+      "query": "daily-auto",
+      "title": "About Sakana AI",
+      "url": "https://sakana.ai/blog",
+      "sourceId": "sakana-ai",
+      "sourceName": "Sakana AI",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "product-release",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 54,
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:44:04.336Z",
+      "acceptedAt": "2026-06-18T10:44:17.617Z",
+      "rejectedAt": "2026-06-18T10:45:46.121Z"
+    },
+    {
+      "id": "ccf283bf9ec569e00c54291a",
+      "query": "daily-auto",
+      "title": "Defense/Intelligence",
+      "url": "https://sakana.ai/blog/?label=defense-intel",
+      "sourceId": "sakana-ai",
+      "sourceName": "Sakana AI",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "product-release",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 54,
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:44:04.336Z",
+      "acceptedAt": "2026-06-18T10:44:17.617Z",
+      "rejectedAt": "2026-06-18T10:45:46.121Z"
+    },
+    {
+      "id": "9ae6f5e655762d8a029e7e1b",
+      "query": "daily-auto",
+      "title": "ドローン/空飛ぶクルマ",
+      "url": "https://www.meti.go.jp/policy/mono_info_service/mono/robot/airmobility.html",
+      "sourceId": "meti-ai-jp",
+      "sourceName": "経済産業省",
+      "sourceType": "government",
+      "categories": [
+        "jp-cases",
+        "jp-governance",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:19:46.625Z",
+      "lastSeenAt": "2026-06-18T10:44:04.336Z",
+      "acceptedAt": "2026-06-18T10:44:17.617Z",
+      "rejectedAt": "2026-06-18T10:45:46.121Z"
+    },
+    {
+      "id": "49c12a9b13605b361a9bc646",
+      "query": "daily-auto",
+      "title": "2026/06/10 全日本ピアノ指導者協会が保有するピアノコンクール等のデータ約200万件を学術研究用に提供開始",
+      "url": "https://www.nii.ac.jp/news/release/2026/0610.html",
+      "sourceId": "nii-jp",
+      "sourceName": "国立情報学研究所",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research"
+      ],
+      "trustLevel": "primary",
+      "score": 80,
+      "publishedDate": "2026-06-10",
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:44:04.336Z"
+    },
+    {
+      "id": "fa29b4720425b850a1f2e0fe",
+      "query": "daily-auto",
+      "title": "2026/06/15 GakuNin RDMとSPring-8実験データを連携 ― 全国の研究データ基盤から大型研究施設データの統合管理・活用を可能に ―",
+      "url": "https://www.nii.ac.jp/news/release/2026/0615.html",
+      "sourceId": "nii-jp",
+      "sourceName": "国立情報学研究所",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research"
+      ],
+      "trustLevel": "primary",
+      "score": 88,
+      "publishedDate": "2026-06-15",
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:44:04.336Z"
+    },
+    {
+      "id": "d91772cd9ea63b35550d14b4",
+      "query": "daily-auto",
+      "title": "マイナンバー苦情 あっせん窓口相談 03-6457-9585",
+      "url": "https://www.ppc.go.jp/legal/complaints",
+      "sourceId": "ppc-jp",
+      "sourceName": "個人情報保護委員会",
+      "sourceType": "regulator",
+      "categories": [
+        "jp-governance",
+        "security"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:13:05.818Z",
+      "acceptedAt": "2026-06-18T10:13:24.872Z",
+      "rejectedAt": "2026-06-18T10:14:00.560Z"
+    },
+    {
+      "id": "744a70e2f60750d832419a12",
+      "query": "daily-auto",
+      "title": "タンパク質液滴の運命はサイズで決まる －微細加工技術を用いてアミロイド形成を左右する新たな競合過程を発見－",
+      "url": "https://www.aist.go.jp/aist_j/press_release/pr2026/pr20260610/pr20260610.html",
+      "sourceId": "aist-jp",
+      "sourceName": "産業技術総合研究所",
+      "sourceType": "research_lab",
+      "categories": [
+        "jp-research",
+        "jp-cases",
+        "infrastructure"
+      ],
+      "trustLevel": "primary",
+      "score": 56,
+      "status": "rejected",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:13:05.818Z",
+      "acceptedAt": "2026-06-18T10:14:07.118Z",
+      "rejectedAt": "2026-06-18T10:14:22.479Z"
+    },
+    {
+      "id": "e77d24592f006593e9b353e9",
+      "query": "daily-auto",
+      "title": "ALPS処理水について知ってほしい5つのこと",
+      "url": "https://www.meti.go.jp/earthquake/nuclear/hairo_osensui/shirou_alps.html",
+      "sourceId": "meti-ai-jp",
+      "sourceName": "経済産業省",
+      "sourceType": "government",
+      "categories": [
+        "jp-cases",
+        "jp-governance",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:13:05.818Z",
+      "acceptedAt": "2026-06-18T10:48:45.890Z"
+    },
+    {
+      "id": "1ef7f85dc4296efd800984cf",
+      "query": "daily-auto",
+      "title": "Graphics Gallery",
+      "url": "https://www.meti.go.jp/main/infographic/index.html",
+      "sourceId": "meti-ai-jp",
+      "sourceName": "経済産業省",
+      "sourceType": "government",
+      "categories": [
+        "jp-cases",
+        "jp-governance",
+        "business"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:13:05.818Z"
+    },
+    {
+      "id": "8285a91a9c515e9e622ac478",
+      "query": "daily-auto",
+      "title": "マイナンバー苦情あっせん相談窓口（電話）",
+      "url": "https://www.ppc.go.jp/legal/complaints?ref=toppanel",
+      "sourceId": "ppc-jp",
+      "sourceName": "個人情報保護委員会",
+      "sourceType": "regulator",
+      "categories": [
+        "jp-governance",
+        "security"
+      ],
+      "trustLevel": "primary",
+      "score": 52,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:13:05.818Z"
+    },
+    {
+      "id": "9e3636b0b0345d81fb9b468a",
+      "query": "daily-auto",
+      "title": "GLM-5.2: Built for Long-Horizon Tasks 55 June 17, 2026",
+      "url": "https://huggingface.co/blog/zai-org/glm-52-blog",
+      "sourceId": "huggingface-blog",
+      "sourceName": "Hugging Face Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "global-research",
+        "product-release",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 90,
+      "publishedDate": "2026-06-17",
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:13:05.817Z"
+    },
+    {
+      "id": "9bcb7beaaad3d2923ba51bad",
+      "query": "daily-auto",
+      "title": "2026年6月12日 第23回デジタル社会推進会議幹事会・書面開催において、「行政の進化と革新のための生成AIの調達·利活用に係るガイドライン（第2.0版）」を決定しました 2026年6月12日 第23回デジタル社会推進会議幹事会・書面開催において、「行政の進化と革新のための生成AIの調達·利活用に係るガイドライン（第2.0版）」を決定しました",
+      "url": "https://www.digital.go.jp/news/decb64eb-f26e-41cb-8d37-f3dd173108b8",
+      "sourceId": "digital-agency-jp",
+      "sourceName": "デジタル庁",
+      "sourceType": "government",
+      "categories": [
+        "jp-cases",
+        "jp-governance"
+      ],
+      "trustLevel": "primary",
+      "score": 46,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:05:36.427Z"
+    },
+    {
+      "id": "d846d936ddbe2bd5aa6eea05",
+      "query": "daily-auto",
+      "title": "「病院情報システム等の刷新に向けた協議会」の構成員の募集を開始します 政策 2026年6月17日",
+      "url": "https://www.digital.go.jp/news/0acbe326-f776-4952-9edb-5bbfc7d61e37",
+      "sourceId": "digital-agency-jp",
+      "sourceName": "デジタル庁",
+      "sourceType": "government",
+      "categories": [
+        "jp-cases",
+        "jp-governance"
+      ],
+      "trustLevel": "primary",
+      "score": 38,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T10:05:36.427Z",
+      "lastSeenAt": "2026-06-18T10:05:36.427Z"
+    },
+    {
+      "id": "00bb6d89ec10fdb9a7d86108",
+      "query": "RAG",
+      "title": "Code a simple RAG from scratch ngxson • Oct 29, 2024 • 347",
+      "url": "https://huggingface.co/blog/ngxson/make-your-own-rag",
+      "sourceId": "huggingface-blog",
+      "sourceName": "Hugging Face Blog",
+      "sourceType": "official_blog",
+      "categories": [
+        "global-research",
+        "product-release",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 7,
+      "status": "candidate",
+      "firstSeenAt": "2026-06-18T04:47:04.761Z",
+      "lastSeenAt": "2026-06-18T04:47:04.761Z"
+    },
+    {
+      "id": "c15ff80e83f8d5add0e82313",
+      "query": "agent",
+      "title": "AI agents",
+      "url": "https://claude.com/solutions/agents",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "company_newsroom",
+      "categories": [
+        "product-release",
+        "global-research",
+        "global-governance",
+        "security",
+        "global-cases"
+      ],
+      "trustLevel": "primary",
+      "score": 7,
+      "status": "accepted",
+      "firstSeenAt": "2026-06-18T04:20:16.008Z",
+      "lastSeenAt": "2026-06-18T04:23:51.650Z",
+      "acceptedAt": "2026-06-18T09:19:58.296Z"
+    }
+  ]
+}

@@ -1,0 +1,551 @@
+{
+  "schemaVersion": 2,
+  "generatedDate": "2026-06-20",
+  "sourcePolicy": "直接RSSで元記事URLと公開日時を確認できる媒体のみを速報対象にする。Google News RSSの検出時刻は元記事公開日と一致しないため、日付検証なしでは掲載しない。",
+  "categories": [
+    {
+      "id": "fde",
+      "label": "FDE",
+      "accent": "business"
+    },
+    {
+      "id": "agents",
+      "label": "AIエージェント・業務AI",
+      "accent": "product"
+    },
+    {
+      "id": "models",
+      "label": "モデル・研究・プロダクト",
+      "accent": "research"
+    },
+    {
+      "id": "regulation",
+      "label": "規制・倫理・著作権",
+      "accent": "governance"
+    },
+    {
+      "id": "industry",
+      "label": "産業活用・導入事例",
+      "accent": "adoption"
+    },
+    {
+      "id": "infrastructure",
+      "label": "半導体・クラウド・基盤",
+      "accent": "infrastructure"
+    },
+    {
+      "id": "security",
+      "label": "AIセキュリティ・リスク",
+      "accent": "security"
+    }
+  ],
+  "items": [
+    {
+      "id": "cf5561bdc7a350a2",
+      "title": "工数「76％」削減 味の素グループが「経理AIエージェント」導入で先陣を切れたワケ",
+      "summary": "経理人材の不足が深刻化する一方で、経理パーソンが担う業務の幅は急速に広がっている。その解決策として期待されるのがAI活用だ。しかし、誤りが許されない経理業務では導入への慎重論も根強い。そんな中、味の素グループの財務・経理業務を担う味の素フィナンシャル・ソリュー...",
+      "url": "https://www.itmedia.co.jp/business/articles/2606/19/news033.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-18T22:00:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 6,
+      "priority": 104,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.437Z"
+      }
+    },
+    {
+      "id": "be70db7a16e37e3a",
+      "title": "Photoshopなど「Adobe Creative Cloud」にAIエージェント、アドビが全面導入 ChatGPTやClaudeとも連携",
+      "summary": "米Adobeは6月18日（現地時間）、「Adobe Creative Cloud」の各アプリにAIエージェント機能を全面導入したと発表した。ChatGPTやClaudeなど外部AIプラットフォームからもクリエイティブ機能を呼び出せる。",
+      "url": "https://www.itmedia.co.jp/news/articles/2606/19/news110.html",
+      "source": "ITmedia NEWS",
+      "sourceType": "メディア",
+      "category": "AIエージェント・業務AI",
+      "categoryId": "agents",
+      "accent": "product",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T06:45:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 5,
+      "priority": 98,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.473Z"
+      }
+    },
+    {
+      "id": "166ba7e9ad46854e",
+      "title": "明治安田、AIエージェントでシステム開発工数見積もりを自動化",
+      "summary": "2026年6月15日、セールスフォース・ジャパンは、明治安田生命保険（以下、明治安田）が自律型AIエージェントプラットフォーム「Agentforce」を用いてシステム開発工数見積もり業務の自動化実証...",
+      "url": "https://enterprisezine.jp/news/detail/24511",
+      "source": "EnterpriseZine",
+      "sourceType": "メディア",
+      "category": "AIエージェント・業務AI",
+      "categoryId": "agents",
+      "accent": "product",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T02:15:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 5,
+      "priority": 96,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.862Z"
+      }
+    },
+    {
+      "id": "546f7311f726d513",
+      "title": "画像AIのMidjourney、体内を全身3Dスキャンする「Midjorney Scanner」発表 畑違いの医療参入",
+      "summary": "画像生成AIで知られる米Midjourneyが、医療分野に乗り出す。同社は現地時間6月17日、新事業「Midjourney Medical」を立ち上げ、第1弾となるハードウェア「Midjourney Scanner」を公式サイトで発表した。水中で超音波を当て、...",
+      "url": "https://japan.cnet.com/article/35249174/",
+      "source": "CNET Japan",
+      "sourceType": "メディア",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T07:05:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 5,
+      "priority": 90,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:21.203Z"
+      }
+    },
+    {
+      "id": "fc9e1145c89e07f0",
+      "title": "理研、AI for Science向けスパコンの名前を「理究」（りきゅう）に決定 由来は？",
+      "summary": "理化学研究所は、AIを活用した科学研究「AI for Science」向けのスーパーコンピュータの名前を「理究」（りきゅう）に決定したと発表した。",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2606/19/2000000110/",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T08:00:51.000Z",
+      "freshness": "recent",
+      "relevanceScore": 4,
+      "priority": 104,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.434Z"
+      }
+    },
+    {
+      "id": "5d8784ce200cff2f",
+      "title": "画面操作を“録画”→AIが作業代行 Codexに新機能「Record & Replay」",
+      "summary": "米OpenAIは6月18日、「Codex」の新機能「Record & Replay」を公開した。利用者がMac上で作業を一度実演すると、Codexがその操作を再利用できる作業手順に変換・記憶する。",
+      "url": "https://www.itmedia.co.jp/news/articles/2606/19/news102.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "AIエージェント・業務AI",
+      "categoryId": "agents",
+      "accent": "product",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T05:15:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 4,
+      "priority": 104,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.436Z"
+      }
+    },
+    {
+      "id": "79ed8c51ee0d0474",
+      "title": "画像生成AIのMidjourneyが医療参入、超音波全身スキャナとサウナ融合の「Midjourney Spa」構想を発表",
+      "summary": "Midjourneyは、超音波を使った全身スキャナと、それを組み込んだ温浴施設「Midjourney Spa」を展開する新事業を立ち上げ、医療分野に参入すると発表した。60秒以内で高精度な立体スキャンを行う技術を開発。当面は体組成マップの提供から始め、将来的に...",
+      "url": "https://www.itmedia.co.jp/news/articles/2606/19/news090.html",
+      "source": "ITmedia NEWS",
+      "sourceType": "メディア",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T03:15:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 4,
+      "priority": 98,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.474Z"
+      }
+    },
+    {
+      "id": "7803c9acef04cbf5",
+      "title": "IBMとGoogle Cloudが戦略的協業 AI本番導入と基幹システムのモダナイゼーション加速へ",
+      "summary": "2026年6月4日（米国時間）、米国ニューヨーク州サニーベールにて、IBMとGoogle Cloudはエンタープライズ向けのAI本番導入と基幹システムのモダナイゼーション加速を目的とした戦略的協業を...",
+      "url": "https://enterprisezine.jp/news/detail/24512",
+      "source": "EnterpriseZine",
+      "sourceType": "メディア",
+      "category": "半導体・クラウド・基盤",
+      "categoryId": "infrastructure",
+      "accent": "infrastructure",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T02:25:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 4,
+      "priority": 96,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.862Z"
+      }
+    },
+    {
+      "id": "0fc57ee02cbbc1b3",
+      "title": "Snowflakeが年次サミットで示したエージェント“司令塔”の価値──AI暴走の懸念にどう応えるか",
+      "summary": "Snowflakeは、米国時間6月1日から6月4日にかけて、年次カンファレンス「Snowflake Summit 26（以下、サミット）」を米サンフランシスコにて開催した。今回のサミットでは、企業がAIを活用し、自律的に業務を支援する「エージェント型エンタープ...",
+      "url": "https://enterprisezine.jp/article/detail/24506",
+      "source": "EnterpriseZine",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T01:00:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 4,
+      "priority": 96,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.862Z"
+      }
+    },
+    {
+      "id": "63d7737cbcfa53d1",
+      "title": "野村不動産グループ6社、経費精算システムの申請業務をAIで自動化 生成AIを“あと乗せ”実装",
+      "summary": "野村不動産ホールディングスを含むグループ会社6社は、既存の業務システム上に生成AIをあと乗せで実装できる「Techtouch AI Hub（以下、テックタッチ AI Hub）」を導入した。 この...",
+      "url": "https://enterprisezine.jp/news/detail/24507",
+      "source": "EnterpriseZine",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-18",
+      "publishedAt": "2026-06-18T02:40:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 4,
+      "priority": 96,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.863Z"
+      }
+    },
+    {
+      "id": "6b9eed1243970b3e",
+      "title": "「この写真を復元して」と入力するだけ、ChatGPTが過激な画像を生成する抜け穴が発覚",
+      "summary": "「ChatGPT」が「この写真を復元して」というプロンプトによって、性的で生々しい暴力表現を含む画像を容易に生成していたことが分かった。AIサイバーセキュリティ・調査会社であるMindgardが報告書を公開した。",
+      "url": "https://japan.cnet.com/article/35249158/",
+      "source": "CNET Japan",
+      "sourceType": "メディア",
+      "category": "AIセキュリティ・リスク",
+      "categoryId": "security",
+      "accent": "security",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T03:27:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 4,
+      "priority": 90,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:21.203Z"
+      }
+    },
+    {
+      "id": "00bf50dbc5ef1285",
+      "title": "大阪メトロは「月1000件の社内問い合わせを効率化」にAIをどう使った？",
+      "summary": "PKSHA Technologyは、Osaka Metroへの「PKSHA AIヘルプデスク」の導入部署を人事や調達に拡大した。全従業員約5000人の社内問い合わせを一元化し、情報格差の解消や業務効率化、ナレッジの共有資産化を目指す。",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2606/19/news113.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T07:26:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 3,
+      "priority": 101,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.435Z"
+      }
+    },
+    {
+      "id": "779825e8a1a11e05",
+      "title": "GMO傘下、Unitreeの国内正規代理店に 人型ロボの導入から保守まで一気通貫で支援",
+      "summary": "GMOインターネットグループ傘下で、ロボティクス事業などを手掛けるGMO AI＆ロボティクス商事は、ロボット開発企業の中国Unitree Roboticsと日本国内正規代理店契約を締結したと発表した。",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2606/19/2000000109/",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T07:16:24.000Z",
+      "freshness": "recent",
+      "relevanceScore": 3,
+      "priority": 101,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.436Z"
+      }
+    },
+    {
+      "id": "6466f471d1dff2cb",
+      "title": "米大企業の7割が導入する「Databricks」とは何者か？ 評価額20兆円の「AI向けデータ基盤」",
+      "summary": "評価額約20兆円、Fortune 500の7割が利用するデータ・AI基盤企業Databricks。オープンソースのビッグデータ分散処理エンジン「Apache Spark」開発者らが2013年に創業した同社の軌跡と最新情報を解説する。",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2606/19/2000000106/",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-18T23:00:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 3,
+      "priority": 101,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.437Z"
+      }
+    },
+    {
+      "id": "334a8a1041b869a2",
+      "title": "「待ちの営業」はもう限界 ホンダがAIエージェントで挑む、商機を逃さない「濃い商談」の創出",
+      "summary": "顧客の購買行動が変化する中、ホンダが新車販売にAIエージェントを導入した。“濃い商談”を支援し、すでに成約も生まれているという。販売現場の変化を追う。",
+      "url": "https://www.itmedia.co.jp/business/articles/2606/19/news064.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "AIエージェント・業務AI",
+      "categoryId": "agents",
+      "accent": "product",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-18T22:00:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 3,
+      "priority": 101,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.438Z"
+      }
+    },
+    {
+      "id": "f26e9853f1f46431",
+      "title": "AIと話すだけで動画編集できる映像ソフト、オープンソースで登場 出力は「Premiere」「DaVinci」でも読み込み可",
+      "summary": "米Palmierは6月18日（現地時間）、AIコーディング支援ツール「Claude Code」などとの対話を通して動画を編集できる映像ソフト「Palmier Pro」をオープンソース（GPLv3）で公開した。",
+      "url": "https://www.itmedia.co.jp/news/articles/2606/19/news119.html",
+      "source": "ITmedia NEWS",
+      "sourceType": "メディア",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T09:20:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 3,
+      "priority": 95,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.473Z"
+      }
+    },
+    {
+      "id": "d7c2351d2ba75045",
+      "title": "同じAIモデルのプロンプト実行スピードを「vLLM推論の約6倍」に……新興企業MangoBoostが実現したイノベーション",
+      "summary": "2026年4月21日～22日の期間、シンガポールにあるAMDのオフィスを訪問する機会があった。ちょうど同じタイミングで、米国西海岸で注目のユニコーン企業 MangoBoost（マンゴーブースト）の共同創業者兼CEOであるジャンウ・キム氏もAMDの同国拠点を訪れ...",
+      "url": "https://enterprisezine.jp/article/detail/23846",
+      "source": "EnterpriseZine",
+      "sourceType": "メディア",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T00:00:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 3,
+      "priority": 93,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.862Z"
+      }
+    },
+    {
+      "id": "95856c10075e6fe4",
+      "title": "「AIガバナンス」の落とし穴 なぜ生成AIリスクは利用ルールをつくっても防げないのか？",
+      "summary": "生成AIの利用ルールを整えても、それだけでリスク管理が機能するわけではない。重要なことは、ユースケースごとにリスクを見極め、必要な統制を業務運用に落とし込むことだ。本稿では、AIリスク管理を「データガバナンスの実装論」として捉え、評価、統制、監視、改善の考え方...",
+      "url": "https://enterprisezine.jp/article/detail/24479",
+      "source": "EnterpriseZine",
+      "sourceType": "メディア",
+      "category": "規制・倫理・著作権",
+      "categoryId": "regulation",
+      "accent": "governance",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-18T23:00:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 3,
+      "priority": 93,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.862Z"
+      }
+    },
+    {
+      "id": "ac6a162a221f0fd1",
+      "title": "ChatGPTで広告テスト、日本でも開始 非表示にする方法は？",
+      "summary": "米OpenAIの日本法人は、ChatGPTでの広告表示テストを日本でも始めたと発表した。広告を非表示にする方法は？",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2606/19/2000000108/",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T02:26:50.000Z",
+      "freshness": "recent",
+      "relevanceScore": 2,
+      "priority": 98,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.436Z"
+      }
+    },
+    {
+      "id": "23b21ee1901aa251",
+      "title": "「ChatGPT広告」日本上陸 無料版と「Go」で表示、電通・博報堂など支援",
+      "summary": "OpenAIは2月に米国でテスト運用を開始。5月には日本など5カ国への拡大を予告していた。",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2606/19/2000000107/",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T00:23:56.000Z",
+      "freshness": "recent",
+      "relevanceScore": 2,
+      "priority": 98,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.437Z"
+      }
+    },
+    {
+      "id": "c6ee360f8a0c418f",
+      "title": "AIで要らなくなったSaaS、要るSaaSは、どれ？ 日本の「SaaS is dead」の実態",
+      "summary": "エイトレッドが「AI時代に生き残るSaaSの条件に関する実態調査」の結果を公表。8割がSaaS見直しの必要性を実感する一方、AI代替の困難さや導入失敗の要因などが示された。",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2606/19/news056.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-18T22:00:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 2,
+      "priority": 98,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.438Z"
+      }
+    },
+    {
+      "id": "34f4b144fd992816",
+      "title": "通信業界におけるAI推進、データアクセスとガバナンスの課題が明確に",
+      "summary": "2026年6月18日、Clouderaは「データレディネス・インデックス調査 2026」における通信業界の調査結果を発表した。同調査は世界のITリーダーを対象に実施され、データへのアクセス性、パフォ...",
+      "url": "https://enterprisezine.jp/news/detail/24513",
+      "source": "EnterpriseZine",
+      "sourceType": "メディア",
+      "category": "規制・倫理・著作権",
+      "categoryId": "regulation",
+      "accent": "governance",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T02:50:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 2,
+      "priority": 90,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.861Z"
+      }
+    },
+    {
+      "id": "53268794f21bcaf6",
+      "title": "アクロバットで話題の人型ロボ「H1」「G1」、GMO子会社が国内販売へ 中国Unitreeと代理店契約",
+      "summary": "GMO AI＆ロボティクス商事は6月19日、中国の人型ロボットメーカー Unitree Roboticsと国内正規代理店契約を結んだと発表した。同日から人型ロボット「G1」「H1」や四足歩行ロボット「Go2」「B2」などの販売を始める。",
+      "url": "https://www.itmedia.co.jp/news/articles/2606/19/news118.html",
+      "source": "ITmedia NEWS",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-19",
+      "publishedAt": "2026-06-19T10:00:00.000Z",
+      "freshness": "recent",
+      "relevanceScore": 1,
+      "priority": 89,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-20T04:15:20.472Z"
+      }
+    }
+  ],
+  "errors": []
+}

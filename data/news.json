@@ -1,0 +1,365 @@
+{
+  "generatedDate": "2026-06-20",
+  "categories": [
+    {
+      "id": "jp-cases",
+      "accent": "adoption",
+      "tab": [
+        "all",
+        "japan"
+      ],
+      "group": "国内",
+      "title": "AI活用・成果事例",
+      "items": [
+        {
+          "title": "「HFS Horizons: Agentic Services, 2026」においてマーケットリーダーの1社に選出",
+          "titleJa": "",
+          "summary": "株式会社NTTデータグループ、株式会社NTTデータ、および株式会社NTT DATA, Inc.（以下：NTTデータグループと総称）は、HFS Research社発行のレポート「HFS Horizons: Agentic Services, 2026」（以下：本レポート）において最高位に当たる「Hor...",
+          "summaryStatus": "extracted-ja",
+          "impact": "社会的影響",
+          "source": "NTT DATA ニュース",
+          "type": "公式発表",
+          "date": "2026-06-08",
+          "url": "https://www.nttdata.com/global/ja/news/evaluation/2026/060801",
+          "priority": 85,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "30d30365a817128c57d13a5f"
+        },
+        {
+          "title": "フォーティエンスコンサルティング、AI時代の成果創出を加速するFDE型コンサルティングを提供開始（フォーティエンスコンサルティング株式会社）",
+          "titleJa": "",
+          "summary": "フォーティエンスコンサルティング株式会社は、2026年6月16日付で、下記のニュースリリースを発表いたしました。",
+          "summaryStatus": "extracted-ja",
+          "impact": "社会的影響",
+          "source": "NTT DATA ニュース",
+          "type": "公式発表",
+          "date": "2026-06-16",
+          "url": "https://www.nttdata.com/global/ja/news/group/2026/061600",
+          "priority": 80,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "4eddb65339beaed4d62bb44f"
+        },
+        {
+          "title": "パロアルトネットワークスのManaged Security Service Providersで最高ランクに認定",
+          "titleJa": "",
+          "summary": "株式会社NTTデータ（以下、NTTデータ）は、Palo Alto Networks, Inc.（以下、パロアルトネットワークス）の展開するパートナープログラム「NextWave Partner Program」のうち、Managed Security Service Providers（以下、MSS...",
+          "summaryStatus": "extracted-ja",
+          "impact": "社会的影響",
+          "source": "NTT DATA ニュース",
+          "type": "公式発表",
+          "date": "2026-06-08",
+          "url": "https://www.nttdata.com/global/ja/news/evaluation/2026/060800",
+          "priority": 80,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "0c39b8985af22217cb94be39"
+        }
+      ]
+    },
+    {
+      "id": "jp-research",
+      "accent": "research",
+      "tab": [
+        "all",
+        "japan",
+        "research"
+      ],
+      "group": "国内",
+      "title": "国産AI・研究・論文",
+      "items": [
+        {
+          "title": "Team Sakura, including Adam Nohejl of the Explainable AI Team, won the Open Track of the BEA 2026 Shared Task（May, 2026) | Center for Advanced Intelligence Project",
+          "titleJa": "理研AIPのTeam SakuraがBEA 2026 Shared TaskのOpen Trackで優勝",
+          "summary": "理研AIPの説明可能AIチームに所属するAdam Nohejl氏らのTeam Sakuraが、BEA 2026 Shared TaskのOpen Trackで優勝。教育・自然言語処理領域での国内研究成果として確認したい内容です。",
+          "summaryStatus": "manual-ja",
+          "impact": "研究価値",
+          "source": "理化学研究所 革新知能統合研究センター",
+          "type": "論文・技術文書",
+          "date": "2026-05-25",
+          "url": "https://aip.riken.jp/news/bea2026",
+          "priority": 93,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "952ed32494e0b2baa75f057a"
+        },
+        {
+          "title": "【Event Report】The 8th Annual Meeting of Japanese Association for Medical Artificial Intelligence (JMAI) (June 5-6, 2026, Tokyo) | Center for Advanced Intelligence Project",
+          "titleJa": "",
+          "summary": "日本語要約は未生成です。APIキーを設定して「今すぐ取得」を実行すると、この記事の内容を日本語で要約します。",
+          "summaryStatus": "missing-ja-summary",
+          "impact": "研究価値",
+          "source": "理化学研究所 革新知能統合研究センター",
+          "type": "論文・技術文書",
+          "date": "2026-06-09",
+          "url": "https://aip.riken.jp/news/jmai_2026",
+          "priority": 88,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "adec0fd325a40b85054c391d"
+        },
+        {
+          "title": "45 papers have been accepted at ICML 2026 | Center for Advanced Intelligence Project",
+          "titleJa": "理研AIPからICML 2026に45本の論文が採択",
+          "summary": "理研AIP関連の研究からICML 2026に45本の論文が採択。国内AI研究の国際トップ会議での存在感と、注目すべき研究テーマの広がりを把握できます。",
+          "summaryStatus": "manual-ja",
+          "impact": "研究価値",
+          "source": "理化学研究所 革新知能統合研究センター",
+          "type": "論文・技術文書",
+          "date": "2026-05-24",
+          "url": "https://aip.riken.jp/news/icml2026",
+          "priority": 88,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "299db76a419076648f405c82"
+        }
+      ]
+    },
+    {
+      "id": "jp-governance",
+      "accent": "governance",
+      "tab": [
+        "all",
+        "japan",
+        "governance"
+      ],
+      "group": "国内",
+      "title": "倫理・法規制",
+      "items": []
+    },
+    {
+      "id": "global-cases",
+      "accent": "adoption",
+      "tab": [
+        "all",
+        "global"
+      ],
+      "group": "海外",
+      "title": "AI活用・成果事例",
+      "items": [
+        {
+          "title": "AI alone won't change your business. The system running it will. - The Official Microsoft Blog",
+          "titleJa": "AI導入の成否はモデル単体ではなく運用システムが左右する",
+          "summary": "Microsoftは、企業がAI-firstへ移行するにはモデル単体ではなく、エージェント基盤や業務システム全体の設計が重要だと提示。AI導入ロードマップや業務変革の論点になります。",
+          "summaryStatus": "manual-ja",
+          "impact": "社会的影響",
+          "source": "Microsoft AI Blog",
+          "type": "公式ブログ",
+          "date": "2026-06-02",
+          "url": "https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will",
+          "priority": 97,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "8e5019b6c9475b8ead966f42"
+        }
+      ]
+    },
+    {
+      "id": "global-research",
+      "accent": "research",
+      "tab": [
+        "all",
+        "global",
+        "research"
+      ],
+      "group": "海外",
+      "title": "海外AI・研究・モデル",
+      "items": [
+        {
+          "title": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026",
+          "titleJa": "AppleがCVPR 2026で発表する機械学習研究を紹介",
+          "summary": "AppleはCVPR 2026で発表するコンピュータビジョン関連研究を紹介。AppleのオンデバイスAI、視覚認識、研究開発テーマを追う材料になります。",
+          "summaryStatus": "manual-ja",
+          "impact": "研究価値",
+          "source": "Apple Machine Learning Research",
+          "type": "論文・技術文書",
+          "date": "2026-05-28",
+          "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
+          "priority": 98,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "eef9527c7b75b65ab8c9f5dc"
+        },
+        {
+          "title": "What we learned mapping a year’s worth of AI-enabled cyber threats",
+          "titleJa": "AnthropicがAIを悪用したサイバー脅威の1年分の分析を公開",
+          "summary": "Anthropicは、AIがサイバー攻撃の手法に与える影響をMITRE ATT&CKの観点から分析。AI悪用、検知、防御フレームワークの見直しに関わる重要な報告です。",
+          "summaryStatus": "manual-ja",
+          "impact": "研究価値",
+          "source": "Anthropic Research",
+          "type": "論文・技術文書",
+          "date": "2026-06-03",
+          "url": "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack",
+          "priority": 95,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "b531a6249412cc4f4209ed36"
+        },
+        {
+          "title": "MosaicLeaks: Can your research agent keep a secret?",
+          "titleJa": "",
+          "summary": "日本語要約は未生成です。APIキーを設定して「今すぐ取得」を実行すると、この記事の内容を日本語で要約します。",
+          "summaryStatus": "missing-ja-summary",
+          "impact": "研究価値",
+          "source": "Hugging Face Blog",
+          "type": "公式ブログ",
+          "date": "2026-06-18",
+          "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+          "priority": 90,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "2eb5bcc3ad88b97ec36616da"
+        }
+      ]
+    },
+    {
+      "id": "global-governance",
+      "accent": "governance",
+      "tab": [
+        "all",
+        "global",
+        "governance"
+      ],
+      "group": "海外",
+      "title": "倫理・法規制",
+      "items": []
+    },
+    {
+      "id": "product-release",
+      "accent": "product",
+      "tab": [
+        "all",
+        "research"
+      ],
+      "group": "横断",
+      "title": "新モデル・プロダクト",
+      "items": [
+        {
+          "title": "Introducing the Services Track and Partner Hub of the Claude Partner Network",
+          "titleJa": "",
+          "summary": "日本語要約は未生成です。APIキーを設定して「今すぐ取得」を実行すると、この記事の内容を日本語で要約します。",
+          "summaryStatus": "missing-ja-summary",
+          "impact": "技術重要度",
+          "source": "Anthropic News",
+          "type": "公式発表",
+          "date": "2026-06-03",
+          "url": "https://www.anthropic.com/news/services-track-partner-hub",
+          "priority": 97,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "c265f4d09da60a8497d8b1be"
+        },
+        {
+          "title": "Introducing Claude Corps",
+          "titleJa": "Anthropicが若手向けフェローシップClaude Corpsを開始",
+          "summary": "Anthropicは、AIの便益を米国内コミュニティへ広げることに関心を持つ若手人材向けの全国フェローシップClaude Corpsを開始。AI人材育成と社会実装の取り組みです。",
+          "summaryStatus": "manual-ja",
+          "impact": "技術重要度",
+          "source": "Anthropic News",
+          "type": "公式発表",
+          "date": "2026-06-11",
+          "url": "https://www.anthropic.com/news/claude-corps",
+          "priority": 97,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "72c805579f21b6e81058f27d"
+        },
+        {
+          "title": "Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem",
+          "titleJa": "Anthropicがソウル拠点を開設し韓国AIエコシステムと提携拡大",
+          "summary": "Anthropicはソウルオフィスを開設し、韓国の企業・スタートアップ・研究者との提携を発表。Claudeのアジア展開と地域AIエコシステム連携の動きです。",
+          "summaryStatus": "manual-ja",
+          "impact": "技術重要度",
+          "source": "Anthropic News",
+          "type": "公式発表",
+          "date": "2026-06-17",
+          "url": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem",
+          "priority": 97,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "47e96fb85bcbcad48e728a49"
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "accent": "security",
+      "tab": [
+        "all",
+        "governance"
+      ],
+      "group": "横断",
+      "title": "AIセキュリティ・悪用対策",
+      "items": []
+    },
+    {
+      "id": "business",
+      "accent": "business",
+      "tab": [
+        "all",
+        "business"
+      ],
+      "group": "横断",
+      "title": "ビジネス・投資・M&A",
+      "items": []
+    },
+    {
+      "id": "infrastructure",
+      "accent": "infrastructure",
+      "tab": [
+        "all",
+        "business"
+      ],
+      "group": "横断",
+      "title": "半導体・クラウド・電力",
+      "items": [
+        {
+          "title": "Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure | NVIDIA Technical Blog",
+          "titleJa": "",
+          "summary": "日本語要約は未生成です。APIキーを設定して「今すぐ取得」を実行すると、この記事の内容を日本語で要約します。",
+          "summaryStatus": "missing-ja-summary",
+          "impact": "技術重要度",
+          "source": "NVIDIA Technical Blog AI",
+          "type": "公式ブログ",
+          "date": "2026-06-12",
+          "url": "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure",
+          "priority": 90,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "ac9d048bf4ae9dfe6154a8e4"
+        },
+        {
+          "title": "Building AI Agents for AR Glasses and XR Devices with NVIDIA XR AI | NVIDIA Technical Blog",
+          "titleJa": "NVIDIAがARグラス・XRデバイス向けAIエージェント構築を解説",
+          "summary": "NVIDIAは、ARグラスやウェアラブルでAI体験を構築するためのXR AI基盤を紹介。エッジAI、マルチモーダル、XRデバイス実装のインフラ論点が分かります。",
+          "summaryStatus": "manual-ja",
+          "impact": "技術重要度",
+          "source": "NVIDIA Technical Blog AI",
+          "type": "公式ブログ",
+          "date": "2026-06-16",
+          "url": "https://developer.nvidia.com/blog/building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai",
+          "priority": 90,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "07fe3fe577b3e39e4925c436"
+        },
+        {
+          "title": "Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA | NVIDIA Technical Blog",
+          "titleJa": "MicrosoftとNVIDIAの新ツールでWindows PC上に個人AIエージェントを構築",
+          "summary": "NVIDIAは、Microsoftとの連携ツールによりWindows PC上で個人AIエージェントを構築する方法を紹介。ローカルAI、PC活用、開発者向けエージェント実装の動向です。",
+          "summaryStatus": "manual-ja",
+          "impact": "技術重要度",
+          "source": "NVIDIA Technical Blog AI",
+          "type": "公式ブログ",
+          "date": "2026-06-02",
+          "url": "https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia",
+          "priority": 90,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "6c1843b0c650dfcc0a7f37d9"
+        }
+      ]
+    }
+  ]
+}

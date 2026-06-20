@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI News Catchup</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div>
+            <p class="eyebrow">AI Daily Intelligence</p>
+            <h1>AI News Catchup</h1>
+          </div>
+        </div>
+        <div class="date-panel">
+          <span class="date-label">今日の更新</span>
+          <strong id="todayLabel">----</strong>
+          <span class="freshness good">自動収集中</span>
+          <div class="metric-row">
+            <div class="metric">
+              <span>速報</span>
+              <strong id="mediaCount">0</strong>
+            </div>
+            <div class="metric">
+              <span>New</span>
+              <strong id="newCount">0</strong>
+            </div>
+            <div class="metric">
+              <span>一次情報</span>
+              <strong id="primaryCount">0</strong>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="ticker-bar" aria-label="AI速報ティッカー">
+        <button id="tickerToggle" class="ticker-label" type="button" aria-pressed="false">AI FLASH</button>
+        <div class="ticker-lanes" role="tablist" aria-label="AI FLASH レーン">
+          <button class="ticker-lane active" type="button" data-ticker-lane="core">CORE</button>
+          <button class="ticker-lane" type="button" data-ticker-lane="fde">FDE</button>
+          <button class="ticker-lane" type="button" data-ticker-lane="research">Research</button>
+          <button class="ticker-lane" type="button" data-ticker-lane="consult">Consult</button>
+        </div>
+        <div class="ticker-viewport">
+          <div id="tickerTrack" class="ticker-track"></div>
+        </div>
+      </div>
+
+      <main>
+        <section class="category-workspace">
+          <div class="search-panel" role="search">
+            <label for="keywordSearch">キーワード検索</label>
+            <div class="search-box">
+              <input id="keywordSearch" type="search" placeholder="FDE, RAG, AIエージェント, 規制など">
+              <button id="sourceSearch" class="text-button primary" type="button">公式ソース検索</button>
+              <button id="runUpdate" class="update-button" type="button" aria-label="今すぐ取得">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20 6v5h-5"></path>
+                  <path d="M4 18v-5h5"></path>
+                  <path d="M18.8 9A7 7 0 0 0 6.3 6.2L4 8.4"></path>
+                  <path d="M5.2 15A7 7 0 0 0 17.7 17.8L20 15.6"></path>
+                </svg>
+                <span>今すぐ取得</span>
+              </button>
+              <button id="clearSearch" class="text-button" type="button">クリア</button>
+            </div>
+            <p id="searchStatus" class="search-status" hidden></p>
+            <button id="saveCandidates" class="text-button save-button" type="button" disabled>候補を保存</button>
+            <div id="sourceSearchResults" class="source-results" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="official-radar" aria-label="AIベンダー・GAFAM公式動向">
+          <div class="section-title-row official-title-row">
+            <div>
+              <p class="section-kicker">official watch</p>
+              <h2>AIベンダー・GAFAM公式動向</h2>
+            </div>
+            <span id="officialFreshness" class="status-chip good">一次情報</span>
+          </div>
+          <div id="officialGrid" class="official-grid"></div>
+        </section>
+
+        <section class="media-radar" aria-label="直近AIメディア速報">
+          <div class="section-title-row media-title-row">
+            <div>
+              <p class="section-kicker">media radar</p>
+              <h2>直近24時間のAIニュース速報</h2>
+            </div>
+            <span id="mediaFreshness" class="status-chip good">検証済み記事</span>
+          </div>
+          <div id="mediaGrid" class="media-grid"></div>
+        </section>
+
+        <section class="category-workspace">
+          <div class="tabs" role="tablist" aria-label="ニュースカテゴリ">
+            <button class="tab active" type="button" data-tab="all">全体</button>
+            <button class="tab" type="button" data-tab="japan">国内</button>
+            <button class="tab" type="button" data-tab="global">海外</button>
+            <button class="tab" type="button" data-tab="research">研究・モデル</button>
+            <button class="tab" type="button" data-tab="governance">規制・リスク</button>
+            <button class="tab" type="button" data-tab="business">事業・基盤</button>
+          </div>
+
+          <div id="categoryGrid" class="category-grid" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="mediaTemplate">
+      <a class="media-card" target="_blank" rel="noreferrer">
+        <div class="media-body">
+          <div class="media-meta">
+            <span class="media-category"></span>
+            <span class="media-source"></span>
+          </div>
+          <h3></h3>
+          <p></p>
+        </div>
+      </a>
+    </template>
+
+    <template id="categoryTemplate">
+      <article class="category-column">
+        <div class="category-head">
+          <div>
+            <p class="section-kicker category-group"></p>
+            <h3></h3>
+          </div>
+          <span class="status-chip"></span>
+        </div>
+        <div class="news-list"></div>
+      </article>
+    </template>
+
+    <template id="newsTemplate">
+      <a class="news-card" target="_blank" rel="noreferrer">
+        <div class="news-meta">
+          <span class="source-type"></span>
+          <span class="published"></span>
+          <span class="new-badge">New</span>
+        </div>
+        <h4></h4>
+        <p></p>
+        <div class="impact-row">
+          <span class="impact-label"></span>
+          <span class="source-name"></span>
+        </div>
+      </a>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

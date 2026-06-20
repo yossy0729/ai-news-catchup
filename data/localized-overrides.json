@@ -1,0 +1,66 @@
+{
+  "https://aip.riken.jp/news/bea2026": {
+    "titleJa": "理研AIPのTeam SakuraがBEA 2026 Shared TaskのOpen Trackで優勝",
+    "summary": "理研AIPの説明可能AIチームに所属するAdam Nohejl氏らのTeam Sakuraが、BEA 2026 Shared TaskのOpen Trackで優勝。教育・自然言語処理領域での国内研究成果として確認したい内容です。"
+  },
+  "https://aip.riken.jp/news/icml2026": {
+    "titleJa": "理研AIPからICML 2026に45本の論文が採択",
+    "summary": "理研AIP関連の研究からICML 2026に45本の論文が採択。国内AI研究の国際トップ会議での存在感と、注目すべき研究テーマの広がりを把握できます。"
+  },
+  "https://www.preferred.jp/en/business/genai": {
+    "titleJa": "PFNの生成AI基盤モデル事業とPLaMoの展開",
+    "summary": "Preferred Networksは、日本語性能を重視した大規模言語モデルPLaMoを含む生成AI基盤モデル事業を紹介。国産LLMの実装・事業化動向として確認すべき内容です。"
+  },
+  "https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will": {
+    "titleJa": "AI導入の成否はモデル単体ではなく運用システムが左右する",
+    "summary": "Microsoftは、企業がAI-firstへ移行するにはモデル単体ではなく、エージェント基盤や業務システム全体の設計が重要だと提示。AI導入ロードマップや業務変革の論点になります。"
+  },
+  "https://www.anthropic.com/policy-on-the-ai-exponential": {
+    "titleJa": "AnthropicがAI進歩に備える政策提案を公開",
+    "summary": "Anthropicは、急速なAI進歩に備えるためのAdvanced AI FrameworkとEconomic Policy Frameworkを提示。高性能AIの安全管理、経済影響、政策設計の論点を確認できます。"
+  },
+  "https://machinelearning.apple.com/updates/apple-at-cvpr-2026": {
+    "titleJa": "AppleがCVPR 2026で発表する機械学習研究を紹介",
+    "summary": "AppleはCVPR 2026で発表するコンピュータビジョン関連研究を紹介。AppleのオンデバイスAI、視覚認識、研究開発テーマを追う材料になります。"
+  },
+  "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack": {
+    "titleJa": "AnthropicがAIを悪用したサイバー脅威の1年分の分析を公開",
+    "summary": "Anthropicは、AIがサイバー攻撃の手法に与える影響をMITRE ATT&CKの観点から分析。AI悪用、検知、防御フレームワークの見直しに関わる重要な報告です。"
+  },
+  "https://digital-strategy.ec.europa.eu/en/policies/ai-factories": {
+    "titleJa": "EUがAI Factoriesで信頼できる生成AI開発基盤を整備",
+    "summary": "EUはEuroHPCのスーパーコンピューティング能力を活用し、信頼できる先端生成AIモデルを開発するAI Factories構想を推進。欧州のAI主権・計算資源政策の動きです。"
+  },
+  "https://digital-strategy.ec.europa.eu/en/policies/enabling-ai": {
+    "titleJa": "EUがAI開発・普及を進めるための投資と制度条件を整理",
+    "summary": "欧州委員会は、欧州でAIの開発と普及を進めるための環境整備、投資、政策アクションを提示。AI Act後の実装促進策として確認したい内容です。"
+  },
+  "https://digital-strategy.ec.europa.eu/en/news/ai-board-convenes-its-eighth-meeting": {
+    "titleJa": "EU AI Boardが第8回会合でAI戦略とAI Act実装を協議",
+    "summary": "EU AI Boardの第8回会合では、欧州AI戦略の進展とAI Act実装状況が議論されました。規制運用がどの段階にあるかを追う材料になります。"
+  },
+  "https://www.anthropic.com/news/claude-corps": {
+    "titleJa": "Anthropicが若手向けフェローシップClaude Corpsを開始",
+    "summary": "Anthropicは、AIの便益を米国内コミュニティへ広げることに関心を持つ若手人材向けの全国フェローシップClaude Corpsを開始。AI人材育成と社会実装の取り組みです。"
+  },
+  "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem": {
+    "titleJa": "Anthropicがソウル拠点を開設し韓国AIエコシステムと提携拡大",
+    "summary": "Anthropicはソウルオフィスを開設し、韓国の企業・スタートアップ・研究者との提携を発表。Claudeのアジア展開と地域AIエコシステム連携の動きです。"
+  },
+  "https://www.anthropic.com/news/tcs-anthropic-partnership": {
+    "titleJa": "TCSとAnthropicが規制産業向けClaude導入で提携",
+    "summary": "Tata Consultancy ServicesはAnthropicと提携し、自社5万人へのClaude提供や規制産業向けソリューション構築を進めます。大企業・規制業界での生成AI展開事例です。"
+  },
+  "https://developer.nvidia.com/blog/building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai": {
+    "titleJa": "NVIDIAがARグラス・XRデバイス向けAIエージェント構築を解説",
+    "summary": "NVIDIAは、ARグラスやウェアラブルでAI体験を構築するためのXR AI基盤を紹介。エッジAI、マルチモーダル、XRデバイス実装のインフラ論点が分かります。"
+  },
+  "https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia": {
+    "titleJa": "MicrosoftとNVIDIAの新ツールでWindows PC上に個人AIエージェントを構築",
+    "summary": "NVIDIAは、Microsoftとの連携ツールによりWindows PC上で個人AIエージェントを構築する方法を紹介。ローカルAI、PC活用、開発者向けエージェント実装の動向です。"
+  },
+  "https://developer.nvidia.com/blog/boosting-moe-training-throughput-with-advanced-fusion-kernels": {
+    "titleJa": "NVIDIAが高度なFusion KernelでMoE学習スループットを改善",
+    "summary": "NVIDIAは、Mixture-of-Expertsモデルの大規模学習で高度なFusion Kernelによりスループットを高める手法を解説。生成AI基盤モデルの訓練効率化に関わる技術記事です。"
+  }
+}

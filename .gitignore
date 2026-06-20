@@ -1,0 +1,26 @@
+# --- 機密情報（絶対にコミットしない） ---
+.env
+.env.*
+*.key
+secrets.*
+
+# --- 依存パッケージ（再インストール可能なので含めない） ---
+node_modules/
+
+# --- 自動生成・実行ログ（成果物ではない） ---
+logs/
+*.log
+server-runtime.log
+
+# --- 画面確認用スクリーンショット（任意・履歴を汚さない） ---
+preview*.png
+
+# --- ツール／ブラウザの一時データ ---
+.chrome-profile-shot/
+.agents/
+
+# --- OS / エディタ ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
