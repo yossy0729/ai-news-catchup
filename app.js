@@ -7,12 +7,14 @@ let officialDataVendors = [];
 let officialShownUrls = new Set();
 let aiSignals = [];
 let pricingData = { models: [] };
+let sotaData = { entries: [] };
 
 const dataPath = "data/news.json";
 const mediaPath = "data/media-news.json";
 const officialPath = "data/official-news.json";
 const signalPath = "data/ai-signals.json";
 const pricingPath = "data/pricing.json";
+const sotaPath = "data/sota.json";
 const categoryGrid = document.querySelector("#categoryGrid");
 const categoryTemplate = document.querySelector("#categoryTemplate");
 const newsTemplate = document.querySelector("#newsTemplate");
@@ -34,6 +36,9 @@ const mediaFreshness = document.querySelector("#mediaFreshness");
 const pricingTable = document.querySelector("#pricingTable");
 const pricingNote = document.querySelector("#pricingNote");
 const pricingFreshness = document.querySelector("#pricingFreshness");
+const sotaTable = document.querySelector("#sotaTable");
+const sotaNote = document.querySelector("#sotaNote");
+const sotaFreshness = document.querySelector("#sotaFreshness");
 const tickerTrack = document.querySelector("#tickerTrack");
 const tickerToggle = document.querySelector("#tickerToggle");
 const tickerLaneButtons = Array.from(document.querySelectorAll(".ticker-lane"));
@@ -772,7 +777,97 @@ function renderPricing() {
   pricingTable.replaceChildren(table);
 }
 
-function renderApp(newsData, mediaData, officialData, signalData, pricing) {
+function renderSota() {
+  if (!sotaTable) return;
+
+  const entries = Array.isArray(sotaData.entries) ? sotaData.entries : [];
+
+  if (sotaNote) {
+    const asOf = sotaData.asOf ? `（基準: ${sotaData.asOf}時点）` : "";
+    sotaNote.textContent = `${sotaData.note || "リーダーボードで要確認"}${asOf}`;
+  }
+  if (sotaFreshness) {
+    const verifiedCount = entries.filter((e) => e.verified).length;
+    sotaFreshness.textContent = verifiedCount ? `確認済 ${verifiedCount}/${entries.length}` : "参考";
+    sotaFreshness.classList.toggle("good", verifiedCount === entries.length && entries.length > 0);
+    sotaFreshness.classList.toggle("stale", verifiedCount < entries.length);
+  }
+
+  if (!entries.length) {
+    const empty = document.createElement("div");
+    empty.className = "empty-note";
+    empty.textContent = "SOTAデータがありません。data/sota.json を確認してください。";
+    sotaTable.replaceChildren(empty);
+    return;
+  }
+
+  const table = document.createElement("table");
+  table.className = "pricing-table";
+
+  const thead = document.createElement("thead");
+  const headRow = document.createElement("tr");
+  ["タスク", "ベンチマーク", "指標", "トップモデル", "スコア", "時点", "出典"].forEach((label) => {
+    const th = document.createElement("th");
+    th.textContent = label;
+    headRow.append(th);
+  });
+  thead.append(headRow);
+
+  const tbody = document.createElement("tbody");
+  entries.forEach((e) => {
+    const row = document.createElement("tr");
+    if (!e.verified) row.classList.add("is-unverified");
+
+    [e.task, e.benchmark, e.metric].forEach((text) => {
+      const td = document.createElement("td");
+      td.textContent = text || "—";
+      row.append(td);
+    });
+
+    const model = document.createElement("td");
+    if (e.topModel) {
+      model.textContent = e.topModel;
+    } else {
+      model.textContent = "要確認";
+      model.classList.add("needs-check");
+    }
+    row.append(model);
+
+    const score = document.createElement("td");
+    score.className = "pricing-num";
+    if (e.score === null || e.score === undefined || e.score === "") {
+      score.textContent = "要確認";
+      score.classList.add("needs-check");
+    } else {
+      score.textContent = String(e.score);
+    }
+    row.append(score);
+
+    const asOf = document.createElement("td");
+    asOf.textContent = e.asOf || "—";
+    row.append(asOf);
+
+    const src = document.createElement("td");
+    if (e.sourceUrl) {
+      const link = document.createElement("a");
+      link.href = e.sourceUrl;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.textContent = "出典";
+      src.append(link);
+    } else {
+      src.textContent = "—";
+    }
+    row.append(src);
+
+    tbody.append(row);
+  });
+
+  table.append(thead, tbody);
+  sotaTable.replaceChildren(table);
+}
+
+function renderApp(newsData, mediaData, officialData, signalData, pricing, sota) {
   today = newsData.generatedDate || mediaData.generatedDate || officialData.generatedDate || signalData.generatedDate;
   categories = newsData.categories || [];
   mediaItems = mediaData.items || [];
@@ -781,6 +876,7 @@ function renderApp(newsData, mediaData, officialData, signalData, pricing) {
   officialDataVendors = officialData.vendors || [];
   aiSignals = signalData.items || [];
   pricingData = pricing || { models: [] };
+  sotaData = sota || { entries: [] };
   todayLabel.textContent = formatFullDate(today);
   freshnessLabel.textContent = "自動収集中";
   freshnessLabel.classList.remove("error");
@@ -789,6 +885,7 @@ function renderApp(newsData, mediaData, officialData, signalData, pricing) {
   renderMediaRadar();
   renderPriority();
   renderPricing();
+  renderSota();
   setActiveTab(document.querySelector(".tab.active")?.dataset.tab || "all");
 }
 
@@ -817,14 +914,15 @@ async function loadJson(path, fallback) {
 
 async function loadAllData() {
   freshnessLabel.textContent = "読み込み中";
-  const [newsData, mediaData, officialData, signalData, pricing] = await Promise.all([
+  const [newsData, mediaData, officialData, signalData, pricing, sota] = await Promise.all([
     loadJson(dataPath),
     loadJson(mediaPath, { generatedDate: "", items: [] }),
     loadJson(officialPath, { generatedDate: "", vendors: [], items: [] }),
     loadJson(signalPath, { generatedDate: "", items: [] }),
-    loadJson(pricingPath, { models: [] })
+    loadJson(pricingPath, { models: [] }),
+    loadJson(sotaPath, { entries: [] })
   ]);
-  return [newsData, mediaData, officialData, signalData, pricing];
+  return [newsData, mediaData, officialData, signalData, pricing, sota];
 }
 
 tabs.forEach((tab) => {
@@ -959,8 +1057,8 @@ runUpdate.addEventListener("click", async () => {
 
     const promoted = result.summary?.promoted?.promoted ?? 0;
     freshnessLabel.textContent = `更新完了 ${promoted}件`;
-    const [newsData, mediaData, officialData, signalData, pricing] = await loadAllData();
-    renderApp(newsData, mediaData, officialData, signalData, pricing);
+    const [newsData, mediaData, officialData, signalData, pricing, sota] = await loadAllData();
+    renderApp(newsData, mediaData, officialData, signalData, pricing, sota);
   } catch (error) {
     console.error(error);
     freshnessLabel.textContent = "取得失敗";
@@ -972,5 +1070,5 @@ runUpdate.addEventListener("click", async () => {
 });
 
 loadAllData()
-  .then(([newsData, mediaData, officialData, signalData, pricing]) => renderApp(newsData, mediaData, officialData, signalData, pricing))
+  .then(([newsData, mediaData, officialData, signalData, pricing, sota]) => renderApp(newsData, mediaData, officialData, signalData, pricing, sota))
   .catch(renderLoadError);

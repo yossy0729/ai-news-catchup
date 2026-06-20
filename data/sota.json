@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-06-20",
+  "note": "SOTA（最高性能）は各 sourceUrl のリーダーボードで確認し、topModel / score / asOf を更新してください（誤値防止のため未確認は「要確認」と表示）。数値はベンチマークと指標の組で初めて意味を持ちます。",
+  "entries": [
+    {
+      "task": "LLM総合知識",
+      "benchmark": "MMLU-Pro",
+      "metric": "正解率 (%)",
+      "topModel": null,
+      "score": null,
+      "asOf": null,
+      "sourceUrl": "https://paperswithcode.com/sota/multi-task-language-understanding-on-mmlu-pro",
+      "verified": false
+    },
+    {
+      "task": "大学院レベル推論",
+      "benchmark": "GPQA Diamond",
+      "metric": "正解率 (%)",
+      "topModel": null,
+      "score": null,
+      "asOf": null,
+      "sourceUrl": "https://paperswithcode.com/dataset/gpqa",
+      "verified": false
+    },
+    {
+      "task": "ソフトウェア課題解決",
+      "benchmark": "SWE-bench Verified",
+      "metric": "解決率 (%)",
+      "topModel": null,
+      "score": null,
+      "asOf": null,
+      "sourceUrl": "https://www.swebench.com/",
+      "verified": false
+    },
+    {
+      "task": "数学",
+      "benchmark": "AIME 2025",
+      "metric": "正解率 (%)",
+      "topModel": null,
+      "score": null,
+      "asOf": null,
+      "sourceUrl": "https://matharena.ai/",
+      "verified": false
+    },
+    {
+      "task": "物体検出",
+      "benchmark": "COCO test-dev",
+      "metric": "box AP",
+      "topModel": null,
+      "score": null,
+      "asOf": null,
+      "sourceUrl": "https://paperswithcode.com/sota/object-detection-on-coco",
+      "verified": false
+    },
+    {
+      "task": "画像分類",
+      "benchmark": "ImageNet",
+      "metric": "Top-1 (%)",
+      "topModel": null,
+      "score": null,
+      "asOf": null,
+      "sourceUrl": "https://paperswithcode.com/sota/image-classification-on-imagenet",
+      "verified": false
+    }
+  ]
+}
