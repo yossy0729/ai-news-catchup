@@ -1,39 +1,42 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-06-20",
+  "asOf": "2026-06-21",
   "currency": "USD",
   "unit": "per 1M tokens",
-  "note": "価格はサンプル枠です。各 sourceUrl の公式pricingページで確認し、inputPer1M / outputPer1M / asOf を更新してください（誤値防止のため未確認は null=「要確認」と表示されます）。",
+  "note": "APIトークン単価（標準モード・100万トークンあたり・USD）。OpenAIはバッチ-50%/データレジデンシー+10%の別モードあり。OpenAIの標準料金はコンテキスト≤270Kに適用。未記入は「要確認」表示。サブスク料金(Claude Free/Pro/Max等)はAPI単価ではないため本表の対象外。Geminiは有料枠の値で、3.1 Pro等はプロンプト>200Kで上位料金（入力$4/出力$18等）、表記は≤200K標準。cachedInputPer1Mはキャッシュ入力単価（将来列）。",
   "models": [
     {
       "vendor": "OpenAI",
-      "model": "gpt-5.4",
-      "inputPer1M": null,
-      "outputPer1M": null,
-      "context": "256K",
-      "asOf": null,
+      "model": "GPT-5.5",
+      "inputPer1M": 5.00,
+      "cachedInputPer1M": 0.50,
+      "outputPer1M": 30.00,
+      "context": "標準≤270K",
+      "asOf": "2026-06-21",
       "sourceUrl": "https://openai.com/api/pricing/",
-      "verified": false
+      "verified": true
     },
     {
       "vendor": "OpenAI",
-      "model": "gpt-5.4-mini",
-      "inputPer1M": null,
-      "outputPer1M": null,
-      "context": "128K",
-      "asOf": null,
+      "model": "GPT-5.4",
+      "inputPer1M": 2.50,
+      "cachedInputPer1M": 0.25,
+      "outputPer1M": 15.00,
+      "context": "標準≤270K",
+      "asOf": "2026-06-21",
       "sourceUrl": "https://openai.com/api/pricing/",
-      "verified": false
+      "verified": true
     },
     {
       "vendor": "OpenAI",
-      "model": "gpt-5.4-nano",
-      "inputPer1M": null,
-      "outputPer1M": null,
-      "context": "128K",
-      "asOf": null,
+      "model": "GPT-5.4 mini",
+      "inputPer1M": 0.75,
+      "cachedInputPer1M": 0.075,
+      "outputPer1M": 4.50,
+      "context": "標準≤270K",
+      "asOf": "2026-06-21",
       "sourceUrl": "https://openai.com/api/pricing/",
-      "verified": false
+      "verified": true
     },
     {
       "vendor": "Anthropic",
@@ -67,13 +70,36 @@
     },
     {
       "vendor": "Google",
-      "model": "Gemini (最新)",
-      "inputPer1M": null,
-      "outputPer1M": null,
+      "model": "Gemini 3.1 Pro",
+      "inputPer1M": 2.00,
+      "cachedInputPer1M": 0.20,
+      "outputPer1M": 12.00,
       "context": "1M",
-      "asOf": null,
-      "sourceUrl": "https://ai.google.dev/pricing",
-      "verified": false
+      "asOf": "2026-06-21",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
+      "verified": true
+    },
+    {
+      "vendor": "Google",
+      "model": "Gemini 3.5 Flash",
+      "inputPer1M": 1.50,
+      "cachedInputPer1M": 0.15,
+      "outputPer1M": 9.00,
+      "context": "1M",
+      "asOf": "2026-06-21",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
+      "verified": true
+    },
+    {
+      "vendor": "Google",
+      "model": "Gemini 3.1 Flash-Lite",
+      "inputPer1M": 0.25,
+      "cachedInputPer1M": 0.025,
+      "outputPer1M": 1.50,
+      "context": "1M",
+      "asOf": "2026-06-21",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
+      "verified": true
     }
   ]
 }
