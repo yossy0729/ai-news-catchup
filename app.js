@@ -137,6 +137,27 @@ function formatDate(value) {
   }).format(date);
 }
 
+function hoursSince(publishedAt) {
+  if (!publishedAt) return Infinity;
+  const time = new Date(publishedAt).getTime();
+  if (Number.isNaN(time)) return Infinity;
+  return (Date.now() - time) / 3_600_000;
+}
+
+// 公開からの経過を「◯時間前 / ◯日前」で表示。publishedAt が無ければ空（呼び出し側で日付にフォールバック）。
+function relativeTime(publishedAt) {
+  const hours = hoursSince(publishedAt);
+  if (!Number.isFinite(hours)) return "";
+  if (hours < 1) return "たった今";
+  if (hours < 24) return `${Math.round(hours)}時間前`;
+  const days = Math.floor(hours / 24);
+  return `${days}日前`;
+}
+
+function isFreshItem(item) {
+  return hoursSince(item.publishedAt) < 24;
+}
+
 function formatFullDate(value) {
   if (!value) return "----";
   const date = new Date(`${value}T00:00:00+09:00`);
@@ -266,9 +287,12 @@ function mediaSort(a, b) {
 
 function chooseVisibleMediaItems(items) {
   const sorted = [...items].sort(mediaSort);
-  const important = sorted.filter((item) => Number(item.relevanceScore || 0) >= 2);
-  const count = Math.min(Math.max(3, important.length), 4, sorted.length);
-  return sorted.slice(0, count);
+  // 24時間以内の新着を最優先。無いカテゴリは直近(24〜72h)で補完してスカスカを避ける。
+  const fresh = sorted.filter(isFreshItem);
+  const pool = fresh.length ? fresh : sorted;
+  const important = pool.filter((item) => Number(item.relevanceScore || 0) >= 2);
+  const count = Math.min(Math.max(3, important.length), 4, pool.length);
+  return pool.slice(0, count);
 }
 
 function tickerLaneMatches(item, lane) {
@@ -372,13 +396,15 @@ function renderMediaRadar() {
     .sort(mediaSort);
 
   if (mediaFreshness) {
-    const todayCount = mediaItems.filter((item) => item.date === today).length;
-    const recentCount = mediaItems.length;
-    mediaFreshness.textContent = todayCount
-      ? `本日公開 ${todayCount}件 / 収集済み ${recentCount}件`
-      : `収集済み ${recentCount}件`;
-    mediaFreshness.classList.toggle("stale", recentCount === 0);
-    mediaFreshness.classList.toggle("good", recentCount > 0);
+    const freshCount = mediaItems.filter(isFreshItem).length;
+    const totalCount = mediaItems.length;
+    mediaFreshness.textContent = freshCount
+      ? `24時間以内 ${freshCount}件 / 直近72時間 ${totalCount}件`
+      : totalCount
+        ? `直近72時間 ${totalCount}件（24時間以内の新着なし）`
+        : "速報なし";
+    mediaFreshness.classList.toggle("stale", totalCount === 0);
+    mediaFreshness.classList.toggle("good", totalCount > 0);
   }
 
   if (!filtered.length) {
@@ -439,9 +465,16 @@ function renderMediaRadar() {
     if (visibleItems.length === 0) {
       const empty = document.createElement("div");
       empty.className = "media-empty-note";
-      empty.textContent = "本日のFDE関連ニュースは未検出です。検出され次第ここに表示します。";
+      empty.textContent = "24時間以内の新着ニュースは未検出です。検出され次第ここに表示します。";
       list.append(empty);
     } else {
+      // 新着(24h)が無く直近(24〜72h)で補完したカテゴリは、その旨を小さく明示する。
+      if (!visibleItems.some(isFreshItem)) {
+        const note = document.createElement("div");
+        note.className = "media-stale-note";
+        note.textContent = "24時間以内の新着なし・直近72時間の注目を表示";
+        list.append(note);
+      }
       visibleItems.forEach((item) => list.append(renderMediaCard(item)));
     }
 
@@ -460,9 +493,23 @@ function renderMediaCard(item) {
   card.dataset.region = item.region || "";
 
   fragment.querySelector(".media-category").textContent = item.category;
-  fragment.querySelector(".media-source").textContent = `${item.source} / ${formatDate(item.date)}`;
+  const relative = relativeTime(item.publishedAt);
+  fragment.querySelector(".media-source").textContent = relative
+    ? `${item.source} ・ ${relative}`
+    : `${item.source} / ${formatDate(item.date)}`;
+  if (relative) {
+    fragment.querySelector(".media-source").title = `${item.source} / ${formatFullDate(item.date)}`;
+  }
   fragment.querySelector("h3").textContent = item.title;
   fragment.querySelector("p").textContent = item.summary;
+
+  if (isFreshItem(item)) {
+    card.classList.add("is-fresh");
+    const chip = document.createElement("span");
+    chip.className = "media-fresh";
+    chip.textContent = "新着";
+    fragment.querySelector(".media-meta").prepend(chip);
+  }
 
   return card;
 }

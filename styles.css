@@ -1851,6 +1851,27 @@ body {
   white-space: nowrap;
 }
 
+.media-fresh {
+  flex: 0 0 auto;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #16a34a;
+  color: #fff;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.media-stale-note {
+  margin-bottom: 2px;
+  padding: 4px 9px;
+  border-radius: 8px;
+  background: #f4f1e8;
+  color: #6b6553;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
 .media-card h3 {
   display: -webkit-box;
   margin-bottom: 0;

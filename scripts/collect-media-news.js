@@ -7,8 +7,11 @@ const rawArgs = process.argv.slice(2);
 const args = new Set(rawArgs);
 const write = args.has("--write");
 const dryRun = args.has("--dry-run");
-const limit = Number(getArg("--limit=", "45"));
+const limit = Number(getArg("--limit=", "50"));
 const perSource = Number(getArg("--per-source=", "12"));
+// 速報の鮮度上限（時間）。これを超える記事は「速報プール」に載せない。
+// 24h以内=fresh / 24〜72h=recent。空カテゴリは recent で補完する設計（app.js側）。
+const maxAgeHours = Number(getArg("--max-age-hours=", "72"));
 const outputPath = path.join(root, "data", "media-news.json");
 
 const categories = [
@@ -45,6 +48,24 @@ const directFeeds = [
     url: "https://japan.cnet.com/rss/index.rdf",
     priority: 78,
     region: "日本"
+  },
+  {
+    name: "ASCII.jp",
+    url: "https://ascii.jp/rss.xml",
+    priority: 80,
+    region: "日本"
+  },
+  {
+    name: "Impress Watch",
+    url: "https://www.watch.impress.co.jp/data/rss/1.0/ipw/feed.rdf",
+    priority: 74,
+    region: "日本"
+  },
+  {
+    name: "TechCrunch (AI)",
+    url: "https://techcrunch.com/category/artificial-intelligence/feed/",
+    priority: 82,
+    region: "海外"
   }
 ];
 
@@ -300,6 +321,11 @@ function parseRss(xml, feed) {
 
     if (!title || !url || !publishedAt || relevance === 0) continue;
 
+    // 鮮度の厳密化: 公開からの経過時間で判定し、上限を超えた古い記事は速報から除外する。
+    const ageHours = (Date.now() - publishedAtDate.getTime()) / 3_600_000;
+    if (ageHours < 0 || ageHours > maxAgeHours) continue;
+    const freshness = ageHours < 24 ? "fresh" : "recent";
+
     parsed.push({
       id: crypto.createHash("sha256").update(`${title}|${url}`).digest("hex").slice(0, 16),
       title,
@@ -313,7 +339,8 @@ function parseRss(xml, feed) {
       region: feed.region,
       date,
       publishedAt,
-      freshness: date === todayInTokyo() ? "today" : "recent",
+      freshness,
+      ageHours: Math.round(ageHours * 10) / 10,
       relevanceScore: relevance,
       priority: feed.priority + Math.min(relevance * 3, 12),
       dateVerification: {
@@ -382,7 +409,8 @@ async function collect() {
     schemaVersion: 2,
     generatedDate: todayInTokyo(),
     sourcePolicy:
-      "直接RSSで元記事URLと公開日時を確認できる媒体のみを速報対象にする。Google News RSSの検出時刻は元記事公開日と一致しないため、日付検証なしでは掲載しない。",
+      `直接RSSで元記事URLと公開日時を確認できる固定・厳選プールの2次情報媒体のみを速報対象にする。公開から${maxAgeHours}時間以内に限定し、24時間以内をfresh・24〜72時間をrecentとして区別する（空カテゴリはrecentで補完）。Google News RSSの検出時刻は元記事公開日と一致しないため、日付検証なしでは掲載しない。`,
+    freshnessPolicy: { maxAgeHours, freshWithinHours: 24 },
     categories: categories.map(({ id, label, accent }) => ({ id, label, accent })),
     items,
     errors
