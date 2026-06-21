@@ -23,6 +23,9 @@ data/ai-signals.json
 data/candidates.json
 data/review.json
 
+# --- 外部APIキャッシュ（再取得可能。sota.jsonは履歴保存のため管理対象に残す） ---
+data/cache/
+
 # --- ツール／ブラウザの一時データ ---
 .chrome-profile-shot/
 .agents/

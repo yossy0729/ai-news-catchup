@@ -165,6 +165,17 @@ function main() {
     runStep("summarize-review", "scripts/summarize-review.js", summarizeArgs);
   }
   runStep("promote-review", "scripts/promote-review.js", promoteArgs);
+
+  // SOTA収集は外部API(paperswithcode.co)依存のため、失敗してもニュース更新は止めない。
+  // 1位交代時のみ前回値へ退避するので毎日実行で履歴が自然に蓄積する。
+  try {
+    runStep("collect-sota", "scripts/collect-sota.js", dryRun ? [] : ["--write"]);
+  } catch (error) {
+    const skip = `collect-sota skipped: ${error.message}`;
+    console.error(skip);
+    appendLog(skip);
+  }
+
   runStep("validate-data", "scripts/validate-data.js", []);
 
   const durationMs = Date.now() - startedAt.getTime();

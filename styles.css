@@ -740,6 +740,39 @@ h1 {
   border-color: var(--green);
 }
 
+.sota-search-row {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 10px;
+}
+
+.sota-search {
+  flex: 1;
+  min-width: 0;
+  padding: 7px 12px;
+  font-size: 0.85rem;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.sota-search:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+.sota-search-clear {
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
 .pricing-note {
   margin: 4px 0 12px;
   font-size: 0.8rem;
@@ -863,6 +896,31 @@ h1 {
   content: "•";
   margin-right: 6px;
   color: var(--amber);
+}
+
+/* SOTA: PwCに数値が無くリンクのみの分野（網羅のため掲載） */
+.pricing-table tr.sota-nodata > td {
+  background: var(--surface-soft);
+  color: var(--muted);
+}
+
+/* SOTA: 2025年より前の古い記録は時点を控えめに（鮮度の注意喚起） */
+.pricing-table .sota-old {
+  color: var(--amber);
+  font-weight: 600;
+}
+
+/* SOTA: 指標の向き矢印(↑高いほど良い / ↓低いほど良い) */
+.pricing-table .sota-dir {
+  color: var(--muted);
+  font-weight: 700;
+  cursor: help;
+}
+
+/* SOTA: 出典でリンク先が無い項目（飛べないグレー文字で示す） */
+.pricing-table .sota-nolink {
+  color: var(--muted);
+  opacity: 0.5;
 }
 
 .category-column .category-group {

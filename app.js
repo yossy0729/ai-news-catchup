@@ -8,6 +8,7 @@ let officialShownUrls = new Set();
 let aiSignals = [];
 let pricingData = { models: [] };
 let sotaData = { entries: [] };
+let sotaPresets = [];
 
 const dataPath = "data/news.json";
 const mediaPath = "data/media-news.json";
@@ -15,6 +16,7 @@ const officialPath = "data/official-news.json";
 const signalPath = "data/ai-signals.json";
 const pricingPath = "data/pricing.json";
 const sotaPath = "data/sota.json";
+const sotaPresetsPath = "data/sota-presets.json";
 const categoryGrid = document.querySelector("#categoryGrid");
 const categoryTemplate = document.querySelector("#categoryTemplate");
 const newsTemplate = document.querySelector("#newsTemplate");
@@ -40,6 +42,8 @@ const sotaTable = document.querySelector("#sotaTable");
 const sotaNote = document.querySelector("#sotaNote");
 const sotaFreshness = document.querySelector("#sotaFreshness");
 const sotaTabs = document.querySelector("#sotaTabs");
+const sotaSearch = document.querySelector("#sotaSearch");
+const sotaSearchClear = document.querySelector("#sotaSearchClear");
 const tickerTrack = document.querySelector("#tickerTrack");
 const tickerToggle = document.querySelector("#tickerToggle");
 const tickerLaneButtons = Array.from(document.querySelectorAll(".ticker-lane"));
@@ -52,15 +56,17 @@ let activeTab = "all";
 let activeQuery = "";
 let latestSourceSearch = null;
 let activeTickerLane = "core";
-let activeSotaDomain = "all";
+let activeSotaDomain = "preset"; // 既定は前線プリセット表示
+let activeSotaQuery = "";
 
-// SOTAドメインの表示順とラベル。sota.json の domain キーと対応。
+// SOTAドメイン（PwCのarea）の表示順とラベル。sota.json の domain キーと対応。
 const sotaDomainLabels = {
-  llm: "言語・推論",
-  vision: "画像・映像",
-  audio: "音声",
-  multimodal: "マルチモーダル",
-  agent: "コード・エージェント"
+  General: "基盤・エージェント",
+  Language: "言語",
+  Vision: "画像",
+  Video: "動画",
+  Audio: "音声",
+  Other: "その他"
 };
 
 const officialVendors = [
@@ -909,32 +915,77 @@ function sotaImprovementText(e) {
   return `${prefix}${Math.abs(improvement).toFixed(2)}pt${period ? ` / ${period}ぶりに更新` : ""}`;
 }
 
+// 検索の正規化。揺らぎ吸収はこの程度に留める（小文字化のみ）。
+function normalizeSotaText(value) {
+  return String(value || "").toLowerCase();
+}
+
+// 端的なキーワード検索。複数語はAND。研究名(日英)・ベンチ名・キーワードを対象。
+function sotaMatches(entry, query) {
+  const q = normalizeSotaText(query).trim();
+  if (!q) return true;
+  const hay = normalizeSotaText(
+    [entry.task, entry.taskEn, entry.benchmark, ...(entry.keywords || [])].join(" ")
+  );
+  return q.split(/\s+/).every((tok) => hay.includes(tok));
+}
+
+// 表示順: データあり→なし、各群で時点の新しい順。
+function sortSotaEntries(list) {
+  return [...list].sort((a, b) => {
+    if (!!b.hasData !== !!a.hasData) return a.hasData ? -1 : 1;
+    const da = parseSotaDate(a.asOf)?.getTime() || 0;
+    const db = parseSotaDate(b.asOf)?.getTime() || 0;
+    if (db !== da) return db - da;
+    return String(a.task).localeCompare(String(b.task));
+  });
+}
+
+// プリセットslugの順序を保って存在するentryだけ返す。
+function getSotaPresetEntries(allEntries) {
+  const bySlug = new Map(allEntries.map((e) => [e.slug, e]));
+  return sotaPresets.map((slug) => bySlug.get(slug)).filter(Boolean);
+}
+
 function renderSotaTabs(allEntries) {
   if (!sotaTabs) return;
 
-  // データに存在するドメインを、sotaDomainLabels の定義順で抽出。
   const present = Object.keys(sotaDomainLabels).filter((key) =>
     allEntries.some((e) => e.domain === key)
   );
-  const tabKeys = ["all", ...present];
+  const presetCount = getSotaPresetEntries(allEntries).length;
+  const tabKeys = [...(presetCount ? ["preset"] : []), ...present, "all"];
 
-  // 現在の選択が消えた場合は all に戻す。
-  if (activeSotaDomain !== "all" && !present.includes(activeSotaDomain)) {
-    activeSotaDomain = "all";
+  // 選択中のタブが消えた場合の復帰。
+  if (
+    activeSotaDomain !== "all" &&
+    activeSotaDomain !== "preset" &&
+    !present.includes(activeSotaDomain)
+  ) {
+    activeSotaDomain = presetCount ? "preset" : "all";
   }
+
+  const labelFor = (key) =>
+    key === "preset" ? "注目" : key === "all" ? "すべて" : sotaDomainLabels[key];
+  const countFor = (key) =>
+    key === "preset"
+      ? presetCount
+      : key === "all"
+        ? allEntries.length
+        : allEntries.filter((e) => e.domain === key).length;
 
   sotaTabs.replaceChildren(
     ...tabKeys.map((key) => {
       const button = document.createElement("button");
       button.type = "button";
       button.className = "sota-tab";
-      button.classList.toggle("active", key === activeSotaDomain);
-      const count = key === "all"
-        ? allEntries.length
-        : allEntries.filter((e) => e.domain === key).length;
-      button.textContent = `${key === "all" ? "すべて" : sotaDomainLabels[key]} (${count})`;
+      button.classList.toggle("active", key === activeSotaDomain && !activeSotaQuery.trim());
+      button.textContent = `${labelFor(key)} (${countFor(key)})`;
       button.addEventListener("click", () => {
         activeSotaDomain = key;
+        // タブと検索は排他。タブ選択で検索を解除。
+        if (sotaSearch) sotaSearch.value = "";
+        activeSotaQuery = "";
         renderSota();
       });
       return button;
@@ -948,25 +999,41 @@ function renderSota() {
   const allEntries = Array.isArray(sotaData.entries) ? sotaData.entries : [];
   renderSotaTabs(allEntries);
 
-  const entries = activeSotaDomain === "all"
-    ? allEntries
-    : allEntries.filter((e) => e.domain === activeSotaDomain);
+  // 検索中はタブを無視して全分野から横断検索（あなたの①の方針）。
+  let entries;
+  let scopeLabel;
+  const query = activeSotaQuery.trim();
+  if (query) {
+    entries = sortSotaEntries(allEntries.filter((e) => sotaMatches(e, query)));
+    scopeLabel = `「${query}」の検索結果`;
+  } else if (activeSotaDomain === "preset") {
+    entries = getSotaPresetEntries(allEntries); // プリセットは重要度順を維持
+    scopeLabel = "前線プリセット（時代の注目分野）";
+  } else if (activeSotaDomain === "all") {
+    entries = sortSotaEntries(allEntries);
+    scopeLabel = "全分野";
+  } else {
+    entries = sortSotaEntries(allEntries.filter((e) => e.domain === activeSotaDomain));
+    scopeLabel = sotaDomainLabels[activeSotaDomain] || "分野別";
+  }
 
   if (sotaNote) {
     const asOf = sotaData.asOf ? `（基準: ${sotaData.asOf}時点）` : "";
-    sotaNote.textContent = `${sotaData.note || "リーダーボードで要確認"}${asOf}`;
+    sotaNote.textContent = `${scopeLabel}・出典: paperswithcode.co${asOf}`;
   }
   if (sotaFreshness) {
-    const verifiedCount = entries.filter((e) => e.verified).length;
-    sotaFreshness.textContent = `実値 ${verifiedCount} / 全 ${entries.length}`;
-    sotaFreshness.classList.toggle("good", verifiedCount > 0);
-    sotaFreshness.classList.toggle("stale", verifiedCount === 0);
+    const withData = entries.filter((e) => e.hasData).length;
+    sotaFreshness.textContent = `数値あり ${withData} / ${entries.length}`;
+    sotaFreshness.classList.toggle("good", withData > 0);
+    sotaFreshness.classList.toggle("stale", withData === 0);
   }
 
   if (!entries.length) {
     const empty = document.createElement("div");
     empty.className = "empty-note";
-    empty.textContent = "SOTAデータがありません。data/sota.json を確認してください。";
+    empty.textContent = query
+      ? `「${query}」に一致する研究分野は見つかりませんでした。別のキーワードでお試しください。`
+      : "SOTAデータがありません。data/sota.json を確認してください。";
     sotaTable.replaceChildren(empty);
     return;
   }
@@ -976,7 +1043,7 @@ function renderSota() {
 
   const thead = document.createElement("thead");
   const headRow = document.createElement("tr");
-  ["タスク", "ベンチマーク", "指標", "トップモデル", "スコア", "時点", "出典"].forEach((label) => {
+  ["研究分野", "ベンチマーク", "指標", "トップモデル", "スコア", "時点", "出典"].forEach((label) => {
     const th = document.createElement("th");
     th.textContent = label;
     headRow.append(th);
@@ -988,25 +1055,39 @@ function renderSota() {
     const hasScore = typeof e.score === "number";
     const hasPrev = !!e.prevTopModel;
 
-    // 今回(上段)の行。前回がある場合、共有列(タスク/ベンチ/指標/出典)は2行ぶち抜き。
+    // 今回(上段)の行。前回がある場合、共有列(分野/ベンチ/指標/出典)は2行ぶち抜き。
     const row = document.createElement("tr");
     if (hasPrev) row.classList.add("sota-cur");
-    if (e.topModel) row.classList.add("sota-now"); // 実値のある今回SOTA行を強調
+    if (e.hasData) row.classList.add("sota-now");
+    if (!e.hasData) row.classList.add("sota-nodata");
 
-    [e.task, e.benchmark, e.metric].forEach((text) => {
+    [e.task, e.benchmark || "—"].forEach((text) => {
       const td = document.createElement("td");
-      td.textContent = text || "—";
+      td.textContent = text;
       if (hasPrev) td.rowSpan = 2;
       row.append(td);
     });
 
-    // モデル列: 実値があればモデル名。無ければ「出典で確認」(リンク行)。
+    // 指標列: 向き(↑高いほど良い / ↓低いほど良い)を併記。
+    const metricTd = document.createElement("td");
+    metricTd.textContent = e.metric || "—";
+    if (e.hasData && e.metric) {
+      const dir = document.createElement("span");
+      dir.className = "sota-dir";
+      dir.textContent = e.higherIsBetter === false ? " ↓" : " ↑";
+      dir.title = e.higherIsBetter === false ? "数値が低いほど良い" : "数値が高いほど良い";
+      metricTd.append(dir);
+    }
+    if (hasPrev) metricTd.rowSpan = 2;
+    row.append(metricTd);
+
+    // モデル列: データありはモデル名、無ければ「データ未登録」。
     const model = document.createElement("td");
     if (e.topModel) {
       model.textContent = e.topModel;
       model.classList.add("sota-emph");
     } else {
-      model.textContent = "出典で確認";
+      model.textContent = "データ未登録";
       model.classList.add("sota-linkonly");
     }
     row.append(model);
@@ -1028,25 +1109,46 @@ function renderSota() {
     }
     row.append(score);
 
+    // 時点列: 2025年より前は鮮度低として控えめ表示。
     const asOf = document.createElement("td");
-    asOf.textContent = e.asOf || "—";
-    if (e.asOf) asOf.classList.add("sota-emph");
-    if (!e.asOf) asOf.classList.add("sota-linkonly");
+    if (e.asOf) {
+      asOf.textContent = e.asOf;
+      asOf.classList.add("sota-emph");
+      const year = Number(String(e.asOf).slice(0, 4));
+      if (year && year < 2025) asOf.classList.add("sota-old");
+    } else {
+      asOf.textContent = "—";
+      asOf.classList.add("sota-linkonly");
+    }
     row.append(asOf);
 
-    // 出典列(2行ぶち抜き)。
+    // 出典列(2行ぶち抜き): Paper / Code / PwC(掲載元)。
+    // リンクが無いものはダッシュを付けず、飛べないグレー文字で示す。
     const src = document.createElement("td");
     if (hasPrev) src.rowSpan = 2;
-    if (e.sourceUrl) {
-      const link = document.createElement("a");
-      link.href = e.sourceUrl;
-      link.target = "_blank";
-      link.rel = "noreferrer";
-      link.textContent = e.sourceName || "出典";
-      src.append(link);
-    } else {
-      src.textContent = "—";
-    }
+    const makeSrcNode = (url, label, hint) => {
+      if (url) {
+        const link = document.createElement("a");
+        link.href = url;
+        link.target = "_blank";
+        link.rel = "noreferrer";
+        link.textContent = label;
+        if (hint) link.title = hint;
+        return link;
+      }
+      const span = document.createElement("span");
+      span.className = "sota-nolink";
+      span.textContent = label;
+      return span;
+    };
+    [
+      makeSrcNode(e.paperUrl, "Paper"),
+      makeSrcNode(e.codeUrl, "Code"),
+      makeSrcNode(e.pwcUrl, "PwC", "Papers with Code（SOTAの掲載元）")
+    ].forEach((node, i) => {
+      if (i > 0) src.append(document.createTextNode(" / "));
+      src.append(node);
+    });
     row.append(src);
 
     tbody.append(row);
@@ -1093,15 +1195,13 @@ function renderMetricsTicker() {
     verified.forEach((e, index) => {
       const item = document.createElement("span");
       item.className = "ticker-item ticker-blue";
-      const tag = document.createElement("em");
-      tag.textContent = "SOTA";
       const headline = document.createElement("strong");
       headline.append(document.createTextNode(`${e.task}: ${e.topModel} `));
       const score = document.createElement("b");
       score.className = "ticker-num";
       score.textContent = e.score;
       headline.append(score);
-      item.append(tag, headline);
+      item.append(headline);
       fragment.append(item);
 
       if (index < verified.length - 1) {
@@ -1183,7 +1283,7 @@ function setActivePage(name) {
   if (name === "official") renderOfficialTicker();
 }
 
-function renderApp(newsData, mediaData, officialData, signalData, pricing, sota) {
+function renderApp(newsData, mediaData, officialData, signalData, pricing, sota, presets) {
   today = newsData.generatedDate || mediaData.generatedDate || officialData.generatedDate || signalData.generatedDate;
   categories = newsData.categories || [];
   mediaItems = mediaData.items || [];
@@ -1193,6 +1293,7 @@ function renderApp(newsData, mediaData, officialData, signalData, pricing, sota)
   aiSignals = signalData.items || [];
   pricingData = pricing || { models: [] };
   sotaData = sota || { entries: [] };
+  sotaPresets = (presets && Array.isArray(presets.slugs)) ? presets.slugs : [];
   todayLabel.textContent = formatFullDate(today);
   freshnessLabel.textContent = "自動収集中";
   freshnessLabel.classList.remove("error");
@@ -1231,15 +1332,16 @@ async function loadJson(path, fallback) {
 
 async function loadAllData() {
   freshnessLabel.textContent = "読み込み中";
-  const [newsData, mediaData, officialData, signalData, pricing, sota] = await Promise.all([
+  const [newsData, mediaData, officialData, signalData, pricing, sota, presets] = await Promise.all([
     loadJson(dataPath),
     loadJson(mediaPath, { generatedDate: "", items: [] }),
     loadJson(officialPath, { generatedDate: "", vendors: [], items: [] }),
     loadJson(signalPath, { generatedDate: "", items: [] }),
     loadJson(pricingPath, { models: [] }),
-    loadJson(sotaPath, { entries: [] })
+    loadJson(sotaPath, { entries: [] }),
+    loadJson(sotaPresetsPath, { slugs: [] })
   ]);
-  return [newsData, mediaData, officialData, signalData, pricing, sota];
+  return [newsData, mediaData, officialData, signalData, pricing, sota, presets];
 }
 
 tabs.forEach((tab) => {
@@ -1256,6 +1358,20 @@ keywordSearch.addEventListener("input", () => {
   renderPriority();
   renderCategories(activeTab);
 });
+
+if (sotaSearch) {
+  sotaSearch.addEventListener("input", () => {
+    activeSotaQuery = sotaSearch.value;
+    renderSota();
+  });
+}
+if (sotaSearchClear) {
+  sotaSearchClear.addEventListener("click", () => {
+    if (sotaSearch) sotaSearch.value = "";
+    activeSotaQuery = "";
+    renderSota();
+  });
+}
 
 clearSearch.addEventListener("click", () => {
   keywordSearch.value = "";
@@ -1378,8 +1494,8 @@ runUpdate.addEventListener("click", async () => {
 
     const promoted = result.summary?.promoted?.promoted ?? 0;
     freshnessLabel.textContent = `更新完了 ${promoted}件`;
-    const [newsData, mediaData, officialData, signalData, pricing, sota] = await loadAllData();
-    renderApp(newsData, mediaData, officialData, signalData, pricing, sota);
+    const [newsData, mediaData, officialData, signalData, pricing, sota, presets] = await loadAllData();
+    renderApp(newsData, mediaData, officialData, signalData, pricing, sota, presets);
   } catch (error) {
     console.error(error);
     freshnessLabel.textContent = "取得失敗";
@@ -1391,5 +1507,5 @@ runUpdate.addEventListener("click", async () => {
 });
 
 loadAllData()
-  .then(([newsData, mediaData, officialData, signalData, pricing, sota]) => renderApp(newsData, mediaData, officialData, signalData, pricing, sota))
+  .then(([newsData, mediaData, officialData, signalData, pricing, sota, presets]) => renderApp(newsData, mediaData, officialData, signalData, pricing, sota, presets))
   .catch(renderLoadError);

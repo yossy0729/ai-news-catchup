@@ -157,17 +157,22 @@
           <div class="section-title-row">
             <div>
               <p class="section-kicker">sota watch</p>
-              <h2>SOTAウォッチ（最新性能）</h2>
+              <h2>SOTAウォッチ（全研究分野の最新性能）</h2>
             </div>
             <span id="sotaFreshness" class="status-chip">参考</span>
           </div>
           <ul class="metric-legend">
-            <li><b>上段（緑）＝今回</b>：現在のSOTA（最高性能）のモデルとスコア</li>
-            <li><b>下段（灰）＝前回</b>：ひとつ前の記録。どれだけ伸びたかが分かる</li>
-            <li><b>改善幅</b>：前回から何ポイント・何年ぶりの更新か</li>
-            <li><b>出典で確認</b>：自動取得しにくい値は出典リンク先で確認</li>
+            <li><b>注目タブ</b>：いま情報価値が高い前線分野を厳選表示（既定）</li>
+            <li><b>検索</b>：全研究分野から横断検索（例: ロボット／時系列／音声合成）</li>
+            <li><b>上段（緑）＝今回 / 下段（灰）＝前回</b>：1位交代時に推移を表示</li>
+            <li><b>指標の ↑ / ↓</b>：↑は数値が高いほど良い、↓は低いほど良い</li>
+            <li><b>データ未登録</b>：出典(PwC)に数値が無い分野はリンクのみ掲載</li>
           </ul>
           <p id="sotaNote" class="pricing-note"></p>
+          <div class="sota-search-row">
+            <input id="sotaSearch" type="search" class="sota-search" placeholder="研究分野を検索（例: ロボット、時系列、音声合成）" aria-label="研究分野を検索" />
+            <button id="sotaSearchClear" type="button" class="sota-search-clear">クリア</button>
+          </div>
           <div id="sotaTabs" class="sota-tabs" role="tablist" aria-label="SOTAドメイン"></div>
           <div id="sotaTable" class="pricing-table-wrap" aria-live="polite"></div>
         </section>

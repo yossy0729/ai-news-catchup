@@ -1,0 +1,16 @@
+{
+  "_note": "前線プリセット = デフォルトで表示する『今この時代に情報価値が高い』研究分野。時代で見直す前提（数年前なら画像認識、今はエージェント）。slugは sota.json / sota-labels.json と対応。見直し時はこの配列を編集するだけでよい。",
+  "asOf": "2026-06",
+  "slugs": [
+    "agents",
+    "computer-use-agents",
+    "coding-agents",
+    "reasoning",
+    "world-knowledge",
+    "math",
+    "long-context",
+    "embedding-models",
+    "image-generation",
+    "safety-and-grounding"
+  ]
+}
