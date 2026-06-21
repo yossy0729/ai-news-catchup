@@ -752,6 +752,19 @@ h1 {
   max-width: 1150px;
 }
 
+.pricing-subnote {
+  margin: 0 0 8px;
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+/* 結合したベンダーセルはグループ中央に寄せて見やすく */
+.pricing-table td.pricing-vendor {
+  vertical-align: middle;
+  font-weight: 500;
+  border-right: 1px solid var(--line);
+}
+
 .pricing-table {
   width: 100%;
   border-collapse: collapse;

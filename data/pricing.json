@@ -41,32 +41,35 @@
     {
       "vendor": "Anthropic",
       "model": "Claude Opus 4.8",
-      "inputPer1M": null,
-      "outputPer1M": null,
-      "context": "500K",
-      "asOf": null,
-      "sourceUrl": "https://www.anthropic.com/pricing",
-      "verified": false
+      "inputPer1M": 5.00,
+      "cachedInputPer1M": 0.50,
+      "outputPer1M": 25.00,
+      "context": "1M",
+      "asOf": "2026-06-21",
+      "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verified": true
     },
     {
       "vendor": "Anthropic",
       "model": "Claude Sonnet 4.6",
-      "inputPer1M": null,
-      "outputPer1M": null,
-      "context": "500K",
-      "asOf": null,
-      "sourceUrl": "https://www.anthropic.com/pricing",
-      "verified": false
+      "inputPer1M": 3.00,
+      "cachedInputPer1M": 0.30,
+      "outputPer1M": 15.00,
+      "context": "1M",
+      "asOf": "2026-06-21",
+      "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verified": true
     },
     {
       "vendor": "Anthropic",
       "model": "Claude Haiku 4.5",
-      "inputPer1M": null,
-      "outputPer1M": null,
+      "inputPer1M": 1.00,
+      "cachedInputPer1M": 0.10,
+      "outputPer1M": 5.00,
       "context": "200K",
-      "asOf": null,
-      "sourceUrl": "https://www.anthropic.com/pricing",
-      "verified": false
+      "asOf": "2026-06-21",
+      "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verified": true
     },
     {
       "vendor": "Google",

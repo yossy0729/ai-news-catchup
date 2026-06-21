@@ -749,16 +749,24 @@ function renderPricing() {
   thead.append(headRow);
 
   const tbody = document.createElement("tbody");
-  models.forEach((m) => {
+  models.forEach((m, i) => {
     const row = document.createElement("tr");
     if (!m.verified) row.classList.add("is-unverified");
 
-    const cells = [m.vendor || "", m.model || ""];
-    cells.forEach((text) => {
-      const td = document.createElement("td");
-      td.textContent = text;
-      row.append(td);
-    });
+    // ベンダー列: 同一ベンダーの連続行は先頭だけ表示し rowSpan で結合する。
+    if (i === 0 || models[i - 1].vendor !== m.vendor) {
+      let span = 1;
+      while (i + span < models.length && models[i + span].vendor === m.vendor) span++;
+      const vendorTd = document.createElement("td");
+      vendorTd.textContent = m.vendor || "";
+      vendorTd.className = "pricing-vendor";
+      if (span > 1) vendorTd.rowSpan = span;
+      row.append(vendorTd);
+    }
+
+    const modelTd = document.createElement("td");
+    modelTd.textContent = m.model || "";
+    row.append(modelTd);
 
     const inputTd = document.createElement("td");
     inputTd.className = "pricing-num";
