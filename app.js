@@ -43,6 +43,9 @@ const sotaTabs = document.querySelector("#sotaTabs");
 const tickerTrack = document.querySelector("#tickerTrack");
 const tickerToggle = document.querySelector("#tickerToggle");
 const tickerLaneButtons = Array.from(document.querySelectorAll(".ticker-lane"));
+const pageTabs = Array.from(document.querySelectorAll(".page-tab"));
+const pageSections = Array.from(document.querySelectorAll(".page"));
+const metricsTickerTrack = document.querySelector("#metricsTickerTrack");
 
 let activeTab = "all";
 let activeQuery = "";
@@ -990,6 +993,49 @@ function renderSota() {
   sotaTable.replaceChildren(table);
 }
 
+// 指標タブのティッカー: 実値のあるSOTAのハイライトを流す。
+// （価格改定やSOTA順位交代の検知は将来機能。今は現値のハイライト表示。）
+function renderMetricsTicker() {
+  if (!metricsTickerTrack) return;
+
+  const verified = (sotaData.entries || []).filter((e) => typeof e.score === "number" && e.topModel);
+  if (!verified.length) {
+    metricsTickerTrack.textContent = "価格・SOTAの最新値は各表で確認できます。";
+    return;
+  }
+
+  const buildSegment = () => {
+    const fragment = document.createDocumentFragment();
+    verified.forEach((e, index) => {
+      const item = document.createElement("span");
+      item.className = "ticker-item ticker-blue";
+      const tag = document.createElement("em");
+      tag.textContent = "SOTA";
+      const headline = document.createElement("strong");
+      headline.textContent = `${e.task}: ${e.topModel} ${e.score}`;
+      item.append(tag, headline);
+      fragment.append(item);
+
+      if (index < verified.length - 1) {
+        const separator = document.createElement("span");
+        separator.className = "ticker-separator";
+        separator.textContent = "/";
+        fragment.append(separator);
+      }
+    });
+    return fragment;
+  };
+
+  metricsTickerTrack.replaceChildren(buildSegment(), buildSegment());
+}
+
+function setActivePage(name) {
+  const targetId = name === "metrics" ? "pageMetrics" : "pageToday";
+  pageTabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.page === name));
+  pageSections.forEach((section) => section.classList.toggle("active", section.id === targetId));
+  if (name === "metrics") renderMetricsTicker();
+}
+
 function renderApp(newsData, mediaData, officialData, signalData, pricing, sota) {
   today = newsData.generatedDate || mediaData.generatedDate || officialData.generatedDate || signalData.generatedDate;
   categories = newsData.categories || [];
@@ -1009,6 +1055,7 @@ function renderApp(newsData, mediaData, officialData, signalData, pricing, sota)
   renderPriority();
   renderPricing();
   renderSota();
+  renderMetricsTicker();
   setActiveTab(document.querySelector(".tab.active")?.dataset.tab || "all");
 }
 
@@ -1050,6 +1097,10 @@ async function loadAllData() {
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => setActiveTab(tab.dataset.tab));
+});
+
+pageTabs.forEach((tab) => {
+  tab.addEventListener("click", () => setActivePage(tab.dataset.page));
 });
 
 keywordSearch.addEventListener("input", () => {
