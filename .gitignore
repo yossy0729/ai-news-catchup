@@ -15,6 +15,14 @@ server-runtime.log
 # --- 画面確認用スクリーンショット（任意・履歴を汚さない） ---
 preview*.png
 
+# --- 日次更新で再生成されるデータ（生成物。設定系のsources.json等は管理対象に残す） ---
+data/news.json
+data/media-news.json
+data/official-news.json
+data/ai-signals.json
+data/candidates.json
+data/review.json
+
 # --- ツール／ブラウザの一時データ ---
 .chrome-profile-shot/
 .agents/
