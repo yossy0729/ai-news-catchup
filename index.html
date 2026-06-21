@@ -42,9 +42,28 @@
         </div>
       </header>
 
-      <div class="page-tabs" role="tablist" aria-label="表示切替">
-        <button class="page-tab active" type="button" data-page="today">今日の動向</button>
-        <button class="page-tab" type="button" data-page="metrics">指標・ベンチ</button>
+      <div class="search-panel command-bar" role="search">
+        <div class="page-tabs" role="tablist" aria-label="表示切替">
+          <button class="page-tab active" type="button" data-page="today">今日の動向</button>
+          <button class="page-tab" type="button" data-page="metrics">指標・ベンチ</button>
+        </div>
+        <div class="search-box">
+          <input id="keywordSearch" type="search" aria-label="キーワード検索" placeholder="FDE, RAG, AIエージェント, 規制など">
+          <button id="sourceSearch" class="text-button primary" type="button">公式ソース検索</button>
+          <button id="runUpdate" class="update-button" type="button" aria-label="今すぐ取得">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 6v5h-5"></path>
+              <path d="M4 18v-5h5"></path>
+              <path d="M18.8 9A7 7 0 0 0 6.3 6.2L4 8.4"></path>
+              <path d="M5.2 15A7 7 0 0 0 17.7 17.8L20 15.6"></path>
+            </svg>
+            <span>今すぐ取得</span>
+          </button>
+          <button id="clearSearch" class="text-button" type="button">クリア</button>
+        </div>
+        <p id="searchStatus" class="search-status" hidden></p>
+        <button id="saveCandidates" class="text-button save-button" type="button" disabled>候補を保存</button>
+        <div id="sourceSearchResults" class="source-results" aria-live="polite"></div>
       </div>
 
       <main>
@@ -61,29 +80,6 @@
           <div id="tickerTrack" class="ticker-track"></div>
         </div>
       </div>
-
-        <section class="category-workspace">
-          <div class="search-panel" role="search">
-            <label for="keywordSearch">キーワード検索</label>
-            <div class="search-box">
-              <input id="keywordSearch" type="search" placeholder="FDE, RAG, AIエージェント, 規制など">
-              <button id="sourceSearch" class="text-button primary" type="button">公式ソース検索</button>
-              <button id="runUpdate" class="update-button" type="button" aria-label="今すぐ取得">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20 6v5h-5"></path>
-                  <path d="M4 18v-5h5"></path>
-                  <path d="M18.8 9A7 7 0 0 0 6.3 6.2L4 8.4"></path>
-                  <path d="M5.2 15A7 7 0 0 0 17.7 17.8L20 15.6"></path>
-                </svg>
-                <span>今すぐ取得</span>
-              </button>
-              <button id="clearSearch" class="text-button" type="button">クリア</button>
-            </div>
-            <p id="searchStatus" class="search-status" hidden></p>
-            <button id="saveCandidates" class="text-button save-button" type="button" disabled>候補を保存</button>
-            <div id="sourceSearchResults" class="source-results" aria-live="polite"></div>
-          </div>
-        </section>
 
         <section class="official-radar" aria-label="AIベンダー・GAFAM公式動向">
           <div class="section-title-row official-title-row">

@@ -183,28 +183,54 @@ h1 {
   font-size: 0.72rem;
 }
 
-/* 大カテゴリの切替タブ（今日の動向 / 指標・ベンチ） */
-.page-tabs {
+/* コマンドバー: タブ＋検索を1行に（固定表示・常に操作可能） */
+.search-panel.command-bar {
   display: flex;
-  gap: 8px;
-  margin: 14px 0 6px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.command-bar .search-box {
+  margin-left: auto;
+  flex: 1 1 360px;
+}
+
+.command-bar .search-status,
+.command-bar .save-button,
+.command-bar .source-results {
+  flex-basis: 100%;
+}
+
+/* 大カテゴリ切替: セグメント型タブ（今日の動向 / 指標・ベンチ） */
+.page-tabs {
+  display: inline-flex;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface-soft);
+  flex: 0 0 auto;
 }
 
 .page-tab {
-  padding: 8px 18px;
-  font-size: 0.92rem;
+  padding: 6px 14px;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--muted);
-  background: var(--surface-soft);
-  border: 1px solid var(--line);
-  border-radius: 999px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   cursor: pointer;
+}
+
+.page-tab + .page-tab {
+  border-left: 1px solid var(--line);
 }
 
 .page-tab.active {
   color: var(--surface);
   background: var(--green);
-  border-color: var(--green);
 }
 
 .page {
