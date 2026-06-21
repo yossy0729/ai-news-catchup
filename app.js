@@ -1112,8 +1112,14 @@ function renderMetricsTicker() {
   metricsTickerTrack.replaceChildren(buildSegment(), buildSegment());
 }
 
+const PAGE_ID_BY_NAME = {
+  today: "pageToday",
+  official: "pageOfficial",
+  metrics: "pageMetrics"
+};
+
 function setActivePage(name) {
-  const targetId = name === "metrics" ? "pageMetrics" : "pageToday";
+  const targetId = PAGE_ID_BY_NAME[name] || "pageToday";
   pageTabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.page === name));
   pageSections.forEach((section) => section.classList.toggle("active", section.id === targetId));
   if (name === "metrics") renderMetricsTicker();
