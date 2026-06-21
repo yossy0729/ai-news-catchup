@@ -178,6 +178,11 @@ h1 {
   font-size: 0.78rem;
 }
 
+.update-rule {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
 .freshness,
 .status-chip,
 .new-badge,
