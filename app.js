@@ -706,7 +706,9 @@ function setActiveTab(nextTab) {
 function formatPrice(value) {
   if (value === null || value === undefined || value === "") return "要確認";
   const num = Number(value);
-  return Number.isFinite(num) ? `$${num.toFixed(2)}` : "要確認";
+  if (!Number.isFinite(num)) return "要確認";
+  // 0.075 のような小額（キャッシュ入力）は3桁まで表示し丸め誤差を避ける。
+  return `$${num < 0.1 ? num.toFixed(3) : num.toFixed(2)}`;
 }
 
 function renderPricing() {
@@ -739,7 +741,7 @@ function renderPricing() {
 
   const thead = document.createElement("thead");
   const headRow = document.createElement("tr");
-  ["ベンダー", "モデル", `入力 (${unit})`, `出力 (${unit})`, "コンテキスト", "出典"].forEach((label) => {
+  ["ベンダー", "モデル", `入力 (${unit})`, "キャッシュ入力", `出力 (${unit})`, "コンテキスト", "出典"].forEach((label) => {
     const th = document.createElement("th");
     th.textContent = label;
     headRow.append(th);
@@ -758,14 +760,29 @@ function renderPricing() {
       row.append(td);
     });
 
-    [m.inputPer1M, m.outputPer1M].forEach((value) => {
-      const td = document.createElement("td");
-      td.className = "pricing-num";
-      const text = formatPrice(value);
-      td.textContent = text;
-      if (text === "要確認") td.classList.add("needs-check");
-      row.append(td);
-    });
+    const inputTd = document.createElement("td");
+    inputTd.className = "pricing-num";
+    inputTd.textContent = formatPrice(m.inputPer1M);
+    if (inputTd.textContent === "要確認") inputTd.classList.add("needs-check");
+    row.append(inputTd);
+
+    // キャッシュ入力（任意。提供が無いモデルは「—」）
+    const cachedTd = document.createElement("td");
+    cachedTd.className = "pricing-num";
+    const cachedVal = m.cachedInputPer1M;
+    if (cachedVal === null || cachedVal === undefined || cachedVal === "") {
+      cachedTd.textContent = "—";
+      cachedTd.classList.add("sota-linkonly");
+    } else {
+      cachedTd.textContent = formatPrice(cachedVal);
+    }
+    row.append(cachedTd);
+
+    const outputTd = document.createElement("td");
+    outputTd.className = "pricing-num";
+    outputTd.textContent = formatPrice(m.outputPer1M);
+    if (outputTd.textContent === "要確認") outputTd.classList.add("needs-check");
+    row.append(outputTd);
 
     const ctx = document.createElement("td");
     ctx.textContent = m.context || "—";

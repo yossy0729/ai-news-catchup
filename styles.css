@@ -747,6 +747,11 @@ h1 {
   background: var(--surface);
 }
 
+/* 価格表は列が少なく間延びしやすいので幅を制限して詰める（SOTA表は対象外） */
+.pricing-board .pricing-table-wrap {
+  max-width: 1150px;
+}
+
 .pricing-table {
   width: 100%;
   border-collapse: collapse;
