@@ -722,6 +722,24 @@ h1 {
   color: var(--muted);
 }
 
+/* SOTA: 今回(上段)と前回(下段)の2行兼用表示 */
+.pricing-table tr.sota-cur > td {
+  border-bottom-style: dashed;
+}
+
+.pricing-table tr.sota-prev > td {
+  color: var(--muted);
+  font-size: 0.82rem;
+  background: var(--surface-soft);
+}
+
+.pricing-table .sota-delta {
+  margin-top: 2px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
 .pricing-table tr.is-unverified td:first-child::before {
   content: "•";
   margin-right: 6px;

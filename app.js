@@ -807,28 +807,18 @@ function formatSotaPeriod(fromStr, toStr) {
   return `約${years < 10 ? years.toFixed(1) : Math.round(years)}年`;
 }
 
-// 前回SOTAと改善幅を組み立てる。同一ベンチ・同一指標(prevComparable)のときだけ
-// 数値差分を出し、基準変更時は比較せず推移のみ示す（誤った引き算を避ける）。
-function sotaProgression(e) {
-  if (!e.prevTopModel) return { prevText: "—", deltaText: "—", muted: true };
-
-  const hasPrevScore = typeof e.prevScore === "number";
-  const meta = [hasPrevScore ? String(e.prevScore) : null, e.prevAsOf || null].filter(Boolean).join(" / ");
-  const prevText = meta ? `${e.prevTopModel} (${meta})` : e.prevTopModel;
-
-  if (e.prevComparable === false) {
-    return { prevText, deltaText: "比較不可（基準変更）", muted: true };
-  }
-  if (!hasPrevScore || typeof e.score !== "number") {
-    return { prevText, deltaText: "—", muted: true };
-  }
+// 今回と前回の改善幅テキストを返す。同一ベンチ・同一指標(prevComparable)のときだけ
+// 数値差分を出し、基準変更時は比較せず注記のみ（誤った引き算を避ける）。
+function sotaImprovementText(e) {
+  if (!e.prevTopModel) return "";
+  if (e.prevComparable === false) return "基準変更のため単純比較不可";
+  if (typeof e.score !== "number" || typeof e.prevScore !== "number") return "";
 
   const raw = e.score - e.prevScore;
   const improvement = e.higherIsBetter === false ? -raw : raw;
   const period = formatSotaPeriod(e.prevAsOf, e.asOf);
   const sign = improvement >= 0 ? "改善" : "悪化";
-  const deltaText = `${Math.abs(improvement).toFixed(2)}pt ${sign}${period ? ` ・ ${period}` : ""}`;
-  return { prevText, deltaText, muted: improvement < 0 };
+  return `${Math.abs(improvement).toFixed(2)}pt ${sign}${period ? ` ・ ${period}` : ""}`;
 }
 
 function renderSotaTabs(allEntries) {
@@ -898,7 +888,7 @@ function renderSota() {
 
   const thead = document.createElement("thead");
   const headRow = document.createElement("tr");
-  ["タスク", "ベンチマーク", "指標", "トップモデル", "スコア", "時点", "前回SOTA", "改善幅", "出典"].forEach((label) => {
+  ["タスク", "ベンチマーク", "指標", "トップモデル", "スコア", "時点", "出典"].forEach((label) => {
     const th = document.createElement("th");
     th.textContent = label;
     headRow.append(th);
@@ -907,17 +897,21 @@ function renderSota() {
 
   const tbody = document.createElement("tbody");
   entries.forEach((e) => {
+    const hasScore = typeof e.score === "number";
+    const hasPrev = !!e.prevTopModel;
+
+    // 今回(上段)の行。前回がある場合、共有列(タスク/ベンチ/指標/出典)は2行ぶち抜き。
     const row = document.createElement("tr");
-    const hasScore = !(e.score === null || e.score === undefined || e.score === "");
+    if (hasPrev) row.classList.add("sota-cur");
 
     [e.task, e.benchmark, e.metric].forEach((text) => {
       const td = document.createElement("td");
       td.textContent = text || "—";
+      if (hasPrev) td.rowSpan = 2;
       row.append(td);
     });
 
-    // 実値が取れた行はモデル名＋スコアを表示。取れない行は「—」にして
-    // 出典サイト名のリンクで確認してもらう（ハイブリッド方針）。
+    // モデル列: 実値があればモデル名。無ければ「出典で確認」(リンク行)。
     const model = document.createElement("td");
     if (e.topModel) {
       model.textContent = e.topModel;
@@ -927,10 +921,20 @@ function renderSota() {
     }
     row.append(model);
 
+    // スコア列: 実値 + 改善幅の注記。
     const score = document.createElement("td");
     score.className = "pricing-num";
     score.textContent = hasScore ? String(e.score) : "—";
     if (!hasScore) score.classList.add("sota-linkonly");
+    if (hasPrev) {
+      const delta = sotaImprovementText(e);
+      if (delta) {
+        const note = document.createElement("div");
+        note.className = "sota-delta";
+        note.textContent = delta;
+        score.append(note);
+      }
+    }
     row.append(score);
 
     const asOf = document.createElement("td");
@@ -938,18 +942,9 @@ function renderSota() {
     if (!e.asOf) asOf.classList.add("sota-linkonly");
     row.append(asOf);
 
-    const progression = sotaProgression(e);
-    const prevCell = document.createElement("td");
-    prevCell.textContent = progression.prevText;
-    if (progression.prevText === "—") prevCell.classList.add("sota-linkonly");
-    row.append(prevCell);
-
-    const deltaCell = document.createElement("td");
-    deltaCell.textContent = progression.deltaText;
-    if (progression.muted) deltaCell.classList.add("sota-linkonly");
-    row.append(deltaCell);
-
+    // 出典列(2行ぶち抜き)。
     const src = document.createElement("td");
+    if (hasPrev) src.rowSpan = 2;
     if (e.sourceUrl) {
       const link = document.createElement("a");
       link.href = e.sourceUrl;
@@ -963,6 +958,27 @@ function renderSota() {
     row.append(src);
 
     tbody.append(row);
+
+    // 前回(下段)の行。同じ列を兼用してモデル/スコア/時点だけ並べる。
+    if (hasPrev) {
+      const prevRow = document.createElement("tr");
+      prevRow.className = "sota-prev";
+
+      const pModel = document.createElement("td");
+      pModel.textContent = `前回: ${e.prevTopModel}`;
+      prevRow.append(pModel);
+
+      const pScore = document.createElement("td");
+      pScore.className = "pricing-num";
+      pScore.textContent = typeof e.prevScore === "number" ? String(e.prevScore) : "—";
+      prevRow.append(pScore);
+
+      const pAsOf = document.createElement("td");
+      pAsOf.textContent = e.prevAsOf || "—";
+      prevRow.append(pAsOf);
+
+      tbody.append(prevRow);
+    }
   });
 
   table.append(thead, tbody);
