@@ -763,9 +763,9 @@ h1 {
   margin: 4px 0 8px;
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
   font-size: 0.76rem;
   color: var(--muted);
 }
@@ -2072,6 +2072,12 @@ body {
 
 .app-shell {
   padding-top: 158px;
+}
+
+/* 各ページ先頭セクションは固定バー直下の余白(app-shell padding)で十分なため、
+   さらに24pxを足さずタイトル上の無駄な空きを詰める。 */
+.ticker-bar + section {
+  margin-top: 8px;
 }
 
 .ticker-bar {
