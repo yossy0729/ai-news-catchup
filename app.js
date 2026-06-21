@@ -741,7 +741,7 @@ function renderPricing() {
 
   const thead = document.createElement("thead");
   const headRow = document.createElement("tr");
-  ["ベンダー", "モデル", `入力 (${unit})`, "キャッシュ入力", `出力 (${unit})`, "コンテキスト", "出典"].forEach((label) => {
+  ["ベンダー", "モデル", `入力 (${unit})`, "キャッシュ入力", `出力 (${unit})`, "出力倍率", "コンテキスト", "出典"].forEach((label) => {
     const th = document.createElement("th");
     th.textContent = label;
     headRow.append(th);
@@ -791,6 +791,17 @@ function renderPricing() {
     outputTd.textContent = formatPrice(m.outputPer1M);
     if (outputTd.textContent === "要確認") outputTd.classList.add("needs-check");
     row.append(outputTd);
+
+    // 出力倍率: 出力単価が入力単価の何倍か（データから正確に算出）。
+    const ratioTd = document.createElement("td");
+    ratioTd.className = "pricing-num";
+    if (typeof m.inputPer1M === "number" && m.inputPer1M > 0 && typeof m.outputPer1M === "number") {
+      ratioTd.textContent = `${(m.outputPer1M / m.inputPer1M).toFixed(1)}倍`;
+    } else {
+      ratioTd.textContent = "—";
+      ratioTd.classList.add("sota-linkonly");
+    }
+    row.append(ratioTd);
 
     const ctx = document.createElement("td");
     ctx.textContent = m.context || "—";
