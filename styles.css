@@ -687,7 +687,7 @@ h1 {
 .pricing-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.88rem;
+  font-size: 0.8rem;
 }
 
 .pricing-table th,
@@ -727,18 +727,27 @@ h1 {
 /* SOTA: 今回(上段)と前回(下段)の2行兼用表示 */
 .pricing-table tr.sota-cur > td {
   border-bottom-style: dashed;
-  background: color-mix(in srgb, var(--green) 8%, var(--surface));
+}
+
+/* 実値のある今回SOTA行: 緑背景で強調 */
+.pricing-table tr.sota-now > td {
+  background: color-mix(in srgb, var(--green) 16%, var(--surface));
+}
+
+/* 今回SOTAのモデル〜時点を太字で目立たせる */
+.pricing-table .sota-emph {
+  font-weight: 700;
 }
 
 .pricing-table tr.sota-prev > td {
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   background: var(--surface-soft);
 }
 
 .pricing-table .sota-delta {
-  margin-top: 2px;
-  font-size: 0.74rem;
+  margin-top: 1px;
+  font-size: 0.66rem;
   font-weight: 600;
   color: var(--green);
 }

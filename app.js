@@ -819,7 +819,7 @@ function sotaImprovementText(e) {
   const period = formatSotaPeriod(e.prevAsOf, e.asOf);
   // SOTA更新は改善前提なので「改善」の語は付けない。万一の後退時のみ ▼ を付す。
   const prefix = improvement < 0 ? "▼" : "";
-  return `${prefix}${Math.abs(improvement).toFixed(2)}pt${period ? ` ・ ${period}` : ""}`;
+  return `${prefix}${Math.abs(improvement).toFixed(2)}pt${period ? ` / ${period}ぶりに更新` : ""}`;
 }
 
 function renderSotaTabs(allEntries) {
@@ -904,6 +904,7 @@ function renderSota() {
     // 今回(上段)の行。前回がある場合、共有列(タスク/ベンチ/指標/出典)は2行ぶち抜き。
     const row = document.createElement("tr");
     if (hasPrev) row.classList.add("sota-cur");
+    if (e.topModel) row.classList.add("sota-now"); // 実値のある今回SOTA行を強調
 
     [e.task, e.benchmark, e.metric].forEach((text) => {
       const td = document.createElement("td");
@@ -916,6 +917,7 @@ function renderSota() {
     const model = document.createElement("td");
     if (e.topModel) {
       model.textContent = e.topModel;
+      model.classList.add("sota-emph");
     } else {
       model.textContent = "出典で確認";
       model.classList.add("sota-linkonly");
@@ -926,6 +928,7 @@ function renderSota() {
     const score = document.createElement("td");
     score.className = "pricing-num";
     score.textContent = hasScore ? String(e.score) : "—";
+    if (hasScore) score.classList.add("sota-emph");
     if (!hasScore) score.classList.add("sota-linkonly");
     if (hasPrev) {
       const delta = sotaImprovementText(e);
@@ -940,6 +943,7 @@ function renderSota() {
 
     const asOf = document.createElement("td");
     asOf.textContent = e.asOf || "—";
+    if (e.asOf) asOf.classList.add("sota-emph");
     if (!e.asOf) asOf.classList.add("sota-linkonly");
     row.append(asOf);
 
