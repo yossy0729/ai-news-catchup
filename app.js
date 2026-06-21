@@ -46,6 +46,7 @@ const tickerLaneButtons = Array.from(document.querySelectorAll(".ticker-lane"));
 const pageTabs = Array.from(document.querySelectorAll(".page-tab"));
 const pageSections = Array.from(document.querySelectorAll(".page"));
 const metricsTickerTrack = document.querySelector("#metricsTickerTrack");
+const officialTickerTrack = document.querySelector("#officialTickerTrack");
 
 let activeTab = "all";
 let activeQuery = "";
@@ -1095,7 +1096,11 @@ function renderMetricsTicker() {
       const tag = document.createElement("em");
       tag.textContent = "SOTA";
       const headline = document.createElement("strong");
-      headline.textContent = `${e.task}: ${e.topModel} ${e.score}`;
+      headline.append(document.createTextNode(`${e.task}: ${e.topModel} `));
+      const score = document.createElement("b");
+      score.className = "ticker-num";
+      score.textContent = e.score;
+      headline.append(score);
       item.append(tag, headline);
       fragment.append(item);
 
@@ -1112,6 +1117,58 @@ function renderMetricsTicker() {
   metricsTickerTrack.replaceChildren(buildSegment(), buildSegment());
 }
 
+const OFFICIAL_TICKER_TONE = {
+  research: "blue",
+  product: "green",
+  infrastructure: "amber",
+  adoption: "green",
+  security: "red",
+  governance: "red"
+};
+
+// 公式動向タブのティッカー: ベンダー公式の最新更新をベンダー色で流す。
+function renderOfficialTicker() {
+  if (!officialTickerTrack) return;
+
+  const items = [...officialItems].filter((item) => item.url).sort(officialSort).slice(0, 10);
+  if (!items.length) {
+    officialTickerTrack.textContent = "公式動向はまだ取得されていません。今すぐ取得で更新してください。";
+    return;
+  }
+
+  const buildSegment = () => {
+    const fragment = document.createDocumentFragment();
+    items.forEach((item, index) => {
+      const vendor = officialDataVendors.find((v) => v.id === item.vendorId);
+      const tone = OFFICIAL_TICKER_TONE[vendor?.accent] || "green";
+      const link = document.createElement("a");
+      link.className = `ticker-item ticker-${tone}`;
+      link.href = item.url;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.title = `${item.vendorName || item.source} / ${item.date}`;
+
+      const tag = document.createElement("em");
+      tag.textContent = item.vendorName || item.source || "公式";
+      const headline = document.createElement("strong");
+      headline.textContent = String(item.title || "").replace(/\s+/g, " ").trim();
+
+      link.append(tag, headline);
+      fragment.append(link);
+
+      if (index < items.length - 1) {
+        const separator = document.createElement("span");
+        separator.className = "ticker-separator";
+        separator.textContent = "/";
+        fragment.append(separator);
+      }
+    });
+    return fragment;
+  };
+
+  officialTickerTrack.replaceChildren(buildSegment(), buildSegment());
+}
+
 const PAGE_ID_BY_NAME = {
   today: "pageToday",
   official: "pageOfficial",
@@ -1123,6 +1180,7 @@ function setActivePage(name) {
   pageTabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.page === name));
   pageSections.forEach((section) => section.classList.toggle("active", section.id === targetId));
   if (name === "metrics") renderMetricsTicker();
+  if (name === "official") renderOfficialTicker();
 }
 
 function renderApp(newsData, mediaData, officialData, signalData, pricing, sota) {

@@ -24,6 +24,11 @@
   box-sizing: border-box;
 }
 
+/* スクロールバーの幅を常に確保し、タブ切替で内容が横にズレないようにする。 */
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -909,8 +914,8 @@ h1 {
 
 .new-badge {
   display: none;
-  background: var(--red-soft);
-  color: var(--red);
+  background: var(--green-soft);
+  color: var(--green);
 }
 
 .news-card.is-new .new-badge {
@@ -2236,6 +2241,24 @@ body {
 
 .ticker-separator {
   color: rgba(223, 247, 233, 0.34);
+  font-weight: 900;
+}
+
+/* ラベル＋ビューポートの2カラム構成のティッカー（指標・公式） */
+.metrics-ticker,
+.official-ticker {
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+/* ベンダー名やSOTA等、タグ文字列が長いティッカーはピルに左右余白を持たせる */
+.metrics-ticker .ticker-item em,
+.official-ticker .ticker-item em {
+  padding: 0 7px;
+}
+
+/* ティッカー内の主要情報（SOTAスコア等の数値）を強調表示 */
+.ticker-num {
+  color: #ffe08a;
   font-weight: 900;
 }
 
