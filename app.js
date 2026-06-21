@@ -508,7 +508,7 @@ function renderMediaCard(item) {
     card.classList.add("is-fresh");
     const chip = document.createElement("span");
     chip.className = "media-fresh";
-    chip.textContent = "新着";
+    chip.textContent = "NEW";
     fragment.querySelector(".media-meta").prepend(chip);
   }
 
