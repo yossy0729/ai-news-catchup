@@ -817,8 +817,9 @@ function sotaImprovementText(e) {
   const raw = e.score - e.prevScore;
   const improvement = e.higherIsBetter === false ? -raw : raw;
   const period = formatSotaPeriod(e.prevAsOf, e.asOf);
-  const sign = improvement >= 0 ? "改善" : "悪化";
-  return `${Math.abs(improvement).toFixed(2)}pt ${sign}${period ? ` ・ ${period}` : ""}`;
+  // SOTA更新は改善前提なので「改善」の語は付けない。万一の後退時のみ ▼ を付す。
+  const prefix = improvement < 0 ? "▼" : "";
+  return `${prefix}${Math.abs(improvement).toFixed(2)}pt${period ? ` ・ ${period}` : ""}`;
 }
 
 function renderSotaTabs(allEntries) {
