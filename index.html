@@ -133,7 +133,12 @@
             </div>
             <span id="pricingFreshness" class="status-chip">参考</span>
           </div>
-          <p class="pricing-subnote">コンテキスト＝一度に扱える最大トークン数（日本語は概ね 1トークン ≒ 1文字弱が目安）。キャッシュ入力＝再利用時の割引後単価。</p>
+          <ul class="metric-legend">
+            <li><b>入力 / 出力</b>：送る文章／AIの返答の単価（100万トークンあたり・USD）</li>
+            <li><b>キャッシュ入力</b>：同じ内容を再利用したときの割引価格</li>
+            <li><b>出力倍率</b>：出力は入力の何倍高いか</li>
+            <li><b>コンテキスト</b>：一度に扱える最大量（日本語で 1トークン ≒ 約1文字）</li>
+          </ul>
           <p id="pricingNote" class="pricing-note"></p>
           <div id="pricingTable" class="pricing-table-wrap" aria-live="polite"></div>
         </section>
@@ -146,6 +151,12 @@
             </div>
             <span id="sotaFreshness" class="status-chip">参考</span>
           </div>
+          <ul class="metric-legend">
+            <li><b>上段（緑）＝今回</b>：現在のSOTA（最高性能）のモデルとスコア</li>
+            <li><b>下段（灰）＝前回</b>：ひとつ前の記録。どれだけ伸びたかが分かる</li>
+            <li><b>改善幅</b>：前回から何ポイント・何年ぶりの更新か</li>
+            <li><b>出典で確認</b>：自動取得しにくい値は出典リンク先で確認</li>
+          </ul>
           <p id="sotaNote" class="pricing-note"></p>
           <div id="sotaTabs" class="sota-tabs" role="tablist" aria-label="SOTAドメイン"></div>
           <div id="sotaTable" class="pricing-table-wrap" aria-live="polite"></div>

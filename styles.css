@@ -758,6 +758,27 @@ h1 {
   color: var(--muted);
 }
 
+/* 用語の凡例（価格表・SOTA共通）: 直感的に読めるよう箇条書きで */
+.metric-legend {
+  margin: 4px 0 8px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2px 20px;
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+.metric-legend li {
+  line-height: 1.55;
+}
+
+.metric-legend b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
 /* 結合したベンダーセルはグループ中央に寄せて見やすく */
 .pricing-table td.pricing-vendor {
   vertical-align: middle;

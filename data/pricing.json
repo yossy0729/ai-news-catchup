@@ -3,7 +3,7 @@
   "asOf": "2026-06-21",
   "currency": "USD",
   "unit": "per 1M tokens",
-  "note": "APIトークン単価（標準モード・100万トークンあたり・USD）。OpenAIはバッチ-50%/データレジデンシー+10%の別モードあり。OpenAIの標準料金はコンテキスト≤270Kに適用。未記入は「要確認」表示。サブスク料金(Claude Free/Pro/Max等)はAPI単価ではないため本表の対象外。Geminiは有料枠の値で、3.1 Pro等はプロンプト>200Kで上位料金（入力$4/出力$18等）、表記は≤200K標準。cachedInputPer1Mはキャッシュ入力単価（将来列）。",
+  "note": "標準モードの参考値。OpenAIはバッチ等で変動、GeminiはPro系で200K超は上位料金。Claudeのサブスク料金(Pro/Max等)はAPI単価ではないため対象外。",
   "models": [
     {
       "vendor": "OpenAI",
