@@ -717,6 +717,11 @@ h1 {
   color: var(--amber);
 }
 
+/* SOTA: 実値が無く出典リンクで確認する行のセル */
+.pricing-table .sota-linkonly {
+  color: var(--muted);
+}
+
 .pricing-table tr.is-unverified td:first-child::before {
   content: "•";
   margin-right: 6px;

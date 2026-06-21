@@ -837,9 +837,9 @@ function renderSota() {
   }
   if (sotaFreshness) {
     const verifiedCount = entries.filter((e) => e.verified).length;
-    sotaFreshness.textContent = verifiedCount ? `確認済 ${verifiedCount}/${entries.length}` : "参考";
-    sotaFreshness.classList.toggle("good", verifiedCount === entries.length && entries.length > 0);
-    sotaFreshness.classList.toggle("stale", verifiedCount < entries.length);
+    sotaFreshness.textContent = `実値 ${verifiedCount} / 全 ${entries.length}`;
+    sotaFreshness.classList.toggle("good", verifiedCount > 0);
+    sotaFreshness.classList.toggle("stale", verifiedCount === 0);
   }
 
   if (!entries.length) {
@@ -865,7 +865,7 @@ function renderSota() {
   const tbody = document.createElement("tbody");
   entries.forEach((e) => {
     const row = document.createElement("tr");
-    if (!e.verified) row.classList.add("is-unverified");
+    const hasScore = !(e.score === null || e.score === undefined || e.score === "");
 
     [e.task, e.benchmark, e.metric].forEach((text) => {
       const td = document.createElement("td");
@@ -873,27 +873,26 @@ function renderSota() {
       row.append(td);
     });
 
+    // 実値が取れた行はモデル名＋スコアを表示。取れない行は「—」にして
+    // 出典サイト名のリンクで確認してもらう（ハイブリッド方針）。
     const model = document.createElement("td");
     if (e.topModel) {
       model.textContent = e.topModel;
     } else {
-      model.textContent = "要確認";
-      model.classList.add("needs-check");
+      model.textContent = "出典で確認";
+      model.classList.add("sota-linkonly");
     }
     row.append(model);
 
     const score = document.createElement("td");
     score.className = "pricing-num";
-    if (e.score === null || e.score === undefined || e.score === "") {
-      score.textContent = "要確認";
-      score.classList.add("needs-check");
-    } else {
-      score.textContent = String(e.score);
-    }
+    score.textContent = hasScore ? String(e.score) : "—";
+    if (!hasScore) score.classList.add("sota-linkonly");
     row.append(score);
 
     const asOf = document.createElement("td");
     asOf.textContent = e.asOf || "—";
+    if (!e.asOf) asOf.classList.add("sota-linkonly");
     row.append(asOf);
 
     const src = document.createElement("td");
@@ -902,7 +901,7 @@ function renderSota() {
       link.href = e.sourceUrl;
       link.target = "_blank";
       link.rel = "noreferrer";
-      link.textContent = "出典";
+      link.textContent = e.sourceName || "出典";
       src.append(link);
     } else {
       src.textContent = "—";

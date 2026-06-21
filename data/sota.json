@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 2,
-  "asOf": "2026-06-20",
-  "note": "出典は Papers with Code 復活版 paperswithcode.co を指します（旧 .com はMetaが2025年終了）。各 sourceUrl で topModel / score / asOf を確認・更新してください（誤値防止のため未確認は「要確認」と表示）。数値はベンチマークと指標の組で初めて意味を持ちます。全網羅は狙わず各ドメイン少数の代表ベンチに絞ります。※.co のURLスラッグは未検証のため、開いて404なら正しいページのURLに直してください。",
+  "schemaVersion": 3,
+  "asOf": "2026-06-21",
+  "note": "方針: 信頼できる公式リーダーボードから値が取れるものは実値を記入(verified)。取りにくい/定番出典が消えたものは、SOTAを確認できる出典サイト名＋リンクのみ掲載(score=空欄=「—」)。数値はベンチマークと指標の組で初めて意味を持つ。全網羅は狙わず各ドメインの代表ベンチに絞る。各 sourceUrl で最新を確認のうえ随時更新。",
   "entries": [
     {
       "domain": "llm",
@@ -11,7 +11,8 @@
       "topModel": null,
       "score": null,
       "asOf": null,
-      "sourceUrl": "https://paperswithcode.co/sota/multi-task-language-understanding-on-mmlu-pro",
+      "sourceName": "Artificial Analysis",
+      "sourceUrl": "https://artificialanalysis.ai/",
       "verified": false
     },
     {
@@ -22,7 +23,8 @@
       "topModel": null,
       "score": null,
       "asOf": null,
-      "sourceUrl": "https://paperswithcode.co/dataset/gpqa",
+      "sourceName": "Artificial Analysis",
+      "sourceUrl": "https://artificialanalysis.ai/",
       "verified": false
     },
     {
@@ -33,6 +35,7 @@
       "topModel": null,
       "score": null,
       "asOf": null,
+      "sourceName": "MathArena",
       "sourceUrl": "https://matharena.ai/",
       "verified": false
     },
@@ -44,18 +47,20 @@
       "topModel": "Claude 4.5 Opus (high reasoning)",
       "score": 76.8,
       "asOf": "2026-02-17",
+      "sourceName": "swebench.com",
       "sourceUrl": "https://www.swebench.com/",
       "verified": true
     },
     {
       "domain": "vision",
       "task": "物体検出",
-      "benchmark": "COCO test-dev",
+      "benchmark": "COCO",
       "metric": "box AP",
       "topModel": null,
       "score": null,
       "asOf": null,
-      "sourceUrl": "https://paperswithcode.co/sota/object-detection-on-coco",
+      "sourceName": "paperswithcode.co",
+      "sourceUrl": "https://paperswithcode.co/tasks/object-detection",
       "verified": false
     },
     {
@@ -66,7 +71,20 @@
       "topModel": null,
       "score": null,
       "asOf": null,
-      "sourceUrl": "https://paperswithcode.co/sota/image-classification-on-imagenet",
+      "sourceName": "paperswithcode.co",
+      "sourceUrl": "https://paperswithcode.co/tasks/image-classification",
+      "verified": false
+    },
+    {
+      "domain": "vision",
+      "task": "異常検知",
+      "benchmark": "MVTec AD",
+      "metric": "画像 AUROC (%)",
+      "topModel": null,
+      "score": null,
+      "asOf": null,
+      "sourceName": "paperswithcode.co",
+      "sourceUrl": "https://paperswithcode.co/tasks/anomaly-detection",
       "verified": false
     },
     {
@@ -77,6 +95,7 @@
       "topModel": "Granite-speech-4.1-2b",
       "score": 5.33,
       "asOf": "2026-06-21",
+      "sourceName": "paperswithcode.co",
       "sourceUrl": "https://paperswithcode.co/benchmark/open-asr-leaderboard",
       "verified": true
     },
@@ -88,7 +107,8 @@
       "topModel": null,
       "score": null,
       "asOf": null,
-      "sourceUrl": "https://paperswithcode.co/dataset/mmmu",
+      "sourceName": "MMMU公式",
+      "sourceUrl": "https://mmmu-benchmark.github.io/#leaderboard",
       "verified": false
     }
   ]
