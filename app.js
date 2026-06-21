@@ -788,6 +788,49 @@ function renderPricing() {
   pricingTable.replaceChildren(table);
 }
 
+function parseSotaDate(value) {
+  if (!value) return null;
+  const str = String(value);
+  if (/^\d{4}$/.test(str)) return new Date(`${str}-01-01T00:00:00`);
+  const date = new Date(str);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function formatSotaPeriod(fromStr, toStr) {
+  const from = parseSotaDate(fromStr);
+  const to = parseSotaDate(toStr);
+  if (!from || !to) return "";
+  const months = Math.round((to - from) / (1000 * 60 * 60 * 24 * 30.44));
+  if (months < 1) return "";
+  if (months < 12) return `約${months}ヶ月`;
+  const years = months / 12;
+  return `約${years < 10 ? years.toFixed(1) : Math.round(years)}年`;
+}
+
+// 前回SOTAと改善幅を組み立てる。同一ベンチ・同一指標(prevComparable)のときだけ
+// 数値差分を出し、基準変更時は比較せず推移のみ示す（誤った引き算を避ける）。
+function sotaProgression(e) {
+  if (!e.prevTopModel) return { prevText: "—", deltaText: "—", muted: true };
+
+  const hasPrevScore = typeof e.prevScore === "number";
+  const meta = [hasPrevScore ? String(e.prevScore) : null, e.prevAsOf || null].filter(Boolean).join(" / ");
+  const prevText = meta ? `${e.prevTopModel} (${meta})` : e.prevTopModel;
+
+  if (e.prevComparable === false) {
+    return { prevText, deltaText: "比較不可（基準変更）", muted: true };
+  }
+  if (!hasPrevScore || typeof e.score !== "number") {
+    return { prevText, deltaText: "—", muted: true };
+  }
+
+  const raw = e.score - e.prevScore;
+  const improvement = e.higherIsBetter === false ? -raw : raw;
+  const period = formatSotaPeriod(e.prevAsOf, e.asOf);
+  const sign = improvement >= 0 ? "改善" : "悪化";
+  const deltaText = `${Math.abs(improvement).toFixed(2)}pt ${sign}${period ? ` ・ ${period}` : ""}`;
+  return { prevText, deltaText, muted: improvement < 0 };
+}
+
 function renderSotaTabs(allEntries) {
   if (!sotaTabs) return;
 
@@ -855,7 +898,7 @@ function renderSota() {
 
   const thead = document.createElement("thead");
   const headRow = document.createElement("tr");
-  ["タスク", "ベンチマーク", "指標", "トップモデル", "スコア", "時点", "出典"].forEach((label) => {
+  ["タスク", "ベンチマーク", "指標", "トップモデル", "スコア", "時点", "前回SOTA", "改善幅", "出典"].forEach((label) => {
     const th = document.createElement("th");
     th.textContent = label;
     headRow.append(th);
@@ -894,6 +937,17 @@ function renderSota() {
     asOf.textContent = e.asOf || "—";
     if (!e.asOf) asOf.classList.add("sota-linkonly");
     row.append(asOf);
+
+    const progression = sotaProgression(e);
+    const prevCell = document.createElement("td");
+    prevCell.textContent = progression.prevText;
+    if (progression.prevText === "—") prevCell.classList.add("sota-linkonly");
+    row.append(prevCell);
+
+    const deltaCell = document.createElement("td");
+    deltaCell.textContent = progression.deltaText;
+    if (progression.muted) deltaCell.classList.add("sota-linkonly");
+    row.append(deltaCell);
 
     const src = document.createElement("td");
     if (e.sourceUrl) {
