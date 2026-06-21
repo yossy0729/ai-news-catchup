@@ -72,13 +72,13 @@
     {
       "domain": "audio",
       "task": "音声認識",
-      "benchmark": "LibriSpeech (test-clean)",
+      "benchmark": "Open ASR Leaderboard (11データセット平均)",
       "metric": "WER (%・低いほど良い)",
-      "topModel": null,
-      "score": null,
-      "asOf": null,
-      "sourceUrl": "https://paperswithcode.co/sota/speech-recognition-on-librispeech-test-clean",
-      "verified": false
+      "topModel": "Granite-speech-4.1-2b",
+      "score": 5.33,
+      "asOf": "2026-06-21",
+      "sourceUrl": "https://paperswithcode.co/benchmark/open-asr-leaderboard",
+      "verified": true
     },
     {
       "domain": "multimodal",
