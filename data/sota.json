@@ -133,7 +133,7 @@
       "asOf": "2026-06-21",
       "prevTopModel": "Whisper-large-v3",
       "prevScore": 7.44,
-      "prevAsOf": "2022",
+      "prevAsOf": "2023-11-06",
       "prevComparable": true,
       "sourceName": "paperswithcode.co",
       "sourceUrl": "https://paperswithcode.co/benchmark/open-asr-leaderboard",
