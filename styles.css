@@ -1001,6 +1001,31 @@ h1 {
   color: var(--accent);
 }
 
+/* 地域バッジ（国内/海外）。アクセント色とは独立した中立色で「どこの動向か」を示す。 */
+.region-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.region-jp {
+  background: #eef2f6;
+  color: #41506b;
+  border-color: #d4dde8;
+}
+
+.region-global {
+  background: #f1eef7;
+  color: #5a4a86;
+  border-color: #ddd4ed;
+}
+
 .published,
 .source-name {
   color: var(--muted);

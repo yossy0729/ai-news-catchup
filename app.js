@@ -688,6 +688,14 @@ function renderNewsCard(item, accent) {
   card.href = item.url;
   card.dataset.accent = accent;
   card.classList.toggle("is-new", item.new);
+  // 地域バッジ（国内/海外）。横断カテゴリは付けない。
+  if (item._region === "国内" || item._region === "海外") {
+    const meta = fragment.querySelector(".news-meta");
+    const region = document.createElement("span");
+    region.className = item._region === "国内" ? "region-badge region-jp" : "region-badge region-global";
+    region.textContent = item._region;
+    meta.insertBefore(region, meta.firstChild);
+  }
   fragment.querySelector(".source-type").textContent = item.type;
   fragment.querySelector(".published").textContent = formatDate(item.date);
   appendTitle(fragment.querySelector("h4"), item);
@@ -713,55 +721,74 @@ function diversifyBySource(items, maxPerSource = 2) {
   return selected;
 }
 
+// 分野別動向タブのグルーピング（テーマ軸）。国内/海外を分けず分野でまとめ、
+// 地域はカードの地域バッジで示す。各分野は複数の収集カテゴリ(cats)を束ねる。
+const FIELD_GROUPS = [
+  { id: "research", title: "モデル・研究", accent: "research", cats: ["jp-research", "global-research", "product-release"] },
+  { id: "adoption", title: "産業導入・活用事例", accent: "adoption", cats: ["jp-cases", "global-cases", "business"] },
+  { id: "governance", title: "規制・ガバナンス", accent: "governance", cats: ["jp-governance", "global-governance"] },
+  { id: "security", title: "セキュリティ", accent: "security", cats: ["security"] },
+  { id: "infrastructure", title: "インフラ・基盤", accent: "infrastructure", cats: ["infrastructure"] }
+];
+
 function renderCategories(nextTab = "all") {
   let matchedItemCount = 0;
-  const visible = categories
-    .filter((category) => category.tab.includes(nextTab))
-    .map((category) => {
-      const items = diversifyBySource(
-        category.items.filter((item) => itemMatchesQuery(item, activeQuery) && !officialShownUrls.has(item.url))
+  const byId = new Map(categories.map((c) => [c.id, c]));
+
+  const fields = FIELD_GROUPS
+    .filter((fg) => nextTab === "all" || nextTab === fg.id)
+    .map((fg) => {
+      // 束ねる収集カテゴリのitemsを統合し、各itemに地域(国内/海外/横断)を注入。
+      let items = [];
+      for (const cid of fg.cats) {
+        const c = byId.get(cid);
+        if (!c) continue;
+        for (const it of c.items) items.push({ ...it, _region: c.group });
+      }
+      items = diversifyBySource(
+        items.filter((item) => itemMatchesQuery(item, activeQuery) && !officialShownUrls.has(item.url))
       );
+      items.sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
       matchedItemCount += items.length;
-      return { ...category, items };
+      return { ...fg, items };
     })
-    .filter((category) => !activeQuery || category.items.length > 0);
+    .filter((fg) => !activeQuery || fg.items.length > 0);
 
   categoryGrid.replaceChildren(
-    ...visible.map((category) => {
+    ...fields.map((fg) => {
       const fragment = categoryTemplate.content.cloneNode(true);
       const column = fragment.querySelector(".category-column");
-      column.dataset.accent = category.accent;
-      const hasToday = category.items.some((item) => item.date === today);
-      const isEmpty = category.items.length === 0;
+      column.dataset.accent = fg.accent;
+      const hasToday = fg.items.some((item) => item.date === today);
+      const isEmpty = fg.items.length === 0;
       const status = fragment.querySelector(".status-chip");
 
-      // 0件カテゴリは折りたたみ表示にする。ヘッダーは残して網羅性を示しつつ、
-      // 大きな空メッセージは出さず視覚的に小さくたたむ（is-collapsed）。
+      // 0件分野は折りたたみ表示（網羅性は残しつつ視覚的に小さく）。
       column.classList.toggle("is-collapsed", isEmpty);
 
-      fragment.querySelector(".category-group").textContent = category.group;
-      fragment.querySelector("h3").textContent = category.title;
-      status.textContent = hasToday ? "本日更新" : category.items.length ? "前回分" : "未取得";
+      fragment.querySelector(".category-group").textContent = "分野";
+      fragment.querySelector("h3").textContent = fg.title;
+      status.textContent = hasToday ? "本日更新" : fg.items.length ? "最近の動向" : "未取得";
       status.classList.add(hasToday ? "good" : "stale");
 
       const list = fragment.querySelector(".news-list");
       if (isEmpty) {
         const note = document.createElement("div");
         note.className = "empty-note";
-        note.textContent = "本日は未取得（速報枠を確認）";
+        note.textContent = "最近の新着はありません";
         list.append(note);
       } else {
-        category.items.slice(0, 3).forEach((item) => list.append(renderNewsCard(item, category.accent)));
+        fg.items.slice(0, 4).forEach((item) => list.append(renderNewsCard(item, fg.accent)));
       }
 
       return column;
     })
   );
 
-  if (visible.length === 0) {
+  if (fields.length === 0) {
     const empty = document.createElement("div");
     empty.className = "empty-state load-error";
-    empty.textContent = "該当する保存済みニュースはありません。上段の速報、または公式ソース検索を確認してください。";
+    empty.textContent = "該当する一次情報はありません。今日の動向（速報）や公式ソース検索もご確認ください。";
     categoryGrid.append(empty);
   }
 
