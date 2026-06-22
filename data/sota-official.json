@@ -11,6 +11,8 @@
       "task": "LLM対話(Arena)",
       "taskEn": "LLM Chat Arena",
       "keywords": ["対話", "チャット", "会話", "Arena", "LMArena", "総合力"]
-    }
+    },
+    { "slug": "image-generation", "fetcher": "lmarena-image" },
+    { "slug": "image-understanding", "fetcher": "lmarena-vision" }
   ]
 }

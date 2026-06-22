@@ -200,6 +200,58 @@ const officialFetchers = {
       boardUrl: "https://lmarena.ai/leaderboard",
     };
   },
+
+  // LMArena Image（画像生成の対戦評価）。
+  "lmarena-image": async () => {
+    const data = await apiGet(
+      "https://raw.githubusercontent.com/lmarena/arena-catalog/main/data/leaderboard-image.json"
+    );
+    const board = (data && data.full) || {};
+    const rows = Object.entries(board)
+      .map(([name, v]) => ({ name, rating: v && v.rating }))
+      .filter((r) => typeof r.rating === "number");
+    rows.sort((a, b) => b.rating - a.rating);
+    const top = rows[0];
+    if (!top) return null;
+    return {
+      benchmark: "LMArena (Image Arena)",
+      metric: "Arena Elo",
+      higherIsBetter: true,
+      topModel: top.name,
+      score: Math.round(top.rating),
+      asOf: new Date().toISOString().slice(0, 10),
+      paperUrl: "https://arxiv.org/abs/2403.04132",
+      codeUrl: null,
+      boardName: "LMArena",
+      boardUrl: "https://lmarena.ai/leaderboard",
+    };
+  },
+
+  // LMArena Vision（画像理解・マルチモーダルの対戦評価）。
+  "lmarena-vision": async () => {
+    const data = await apiGet(
+      "https://raw.githubusercontent.com/lmarena/arena-catalog/main/data/leaderboard-vision.json"
+    );
+    const board = (data && data.full) || {};
+    const rows = Object.entries(board)
+      .map(([name, v]) => ({ name, rating: v && v.rating }))
+      .filter((r) => typeof r.rating === "number");
+    rows.sort((a, b) => b.rating - a.rating);
+    const top = rows[0];
+    if (!top) return null;
+    return {
+      benchmark: "LMArena (Vision Arena)",
+      metric: "Arena Elo",
+      higherIsBetter: true,
+      topModel: top.name,
+      score: Math.round(top.rating),
+      asOf: new Date().toISOString().slice(0, 10),
+      paperUrl: "https://arxiv.org/abs/2403.04132",
+      codeUrl: null,
+      boardName: "LMArena",
+      boardUrl: "https://lmarena.ai/leaderboard",
+    };
+  },
 };
 
 function pickMode(items) {
