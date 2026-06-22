@@ -1,6 +1,16 @@
 {
-  "_note": "PwCに無い/代表ベンチが弱い分野を、公式ソースの最新値で上書きする設定。fetcher は scripts/collect-sota.js の officialFetchers のキーに対応。slug は sota.json の分野slug。",
+  "_note": "PwCに無い/代表ベンチが弱い分野を、公式リーダーボードの最新値で上書きする設定。fetcher は scripts/collect-sota.js の officialFetchers のキーに対応。slug は sota.json の分野slug。addIfMissing:true なら PwCに無い分野を新規追加（domain/task/keywords を併記）。",
   "overrides": [
-    { "slug": "coding-agents", "fetcher": "swe-bench-verified" }
+    { "slug": "coding-agents", "fetcher": "swe-bench-verified" },
+    { "slug": "automatic-speech-recognition", "fetcher": "open-asr" },
+    {
+      "slug": "llm-arena",
+      "fetcher": "lmarena-text",
+      "addIfMissing": true,
+      "domain": "Language",
+      "task": "LLM対話(Arena)",
+      "taskEn": "LLM Chat Arena",
+      "keywords": ["対話", "チャット", "会話", "Arena", "LMArena", "総合力"]
+    }
   ]
 }

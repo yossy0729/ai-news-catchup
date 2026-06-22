@@ -138,6 +138,67 @@ const officialFetchers = {
       boardUrl: "https://www.swebench.com/",
     };
   },
+
+  // Open ASR Leaderboard（音声認識の定番。HuggingFace公式GitHubのCSV）。
+  "open-asr": async () => {
+    const res = await fetch(
+      "https://raw.githubusercontent.com/huggingface/open_asr_leaderboard/main/scripts/data/en_shortform.csv",
+      { headers: { "User-Agent": UA } }
+    );
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const lines = (await res.text()).split("\n").map((l) => l.trim()).filter(Boolean);
+    const header = lines[0].split(",");
+    const modelIdx = header.indexOf("model");
+    const werIdx = header.indexOf("Avg. WER");
+    if (modelIdx < 0 || werIdx < 0) return null;
+    const rows = lines
+      .slice(1)
+      .map((l) => l.split(","))
+      .map((c) => ({ model: c[modelIdx], wer: parseScore(c[werIdx]) }))
+      .filter((r) => r.model && r.wer != null && r.wer > 0);
+    rows.sort((a, b) => a.wer - b.wer); // WERは低いほど良い
+    const top = rows[0];
+    if (!top) return null;
+    return {
+      benchmark: "Open ASR Leaderboard (英語・8データセット平均)",
+      metric: "WER (%)",
+      higherIsBetter: false,
+      topModel: top.model,
+      score: top.wer,
+      asOf: new Date().toISOString().slice(0, 10),
+      paperUrl: "https://arxiv.org/abs/2510.06961",
+      codeUrl: "https://github.com/huggingface/open_asr_leaderboard",
+      boardName: "Open ASR",
+      boardUrl: "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard",
+    };
+  },
+
+  // LMArena (Chatbot Arena) Text。LLM対話の総合力。公式org lmarena/arena-catalog のJSON。
+  "lmarena-text": async () => {
+    const data = await apiGet(
+      "https://raw.githubusercontent.com/lmarena/arena-catalog/main/data/leaderboard-text.json"
+    );
+    // カテゴリ別のネスト構造。"full" が総合(全カテゴリ込み)のリーダーボード。
+    const board = (data && data.full) || {};
+    const rows = Object.entries(board)
+      .map(([name, v]) => ({ name, rating: v && v.rating }))
+      .filter((r) => typeof r.rating === "number");
+    rows.sort((a, b) => b.rating - a.rating); // Eloは高いほど良い
+    const top = rows[0];
+    if (!top) return null;
+    return {
+      benchmark: "LMArena (Text Arena)",
+      metric: "Arena Elo",
+      higherIsBetter: true,
+      topModel: top.name,
+      score: Math.round(top.rating),
+      asOf: new Date().toISOString().slice(0, 10),
+      paperUrl: "https://arxiv.org/abs/2403.04132",
+      codeUrl: null,
+      boardName: "LMArena",
+      boardUrl: "https://lmarena.ai/leaderboard",
+    };
+  },
 };
 
 function pickMode(items) {
@@ -309,6 +370,28 @@ async function main() {
             hasData: true,
             verified: data.score != null,
           };
+        } else if (ov.addIfMissing) {
+          // PwCに無い分野を新規追加（domain/task等は設定から）。
+          entries.push({
+            slug: ov.slug,
+            domain: ov.domain || "Other",
+            task: ov.task || ov.slug,
+            taskEn: ov.taskEn || ov.task || ov.slug,
+            keywords: ov.keywords || [],
+            hasData: true,
+            sourceName: "official",
+            boardName: "PwC",
+            boardUrl: null,
+            paperUrl: null,
+            codeUrl: null,
+            paperTitle: null,
+            prevTopModel: null,
+            prevScore: null,
+            prevAsOf: null,
+            prevComparable: true,
+            ...data,
+            verified: data.score != null,
+          });
         }
         console.log(`  公式上書き: ${ov.slug} ← ${ov.fetcher} (${data.topModel} ${data.score})`);
       } catch (err) {

@@ -1019,7 +1019,7 @@ function renderSota() {
 
   if (sotaNote) {
     const asOf = sotaData.asOf ? `（基準: ${sotaData.asOf}時点）` : "";
-    sotaNote.textContent = `${scopeLabel}・出典: paperswithcode.co${asOf}`;
+    sotaNote.textContent = `${scopeLabel}・出典: paperswithcode.co ほか公式リーダーボード${asOf}`;
   }
   if (sotaFreshness) {
     const withData = entries.filter((e) => e.hasData).length;
