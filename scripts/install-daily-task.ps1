@@ -31,8 +31,11 @@ $Action = New-ScheduledTaskAction `
 $Trigger = New-ScheduledTaskTrigger -Daily -At $TriggerTime
 $Settings = New-ScheduledTaskSettingsSet `
   -StartWhenAvailable `
+  -WakeToRun `
   -AllowStartIfOnBatteries `
   -DontStopIfGoingOnBatteries `
+  -RestartCount 3 `
+  -RestartInterval (New-TimeSpan -Minutes 10) `
   -ExecutionTimeLimit (New-TimeSpan -Hours 1)
 $Principal = New-ScheduledTaskPrincipal `
   -UserId "$env:USERDOMAIN\$env:USERNAME" `
