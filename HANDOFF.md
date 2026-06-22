@@ -7,8 +7,9 @@
 - 「データは全網羅・画面は厳選＋検索」方針。既定は `data/sota-presets.json` の前線10分野、タブでエリア別/全分野、`data/sota-labels.json` で日本語キーワード検索。
 - 数値が取れるのは **55分野のみ**（PwC未登録の23分野はリンクのみ）。一部は更新停止で古いSOTA（PwCの構造的限界）。鮮度はプリセットで対処。
 - 1位交代時のみ前回値を `prev*` へ退避（履歴蓄積）。`daily-update.js` に組込み済み・毎朝自動・失敗は隔離。
-- 指標の向き(↑/↓)は1位2位スコアで自動判定。出典は Paper/Code/PwC。`data/cache/` は .gitignore 済み。
-- **次の候補**: ①SWE-bench等の公式GitHub値で重要分野を上書き補完（PwCのcoding系は代表ベンチが弱い/古い）。②代表データセット選定の改善（retrieval が動画検索になる等の副作用）。
+- 指標の向き(↑/↓)は1位2位スコアで自動判定。出典は Paper/Code/掲載元。`data/cache/` は .gitignore 済み。
+- **公式上書き（2026-06-22 追加・候補①完了）**: `data/sota-official.json` で分野を公式ソース値に差し替え。`collect-sota.js` の `officialFetchers` に取得処理。現状 `coding-agents` を **SWE-bench Verified 公式GitHub**（現1位を自動取得）に上書き。退避はベンチ/指標が同一のときだけ行う（ベンチ差し替え時は誤比較を避け履歴を持たない）。新ソースは fetcher を足すだけ。
+- **次の候補**: ②代表データセット選定の改善（retrieval が動画検索になる等の副作用）。③他の重要分野も公式ソース上書きを拡充（画像生成=公式Arena等、音声=Open ASR公式CSV など）。
 
 ---
 
