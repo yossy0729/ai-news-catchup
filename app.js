@@ -315,23 +315,39 @@ function tickerLaneMatches(item, lane) {
   return /AI|生成AI|ChatGPT|Claude|Gemini|OpenAI|Anthropic|Copilot|LLM|RAG|FDE|エージェント|モデル/i.test(text);
 }
 
+// ティッカーのタグ（日本語）。色の意味と一致させる:
+//   モデル/研究=青, インフラ・業務(FDE/エージェント)=橙, 規制=赤, 一般=緑。
+// SOTA/ベンチは「指標・ベンチ」タブの担当なので、ニュース速報では「モデル」に寄せる。
 function tickerTag(item) {
   const text = `${item.title} ${item.summary}`;
   if (/\bFDE\b|Forward Deployed/i.test(text)) return "FDE";
-  if (/SOTA|ベンチ|benchmark/i.test(text)) return "SOTA";
-  if (/規制|著作権|ガバナンス|プライバシー|CISO/i.test(text)) return "Risk";
-  if (/エージェント|Copilot|RAG|作業代行|自動化/i.test(text)) return "Agent";
-  if (/GPU|クラウド|Cloud|AWS|半導体|スパコン/i.test(text)) return "Infra";
-  if (/モデル|LLM|Midjourney|動画|画像AI|AI for Science/i.test(text)) return "Model";
+  if (/規制|著作権|ガバナンス|プライバシー|CISO|セキュリティ|脆弱性/i.test(text)) return "規制";
+  if (/エージェント|Copilot|RAG|作業代行|自動化/i.test(text)) return "エージェント";
+  if (/GPU|クラウド|Cloud|AWS|半導体|スパコン|データセンター|基盤/i.test(text)) return "インフラ";
+  if (/モデル|LLM|ベンチ|SOTA|benchmark|Midjourney|動画|画像AI|AI for Science|論文|研究/i.test(text)) return "モデル";
   return "AI";
 }
 
+// タグ → 色トーン。色とタグの意味を一致させ「色を見れば中身が分かる」状態にする。
+const TICKER_TAG_TONE = {
+  "モデル": "blue",
+  "インフラ": "amber",
+  "エージェント": "amber",
+  "FDE": "amber",
+  "規制": "red",
+  "AI": "green"
+};
+
 function tickerTone(item) {
-  const accent = item.accent || item.categoryId;
-  if (accent === "security" || item.categoryId === "regulation") return "red";
-  if (accent === "research" || item.categoryId === "models") return "blue";
-  if (accent === "business" || item.categoryId === "fde") return "amber";
-  return "green";
+  if (item.tag) return "blue"; // aiSignals(論文/ベンチ/研究/価格)は研究・指標系=青
+  return TICKER_TAG_TONE[tickerTag(item)] || "green";
+}
+
+// aiSignals の英語タグを日本語に。media/official はタグを持たないので tickerTag で導出。
+const SIGNAL_TAG_JA = { Paper: "論文", SOTA: "ベンチ", Research: "研究", Price: "価格" };
+function tickerTagLabel(item) {
+  if (item.tag) return SIGNAL_TAG_JA[item.tag] || item.tag;
+  return tickerTag(item);
 }
 
 function buildTickerMessage(item) {
@@ -339,6 +355,18 @@ function buildTickerMessage(item) {
   const cleanTitle = String(item.title || "").replace(/\s+/g, " ").trim();
   const meta = `${formatDate(item.date)} / ${item.source}`;
   return `${cleanTitle} / ${meta}`;
+}
+
+// ティッカーの見た目スクロール速度を一定(px/秒)に揃える。
+// トラックは同じ内容を2回並べ translateX(-50%) で流すため、1周距離=幅の半分。
+// 中身の長短で速度が変わらないよう、距離に比例して animation-duration を設定する。
+const TICKER_SPEED_PX_PER_SEC = 55;
+function applyTickerSpeed(track) {
+  if (!track) return;
+  const distance = track.scrollWidth / 2;
+  if (!distance) return;
+  const duration = Math.max(24, Math.round(distance / TICKER_SPEED_PX_PER_SEC));
+  track.style.animationDuration = `${duration}s`;
 }
 
 function renderTicker() {
@@ -357,7 +385,7 @@ function renderTicker() {
   const candidates = (activeTickerLane === "research"
     ? [...signalCandidates, ...officialCandidates, ...mediaCandidates]
     : activeTickerLane === "core"
-      ? [...signalCandidates.slice(0, 6), ...officialCandidates.slice(0, 5), ...mediaCandidates.slice(0, 5)]
+      ? [...mediaCandidates.slice(0, 7), ...officialCandidates.slice(0, 5)]
       : [...mediaCandidates, ...officialCandidates, ...signalCandidates]
   ).slice(0, 12);
 
@@ -377,7 +405,7 @@ function renderTicker() {
       link.title = `${entry.source} / ${entry.date}`;
 
       const tag = document.createElement("em");
-      tag.textContent = entry.tag || tickerTag(entry);
+      tag.textContent = tickerTagLabel(entry);
       const headline = document.createElement("strong");
       headline.textContent = buildTickerMessage(entry);
 
@@ -395,6 +423,7 @@ function renderTicker() {
   };
 
   tickerTrack.replaceChildren(buildSegment(), buildSegment());
+  applyTickerSpeed(tickerTrack);
 }
 
 function renderMediaRadar() {
@@ -1216,13 +1245,16 @@ function renderMetricsTicker() {
   };
 
   metricsTickerTrack.replaceChildren(buildSegment(), buildSegment());
+  applyTickerSpeed(metricsTickerTrack);
 }
 
+// 公式ベンダーのaccent → 色トーン。共通の色定義に合わせる:
+//   研究・モデル=青, プロダクト=緑, インフラ/業務導入=橙, リスク・規制=赤。
 const OFFICIAL_TICKER_TONE = {
   research: "blue",
   product: "green",
   infrastructure: "amber",
-  adoption: "green",
+  adoption: "amber",
   security: "red",
   governance: "red"
 };
@@ -1268,6 +1300,7 @@ function renderOfficialTicker() {
   };
 
   officialTickerTrack.replaceChildren(buildSegment(), buildSegment());
+  applyTickerSpeed(officialTickerTrack);
 }
 
 const PAGE_ID_BY_NAME = {

@@ -45,46 +45,39 @@ a {
   color: inherit;
 }
 
-[data-accent="adoption"] {
+/* カードのアクセント色 = 共通の意味4色体系に対応:
+   🔵青=研究・モデル / 🟢緑=プロダクト・一般 /
+   🟠橙=インフラ・業務(導入/エージェント含む) / 🔴赤=リスク・規制 */
+
+/* 🟢 緑: プロダクト・一般 */
+[data-accent="product"] {
   --accent: #0f7a4f;
   --accent-soft: #e1f3e9;
   --accent-border: #b8ddc9;
 }
 
+/* 🔵 青: 研究・モデル */
 [data-accent="research"] {
   --accent: #245eb8;
   --accent-soft: #e4edfb;
   --accent-border: #b8cbed;
 }
 
+/* 🟠 橙: インフラ・業務導入 */
+[data-accent="adoption"],
+[data-accent="business"],
+[data-accent="infrastructure"] {
+  --accent: #b3650f;
+  --accent-soft: #fbebd6;
+  --accent-border: #ecc79a;
+}
+
+/* 🔴 赤: リスク・規制・安全 */
+[data-accent="security"],
 [data-accent="governance"] {
-  --accent: #9b5d00;
-  --accent-soft: #fff1d8;
-  --accent-border: #e7c986;
-}
-
-[data-accent="product"] {
-  --accent: #5343a6;
-  --accent-soft: #ece9fb;
-  --accent-border: #c9c0ef;
-}
-
-[data-accent="security"] {
   --accent: #b42318;
   --accent-soft: #fde7e3;
   --accent-border: #f0b5ac;
-}
-
-[data-accent="business"] {
-  --accent: #7a5a12;
-  --accent-soft: #f4ecd0;
-  --accent-border: #d9c47e;
-}
-
-[data-accent="infrastructure"] {
-  --accent: #24706f;
-  --accent-soft: #e0f1ef;
-  --accent-border: #aed9d4;
 }
 
 h1,
@@ -921,6 +914,48 @@ h1 {
 .pricing-table .sota-nolink {
   color: var(--muted);
   opacity: 0.5;
+}
+
+/* 色の意味凡例（ティッカー・カード共通の4色体系） */
+.tone-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 7px 2px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.tone-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tone-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+}
+
+.tone-dot.tone-blue {
+  background: #245eb8;
+}
+
+.tone-dot.tone-green {
+  background: #0f7a4f;
+}
+
+.tone-dot.tone-amber {
+  background: #b3650f;
+}
+
+.tone-dot.tone-red {
+  background: #b42318;
 }
 
 .category-column .category-group {
@@ -1787,7 +1822,7 @@ body {
 .official-item h3 {
   margin-bottom: 0;
   color: #101815;
-  font-size: 0.98rem;
+  font-size: 1.04rem;
   font-weight: 900;
   line-height: 1.32;
 }
@@ -1803,10 +1838,10 @@ body {
 .official-item p {
   display: -webkit-box;
   overflow: hidden;
-  color: #31433a;
-  font-size: 0.84rem;
-  font-weight: 600;
-  line-height: 1.45;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
@@ -2445,10 +2480,10 @@ body {
 }
 
 .media-card p {
-  color: #31433a;
+  color: var(--muted);
   font-size: 0.86rem;
-  font-weight: 600;
-  line-height: 1.48;
+  font-weight: 400;
+  line-height: 1.5;
   -webkit-line-clamp: 2;
 }
 

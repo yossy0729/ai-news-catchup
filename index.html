@@ -72,15 +72,21 @@
         <div class="ticker-bar" aria-label="AI速報ティッカー">
         <button id="tickerToggle" class="ticker-label" type="button" aria-pressed="false">AI FLASH</button>
         <div class="ticker-lanes" role="tablist" aria-label="AI FLASH レーン">
-          <button class="ticker-lane active" type="button" data-ticker-lane="core">CORE</button>
+          <button class="ticker-lane active" type="button" data-ticker-lane="core">主要</button>
           <button class="ticker-lane" type="button" data-ticker-lane="fde">FDE</button>
-          <button class="ticker-lane" type="button" data-ticker-lane="research">Research</button>
-          <button class="ticker-lane" type="button" data-ticker-lane="consult">Consult</button>
+          <button class="ticker-lane" type="button" data-ticker-lane="research">研究・モデル</button>
+          <button class="ticker-lane" type="button" data-ticker-lane="consult">規制・コンサル</button>
         </div>
         <div class="ticker-viewport">
           <div id="tickerTrack" class="ticker-track"></div>
         </div>
       </div>
+      <ul class="tone-legend" aria-label="ティッカー・カードの色の意味">
+        <li><span class="tone-dot tone-blue"></span>研究・モデル</li>
+        <li><span class="tone-dot tone-green"></span>プロダクト・一般</li>
+        <li><span class="tone-dot tone-amber"></span>インフラ・業務</li>
+        <li><span class="tone-dot tone-red"></span>リスク・規制</li>
+      </ul>
 
         <section class="media-radar" aria-label="直近AIメディア速報">
           <div class="section-title-row media-title-row">
@@ -114,6 +120,12 @@
             <div id="officialTickerTrack" class="ticker-track"></div>
           </div>
         </div>
+        <ul class="tone-legend" aria-label="ティッカー・カードの色の意味">
+          <li><span class="tone-dot tone-blue"></span>研究・モデル</li>
+          <li><span class="tone-dot tone-green"></span>プロダクト・一般</li>
+          <li><span class="tone-dot tone-amber"></span>インフラ・業務</li>
+          <li><span class="tone-dot tone-red"></span>リスク・規制</li>
+        </ul>
 
         <section class="official-radar" aria-label="AIベンダー・GAFAM公式動向">
           <div class="section-title-row official-title-row">
