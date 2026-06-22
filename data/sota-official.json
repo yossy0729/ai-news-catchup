@@ -1,0 +1,6 @@
+{
+  "_note": "PwCに無い/代表ベンチが弱い分野を、公式ソースの最新値で上書きする設定。fetcher は scripts/collect-sota.js の officialFetchers のキーに対応。slug は sota.json の分野slug。",
+  "overrides": [
+    { "slug": "coding-agents", "fetcher": "swe-bench-verified" }
+  ]
+}

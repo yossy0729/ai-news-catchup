@@ -22,6 +22,7 @@ const dataDir = path.join(root, "data");
 const cacheDir = path.join(dataDir, "cache");
 const sotaPath = path.join(dataDir, "sota.json");
 const labelsPath = path.join(dataDir, "sota-labels.json");
+const officialPath = path.join(dataDir, "sota-official.json");
 const evalCachePath = path.join(cacheDir, "pwc-evaluations.json");
 
 const args = new Set(process.argv.slice(2));
@@ -110,6 +111,35 @@ function inferHigherIsBetter(repRows, metric, topScore) {
   return !LOWER_IS_BETTER_HINTS.some((k) => m.includes(k));
 }
 
+// 公式ソースのfetcher。PwCに無い/代表ベンチが弱い分野を、最新の公式値で補完する。
+// data/sota-official.json の overrides[].fetcher がこのキーを指す。新ソースはここに追加。
+const officialFetchers = {
+  // SWE-bench Verified（コーディングエージェントの花形ベンチ。PwCには未登録）。
+  "swe-bench-verified": async () => {
+    const data = await apiGet(
+      "https://raw.githubusercontent.com/SWE-bench/swe-bench.github.io/master/data/leaderboards.json"
+    );
+    const board = (data.leaderboards || []).find((b) => b.name === "Verified");
+    const results = board && Array.isArray(board.results) ? board.results : [];
+    const top = results
+      .filter((r) => typeof r.resolved === "number")
+      .sort((a, b) => b.resolved - a.resolved)[0];
+    if (!top) return null;
+    return {
+      benchmark: "SWE-bench Verified",
+      metric: "解決率 (%)",
+      higherIsBetter: true,
+      topModel: top.name,
+      score: top.resolved,
+      asOf: top.date || null,
+      paperUrl: "https://arxiv.org/abs/2310.06770",
+      codeUrl: top.site || null,
+      boardName: "SWE-bench",
+      boardUrl: "https://www.swebench.com/",
+    };
+  },
+};
+
 function pickMode(items) {
   const counts = new Map();
   let best = null;
@@ -174,7 +204,8 @@ async function main() {
       score: null,
       asOf: null,
       sourceName: "paperswithcode.co",
-      pwcUrl: `https://paperswithcode.co/tasks/${task.slug}`,
+      boardName: "PwC",
+      boardUrl: `https://paperswithcode.co/tasks/${task.slug}`,
       paperUrl: null,
       codeUrl: null,
       paperTitle: null,
@@ -255,6 +286,37 @@ async function main() {
     );
   }
 
+  // 公式ソースで上書き（PwCに無い/代表ベンチが弱い分野の補完）。
+  if (fs.existsSync(officialPath)) {
+    const official = JSON.parse(fs.readFileSync(officialPath, "utf8"));
+    for (const ov of official.overrides || []) {
+      const fetcher = officialFetchers[ov.fetcher];
+      if (!fetcher) {
+        console.warn(`  公式上書き: 未知のfetcher "${ov.fetcher}"`);
+        continue;
+      }
+      try {
+        const data = await fetcher();
+        if (!data) {
+          console.warn(`  公式上書き: ${ov.slug} の値が取得できず（PwC値を維持）`);
+          continue;
+        }
+        const idx = entries.findIndex((e) => e.slug === ov.slug);
+        if (idx >= 0) {
+          entries[idx] = {
+            ...entries[idx],
+            ...data,
+            hasData: true,
+            verified: data.score != null,
+          };
+        }
+        console.log(`  公式上書き: ${ov.slug} ← ${ov.fetcher} (${data.topModel} ${data.score})`);
+      } catch (err) {
+        console.warn(`  公式上書き失敗 ${ov.slug}: ${err.message}（PwC値を維持）`);
+      }
+    }
+  }
+
   entries.sort((a, b) => a.domain.localeCompare(b.domain) || a.task.localeCompare(b.task));
 
   // プレビュー出力
@@ -294,14 +356,18 @@ async function main() {
   let changed = 0;
   for (const e of entries) {
     const old = prevBySlug.get(e.slug);
-    if (old && old.topModel && old.topModel !== e.topModel) {
-      // 1位交代 → 旧値を退避
+    if (!old) continue;
+    // ベンチ/指標が変わったら過去値は比較不能。履歴を持たない（prevはnullのまま）。
+    const sameBench = old.benchmark === e.benchmark && old.metric === e.metric;
+    if (!sameBench) continue;
+    if (old.topModel && old.topModel !== e.topModel) {
+      // 同一ベンチでの1位交代 → 旧値を退避
       e.prevTopModel = old.topModel;
       e.prevScore = old.score;
       e.prevAsOf = old.asOf;
-      e.prevComparable = old.benchmark === e.benchmark && old.metric === e.metric;
+      e.prevComparable = true;
       changed += 1;
-    } else if (old) {
+    } else {
       // 同一1位 → 既存の退避履歴を引き継ぐ
       e.prevTopModel = old.prevTopModel ?? null;
       e.prevScore = old.prevScore ?? null;

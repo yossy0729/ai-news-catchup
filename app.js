@@ -1141,10 +1141,11 @@ function renderSota() {
       span.textContent = label;
       return span;
     };
+    const boardName = e.boardName || "PwC";
     [
       makeSrcNode(e.paperUrl, "Paper"),
       makeSrcNode(e.codeUrl, "Code"),
-      makeSrcNode(e.pwcUrl, "PwC", "Papers with Code（SOTAの掲載元）")
+      makeSrcNode(e.boardUrl, boardName, `${boardName}（SOTAの掲載元）`)
     ].forEach((node, i) => {
       if (i > 0) src.append(document.createTextNode(" / "));
       src.append(node);
