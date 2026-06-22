@@ -12,9 +12,10 @@
   - `coding-agents` → SWE-bench Verified（swe-bench.github.io の leaderboards.json）
   - `automatic-speech-recognition` → Open ASR（huggingface/open_asr_leaderboard の en_shortform.csv）
   - `llm-arena`（新規・addIfMissing）→ LMArena Text（lmarena/arena-catalog の leaderboard-text.json の "full" カテゴリ）
-  退避はベンチ/指標が同一のときだけ（ベンチ差し替え時は誤比較を避け履歴を持たない）。新ソースは fetcher を足すだけ。
+  - `image-generation` → LMArena Image、`image-understanding` → LMArena Vision（同 arena-catalog）
+  退避はベンチ/指標が同一のときだけ（ベンチ差し替え時は誤比較を避け履歴を持たない）。新ソースは fetcher を足すだけ。動きの速い注目分野に絞って上書きし、更新の遅い古典分野はPwCのまま。
 - **代表ベンチ手動指定（2026-06-22 追加・候補②完了）**: `data/sota-datasets.json` で分野ごとに代表データセットを指定し、件数最多ルールを上書き。現状 世界知識=GPQA Diamond / 数学=AIME 2025 / 推論=BBH / 検索=BEIR。`collect-sota.js` の代表選定で dataset_name 部分一致を優先。指定が見つからなければ自動選定へフォールバック。
-- **次の候補**: ③公式上書きをさらに拡充（数学=MathArena、画像/動画生成=各公式 など、生データが公開されているもの）。④数学 AIME 2025 は GPT-5.2 が満点(100)で飽和ぎみ → AIME 2026 への切替を検討（現状データ少）。
+- **次の候補**: ③数学 AIME 2025 は GPT-5.2 が満点(100)で飽和ぎみ → AIME 2026 への切替を検討（現状データ少）。④取得できない定番ボード（Artificial Analysis=API登録制、MathArena=JS描画）は現状非対応。
 
 ---
 
