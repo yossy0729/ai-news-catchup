@@ -45,6 +45,7 @@
       <div class="search-panel command-bar" role="search">
         <div class="page-tabs" role="tablist" aria-label="表示切替">
           <button class="page-tab active" type="button" data-page="today">今日の動向</button>
+          <button class="page-tab" type="button" data-page="category">カテゴリ別</button>
           <button class="page-tab" type="button" data-page="official">公式動向</button>
           <button class="page-tab" type="button" data-page="metrics">指標・ベンチ</button>
         </div>
@@ -98,8 +99,18 @@
           </div>
           <div id="mediaGrid" class="media-grid"></div>
         </section>
+        </div>
 
+        <div id="pageCategory" class="page">
         <section class="category-workspace">
+          <div class="section-title-row">
+            <div>
+              <p class="section-kicker">primary sources</p>
+              <h2>カテゴリ別ニュース（一次情報）</h2>
+            </div>
+            <span class="status-chip good">一次情報</span>
+          </div>
+          <p class="pricing-note">公式発表・論文・導入事例などの一次情報をカテゴリ別に整理します。速報と違い毎日は更新されないため、数日〜数週間前の項目が並ぶことがあります（一次情報の性質によるもので、古い＝未更新ではありません）。</p>
           <div class="tabs" role="tablist" aria-label="ニュースカテゴリ">
             <button class="tab active" type="button" data-tab="all">全体</button>
             <button class="tab" type="button" data-tab="japan">国内</button>

@@ -1305,6 +1305,7 @@ function renderOfficialTicker() {
 
 const PAGE_ID_BY_NAME = {
   today: "pageToday",
+  category: "pageCategory",
   official: "pageOfficial",
   metrics: "pageMetrics"
 };
