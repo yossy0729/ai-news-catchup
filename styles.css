@@ -903,10 +903,13 @@ h1 {
   font-weight: 600;
 }
 
-/* SOTA: 指標の向き矢印(↑高いほど良い / ↓低いほど良い) */
+/* SOTA: 指標の向き三角(▲高いほど良い / ▼低いほど良い)。
+   塗りつぶし三角＋濃色で、細い矢印より視認性を高める。 */
 .pricing-table .sota-dir {
-  color: var(--muted);
-  font-weight: 700;
+  margin-left: 5px;
+  color: var(--ink);
+  font-size: 0.82rem;
+  line-height: 1;
   cursor: help;
 }
 

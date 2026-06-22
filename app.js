@@ -1102,8 +1102,8 @@ function renderSota() {
     metricTd.textContent = e.metric || "—";
     if (e.hasData && e.metric) {
       const dir = document.createElement("span");
-      dir.className = "sota-dir";
-      dir.textContent = e.higherIsBetter === false ? " ↓" : " ↑";
+      dir.className = e.higherIsBetter === false ? "sota-dir sota-dir-down" : "sota-dir sota-dir-up";
+      dir.textContent = e.higherIsBetter === false ? "▼" : "▲";
       dir.title = e.higherIsBetter === false ? "数値が低いほど良い" : "数値が高いほど良い";
       metricTd.append(dir);
     }
