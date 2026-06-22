@@ -23,6 +23,7 @@ const cacheDir = path.join(dataDir, "cache");
 const sotaPath = path.join(dataDir, "sota.json");
 const labelsPath = path.join(dataDir, "sota-labels.json");
 const officialPath = path.join(dataDir, "sota-official.json");
+const datasetsPath = path.join(dataDir, "sota-datasets.json");
 const evalCachePath = path.join(cacheDir, "pwc-evaluations.json");
 
 const args = new Set(process.argv.slice(2));
@@ -233,6 +234,11 @@ async function main() {
     ? JSON.parse(fs.readFileSync(labelsPath, "utf8"))
     : {};
 
+  // 分野ごとの代表データセット指定（件数最多ルールの上書き）。
+  const datasetOverrides = fs.existsSync(datasetsPath)
+    ? JSON.parse(fs.readFileSync(datasetsPath, "utf8")).overrides || {}
+    : {};
+
   // タスクslug -> evaluations
   const byTask = new Map();
   for (const ev of evals) {
@@ -293,16 +299,26 @@ async function main() {
       continue;
     }
 
-    // 代表データセット = 評価件数が最多のもの（＝事実上の主要ベンチ）。
+    // 代表データセットを決定。手動指定(sota-datasets.json)があればそれを優先し、
+    // 無ければ評価件数が最多のもの（＝事実上の主要ベンチ）を採用する。
+    const keyOf = (r) => r.dataset_slug || r.dataset_name || "";
     const datasetCounts = new Map();
     for (const r of rows) {
-      const key = r.dataset_slug || r.dataset_name || "";
-      datasetCounts.set(key, (datasetCounts.get(key) || 0) + 1);
+      datasetCounts.set(keyOf(r), (datasetCounts.get(keyOf(r)) || 0) + 1);
     }
-    const repDataset = [...datasetCounts.entries()].sort((a, b) => b[1] - a[1])[0][0];
-    const repRows = rows.filter(
-      (r) => (r.dataset_slug || r.dataset_name || "") === repDataset
-    );
+
+    let repDataset = null;
+    const wanted = datasetOverrides[task.slug];
+    if (wanted) {
+      const w = String(wanted).toLowerCase();
+      const match = rows.find((r) => (r.dataset_name || "").toLowerCase().includes(w));
+      if (match) repDataset = keyOf(match);
+      else console.warn(`  代表ベンチ指定が見つからず: ${task.slug} → "${wanted}"（自動選定に戻す）`);
+    }
+    if (!repDataset) {
+      repDataset = [...datasetCounts.entries()].sort((a, b) => b[1] - a[1])[0][0];
+    }
+    const repRows = rows.filter((r) => keyOf(r) === repDataset);
 
     // 代表指標 = その代表データセットで最も使われている best_metric。
     const repMetric = pickMode(repRows.map((r) => r.best_metric).filter(Boolean));

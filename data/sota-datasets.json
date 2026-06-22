@@ -1,0 +1,9 @@
+{
+  "_note": "分野ごとに代表データセット(ベンチマーク)を手動指定し、PwCの『評価件数最多』ルールを上書きする。値は PwC の dataset_name の部分一致（大文字小文字無視）。件数最多が古い/マイナーなベンチを拾う分野だけ指定すればよい（未指定は自動選定のまま）。",
+  "overrides": {
+    "world-knowledge": "GPQA Diamond",
+    "math": "AIME 2025",
+    "reasoning": "BBH",
+    "retrieval": "BEIR"
+  }
+}
