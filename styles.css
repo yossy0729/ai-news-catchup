@@ -1758,9 +1758,10 @@ body {
 }
 
 .official-vendor {
+  /* --brand: 各社ブランド色（app.js が設定）。未設定時は意味アクセント色にフォールバック。 */
   min-width: 0;
-  border: 1px solid color-mix(in srgb, var(--accent) 46%, #d9e0dc);
-  border-top: 5px solid var(--accent);
+  border: 1px solid color-mix(in srgb, var(--brand, var(--accent)) 40%, #d9e0dc);
+  border-top: 5px solid var(--brand, var(--accent));
   background: #ffffff;
   box-shadow: 0 10px 24px rgba(20, 35, 27, 0.07);
 }
@@ -1772,7 +1773,9 @@ body {
   gap: 10px;
   min-height: 42px;
   padding: 7px 10px;
-  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 92%, #101815), color-mix(in srgb, var(--accent) 70%, #ffffff));
+  /* タイトル(左寄せ)が乗る左側を暗く、右へ鮮やかなブランド色へ。
+     黄/緑など明るいブランド色でも左端で白文字のコントラストを確保する。 */
+  background: linear-gradient(90deg, color-mix(in srgb, var(--brand, var(--accent)) 50%, #10151a), color-mix(in srgb, var(--brand, var(--accent)) 78%, #10151a));
   color: #ffffff;
 }
 

@@ -70,10 +70,13 @@ const sotaDomainLabels = {
 };
 
 const officialVendors = [
+  // brand: 各社のブランド主要色（ロゴは商標リスクのため不使用。色のみで識別）。
+  // ヘッダー帯では黒寄りに暗色化して白文字の可読性を確保し、上ボーダーは原色で出す。
   {
     id: "anthropic",
     name: "Anthropic / Claude",
     accent: "product",
+    brand: "#cc785c",
     homepage: "https://www.anthropic.com/news",
     pattern: /Anthropic|Claude/i
   },
@@ -81,6 +84,7 @@ const officialVendors = [
     id: "openai",
     name: "OpenAI / ChatGPT",
     accent: "research",
+    brand: "#10a37f",
     homepage: "https://openai.com/news/",
     pattern: /OpenAI|ChatGPT|Codex/i
   },
@@ -88,6 +92,7 @@ const officialVendors = [
     id: "google",
     name: "Google / DeepMind",
     accent: "infrastructure",
+    brand: "#4285f4",
     homepage: "https://blog.google/technology/ai/",
     pattern: /Google|DeepMind|Gemini/i
   },
@@ -95,6 +100,7 @@ const officialVendors = [
     id: "microsoft",
     name: "Microsoft / Azure AI",
     accent: "adoption",
+    brand: "#0078d4",
     homepage: "https://blogs.microsoft.com/ai/",
     pattern: /Microsoft|Azure|Copilot/i
   },
@@ -102,6 +108,7 @@ const officialVendors = [
     id: "meta",
     name: "Meta AI",
     accent: "research",
+    brand: "#0866ff",
     homepage: "https://ai.meta.com/blog/",
     pattern: /Meta AI|Meta\b|Llama/i
   },
@@ -109,6 +116,7 @@ const officialVendors = [
     id: "nvidia",
     name: "NVIDIA",
     accent: "infrastructure",
+    brand: "#76b900",
     homepage: "https://developer.nvidia.com/blog/category/generative-ai/",
     pattern: /NVIDIA/i
   },
@@ -116,6 +124,7 @@ const officialVendors = [
     id: "huggingface",
     name: "Hugging Face",
     accent: "research",
+    brand: "#ffd21e",
     homepage: "https://huggingface.co/blog",
     pattern: /Hugging Face|HuggingFace/i
   },
@@ -123,6 +132,7 @@ const officialVendors = [
     id: "apple",
     name: "Apple ML",
     accent: "research",
+    brand: "#6e6e73",
     homepage: "https://machinelearning.apple.com/",
     pattern: /Apple Machine Learning|Apple/i
   },
@@ -130,6 +140,7 @@ const officialVendors = [
     id: "japan-ai",
     name: "Japan AI Labs",
     accent: "business",
+    brand: "#5b6b8c",
     homepage: "https://www.nttdata.com/global/ja/news/",
     pattern: /NTT DATA|理化学研究所|Sakana|Preferred Networks|PFN/i
   }
@@ -647,6 +658,9 @@ function renderOfficialRadar() {
       const section = document.createElement("section");
       section.className = "official-vendor";
       section.dataset.accent = vendor.accent;
+      // ブランドカラーをヘッダー帯/上ボーダーへ。データ駆動ベンダーは id で既定値を補完。
+      const brand = vendor.brand || officialVendors.find((v) => v.id === vendor.id)?.brand;
+      if (brand) section.style.setProperty("--brand", brand);
 
       const head = document.createElement("div");
       head.className = "official-vendor-head";
