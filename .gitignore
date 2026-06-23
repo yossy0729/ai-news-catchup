@@ -15,11 +15,9 @@ server-runtime.log
 # --- 画面確認用スクリーンショット（任意・履歴を汚さない） ---
 preview*.png
 
-# --- 日次更新で再生成されるデータ（生成物。設定系のsources.json等は管理対象に残す） ---
-data/news.json
-data/media-news.json
-data/official-news.json
-data/ai-signals.json
+# --- 日次更新で再生成されるデータ ---
+# 表示用データ(news/media/official/ai-signals)は静的公開(GitHub Pages)のためGit管理する。
+# サーバ側の作業ファイル(候補/レビュー)のみ除外する。
 data/candidates.json
 data/review.json
 

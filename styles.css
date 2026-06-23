@@ -2630,3 +2630,11 @@ body {
     animation: none;
   }
 }
+
+/* 閲覧専用モード（静的ホスティング）: サーバAPIが無いためサーバ専用ボタンを隠す。
+   ローカル(localhost)で開いたときは付与されず、全機能が使える。 */
+.view-only #runUpdate,
+.view-only #sourceSearch,
+.view-only #saveCandidates {
+  display: none;
+}

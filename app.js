@@ -1681,6 +1681,11 @@ runUpdate.addEventListener("click", async () => {
   }
 });
 
+// 静的ホスティング(GitHub Pages等)ではサーバAPI(/api/*)が無いため、サーバ専用操作を隠して閲覧専用にする。
+// localhost/127.0.0.1 で開いたときだけ全機能（取得・公式ソース検索・候補保存）を有効化する。
+const isLocalServer = ["localhost", "127.0.0.1", ""].includes(location.hostname);
+if (!isLocalServer) document.body.classList.add("view-only");
+
 loadAllData()
   .then(([newsData, mediaData, officialData, signalData, pricing, sota, presets]) => renderApp(newsData, mediaData, officialData, signalData, pricing, sota, presets))
   .catch(renderLoadError);
