@@ -2623,6 +2623,17 @@ body {
     font-size: 0.72rem;
     white-space: nowrap;
   }
+
+  /* 公開(閲覧専用)サイト: サーバ専用ボタンが消えるので、検索欄とクリアを1行に収める。
+     縦の占有を減らし、固定コマンドバーが下の凡例・説明文に重ならないようにする。 */
+  .view-only .search-box {
+    grid-template-columns: 1fr auto;
+  }
+
+  .view-only .search-box input,
+  .view-only #clearSearch {
+    grid-column: auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
