@@ -1365,12 +1365,34 @@ const PAGE_ID_BY_NAME = {
   metrics: "pageMetrics"
 };
 
+// 選択中のタブを保存し、リロード時に同じタブへ復元する。
+// localStorage が使えない環境(プライベートモード等)でも失敗しないよう握りつぶす。
+const ACTIVE_PAGE_KEY = "ainews.activePage";
+
+function savePage(name) {
+  try {
+    localStorage.setItem(ACTIVE_PAGE_KEY, name);
+  } catch {
+    /* localStorage 不可: 永続化なしで継続 */
+  }
+}
+
+function loadSavedPage() {
+  try {
+    return localStorage.getItem(ACTIVE_PAGE_KEY);
+  } catch {
+    return null;
+  }
+}
+
 function setActivePage(name) {
-  const targetId = PAGE_ID_BY_NAME[name] || "pageToday";
-  pageTabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.page === name));
+  const validName = PAGE_ID_BY_NAME[name] ? name : "today";
+  const targetId = PAGE_ID_BY_NAME[validName];
+  pageTabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.page === validName));
   pageSections.forEach((section) => section.classList.toggle("active", section.id === targetId));
-  if (name === "metrics") renderMetricsTicker();
-  if (name === "official") renderOfficialTicker();
+  if (validName === "metrics") renderMetricsTicker();
+  if (validName === "official") renderOfficialTicker();
+  savePage(validName);
 }
 
 function renderApp(newsData, mediaData, officialData, signalData, pricing, sota, presets) {
@@ -1395,6 +1417,11 @@ function renderApp(newsData, mediaData, officialData, signalData, pricing, sota,
   renderSota();
   renderMetricsTicker();
   setActiveTab(document.querySelector(".tab.active")?.dataset.tab || "all");
+  // リロード時は直前に見ていたタブへ復元（既定の「今日の動向」に強制遷移しない）。
+  const savedPage = loadSavedPage();
+  if (savedPage && PAGE_ID_BY_NAME[savedPage] && savedPage !== "today") {
+    setActivePage(savedPage);
+  }
 }
 
 function renderLoadError(error) {
