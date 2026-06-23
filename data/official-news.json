@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedDate": "2026-06-23",
+  "generatedDate": "2026-06-24",
   "sourcePolicy": "AIベンダー/GAFAMの公式RSSまたは公式一覧HTMLから直接取得し、元記事URLと公開日メタデータを確認できたものだけを保存。",
   "vendors": [
     {
@@ -54,6 +54,98 @@
   ],
   "items": [
     {
+      "id": "f3fbcb970ccda5be",
+      "vendorId": "openai",
+      "vendorName": "OpenAI / ChatGPT",
+      "accent": "research",
+      "homepage": "https://openai.com/news/",
+      "title": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
+      "titleJa": "",
+      "summary": "OpenAIがAIモデルまたは開発者向け機能に関する更新を発表。利用可能モデル、開発体験、プロダクト選定への影響を確認できます。",
+      "url": "https://openai.com/index/gpt-5-immunology-mystery",
+      "source": "OpenAI News",
+      "type": "公式発表",
+      "kind": "モデル・プロダクト",
+      "date": "2026-06-24",
+      "publishedAt": "2026-06-23T17:00:00.000Z",
+      "freshness": "today",
+      "priority": 80,
+      "dateVerification": {
+        "status": "verified",
+        "method": "rss",
+        "checkedAt": "2026-06-23T22:00:09.336Z"
+      }
+    },
+    {
+      "id": "bb51b11b7438fd46",
+      "vendorId": "nvidia",
+      "vendorName": "NVIDIA",
+      "accent": "infrastructure",
+      "homepage": "https://developer.nvidia.com/blog/category/generative-ai/",
+      "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
+      "titleJa": "",
+      "summary": "NVIDIA TechnicalがAI性能評価・学習基盤に関する情報を公開。モデル開発、GPU基盤、推論・学習コスト判断に関わる一次情報です。",
+      "url": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding",
+      "source": "NVIDIA Technical Blog AI",
+      "type": "公式ブログ",
+      "kind": "モデル・プロダクト",
+      "date": "2026-06-24",
+      "publishedAt": "2026-06-23T15:00:00.000Z",
+      "freshness": "today",
+      "priority": 80,
+      "dateVerification": {
+        "status": "verified",
+        "method": "atom",
+        "checkedAt": "2026-06-23T22:00:58.176Z"
+      }
+    },
+    {
+      "id": "75e3bc69aab9968e",
+      "vendorId": "openai",
+      "vendorName": "OpenAI / ChatGPT",
+      "accent": "research",
+      "homepage": "https://openai.com/news/",
+      "title": "Helping build shared standards for advanced AI",
+      "titleJa": "",
+      "summary": "OpenAI helps build shared standards for advanced AI, supporting evaluation frameworks, safety practices, and global cooperation through the Appia Foun...",
+      "url": "https://openai.com/index/helping-build-shared-standards-for-advanced-ai",
+      "source": "OpenAI News",
+      "type": "公式発表",
+      "kind": "AIセーフティ・リスク",
+      "date": "2026-06-23",
+      "publishedAt": "2026-06-23T13:00:00.000Z",
+      "freshness": "recent",
+      "priority": 80,
+      "dateVerification": {
+        "status": "verified",
+        "method": "rss",
+        "checkedAt": "2026-06-23T22:00:09.335Z"
+      }
+    },
+    {
+      "id": "d0a65fccde70445b",
+      "vendorId": "huggingface",
+      "vendorName": "Hugging Face",
+      "accent": "research",
+      "homepage": "https://huggingface.co/blog",
+      "title": "Build real agentic apps using CUGA: two dozen working examples on a lightweight harness",
+      "titleJa": "",
+      "summary": "Hugging FaceがAIエージェント関連の技術・安全性・評価に関する情報を公開。実装設計、ツール利用、リスク管理の観点で追うべき内容です。",
+      "url": "https://huggingface.co/blog/ibm-research/cuga-apps",
+      "source": "Hugging Face Blog",
+      "type": "公式ブログ",
+      "kind": "モデル・プロダクト",
+      "date": "2026-06-23",
+      "publishedAt": "2026-06-23T12:51:55.000Z",
+      "freshness": "recent",
+      "priority": 80,
+      "dateVerification": {
+        "status": "verified",
+        "method": "rss",
+        "checkedAt": "2026-06-23T22:00:58.513Z"
+      }
+    },
+    {
       "id": "66b53eaa6c509aff",
       "vendorId": "nvidia",
       "vendorName": "NVIDIA",
@@ -68,12 +160,12 @@
       "kind": "モデル・プロダクト",
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T06:00:00.000Z",
-      "freshness": "today",
+      "freshness": "recent",
       "priority": 80,
       "dateVerification": {
         "status": "verified",
         "method": "atom",
-        "checkedAt": "2026-06-23T10:39:29.567Z"
+        "checkedAt": "2026-06-23T22:00:58.176Z"
       }
     },
     {
@@ -91,12 +183,12 @@
       "kind": "公式アップデート",
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T00:00:00.000Z",
-      "freshness": "today",
+      "freshness": "recent",
       "priority": 80,
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T10:38:55.919Z"
+        "checkedAt": "2026-06-23T22:00:09.336Z"
       }
     },
     {
@@ -114,12 +206,58 @@
       "kind": "公式アップデート",
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T00:00:00.000Z",
-      "freshness": "today",
+      "freshness": "recent",
       "priority": 80,
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T10:39:29.925Z"
+        "checkedAt": "2026-06-23T22:00:58.513Z"
+      }
+    },
+    {
+      "id": "4e694b48693490d7",
+      "vendorId": "apple",
+      "vendorName": "Apple ML",
+      "accent": "research",
+      "homepage": "https://machinelearning.apple.com/",
+      "title": "Metric-Dependent Annotation Saturation for Learning from Label Distributions",
+      "titleJa": "",
+      "summary": "When annotators disagree on a label, the disagreement itself carries signal—and the number of annotators needed to capture it depends on the evaluatio...",
+      "url": "https://machinelearning.apple.com/research/metric-dependent-annotation-saturation",
+      "source": "Apple Machine Learning Research",
+      "type": "論文・技術文書",
+      "kind": "公式アップデート",
+      "date": "2026-06-23",
+      "publishedAt": "2026-06-23T00:00:00.000Z",
+      "freshness": "recent",
+      "priority": 80,
+      "dateVerification": {
+        "status": "verified",
+        "method": "rss",
+        "checkedAt": "2026-06-23T22:00:58.661Z"
+      }
+    },
+    {
+      "id": "95be2cca50cb09f5",
+      "vendorId": "apple",
+      "vendorName": "Apple ML",
+      "accent": "research",
+      "homepage": "https://machinelearning.apple.com/",
+      "title": "Nine Judges, Two Effective Votes: Correlated Errors Undermine LLM Evaluation Panels",
+      "titleJa": "",
+      "summary": "LLM-as-a-judge panels aggregate votes from multiple models, with the expectation that diverse models yield more reliable evaluations. We develop a fra...",
+      "url": "https://machinelearning.apple.com/research/correlated-llm-evaluation-panels",
+      "source": "Apple Machine Learning Research",
+      "type": "論文・技術文書",
+      "kind": "研究・評価",
+      "date": "2026-06-23",
+      "publishedAt": "2026-06-23T00:00:00.000Z",
+      "freshness": "recent",
+      "priority": 80,
+      "dateVerification": {
+        "status": "verified",
+        "method": "rss",
+        "checkedAt": "2026-06-23T22:00:58.661Z"
       }
     },
     {
@@ -137,12 +275,12 @@
       "kind": "公式アップデート",
       "date": "2026-06-23",
       "publishedAt": "2026-06-22T15:00:00.000Z",
-      "freshness": "today",
+      "freshness": "recent",
       "priority": 80,
       "dateVerification": {
         "status": "verified",
         "method": "atom",
-        "checkedAt": "2026-06-23T10:39:29.567Z"
+        "checkedAt": "2026-06-23T22:00:58.176Z"
       }
     },
     {
@@ -165,30 +303,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "atom",
-        "checkedAt": "2026-06-23T10:39:29.568Z"
-      }
-    },
-    {
-      "id": "d4c42449aac1d536",
-      "vendorId": "openai",
-      "vendorName": "OpenAI / ChatGPT",
-      "accent": "research",
-      "homepage": "https://openai.com/news/",
-      "title": "Daybreak: Tools for securing every organization in the world",
-      "titleJa": "",
-      "summary": "OpenAI introduces new Daybreak tools, including Codex Security and GPT-5.5-Cyber, to help organizations find, validate, and patch vulnerabilities at s...",
-      "url": "https://openai.com/index/daybreak-securing-the-world",
-      "source": "OpenAI News",
-      "type": "公式発表",
-      "kind": "AIセーフティ・リスク",
-      "date": "2026-06-22",
-      "publishedAt": "2026-06-22T10:00:00.000Z",
-      "freshness": "recent",
-      "priority": 80,
-      "dateVerification": {
-        "status": "verified",
-        "method": "rss",
-        "checkedAt": "2026-06-23T10:38:55.920Z"
+        "checkedAt": "2026-06-23T22:00:58.177Z"
       }
     },
     {
@@ -211,76 +326,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T10:38:55.920Z"
-      }
-    },
-    {
-      "id": "8cd1416df555466a",
-      "vendorId": "openai",
-      "vendorName": "OpenAI / ChatGPT",
-      "accent": "research",
-      "homepage": "https://openai.com/news/",
-      "title": "Codex-maxxing for long-running work",
-      "titleJa": "",
-      "summary": "Learn how Jason Liu uses Codex to preserve context, manage complex projects, and help work continue beyond a single prompt.",
-      "url": "https://openai.com/index/codex-maxxing-long-running-work",
-      "source": "OpenAI News",
-      "type": "公式発表",
-      "kind": "公式アップデート",
-      "date": "2026-06-22",
-      "publishedAt": "2026-06-22T00:00:00.000Z",
-      "freshness": "recent",
-      "priority": 80,
-      "dateVerification": {
-        "status": "verified",
-        "method": "rss",
-        "checkedAt": "2026-06-23T10:38:55.921Z"
-      }
-    },
-    {
-      "id": "f4731dca404b0ee5",
-      "vendorId": "huggingface",
-      "vendorName": "Hugging Face",
-      "accent": "research",
-      "homepage": "https://huggingface.co/blog",
-      "title": "We got local models to triage the OpenClaw repo for FREE!*",
-      "titleJa": "",
-      "summary": "Hugging FaceがAIモデルまたは開発者向け機能に関する更新を発表。利用可能モデル、開発体験、プロダクト選定への影響を確認できます。",
-      "url": "https://huggingface.co/blog/local-models-pr-triage",
-      "source": "Hugging Face Blog",
-      "type": "公式ブログ",
-      "kind": "モデル・プロダクト",
-      "date": "2026-06-22",
-      "publishedAt": "2026-06-22T00:00:00.000Z",
-      "freshness": "recent",
-      "priority": 80,
-      "dateVerification": {
-        "status": "verified",
-        "method": "rss",
-        "checkedAt": "2026-06-23T10:39:29.925Z"
-      }
-    },
-    {
-      "id": "22b9ebd378deca9d",
-      "vendorId": "huggingface",
-      "vendorName": "Hugging Face",
-      "accent": "research",
-      "homepage": "https://huggingface.co/blog",
-      "title": "MosaicLeaks: Can your research agent keep a secret?",
-      "titleJa": "",
-      "summary": "Hugging FaceがAIエージェント関連の技術・安全性・評価に関する情報を公開。実装設計、ツール利用、リスク管理の観点で追うべき内容です。",
-      "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
-      "source": "Hugging Face Blog",
-      "type": "公式ブログ",
-      "kind": "研究・評価",
-      "date": "2026-06-19",
-      "publishedAt": "2026-06-18T18:13:13.000Z",
-      "freshness": "recent",
-      "priority": 80,
-      "dateVerification": {
-        "status": "verified",
-        "method": "rss",
-        "checkedAt": "2026-06-23T10:39:29.925Z"
+        "checkedAt": "2026-06-23T22:00:09.337Z"
       }
     },
     {
@@ -303,30 +349,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T10:39:19.950Z"
-      }
-    },
-    {
-      "id": "1c4edf34e027f58a",
-      "vendorId": "nvidia",
-      "vendorName": "NVIDIA",
-      "accent": "infrastructure",
-      "homepage": "https://developer.nvidia.com/blog/category/generative-ai/",
-      "title": "Building AI Agents for AR Glasses and XR Devices with NVIDIA XR AI",
-      "titleJa": "",
-      "summary": "NVIDIA TechnicalがAIエージェント関連の技術・安全性・評価に関する情報を公開。実装設計、ツール利用、リスク管理の観点で追うべき内容です。",
-      "url": "https://developer.nvidia.com/blog/building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai",
-      "source": "NVIDIA Technical Blog AI",
-      "type": "公式ブログ",
-      "kind": "モデル・プロダクト",
-      "date": "2026-06-17",
-      "publishedAt": "2026-06-16T22:30:00.000Z",
-      "freshness": "recent",
-      "priority": 80,
-      "dateVerification": {
-        "status": "verified",
-        "method": "atom",
-        "checkedAt": "2026-06-23T10:39:29.568Z"
+        "checkedAt": "2026-06-23T22:00:49.993Z"
       }
     },
     {
@@ -349,7 +372,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T10:39:20.622Z"
+        "checkedAt": "2026-06-23T22:00:50.779Z"
       }
     },
     {
@@ -372,7 +395,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T10:39:20.623Z"
+        "checkedAt": "2026-06-23T22:00:50.779Z"
       }
     },
     {
@@ -395,7 +418,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T10:39:19.951Z"
+        "checkedAt": "2026-06-23T22:00:49.993Z"
       }
     },
     {
@@ -418,7 +441,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T10:39:19.951Z"
+        "checkedAt": "2026-06-23T22:00:49.993Z"
       }
     },
     {
@@ -441,7 +464,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T10:39:20.623Z"
+        "checkedAt": "2026-06-23T22:00:50.779Z"
       }
     },
     {
@@ -464,7 +487,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "html_meta",
-        "checkedAt": "2026-06-23T10:39:21.821Z"
+        "checkedAt": "2026-06-23T22:00:52.198Z"
       }
     },
     {
@@ -487,7 +510,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T10:39:20.623Z"
+        "checkedAt": "2026-06-23T22:00:50.779Z"
       }
     },
     {
@@ -510,7 +533,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T10:39:30.353Z"
+        "checkedAt": "2026-06-23T22:00:58.661Z"
       }
     },
     {
@@ -533,7 +556,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T10:39:19.951Z"
+        "checkedAt": "2026-06-23T22:00:49.994Z"
       }
     },
     {
@@ -556,7 +579,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "html_meta",
-        "checkedAt": "2026-06-23T10:39:21.464Z"
+        "checkedAt": "2026-06-23T22:00:51.715Z"
       }
     },
     {
@@ -579,55 +602,16 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T10:39:30.354Z"
-      }
-    },
-    {
-      "id": "faa17bdb08166618",
-      "vendorId": "apple",
-      "vendorName": "Apple ML",
-      "accent": "research",
-      "homepage": "https://machinelearning.apple.com/",
-      "title": "VSAS-Bench: Real-Time Evaluation of Visual Streaming Assistant Models",
-      "titleJa": "",
-      "summary": "Apple Machine LearningがAIモデルまたは開発者向け機能に関する更新を発表。利用可能モデル、開発体験、プロダクト選定への影響を確認できます。",
-      "url": "https://machinelearning.apple.com/research/vsas-bench-streaming-assistant",
-      "source": "Apple Machine Learning Research",
-      "type": "論文・技術文書",
-      "kind": "研究・評価",
-      "date": "2026-05-22",
-      "publishedAt": "2026-05-22T00:00:00.000Z",
-      "freshness": "recent",
-      "priority": 80,
-      "dateVerification": {
-        "status": "verified",
-        "method": "rss",
-        "checkedAt": "2026-06-23T10:39:30.354Z"
-      }
-    },
-    {
-      "id": "a73490c9172e2fbb",
-      "vendorId": "apple",
-      "vendorName": "Apple ML",
-      "accent": "research",
-      "homepage": "https://machinelearning.apple.com/",
-      "title": "EpiCache: Episodic KV Cache Management for Long-Term Conversation on Resource-Constrained Environments",
-      "titleJa": "",
-      "summary": "Modern large language models (LLMs) extend context lengths to millions of tokens, enabling coherent, personalized responses grounded in long conversat...",
-      "url": "https://machinelearning.apple.com/research/epicache",
-      "source": "Apple Machine Learning Research",
-      "type": "論文・技術文書",
-      "kind": "モデル・プロダクト",
-      "date": "2026-05-19",
-      "publishedAt": "2026-05-19T00:00:00.000Z",
-      "freshness": "recent",
-      "priority": 80,
-      "dateVerification": {
-        "status": "verified",
-        "method": "rss",
-        "checkedAt": "2026-06-23T10:39:30.354Z"
+        "checkedAt": "2026-06-23T22:00:58.661Z"
       }
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "vendor": "openai",
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/blog/rss.xml",
+      "error": "This operation was aborted"
+    }
+  ]
 }

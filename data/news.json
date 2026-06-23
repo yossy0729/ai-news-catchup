@@ -1,5 +1,5 @@
 {
-  "generatedDate": "2026-06-23",
+  "generatedDate": "2026-06-24",
   "categories": [
     {
       "id": "jp-cases",
@@ -38,7 +38,7 @@
           "url": "https://www.nttdata.com/global/ja/news/evaluation/2026/062301",
           "priority": 80,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": true,
+          "new": false,
           "candidateId": "6cd83257a2522ee76b73edab"
         },
         {
@@ -98,21 +98,6 @@
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
           "candidateId": "adec0fd325a40b85054c391d"
-        },
-        {
-          "title": "45 papers have been accepted at ICML 2026 | Center for Advanced Intelligence Project",
-          "titleJa": "理研AIPからICML 2026に45本の論文が採択",
-          "summary": "理研AIP関連の研究からICML 2026に45本の論文が採択。国内AI研究の国際トップ会議での存在感と、注目すべき研究テーマの広がりを把握できます。",
-          "summaryStatus": "manual-ja",
-          "impact": "研究価値",
-          "source": "理化学研究所 革新知能統合研究センター",
-          "type": "論文・技術文書",
-          "date": "2026-05-24",
-          "url": "https://aip.riken.jp/news/icml2026",
-          "priority": 88,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "299db76a419076648f405c82"
         }
       ]
     },

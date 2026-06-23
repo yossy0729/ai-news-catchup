@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedDate": "2026-06-23",
+  "generatedDate": "2026-06-24",
   "sourcePolicy": "直接RSSで元記事URLと公開日時を確認できる固定・厳選プールの2次情報媒体のみを速報対象にする。公開から72時間以内に限定し、24時間以内をfresh・24〜72時間をrecentとして区別する（空カテゴリはrecentで補完）。Google News RSSの検出時刻は元記事公開日と一致しないため、日付検証なしでは掲載しない。",
   "freshnessPolicy": {
     "maxAgeHours": 72,
@@ -58,13 +58,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T04:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 6.7,
+      "ageHours": 18,
       "relevanceScore": 5,
       "priority": 104,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:32.911Z"
+        "checkedAt": "2026-06-23T22:01:01.544Z"
       }
     },
     {
@@ -81,13 +81,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-22T23:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 11.7,
+      "ageHours": 23,
       "relevanceScore": 5,
       "priority": 104,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:32.912Z"
+        "checkedAt": "2026-06-23T22:01:01.545Z"
       }
     },
     {
@@ -104,13 +104,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T08:49:46.000Z",
       "freshness": "fresh",
-      "ageHours": 1.8,
+      "ageHours": 13.2,
       "relevanceScore": 5,
       "priority": 86,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.947Z"
+        "checkedAt": "2026-06-23T22:01:02.619Z"
       }
     },
     {
@@ -127,13 +127,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T04:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 6.7,
+      "ageHours": 18,
       "relevanceScore": 4,
       "priority": 104,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:32.912Z"
+        "checkedAt": "2026-06-23T22:01:01.544Z"
       }
     },
     {
@@ -149,14 +149,37 @@
       "region": "日本",
       "date": "2026-06-23",
       "publishedAt": "2026-06-22T22:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 12.7,
+      "freshness": "recent",
+      "ageHours": 24,
       "relevanceScore": 4,
       "priority": 104,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:32.912Z"
+        "checkedAt": "2026-06-23T22:01:01.545Z"
+      }
+    },
+    {
+      "id": "8efd4dac27165066",
+      "title": "中国ByteDance、新AI動画生成モデル「Seedance 2.5」発表 プロンプト1つで30秒・4K動画を生成",
+      "summary": "中国ByteDanceは、AI動画生成モデルの最新版「Seedance 2.5」を発表した。米メディアのThe Informationが報じた。現地時間6月23日に北京で開いたカンファレンスで明らかにしたもので、1つのプロンプトから最長30秒・4K画質の動画を...",
+      "url": "https://japan.cnet.com/article/35249305/",
+      "source": "CNET Japan",
+      "sourceType": "メディア",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
+      "region": "日本",
+      "date": "2026-06-24",
+      "publishedAt": "2026-06-23T20:22:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 1.7,
+      "relevanceScore": 4,
+      "priority": 90,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-23T22:01:02.347Z"
       }
     },
     {
@@ -173,13 +196,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T02:56:00.000Z",
       "freshness": "fresh",
-      "ageHours": 7.7,
+      "ageHours": 19.1,
       "relevanceScore": 4,
       "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.676Z"
+        "checkedAt": "2026-06-23T22:01:02.348Z"
       }
     },
     {
@@ -196,13 +219,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T08:18:44.000Z",
       "freshness": "fresh",
-      "ageHours": 2.3,
+      "ageHours": 13.7,
       "relevanceScore": 3,
       "priority": 101,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:32.910Z"
+        "checkedAt": "2026-06-23T22:01:01.544Z"
       }
     },
     {
@@ -219,13 +242,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T04:12:15.000Z",
       "freshness": "fresh",
-      "ageHours": 6.5,
+      "ageHours": 17.8,
       "relevanceScore": 3,
       "priority": 101,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:32.911Z"
+        "checkedAt": "2026-06-23T22:01:01.544Z"
       }
     },
     {
@@ -242,13 +265,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T03:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 7.7,
+      "ageHours": 19,
       "relevanceScore": 3,
       "priority": 101,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:32.912Z"
+        "checkedAt": "2026-06-23T22:01:01.544Z"
       }
     },
     {
@@ -264,37 +287,37 @@
       "region": "日本",
       "date": "2026-06-23",
       "publishedAt": "2026-06-22T22:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 12.7,
+      "freshness": "recent",
+      "ageHours": 24,
       "relevanceScore": 3,
       "priority": 101,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:32.913Z"
+        "checkedAt": "2026-06-23T22:01:01.545Z"
       }
     },
     {
-      "id": "49c6ebccba89ea99",
-      "title": "Excelの10万行データを3分でAIに処理させる、M365 Copilotの使い方",
-      "summary": "上司から突然「このデータを見ておいて」と任され、Excelを前に手が止まった経験がある人も多いはずだ。大量データの集計は負担が大きく、分析業務は特定の担当者に偏ってしまう。Copilotのチャットや関数機能は、その前提を変えつつある。",
-      "url": "https://kn.itmedia.co.jp/kn/articles/2606/23/news043.html",
-      "source": "ITmedia AI+",
+      "id": "dbad1386ba010d69",
+      "title": "NTTビジネスソリューションズ、「tsuzumi 2」活用のAIエージェント実証を8月に開始",
+      "summary": "NTTビジネスソリューションズは2026年6月22日、同社が提供する「データ連携基盤サービス」（FIWARE Orion搭載）に、AIとの連携を可能にするMCP（Model Context Prot...",
+      "url": "https://enterprisezine.jp/news/detail/24540",
+      "source": "EnterpriseZine",
       "sourceType": "メディア",
       "category": "AIエージェント・業務AI",
       "categoryId": "agents",
       "accent": "product",
       "region": "日本",
       "date": "2026-06-23",
-      "publishedAt": "2026-06-22T22:00:00.000Z",
+      "publishedAt": "2026-06-23T11:10:00.000Z",
       "freshness": "fresh",
-      "ageHours": 12.7,
+      "ageHours": 10.9,
       "relevanceScore": 3,
-      "priority": 101,
+      "priority": 93,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:32.913Z"
+        "checkedAt": "2026-06-23T22:01:02.040Z"
       }
     },
     {
@@ -311,13 +334,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T08:38:00.000Z",
       "freshness": "fresh",
-      "ageHours": 2,
+      "ageHours": 13.4,
       "relevanceScore": 3,
       "priority": 93,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.334Z"
+        "checkedAt": "2026-06-23T22:01:02.040Z"
       }
     },
     {
@@ -334,13 +357,36 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T07:50:00.000Z",
       "freshness": "fresh",
-      "ageHours": 2.8,
+      "ageHours": 14.2,
       "relevanceScore": 3,
       "priority": 93,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.334Z"
+        "checkedAt": "2026-06-23T22:01:02.040Z"
+      }
+    },
+    {
+      "id": "c906fc3020252ae0",
+      "title": "Anthropic’s Claude Tag is learning your company, one Slack message at a time",
+      "summary": "Anthropic’s new Claude Tag brings an always-on AI teammate to Slack. But beyond productivity, the feature is a strategic play to c...",
+      "url": "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/",
+      "source": "TechCrunch (AI)",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "海外",
+      "date": "2026-06-24",
+      "publishedAt": "2026-06-23T17:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 5,
+      "relevanceScore": 3,
+      "priority": 91,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-23T22:01:02.761Z"
       }
     },
     {
@@ -356,14 +402,14 @@
       "region": "海外",
       "date": "2026-06-23",
       "publishedAt": "2026-06-22T20:53:11.000Z",
-      "freshness": "fresh",
-      "ageHours": 13.8,
+      "freshness": "recent",
+      "ageHours": 25.1,
       "relevanceScore": 3,
       "priority": 91,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:34.067Z"
+        "checkedAt": "2026-06-23T22:01:02.762Z"
       }
     },
     {
@@ -379,14 +425,37 @@
       "region": "海外",
       "date": "2026-06-23",
       "publishedAt": "2026-06-22T20:13:58.000Z",
-      "freshness": "fresh",
-      "ageHours": 14.4,
+      "freshness": "recent",
+      "ageHours": 25.8,
       "relevanceScore": 3,
       "priority": 91,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:34.067Z"
+        "checkedAt": "2026-06-23T22:01:02.763Z"
+      }
+    },
+    {
+      "id": "38a8618a6863f929",
+      "title": "メルカリ、ChatGPTで「商品の検索」「出品の下書き」が可能に AIネイティブ加速",
+      "summary": "メルカリは6月23日、OpenAIが提供する「ChatGPT」上でフリマアプリ「メルカリ」を使えるようにしたと発表した。ChatGPTと会話しながら、メルカリに出品された商品を探したり、自分が出品する際の説明文の下書きを作ったりできる。",
+      "url": "https://japan.cnet.com/article/35249303/",
+      "source": "CNET Japan",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-24",
+      "publishedAt": "2026-06-23T20:10:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 1.9,
+      "relevanceScore": 3,
+      "priority": 87,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-23T22:01:02.347Z"
       }
     },
     {
@@ -403,13 +472,36 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T03:23:00.000Z",
       "freshness": "fresh",
-      "ageHours": 7.3,
+      "ageHours": 18.6,
       "relevanceScore": 3,
       "priority": 87,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.676Z"
+        "checkedAt": "2026-06-23T22:01:02.348Z"
+      }
+    },
+    {
+      "id": "f96c1d5e5082af52",
+      "title": "マネックス、資産分析「MONEX VISION」にAI活用のパーソナルアドバイス",
+      "summary": "マネックス証券は、資産分析サービス「MONEX VISION」をリニューアルし、生成AIを活用した新機能「パーソナルアドバイス(β版)」を追加した。β版としてPC版のみで提供される。",
+      "url": "https://www.watch.impress.co.jp/docs/news/2119420.html",
+      "source": "Impress Watch",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-23",
+      "publishedAt": "2026-06-23T11:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 11,
+      "relevanceScore": 3,
+      "priority": 83,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-23T22:01:02.618Z"
       }
     },
     {
@@ -426,13 +518,36 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T00:13:54.000Z",
       "freshness": "fresh",
-      "ageHours": 10.4,
+      "ageHours": 21.8,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:32.912Z"
+        "checkedAt": "2026-06-23T22:01:01.545Z"
+      }
+    },
+    {
+      "id": "03cad0ffbd7709ce",
+      "title": "メルカリ、ChatGPT上で商品検索から出品準備まで可能に 「Apps in ChatGPT」に公式アプリ",
+      "summary": "メルカリは6月23日、米OpenAIの「Apps in ChatGPT」で、フリマアプリ「メルカリ」の公式アプリの提供を始めたと発表した。「ChatGPT」と会話しながら、メルカリの商品を探せるほか、出品時の説明文の下書きも作れる。",
+      "url": "https://www.itmedia.co.jp/news/articles/2606/23/news134.html",
+      "source": "ITmedia NEWS",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-23",
+      "publishedAt": "2026-06-23T11:09:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 10.9,
+      "relevanceScore": 2,
+      "priority": 92,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-23T22:01:01.573Z"
       }
     },
     {
@@ -449,13 +564,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T03:30:00.000Z",
       "freshness": "fresh",
-      "ageHours": 7.2,
+      "ageHours": 18.5,
       "relevanceScore": 2,
       "priority": 92,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:32.947Z"
+        "checkedAt": "2026-06-23T22:01:01.574Z"
       }
     },
     {
@@ -472,13 +587,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T09:17:00.000Z",
       "freshness": "fresh",
-      "ageHours": 1.4,
+      "ageHours": 12.7,
       "relevanceScore": 2,
       "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.333Z"
+        "checkedAt": "2026-06-23T22:01:02.040Z"
       }
     },
     {
@@ -495,36 +610,36 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T01:55:00.000Z",
       "freshness": "fresh",
-      "ageHours": 8.7,
+      "ageHours": 20.1,
       "relevanceScore": 2,
       "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.334Z"
+        "checkedAt": "2026-06-23T22:01:02.041Z"
       }
     },
     {
-      "id": "7c02b1a63eb7565d",
-      "title": "小田急電鉄、「AI踏切画像解析システム」導入へ 踏切内の歩行者をAIで検知・列車停止につなげる狙い",
-      "summary": "小田急電鉄は6月24日に、踏切内に取り残された歩行者や自転車などをAIで検知し、列車の停止につなげる「AI踏切画像解析システム」を導入すると発表した。 AIが踏切内の歩行者を検知している様子（...",
-      "url": "https://enterprisezine.jp/news/detail/24525",
-      "source": "EnterpriseZine",
+      "id": "b665a17a153c6e66",
+      "title": "Fika Jobs raises $4M to build a video-first hiring platform where AI agents interview candidates",
+      "summary": "Stockholm-based startup Fika Jobs is building a video-first hiring platform that combines AI interview agents with short-form vide...",
+      "url": "https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates/",
+      "source": "TechCrunch (AI)",
       "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "日本",
+      "category": "AIエージェント・業務AI",
+      "categoryId": "agents",
+      "accent": "product",
+      "region": "海外",
       "date": "2026-06-23",
-      "publishedAt": "2026-06-22T23:00:00.000Z",
+      "publishedAt": "2026-06-23T13:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 11.7,
+      "ageHours": 9,
       "relevanceScore": 2,
-      "priority": 90,
+      "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.335Z"
+        "checkedAt": "2026-06-23T22:01:02.762Z"
       }
     },
     {
@@ -541,13 +656,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T00:11:31.000Z",
       "freshness": "fresh",
-      "ageHours": 10.5,
+      "ageHours": 21.8,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:34.067Z"
+        "checkedAt": "2026-06-23T22:01:02.762Z"
       }
     },
     {
@@ -563,14 +678,14 @@
       "region": "海外",
       "date": "2026-06-23",
       "publishedAt": "2026-06-22T20:08:15.000Z",
-      "freshness": "fresh",
-      "ageHours": 14.5,
+      "freshness": "recent",
+      "ageHours": 25.9,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:34.067Z"
+        "checkedAt": "2026-06-23T22:01:02.763Z"
       }
     },
     {
@@ -586,37 +701,37 @@
       "region": "海外",
       "date": "2026-06-23",
       "publishedAt": "2026-06-22T16:51:29.000Z",
-      "freshness": "fresh",
-      "ageHours": 17.8,
+      "freshness": "recent",
+      "ageHours": 29.2,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:34.068Z"
+        "checkedAt": "2026-06-23T22:01:02.763Z"
       }
     },
     {
-      "id": "0c8bfe5fd8438bf6",
-      "title": "When the Trump administration cracks down on Anthropic, who benefits?",
-      "summary": "On the new episode of Equity, we discussed what actually prompted the administration's latest moves against Anthropic, and what th...",
-      "url": "https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/",
-      "source": "TechCrunch (AI)",
+      "id": "23f86f75b93deb90",
+      "title": "AIとデータで「捨てる」を「価値」に変える次世代サーキュラーエコノミー 静岡大学発「S-Bridges」",
+      "summary": "静岡大学発のスタートアップ「S-Bridges」では、「Bio Material Transformation」という経済システムの構築に取り組んでいる。従来は廃棄される部位などに新しい価値を見いだし、活用の道を探る――というシステムになっており、「ネイチャー...",
+      "url": "https://ascii.jp/elem/000/004/382/4382674/?rss",
+      "source": "ASCII.jp",
       "sourceType": "メディア",
       "category": "産業活用・導入事例",
       "categoryId": "industry",
       "accent": "adoption",
-      "region": "海外",
-      "date": "2026-06-22",
-      "publishedAt": "2026-06-21T15:28:17.000Z",
-      "freshness": "recent",
-      "ageHours": 43.2,
+      "region": "日本",
+      "date": "2026-06-24",
+      "publishedAt": "2026-06-23T21:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 1,
       "relevanceScore": 2,
-      "priority": 88,
+      "priority": 86,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:34.068Z"
+        "checkedAt": "2026-06-23T22:01:02.477Z"
       }
     },
     {
@@ -633,13 +748,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T02:36:00.000Z",
       "freshness": "fresh",
-      "ageHours": 8.1,
+      "ageHours": 19.4,
       "relevanceScore": 2,
       "priority": 84,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.676Z"
+        "checkedAt": "2026-06-23T22:01:02.348Z"
       }
     },
     {
@@ -656,13 +771,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T01:47:00.000Z",
       "freshness": "fresh",
-      "ageHours": 8.9,
+      "ageHours": 20.2,
       "relevanceScore": 2,
       "priority": 84,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.676Z"
+        "checkedAt": "2026-06-23T22:01:02.348Z"
       }
     },
     {
@@ -679,13 +794,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T09:35:17.000Z",
       "freshness": "fresh",
-      "ageHours": 1.1,
+      "ageHours": 12.4,
       "relevanceScore": 2,
       "priority": 80,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.946Z"
+        "checkedAt": "2026-06-23T22:01:02.618Z"
       }
     },
     {
@@ -702,13 +817,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T05:02:00.000Z",
       "freshness": "fresh",
-      "ageHours": 5.6,
+      "ageHours": 17,
       "relevanceScore": 2,
       "priority": 80,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.948Z"
+        "checkedAt": "2026-06-23T22:01:02.619Z"
       }
     },
     {
@@ -725,36 +840,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T07:34:00.000Z",
       "freshness": "fresh",
-      "ageHours": 3.1,
+      "ageHours": 14.5,
       "relevanceScore": 1,
       "priority": 95,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:32.911Z"
-      }
-    },
-    {
-      "id": "b301c49d3f513aaa",
-      "title": "集中豪雨で損害車の管理が追い付かない……人力運用を経て「AI駆動開発」で専用システムをスピード構築",
-      "summary": "エンジニア不足や開発スピードの要求などを背景に、いまAI駆動開発が注目を集めている。要件定義から実装、テスト、運用に至るソフトウェア開発の全工程にAIを組み込む開発手法だ。事故や災害で全損したクルマの流通を手がけるオークスモビリティは、災害発生時の車両管理シス...",
-      "url": "https://enterprisezine.jp/article/detail/24349",
-      "source": "EnterpriseZine",
-      "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "日本",
-      "date": "2026-06-23",
-      "publishedAt": "2026-06-22T23:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 11.7,
-      "relevanceScore": 1,
-      "priority": 87,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.335Z"
+        "checkedAt": "2026-06-23T22:01:01.544Z"
       }
     },
     {
@@ -771,13 +863,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T01:27:55.000Z",
       "freshness": "fresh",
-      "ageHours": 9.2,
+      "ageHours": 20.6,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:34.066Z"
+        "checkedAt": "2026-06-23T22:01:02.762Z"
       }
     },
     {
@@ -793,14 +885,14 @@
       "region": "海外",
       "date": "2026-06-23",
       "publishedAt": "2026-06-22T18:49:44.000Z",
-      "freshness": "fresh",
-      "ageHours": 15.8,
+      "freshness": "recent",
+      "ageHours": 27.2,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:34.067Z"
+        "checkedAt": "2026-06-23T22:01:02.763Z"
       }
     },
     {
@@ -816,60 +908,14 @@
       "region": "海外",
       "date": "2026-06-23",
       "publishedAt": "2026-06-22T17:31:29.000Z",
-      "freshness": "fresh",
-      "ageHours": 17.1,
-      "relevanceScore": 1,
-      "priority": 85,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:34.067Z"
-      }
-    },
-    {
-      "id": "08aaf7980004c02a",
-      "title": "Beyond Siri: Here are the practical AI features coming to your iPhone in iOS 27",
-      "summary": "Siri’s AI overhaul may have grabbed the headlines at WWDC, but some of Apple’s most useful AI features are arriving elsewhere in i...",
-      "url": "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/",
-      "source": "TechCrunch (AI)",
-      "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "海外",
-      "date": "2026-06-21",
-      "publishedAt": "2026-06-21T14:40:28.000Z",
       "freshness": "recent",
-      "ageHours": 44,
+      "ageHours": 28.5,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:34.068Z"
-      }
-    },
-    {
-      "id": "418c01e66754b8b0",
-      "title": "Signal’s Meredith Whittaker wants you to remember that AI chatbots ‘are not your friends’",
-      "summary": "\"These are not your friends. These are not conscious beings. These are not sentient interlocutors.”",
-      "url": "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/",
-      "source": "TechCrunch (AI)",
-      "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "海外",
-      "date": "2026-06-21",
-      "publishedAt": "2026-06-20T20:32:29.000Z",
-      "freshness": "recent",
-      "ageHours": 62.1,
-      "relevanceScore": 1,
-      "priority": 85,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:34.068Z"
+        "checkedAt": "2026-06-23T22:01:02.763Z"
       }
     },
     {
@@ -886,13 +932,13 @@
       "date": "2026-06-23",
       "publishedAt": "2026-06-23T07:27:13.000Z",
       "freshness": "fresh",
-      "ageHours": 3.2,
+      "ageHours": 14.6,
       "relevanceScore": 1,
       "priority": 77,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-23T10:39:33.947Z"
+        "checkedAt": "2026-06-23T22:01:02.619Z"
       }
     }
   ],
