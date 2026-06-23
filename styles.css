@@ -1048,6 +1048,7 @@ h1 {
   margin-bottom: 0;
   overflow: hidden;
   font-size: 0.95rem;
+  font-weight: 900;
   line-height: 1.42;
 }
 
@@ -1504,8 +1505,8 @@ main {
 
 .priority-card p,
 .news-card p {
-  color: #34423a;
-  font-weight: 500;
+  color: var(--muted);
+  font-weight: 400;
 }
 
 .source-name,
@@ -1687,7 +1688,7 @@ body {
 
 .priority-card p,
 .news-card p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.45;
 }
 
@@ -1870,7 +1871,7 @@ body {
   display: -webkit-box;
   overflow: hidden;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 400;
   line-height: 1.5;
   -webkit-box-orient: vertical;
