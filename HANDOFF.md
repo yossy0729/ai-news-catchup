@@ -2,6 +2,8 @@
 
 ## ★再開ポイント（2026-06-22 時点）
 
+**公開＆毎朝の自動更新（2026-06-24）**: GitHub Pagesで静的公開（`yossy0729/ai-news-catchup` → `https://yossy0729.github.io/ai-news-catchup/`）。リポジトリ閲覧者向けは `body.view-only`（localhost以外で付与）でサーバ専用ボタンを非表示。自動更新は **GitHub Actions** [.github/workflows/daily-update.yml](.github/workflows/daily-update.yml)：毎日07:00 JST(cron 22:00 UTC)に `daily-update.js` を実行し、生成物を Actions方式で Pages へデプロイ。**既定はAPIキー無し・無料のルールベース**。`OPENAI_API_KEY`(任意で`OPENAI_MODEL`)をリポジトリSecretに登録した時だけ自動で `--llm-summary` を有効化＝その分課金。**前提**: Pages の Source を「GitHub Actions」にしておくこと（branch方式のままだとdeploy-pagesが失敗）。データはリポジトリに書き戻さず生成物を直接配信（contents: read）。失敗時は前回の公開が残る。
+
 **情報設計の整理（2026-06-22）**: 「今日の動向」タブが速報(media)と一次情報(category)を同居させ鮮度ミスマッチ（速報=24h / 一次情報=最大30日）で分かりにくかったため、**タブを分離**。今は `今日の動向(速報のみ) / カテゴリ別(一次情報) / 公式動向 / 指標・ベンチ` の4タブ。カテゴリ別には「一次情報は毎日更新されない」旨を明記し、古さが未更新に見えないようにした。ティッカー/カードは色4色体系（🔵研究・モデル/🟢プロダクト/🟠インフラ・業務/🔴リスク・規制）＋色凡例に統一。速度は全ティッカー55px/秒に統一。SOTA指標の向きは▲▼。
 
 **公式動向カードに企業ブランドカラー（2026-06-22）**: 各社ロゴは商標/トレードドレスのリスク＋画像配信が必要なため不使用とし、**ブランド主要色**で識別（`officialVendors[].brand`、データ駆動ベンダーは id で補完）。`app.js` が `--brand` をセクションに設定し、CSS は `var(--brand, var(--accent))` で上ボーダー＝原色、ヘッダー帯＝左暗→右鮮のグラデ。タイトル(左寄せ)が乗る左端は brand 50%+黒で暗色化し、Hugging Face黄/NVIDIA緑でも白文字コントラスト≥4.6(AA)を確保。カウントチップは白背景のため意味アクセント色のまま。新ベンダー追加時は `brand` を足すだけ。
