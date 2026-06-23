@@ -303,6 +303,12 @@ function mediaSort(a, b) {
   );
 }
 
+// カード表示順は全タブ共通で「更新時刻が新しいものを上」に統一。
+// publishedAt(時刻あり)を優先し、無ければ date(日付)で比較。降順。
+function byRecencyDesc(a, b) {
+  return String(b.publishedAt || b.date || "").localeCompare(String(a.publishedAt || a.date || ""));
+}
+
 function chooseVisibleMediaItems(items) {
   const sorted = [...items].sort(mediaSort);
   // 24時間以内の新着を最優先。無いカテゴリは直近(24〜72h)で補完してスカスカを避ける。
@@ -310,7 +316,8 @@ function chooseVisibleMediaItems(items) {
   const pool = fresh.length ? fresh : sorted;
   const important = pool.filter((item) => Number(item.relevanceScore || 0) >= 2);
   const count = Math.min(Math.max(3, important.length), 4, pool.length);
-  return pool.slice(0, count);
+  // 選定は関連度ベースのまま、表示は新しい順に並べ替える。
+  return pool.slice(0, count).sort(byRecencyDesc);
 }
 
 function tickerLaneMatches(item, lane) {
@@ -438,9 +445,8 @@ function renderTicker() {
 }
 
 function renderMediaRadar() {
-  const filtered = mediaItems
-    .filter((item) => itemMatchesQuery(item, activeQuery))
-    .sort(mediaSort);
+  // 並び順はグルーピング後に各グループで決めるため、ここでは絞り込みのみ（全件ソートは不要）。
+  const filtered = mediaItems.filter((item) => itemMatchesQuery(item, activeQuery));
 
   if (mediaFreshness) {
     const freshCount = mediaItems.filter(isFreshItem).length;
@@ -566,9 +572,10 @@ function vendorMatches(item, vendor) {
 }
 
 function officialSort(a, b) {
+  // 「更新が新しいものを上」を最優先。同日内は新着フラグ→優先度で安定化。
   return (
+    byRecencyDesc(a, b) ||
     Number(b.new) - Number(a.new) ||
-    String(b.date || "").localeCompare(String(a.date || "")) ||
     Number(b.priority || 0) - Number(a.priority || 0)
   );
 }
@@ -610,9 +617,14 @@ function renderOfficialRadar() {
   const primaryItems = hasOfficialFeed
     ? officialItems.filter((item) => itemMatchesQuery(item, activeQuery)).sort(officialSort)
     : collectItems().filter((item) => itemMatchesQuery(item, activeQuery)).sort(officialSort);
-  const fallbackPrimaryItems = collectItems()
-    .filter((item) => itemMatchesQuery(item, activeQuery))
-    .sort(officialSort);
+
+  // フォールバック（公式フィードのベンダーに該当が無いとき用）は遅延計算。
+  // collectItems() は全カテゴリをflatMapするため、実際に必要になった初回だけ計算する。
+  let fallbackCache = null;
+  const getFallbackItems = () =>
+    (fallbackCache ??= collectItems()
+      .filter((item) => itemMatchesQuery(item, activeQuery))
+      .sort(officialSort));
 
   const vendorList = hasOfficialFeed && officialDataVendors.length ? officialDataVendors : officialVendors;
   const groups = vendorList
@@ -621,16 +633,15 @@ function renderOfficialRadar() {
         ...vendor,
         pattern: vendor.pattern || officialVendors.find((item) => item.id === vendor.id)?.pattern || /$a/
       };
-      return {
-        vendor: normalizedVendor,
-        items: hasOfficialFeed
-          ? (
-              primaryItems.filter((item) => item.vendorId === vendor.id).length
-                ? primaryItems.filter((item) => item.vendorId === vendor.id)
-                : fallbackPrimaryItems.filter((item) => vendorMatches(item, normalizedVendor))
-            ).slice(0, 3)
-          : primaryItems.filter((item) => vendorMatches(item, normalizedVendor)).slice(0, 3)
-      };
+      let items;
+      if (hasOfficialFeed) {
+        const own = primaryItems.filter((item) => item.vendorId === vendor.id);
+        const matched = own.length ? own : getFallbackItems().filter((item) => vendorMatches(item, normalizedVendor));
+        items = matched.slice(0, 3);
+      } else {
+        items = primaryItems.filter((item) => vendorMatches(item, normalizedVendor)).slice(0, 3);
+      }
+      return { vendor: normalizedVendor, items };
     })
     .filter((group) => group.items.length > 0);
 
@@ -753,16 +764,19 @@ function renderCategories(nextTab = "all") {
     .filter((fg) => nextTab === "all" || nextTab === fg.id)
     .map((fg) => {
       // 束ねる収集カテゴリのitemsを統合し、各itemに地域(国内/海外/横断)を注入。
+      // 先にquery/重複URLで絞ってから地域を注入し、捨てる分のコピーを避ける。
       let items = [];
       for (const cid of fg.cats) {
         const c = byId.get(cid);
         if (!c) continue;
-        for (const it of c.items) items.push({ ...it, _region: c.group });
+        for (const it of c.items) {
+          if (itemMatchesQuery(it, activeQuery) && !officialShownUrls.has(it.url)) {
+            items.push({ ...it, _region: c.group });
+          }
+        }
       }
-      items = diversifyBySource(
-        items.filter((item) => itemMatchesQuery(item, activeQuery) && !officialShownUrls.has(item.url))
-      );
-      items.sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+      items = diversifyBySource(items);
+      items.sort(byRecencyDesc);
       matchedItemCount += items.length;
       return { ...fg, items };
     })
