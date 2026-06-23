@@ -591,6 +591,14 @@ function renderOfficialCard(item, vendor) {
 
   const meta = document.createElement("div");
   meta.className = "official-meta";
+  // 24時間以内の更新は速報カード同様にNEWを表示（official-newsはpublishedAtを持つ）。
+  if (isFreshItem(item)) {
+    link.classList.add("is-fresh");
+    const chip = document.createElement("span");
+    chip.className = "official-new";
+    chip.textContent = "NEW";
+    meta.append(chip);
+  }
   const date = document.createElement("span");
   date.textContent = formatDate(item.date);
   const type = document.createElement("span");

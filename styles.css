@@ -1981,7 +1981,8 @@ body {
   white-space: nowrap;
 }
 
-.media-fresh {
+.media-fresh,
+.official-new {
   flex: 0 0 auto;
   padding: 2px 7px;
   border-radius: 999px;
