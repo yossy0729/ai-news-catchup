@@ -2369,15 +2369,17 @@ body {
   font-weight: 900;
 }
 
-/* ラベル＋ビューポートの2カラム構成のティッカー（指標・公式） */
+/* ラベル＋ビューポートの2カラム構成のティッカー（指標・公式・一次情報） */
 .metrics-ticker,
-.official-ticker {
+.official-ticker,
+.category-ticker {
   grid-template-columns: auto minmax(0, 1fr);
 }
 
 /* ベンダー名やSOTA等、タグ文字列が長いティッカーはピルに左右余白を持たせる */
 .metrics-ticker .ticker-item em,
-.official-ticker .ticker-item em {
+.official-ticker .ticker-item em,
+.category-ticker .ticker-item em {
   padding: 0 7px;
 }
 

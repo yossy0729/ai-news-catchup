@@ -51,6 +51,7 @@ const pageTabs = Array.from(document.querySelectorAll(".page-tab"));
 const pageSections = Array.from(document.querySelectorAll(".page"));
 const metricsTickerTrack = document.querySelector("#metricsTickerTrack");
 const officialTickerTrack = document.querySelector("#officialTickerTrack");
+const categoryTickerTrack = document.querySelector("#categoryTickerTrack");
 
 let activeTab = "all";
 let activeQuery = "";
@@ -1303,13 +1304,14 @@ function renderMetricsTicker() {
   applyTickerSpeed(metricsTickerTrack);
 }
 
-// 公式ベンダーのaccent → 色トーン。共通の色定義に合わせる:
+// accent → 色トーン。共通の4色定義に合わせる（公式・一次情報ティッカー共用）:
 //   研究・モデル=青, プロダクト=緑, インフラ/業務導入=橙, リスク・規制=赤。
-const OFFICIAL_TICKER_TONE = {
+const ACCENT_TONE = {
   research: "blue",
   product: "green",
   infrastructure: "amber",
   adoption: "amber",
+  business: "amber",
   security: "red",
   governance: "red"
 };
@@ -1328,7 +1330,7 @@ function renderOfficialTicker() {
     const fragment = document.createDocumentFragment();
     items.forEach((item, index) => {
       const vendor = officialDataVendors.find((v) => v.id === item.vendorId);
-      const tone = OFFICIAL_TICKER_TONE[vendor?.accent] || "green";
+      const tone = ACCENT_TONE[vendor?.accent] || "green";
       const link = document.createElement("a");
       link.className = `ticker-item ticker-${tone}`;
       link.href = item.url;
@@ -1356,6 +1358,52 @@ function renderOfficialTicker() {
 
   officialTickerTrack.replaceChildren(buildSegment(), buildSegment());
   applyTickerSpeed(officialTickerTrack);
+}
+
+// カテゴリ別タブのティッカー: 一次情報の最新見出しを分野色で流す。地域(国内/海外)をタグに。
+function renderCategoryTicker() {
+  if (!categoryTickerTrack) return;
+
+  const items = collectItems()
+    .filter((item) => item.url)
+    .sort(byRecencyDesc)
+    .slice(0, 10);
+  if (!items.length) {
+    categoryTickerTrack.textContent = "一次情報はまだ取得されていません。今すぐ取得で更新してください。";
+    return;
+  }
+
+  const buildSegment = () => {
+    const fragment = document.createDocumentFragment();
+    items.forEach((item, index) => {
+      const tone = ACCENT_TONE[item.categoryAccent] || "green";
+      const link = document.createElement("a");
+      link.className = `ticker-item ticker-${tone}`;
+      link.href = item.url;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.title = `${item.categoryTitle || ""} / ${item.date || ""}`.trim();
+
+      const tag = document.createElement("em");
+      tag.textContent = item.categoryGroup || item.categoryTitle || "一次情報";
+      const headline = document.createElement("strong");
+      headline.textContent = String(item.titleJa || item.title || "").replace(/\s+/g, " ").trim();
+
+      link.append(tag, headline);
+      fragment.append(link);
+
+      if (index < items.length - 1) {
+        const separator = document.createElement("span");
+        separator.className = "ticker-separator";
+        separator.textContent = "/";
+        fragment.append(separator);
+      }
+    });
+    return fragment;
+  };
+
+  categoryTickerTrack.replaceChildren(buildSegment(), buildSegment());
+  applyTickerSpeed(categoryTickerTrack);
 }
 
 const PAGE_ID_BY_NAME = {
@@ -1392,6 +1440,7 @@ function setActivePage(name) {
   pageSections.forEach((section) => section.classList.toggle("active", section.id === targetId));
   if (validName === "metrics") renderMetricsTicker();
   if (validName === "official") renderOfficialTicker();
+  if (validName === "category") renderCategoryTicker();
   savePage(validName);
 }
 
@@ -1416,6 +1465,7 @@ function renderApp(newsData, mediaData, officialData, signalData, pricing, sota,
   renderPricing();
   renderSota();
   renderMetricsTicker();
+  renderCategoryTicker();
   setActiveTab(document.querySelector(".tab.active")?.dataset.tab || "all");
   // リロード時は直前に見ていたタブへ復元（既定の「今日の動向」に強制遷移しない）。
   const savedPage = loadSavedPage();
