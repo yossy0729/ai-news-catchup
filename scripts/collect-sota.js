@@ -12,7 +12,7 @@
 // 設計メモ:
 // - APIが best_rank を算出済みなので、指標の向き(higherIsBetter)を自前判定する必要がない。
 // - evaluations は全件(約7000)をページングで取得し data/cache に保存（毎回叩かずAPIに優しく）。
-// - 1位が交代したときだけ現在値を prev* に退避し、新値を記入（履歴が自然に蓄積）。
+// - 1位交代またはスコア更新があったときに現在値を prev* に退避し、新値を記入（履歴が自然に蓄積）。
 
 const fs = require("node:fs");
 const path = require("node:path");
@@ -511,8 +511,12 @@ async function main() {
     // ベンチ/指標が変わったら過去値は比較不能。履歴を持たない（prevはnullのまま）。
     const sameBench = old.benchmark === e.benchmark && old.metric === e.metric;
     if (!sameBench) continue;
-    if (old.topModel && old.topModel !== e.topModel) {
-      // 同一ベンチでの1位交代 → 旧値を退避
+    // 同一ベンチで「1位モデルの交代」または「スコアの更新」があれば旧値を前回行へ退避。
+    // （同じ王者がスコアを伸ばした場合も履歴として残す）
+    const modelChanged = Boolean(old.topModel) && old.topModel !== e.topModel;
+    const scoreChanged =
+      typeof old.score === "number" && typeof e.score === "number" && old.score !== e.score;
+    if (modelChanged || scoreChanged) {
       e.prevTopModel = old.topModel;
       e.prevScore = old.score;
       e.prevAsOf = old.asOf;
@@ -535,7 +539,7 @@ async function main() {
     entries,
   };
   fs.writeFileSync(sotaPath, JSON.stringify(out, null, 2) + "\n");
-  console.log(`\ndata/sota.json を更新しました（${entries.length}分野 / 1位交代 ${changed}件）`);
+  console.log(`\ndata/sota.json を更新しました（${entries.length}分野 / 前回値の退避 ${changed}件）`);
 }
 
 main().catch((err) => {
