@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedDate": "2026-06-24",
+  "generatedDate": "2026-06-25",
   "sourcePolicy": "AIベンダー/GAFAMの公式RSSまたは公式一覧HTMLから直接取得し、元記事URLと公開日メタデータを確認できたものだけを保存。",
   "vendors": [
     {
@@ -54,6 +54,98 @@
   ],
   "items": [
     {
+      "id": "f767a822fc05ccd3",
+      "vendorId": "google",
+      "vendorName": "Google / DeepMind",
+      "accent": "infrastructure",
+      "homepage": "https://blog.google/technology/ai/",
+      "title": "Introducing computer use in Gemini 3.5 Flash",
+      "titleJa": "",
+      "summary": "Google DeepMindがAIモデルまたは開発者向け機能に関する更新を発表。利用可能モデル、開発体験、プロダクト選定への影響を確認できます。",
+      "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash",
+      "source": "Google DeepMind Blog",
+      "type": "研究",
+      "kind": "モデル・プロダクト",
+      "date": "2026-06-25",
+      "publishedAt": "2026-06-24T16:30:01.000Z",
+      "freshness": "today",
+      "priority": 80,
+      "dateVerification": {
+        "status": "verified",
+        "method": "rss",
+        "checkedAt": "2026-06-24T22:16:36.508Z"
+      }
+    },
+    {
+      "id": "483ec38b055d786a",
+      "vendorId": "huggingface",
+      "vendorName": "Hugging Face",
+      "accent": "research",
+      "homepage": "https://huggingface.co/blog",
+      "title": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel",
+      "titleJa": "",
+      "summary": "Hugging FaceがAIモデルまたは開発者向け機能に関する更新を発表。利用可能モデル、開発体験、プロダクト選定への影響を確認できます。",
+      "url": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel",
+      "source": "Hugging Face Blog",
+      "type": "公式ブログ",
+      "kind": "モデル・プロダクト",
+      "date": "2026-06-25",
+      "publishedAt": "2026-06-24T16:00:13.000Z",
+      "freshness": "today",
+      "priority": 80,
+      "dateVerification": {
+        "status": "verified",
+        "method": "rss",
+        "checkedAt": "2026-06-24T22:16:44.344Z"
+      }
+    },
+    {
+      "id": "c4ae6e407095b9ad",
+      "vendorId": "openai",
+      "vendorName": "OpenAI / ChatGPT",
+      "accent": "research",
+      "homepage": "https://openai.com/news/",
+      "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
+      "titleJa": "",
+      "summary": "OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.",
+      "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+      "source": "OpenAI News",
+      "type": "公式発表",
+      "kind": "モデル・プロダクト",
+      "date": "2026-06-24",
+      "publishedAt": "2026-06-24T06:00:00.000Z",
+      "freshness": "recent",
+      "priority": 80,
+      "dateVerification": {
+        "status": "verified",
+        "method": "rss",
+        "checkedAt": "2026-06-24T22:15:58.481Z"
+      }
+    },
+    {
+      "id": "97a65104fcd4181d",
+      "vendorId": "huggingface",
+      "vendorName": "Hugging Face",
+      "accent": "research",
+      "homepage": "https://huggingface.co/blog",
+      "title": "Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World",
+      "titleJa": "",
+      "summary": "Hugging FaceがAI性能評価・学習基盤に関する情報を公開。モデル開発、GPU基盤、推論・学習コスト判断に関わる一次情報です。",
+      "url": "https://huggingface.co/blog/ffasr-leaderboard",
+      "source": "Hugging Face Blog",
+      "type": "公式ブログ",
+      "kind": "研究・評価",
+      "date": "2026-06-24",
+      "publishedAt": "2026-06-24T00:00:00.000Z",
+      "freshness": "recent",
+      "priority": 80,
+      "dateVerification": {
+        "status": "verified",
+        "method": "rss",
+        "checkedAt": "2026-06-24T22:16:44.344Z"
+      }
+    },
+    {
       "id": "f3fbcb970ccda5be",
       "vendorId": "openai",
       "vendorName": "OpenAI / ChatGPT",
@@ -68,12 +160,12 @@
       "kind": "モデル・プロダクト",
       "date": "2026-06-24",
       "publishedAt": "2026-06-23T17:00:00.000Z",
-      "freshness": "today",
+      "freshness": "recent",
       "priority": 80,
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:09.336Z"
+        "checkedAt": "2026-06-24T22:15:58.481Z"
       }
     },
     {
@@ -91,12 +183,12 @@
       "kind": "モデル・プロダクト",
       "date": "2026-06-24",
       "publishedAt": "2026-06-23T15:00:00.000Z",
-      "freshness": "today",
+      "freshness": "recent",
       "priority": 80,
       "dateVerification": {
         "status": "verified",
         "method": "atom",
-        "checkedAt": "2026-06-23T22:00:58.176Z"
+        "checkedAt": "2026-06-24T22:16:44.023Z"
       }
     },
     {
@@ -119,7 +211,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:09.335Z"
+        "checkedAt": "2026-06-24T22:15:58.481Z"
       }
     },
     {
@@ -142,7 +234,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:58.513Z"
+        "checkedAt": "2026-06-24T22:16:44.345Z"
       }
     },
     {
@@ -165,7 +257,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "atom",
-        "checkedAt": "2026-06-23T22:00:58.176Z"
+        "checkedAt": "2026-06-24T22:16:44.023Z"
       }
     },
     {
@@ -188,7 +280,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:09.336Z"
+        "checkedAt": "2026-06-24T22:15:58.482Z"
       }
     },
     {
@@ -211,7 +303,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:58.513Z"
+        "checkedAt": "2026-06-24T22:16:44.345Z"
       }
     },
     {
@@ -234,7 +326,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:58.661Z"
+        "checkedAt": "2026-06-24T22:16:44.782Z"
       }
     },
     {
@@ -257,7 +349,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:58.661Z"
+        "checkedAt": "2026-06-24T22:16:44.782Z"
       }
     },
     {
@@ -280,7 +372,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "atom",
-        "checkedAt": "2026-06-23T22:00:58.176Z"
+        "checkedAt": "2026-06-24T22:16:44.023Z"
       }
     },
     {
@@ -303,30 +395,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "atom",
-        "checkedAt": "2026-06-23T22:00:58.177Z"
-      }
-    },
-    {
-      "id": "2238368126314ea4",
-      "vendorId": "openai",
-      "vendorName": "OpenAI / ChatGPT",
-      "accent": "research",
-      "homepage": "https://openai.com/news/",
-      "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
-      "titleJa": "",
-      "summary": "OpenAI introduces Patch the Planet, a Daybreak initiative helping open-source maintainers find, validate, and fix vulnerabilities with AI and expert r...",
-      "url": "https://openai.com/index/patch-the-planet",
-      "source": "OpenAI News",
-      "type": "公式発表",
-      "kind": "公式アップデート",
-      "date": "2026-06-22",
-      "publishedAt": "2026-06-22T10:00:00.000Z",
-      "freshness": "recent",
-      "priority": 80,
-      "dateVerification": {
-        "status": "verified",
-        "method": "rss",
-        "checkedAt": "2026-06-23T22:00:09.337Z"
+        "checkedAt": "2026-06-24T22:16:44.023Z"
       }
     },
     {
@@ -349,7 +418,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:49.993Z"
+        "checkedAt": "2026-06-24T22:16:35.804Z"
       }
     },
     {
@@ -372,7 +441,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:50.779Z"
+        "checkedAt": "2026-06-24T22:16:36.508Z"
       }
     },
     {
@@ -395,7 +464,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:50.779Z"
+        "checkedAt": "2026-06-24T22:16:36.509Z"
       }
     },
     {
@@ -418,7 +487,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:49.993Z"
+        "checkedAt": "2026-06-24T22:16:35.804Z"
       }
     },
     {
@@ -441,7 +510,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:49.993Z"
+        "checkedAt": "2026-06-24T22:16:35.805Z"
       }
     },
     {
@@ -464,7 +533,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:50.779Z"
+        "checkedAt": "2026-06-24T22:16:36.509Z"
       }
     },
     {
@@ -487,30 +556,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "html_meta",
-        "checkedAt": "2026-06-23T22:00:52.198Z"
-      }
-    },
-    {
-      "id": "b0943f6d7edef0fd",
-      "vendorId": "google",
-      "vendorName": "Google / DeepMind",
-      "accent": "infrastructure",
-      "homepage": "https://blog.google/technology/ai/",
-      "title": "Investing in multi-agent AI safety research",
-      "titleJa": "",
-      "summary": "Google DeepMindがAIエージェント関連の技術・安全性・評価に関する情報を公開。実装設計、ツール利用、リスク管理の観点で追うべき内容です。",
-      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
-      "source": "Google DeepMind Blog",
-      "type": "研究",
-      "kind": "AIセーフティ・リスク",
-      "date": "2026-06-10",
-      "publishedAt": "2026-06-10T10:21:19.000Z",
-      "freshness": "recent",
-      "priority": 80,
-      "dateVerification": {
-        "status": "verified",
-        "method": "rss",
-        "checkedAt": "2026-06-23T22:00:50.779Z"
+        "checkedAt": "2026-06-24T22:16:37.923Z"
       }
     },
     {
@@ -533,7 +579,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:58.661Z"
+        "checkedAt": "2026-06-24T22:16:44.782Z"
       }
     },
     {
@@ -556,7 +602,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:49.994Z"
+        "checkedAt": "2026-06-24T22:16:35.805Z"
       }
     },
     {
@@ -579,7 +625,7 @@
       "dateVerification": {
         "status": "verified",
         "method": "html_meta",
-        "checkedAt": "2026-06-23T22:00:51.715Z"
+        "checkedAt": "2026-06-24T22:16:37.483Z"
       }
     },
     {
@@ -602,16 +648,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-06-23T22:00:58.661Z"
+        "checkedAt": "2026-06-24T22:16:44.782Z"
       }
     }
   ],
-  "errors": [
-    {
-      "vendor": "openai",
-      "source": "OpenAI Blog",
-      "url": "https://openai.com/blog/rss.xml",
-      "error": "This operation was aborted"
-    }
-  ]
+  "errors": []
 }

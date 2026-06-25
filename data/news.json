@@ -1,5 +1,5 @@
 {
-  "generatedDate": "2026-06-24",
+  "generatedDate": "2026-06-25",
   "categories": [
     {
       "id": "jp-cases",
@@ -27,6 +27,21 @@
           "candidateId": "30d30365a817128c57d13a5f"
         },
         {
+          "title": "フォーティエンスコンサルティング、日本CFO協会主催「AI時代における戦略的CFO機能再構築プロジェクト」に協力パートナーとして参画（フォーティエンスコンサルティング株式会社）",
+          "titleJa": "",
+          "summary": "フォーティエンスコンサルティング株式会社は、2026年6月9日付で、下記のニュースリリースを発表いたしました。",
+          "summaryStatus": "extracted-ja",
+          "impact": "社会的影響",
+          "source": "NTT DATA ニュース",
+          "type": "公式発表",
+          "date": "2026-06-09",
+          "url": "https://www.nttdata.com/global/ja/news/group/2026/060901",
+          "priority": 80,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "099d0eae669af89035cfec1f"
+        },
+        {
           "title": "Data + AI Summitにて「2026 Databricks APJ Growth Partner of the Year」を受賞",
           "titleJa": "",
           "summary": "株式会社NTTデータ（以下：NTTデータ）は、2026年6月に米国サンフランシスコで開催されたDatabricks Inc.（以下：データブリックス）の年次イベント「Data + AI Summit 2026」において、2026 Databricks Partner Awardの「APJ Growt...",
@@ -40,21 +55,6 @@
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
           "candidateId": "6cd83257a2522ee76b73edab"
-        },
-        {
-          "title": "フォーティエンスコンサルティング、AI時代の成果創出を加速するFDE型コンサルティングを提供開始（フォーティエンスコンサルティング株式会社）",
-          "titleJa": "",
-          "summary": "フォーティエンスコンサルティング株式会社は、2026年6月16日付で、下記のニュースリリースを発表いたしました。",
-          "summaryStatus": "extracted-ja",
-          "impact": "社会的影響",
-          "source": "NTT DATA ニュース",
-          "type": "公式発表",
-          "date": "2026-06-16",
-          "url": "https://www.nttdata.com/global/ja/news/group/2026/061600",
-          "priority": 80,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "4eddb65339beaed4d62bb44f"
         }
       ]
     },
@@ -69,21 +69,6 @@
       "group": "国内",
       "title": "国産AI・研究・論文",
       "items": [
-        {
-          "title": "Team Sakura, including Adam Nohejl of the Explainable AI Team, won the Open Track of the BEA 2026 Shared Task（May, 2026) | Center for Advanced Intelligence Project",
-          "titleJa": "理研AIPのTeam SakuraがBEA 2026 Shared TaskのOpen Trackで優勝",
-          "summary": "理研AIPの説明可能AIチームに所属するAdam Nohejl氏らのTeam Sakuraが、BEA 2026 Shared TaskのOpen Trackで優勝。教育・自然言語処理領域での国内研究成果として確認したい内容です。",
-          "summaryStatus": "manual-ja",
-          "impact": "研究価値",
-          "source": "理化学研究所 革新知能統合研究センター",
-          "type": "論文・技術文書",
-          "date": "2026-05-25",
-          "url": "https://aip.riken.jp/news/bea2026",
-          "priority": 93,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "952ed32494e0b2baa75f057a"
-        },
         {
           "title": "【Event Report】The 8th Annual Meeting of Japanese Association for Medical Artificial Intelligence (JMAI) (June 5-6, 2026, Tokyo) | Center for Advanced Intelligence Project",
           "titleJa": "",
@@ -182,19 +167,19 @@
           "candidateId": "b531a6249412cc4f4209ed36"
         },
         {
-          "title": "MosaicLeaks: Can your research agent keep a secret?",
+          "title": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel",
           "titleJa": "",
           "summary": "日本語要約は未生成です。APIキーを設定して「今すぐ取得」を実行すると、この記事の内容を日本語で要約します。",
           "summaryStatus": "missing-ja-summary",
           "impact": "研究価値",
           "source": "Hugging Face Blog",
           "type": "公式ブログ",
-          "date": "2026-06-18",
-          "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+          "date": "2026-06-24",
+          "url": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel",
           "priority": 90,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "2eb5bcc3ad88b97ec36616da"
+          "candidateId": "ad312ce435987076fb9f67d2"
         }
       ]
     },
