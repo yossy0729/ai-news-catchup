@@ -14,6 +14,9 @@ const replace = args.has("--replace");
 const accept = args.has("--accept");
 const minPriority = Number(getArg("--min-priority=", "60"));
 const maxAgeDays = Number(getArg("--max-age-days=", "30"));
+// カテゴリごとの保持上限。履歴を積み上げるため、従来の3件から拡大。
+// 実際の表示はmaxAgeDays(既定30日)の窓で自然に間引かれる。
+const maxItems = Number(getArg("--max-items=", "12"));
 
 const categoryMeta = {
   "jp-cases": {
@@ -468,7 +471,7 @@ function main() {
     const candidate = candidateById.get(item.candidateId);
     const categoryId = normalizeCategory(item.suggestedCategory, item.categories);
     const category = categoryById.get(categoryId);
-    if (!category || category.items.length >= 3) continue;
+    if (!category || category.items.length >= maxItems) continue;
 
     const duplicate = categories.some((entry) =>
       (entry.items || []).some((newsItem) => newsItem.url === item.url)
@@ -481,8 +484,10 @@ function main() {
 
   for (const category of categories) {
     category.items = (category.items || [])
+      // 日付が読めるものだけ窓で間引く。日付不明の項目は誤って消さないよう残す。
+      .filter((item) => !item.date || ageInDays(item.date, today) <= maxAgeDays)
       .sort((a, b) => (b.priority || 0) - (a.priority || 0))
-      .slice(0, 3);
+      .slice(0, maxItems);
   }
 
   const nextNews = {

@@ -16,8 +16,10 @@ const perSource = getArg("--per-source=", "3");
 const maxCandidates = getArg("--max-candidates=", "50");
 const minPriority = getArg("--min-priority=", "60");
 const maxAgeDays = getArg("--max-age-days=", "30");
+const maxItems = getArg("--max-items=", "12");
 const sourceLimit = getArg("--source-limit=", "");
-const keepExisting = args.has("--keep-existing");
+// 既定は蓄積（履歴を残す）。明示的に作り直したいときだけ --replace-categories。
+const replaceCategories = args.has("--replace-categories");
 const noAccept = args.has("--no-accept");
 const llmSummary = args.has("--llm-summary") || process.env.AI_NEWS_LLM_SUMMARY === "1";
 const llmLimit = getArg("--llm-limit=", reviewLimit);
@@ -61,8 +63,9 @@ Options:
   --max-candidates=N     Max daily candidates saved from collection. Default: 50.
   --min-priority=N       Promotion threshold. Default: 60.
   --max-age-days=N       Exclude older items from promotion. Default: 30.
+  --max-items=N          Max kept items per category (history depth). Default: 12.
   --source-limit=N       Limit source count for smoke tests.
-  --keep-existing        Do not replace dashboard items during promotion.
+  --replace-categories   Rebuild categories from scratch instead of accumulating history.
   --no-accept            Do not mark promoted review items as accepted.
   --llm-summary          Run optional OpenAI-powered Japanese summaries when OPENAI_API_KEY is set.
   --llm-limit=N          Number of review items to summarize with LLM. Default: review-limit.
@@ -146,11 +149,12 @@ function main() {
 
   const promoteArgs = [
     `--min-priority=${minPriority}`,
-    `--max-age-days=${maxAgeDays}`
+    `--max-age-days=${maxAgeDays}`,
+    `--max-items=${maxItems}`
   ];
   if (!dryRun) {
     promoteArgs.push("--write");
-    if (!keepExisting) promoteArgs.push("--replace");
+    if (replaceCategories) promoteArgs.push("--replace");
     if (!noAccept) promoteArgs.push("--accept");
   }
 
