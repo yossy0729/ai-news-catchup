@@ -975,6 +975,10 @@ h1 {
   display: grid;
   gap: 10px;
   margin-top: 12px;
+  /* 蓄積した履歴で列が伸びすぎないよう、各カテゴリ内でスクロールさせる。 */
+  max-height: min(440px, 56vh);
+  overflow-y: auto;
+  padding-right: 4px;
 }
 
 .news-card {

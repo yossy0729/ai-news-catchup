@@ -815,7 +815,8 @@ function renderCategories(nextTab = "all") {
         note.textContent = "最近の新着はありません";
         list.append(note);
       } else {
-        fg.items.slice(0, 4).forEach((item) => list.append(renderNewsCard(item, fg.accent)));
+        // 蓄積した履歴はすべて出す（多い分野は列内スクロールで見せる。CSS .news-list 参照）。
+        fg.items.forEach((item) => list.append(renderNewsCard(item, fg.accent)));
       }
 
       return column;
