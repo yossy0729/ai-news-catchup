@@ -12,6 +12,15 @@ on:
     # 05:40 JST = 20:40 UTC（cronはUTC基準。なお遅延は完全には避けられない）。
     - cron: "40 20 * * *"
   workflow_dispatch: {} # 手動実行（初回テスト・任意のタイミング更新に使う）
+  # mainへのpushでも公開を更新（データやサイト本体を変えたら即反映できるように）。
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "index.html"
+      - "app.js"
+      - "styles.css"
+      - ".github/workflows/daily-update.yml"
 
 # 公開の同時実行は1つに制限（実行中の公開を壊さない）。
 concurrency:
