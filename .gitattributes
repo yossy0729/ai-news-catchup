@@ -1,0 +1,10 @@
+# 改行コードをLFに統一する。
+# Windows(core.autocrlf=true)でデータ再生成するたびにCRLFが混入し、
+# 中身は同じなのに巨大な差分が出る問題（LF will be replaced by CRLF 警告）を防ぐ。
+* text=auto eol=lf
+
+# バイナリは改行変換しない。
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
