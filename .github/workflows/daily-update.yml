@@ -78,7 +78,8 @@ jobs:
             echo "No data changes to commit."
           else
             git commit -m "chore(data): 自動更新（$(TZ=Asia/Tokyo date +%Y-%m-%d)分）"
-            git push
+            # push失敗(branch保護など)でも公開は止めない。データ保存は次回に持ち越し。
+            git push || echo "WARN: data push failed; deploy continues with this run's data."
           fi
 
       # 公開に必要な静的ファイルだけを集める（serve.js やスクリプトは配信しない）。
