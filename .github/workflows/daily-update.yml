@@ -1,9 +1,10 @@
 name: Daily update & deploy
 
-# 毎朝の自動更新＋GitHub Pages公開。
-# - データ生成は scripts/daily-update.js（RSS/API収集。既定はルールベースで無料・APIキー不要）。
-# - OPENAI_API_KEY シークレットを登録した場合のみ、自動で --llm-summary（日本語LLM要約）を有効化＝その分だけ課金。
-# - 生成したサイトを GitHub Actions 方式で Pages へ公開（リポジトリ設定 Pages の Source を "GitHub Actions" にしておくこと）。
+# 2つの工程を分離して回す:
+#  - データ生成(重い: RSS/API収集＋LLM翻訳/要約): 毎朝のscheduleと手動(workflow_dispatch)のときだけ実行し、
+#    生成結果を data/ にコミットして保存（次回以降の土台にする）。
+#  - 公開(軽い: 静的ファイルをPagesへ): 常に実行。push(コード変更)では生成せず、コミット済みデータでそのまま公開する。
+# これにより「見た目の修正をpush」は数十秒・無課金で反映、「中身の更新」は1日1回だけに分離される。
 
 on:
   schedule:
@@ -11,13 +12,12 @@ on:
     # 前倒し＆半端な分(:40)で実行し、7:00までに公開が終わるようバッファを取る。
     # 05:40 JST = 20:40 UTC（cronはUTC基準。なお遅延は完全には避けられない）。
     - cron: "40 20 * * *"
-  workflow_dispatch: {} # 手動実行（初回テスト・任意のタイミング更新に使う）
-  # mainへのpushでも公開を更新（データやサイト本体を変えたら即反映できるように）。
+  workflow_dispatch: {} # 手動実行（データ生成＋公開）。スクリプト修正の動作確認にも使う。
+  # mainへのpushでは「公開のみ」を更新（コード/データの変更を即反映。データ生成はしない）。
   push:
     branches: [main]
     paths:
       - "data/**"
-      - "scripts/**"
       - "index.html"
       - "app.js"
       - "styles.css"
@@ -29,7 +29,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: read # チェックアウトのみ（データはリポジトリに書き戻さず、生成物を直接公開する）
+  contents: write # 生成データを data/ に書き戻す(コミット)ため。GITHUB_TOKENのpushはワークフローを再起動しない。
   pages: write # Pagesへデプロイ
   id-token: write # デプロイ認証(OIDC)
 
@@ -49,9 +49,10 @@ jobs:
         with:
           node-version: "22"
 
-      # データ生成。OPENAI_API_KEY が登録されているときだけ LLM 要約を有効化する。
-      # 鍵はログに出さない（-n で存在チェックのみ）。失敗時はこのステップで止まり公開は更新されない（前回が残る）。
+      # データ生成は schedule / 手動のときだけ。push(コード変更)ではスキップして高速・無課金にする。
+      # OPENAI_API_KEY が登録されているときだけ LLM 翻訳/要約を有効化（鍵は -n で存在チェックのみ。ログに出さない）。
       - name: Generate data
+        if: github.event_name != 'push'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
@@ -64,6 +65,21 @@ jobs:
             echo "No OPENAI_API_KEY -> rule-based only (free)"
           fi
           node scripts/daily-update.js $FLAG
+
+      # 生成結果を data/ にコミットして保存（次回の土台＋push公開でも最新が出るように）。
+      # 変更が無ければ何もしない。GITHUB_TOKENのpushは新たなワークフローを起動しない（無限ループしない）。
+      - name: Commit refreshed data
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "chore(data): 自動更新（$(TZ=Asia/Tokyo date +%Y-%m-%d)分）"
+            git push
+          fi
 
       # 公開に必要な静的ファイルだけを集める（serve.js やスクリプトは配信しない）。
       - name: Assemble static site
