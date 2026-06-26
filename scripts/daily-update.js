@@ -162,6 +162,11 @@ function main() {
   runStep("collect-ai-signals", "scripts/collect-ai-signals.js", signalArgs);
   runStep("collect-media-news", "scripts/collect-media-news.js", mediaArgs);
   runStep("collect", "scripts/collect-news.js", collectArgs);
+  // ティッカー/速報の英語見出しを日本語化（APIキーがあるときだけ。失敗時は英語のまま）。
+  if (llmSummary) {
+    const translateArgs = [dryRun ? "--dry-run" : "--write"];
+    runStep("translate-titles", "scripts/translate-titles.js", translateArgs);
+  }
   runStep("prepare-review", "scripts/prepare-review.js", reviewArgs);
   if (llmSummary) {
     const summarizeArgs = [`--limit=${llmLimit}`];

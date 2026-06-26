@@ -371,7 +371,10 @@ function tickerTagLabel(item) {
 
 function buildTickerMessage(item) {
   if (item.text) return item.text;
-  const cleanTitle = String(item.title || "").replace(/\s+/g, " ").trim();
+  // 速く流れるティッカーは一目で読めることが優先。日本語タイトル(titleJa)があれば
+  // それを流し、無ければ英語タイトルにフォールバックする。
+  const headline = item.titleJa || item.title || "";
+  const cleanTitle = String(headline).replace(/\s+/g, " ").trim();
   const meta = `${formatDate(item.date)} / ${item.source}`;
   return `${cleanTitle} / ${meta}`;
 }
