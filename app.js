@@ -371,15 +371,15 @@ function tickerTagLabel(item) {
   return tickerTag(item);
 }
 
+// ティッカーに流す見出し文字列を1か所で決める（全ティッカー共通）。
+// 日本語タイトル(titleJa)を最優先。item.text は英語の旧ティッカー文なので次点、最後に英語タイトル。
+// これを各ティッカーが使うことで「片方だけ英語が残る」食い違いを防ぐ。
+function tickerHeadline(item) {
+  return String(item.titleJa || item.text || item.title || "").replace(/\s+/g, " ").trim();
+}
+
 function buildTickerMessage(item) {
-  const meta = `${formatDate(item.date)} / ${item.source}`;
-  // 速く流れるティッカーは一目で読めることが優先。日本語タイトル(titleJa)を最優先で流す。
-  // item.text は英語の旧ティッカー文なので、titleJaが無いときだけ使う。
-  if (item.titleJa) {
-    return `${String(item.titleJa).replace(/\s+/g, " ").trim()} / ${meta}`;
-  }
-  if (item.text) return item.text;
-  return `${String(item.title || "").replace(/\s+/g, " ").trim()} / ${meta}`;
+  return `${tickerHeadline(item)} / ${formatDate(item.date)} / ${item.source}`;
 }
 
 // ティッカーの見た目スクロール速度を一定(px/秒)に揃える。
@@ -1356,8 +1356,8 @@ function renderOfficialTicker() {
       const tag = document.createElement("em");
       tag.textContent = item.vendorName || item.source || "公式";
       const headline = document.createElement("strong");
-      // 日本語タイトルがあれば優先表示。無ければ英語タイトルにフォールバック。
-      headline.textContent = String(item.titleJa || item.title || "").replace(/\s+/g, " ").trim();
+      // 見出し文字列は共通関数で決定（titleJa優先。tickerHeadline 参照）。
+      headline.textContent = tickerHeadline(item);
 
       link.append(tag, headline);
       fragment.append(link);
@@ -1403,7 +1403,8 @@ function renderCategoryTicker() {
       const tag = document.createElement("em");
       tag.textContent = item.categoryGroup || item.categoryTitle || "一次情報";
       const headline = document.createElement("strong");
-      headline.textContent = String(item.titleJa || item.title || "").replace(/\s+/g, " ").trim();
+      // 見出し文字列は共通関数で決定（titleJa優先。tickerHeadline 参照）。
+      headline.textContent = tickerHeadline(item);
 
       link.append(tag, headline);
       fragment.append(link);
