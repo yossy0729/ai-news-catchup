@@ -157,7 +157,7 @@ node scripts/promote-review.js --write --replace --accept
 node scripts/daily-update.js --llm-summary --llm-limit=10
 ```
 
-常時有効化する場合は、Windows環境変数 `AI_NEWS_LLM_SUMMARY=1` と `OPENAI_API_KEY` を設定します。モデルは標準で `gpt-5.4-mini` を使います。変更する場合は `OPENAI_MODEL` を指定します。
+常時有効化する場合は、Windows環境変数 `AI_NEWS_LLM_SUMMARY=1` と `OPENAI_API_KEY` を設定します。モデルは標準で `gpt-4o-mini` を使います。変更する場合は `OPENAI_MODEL` を指定します。
 
 将来的には同じ入力欄を使って、`data/sources.json` の公式ソース群に対して次の処理を行います。
 

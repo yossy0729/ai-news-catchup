@@ -13,7 +13,7 @@ const args = new Set(rawArgs);
 const write = args.has("--write");
 const force = args.has("--force");
 const batchSize = Number(getArg("--batch=", "15"));
-const model = getArg("--model=", process.env.OPENAI_MODEL || "gpt-5.4-mini");
+const model = getArg("--model=", process.env.OPENAI_MODEL || "gpt-4o-mini");
 const apiKey = process.env.OPENAI_API_KEY;
 
 const targetFiles = ["official-news.json", "media-news.json", "ai-signals.json"].map((name) =>
