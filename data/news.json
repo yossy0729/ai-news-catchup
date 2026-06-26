@@ -1,5 +1,5 @@
 {
-  "generatedDate": "2026-06-26",
+  "generatedDate": "2026-06-27",
   "categories": [
     {
       "id": "jp-cases",
@@ -255,6 +255,21 @@
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
           "candidateId": "432c23c0dd1c00f1ba41d7bd"
+        },
+        {
+          "title": "We got local models to triage the OpenClaw repo for FREE!*",
+          "titleJa": "無料でOpenClawリポジトリをトリアージするローカルモデルを取得しました！",
+          "summary": "Hugging Faceは、オープンソースとオープンサイエンスを通じてAIを推進し、民主化する取り組みの一環として、OpenClawリポジトリのトリアージにローカルモデルを適用しました。",
+          "summaryStatus": "llm-ja",
+          "impact": "研究価値",
+          "source": "Hugging Face Blog",
+          "type": "公式ブログ",
+          "date": "2026-06-22",
+          "url": "https://huggingface.co/blog/local-models-pr-triage",
+          "priority": 90,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "965bb4d2ca17efb526463684"
         },
         {
           "title": "Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World",

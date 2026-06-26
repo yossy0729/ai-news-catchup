@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedDate": "2026-06-26",
+  "generatedDate": "2026-06-27",
   "sourcePolicy": "直接RSSで元記事URLと公開日時を確認できる固定・厳選プールの2次情報媒体のみを速報対象にする。公開から72時間以内に限定し、24時間以内をfresh・24〜72時間をrecentとして区別する（空カテゴリはrecentで補完）。Google News RSSの検出時刻は元記事公開日と一致しないため、日付検証なしでは掲載しない。",
   "freshnessPolicy": {
     "maxAgeHours": 72,
@@ -58,36 +58,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T00:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 6.5,
+      "ageHours": 21.9,
       "relevanceScore": 6,
       "priority": 96,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:45.379Z"
-      }
-    },
-    {
-      "id": "50b1a38bee1b89a1",
-      "title": "AIエージェントが回す「イノベーションのフライホイール」 自律型AIが切り拓くビジネスと開発の新時代",
-      "summary": "2026年6月25日に開催された「AWS Summit Japan 2026」基調講演では、生成AIが対話型から自ら実行する「自律型AIエージェント」へ進化する最前線が語られた。AWSの新たなエージェント群やOpenAIとの提携に加え、東京海上日動火災保険やフ...",
-      "url": "https://ascii.jp/elem/000/004/413/4413643/?rss",
-      "source": "ASCII.jp",
-      "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "日本",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-26T05:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 1.5,
-      "relevanceScore": 6,
-      "priority": 92,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:47.623Z"
+        "checkedAt": "2026-06-26T21:52:09.699Z"
       }
     },
     {
@@ -104,60 +81,61 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T23:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 7.5,
+      "ageHours": 22.9,
       "relevanceScore": 5,
       "priority": 96,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:45.379Z"
+        "checkedAt": "2026-06-26T21:52:09.700Z"
       }
     },
     {
-      "id": "167a96d260b163e9",
-      "title": "IBM、世界初の「1nm未満」チップ技術を発表――3D構造「ナノスタック」でAIの処理を高速化",
-      "summary": "IBMは、世界初となる1ナノメートル未満（sub-1nm）のチップ技術を発表した。独自の3次元トランジスタ構造「nanostack」（ナノスタック）を開発し、原子数個分の微細化を達成。2nmノード比で性能が最大50％向上、電力効率が70％改善する。生成AIの高...",
-      "url": "https://www.itmedia.co.jp/news/articles/2606/26/news059.html",
-      "source": "ITmedia NEWS",
+      "id": "73ba764288cebe71",
+      "title": "OpenAI、次世代「GPT-5.6」シリーズを限定プレビュー 米政府と調整、命名は「Sol／Terra／Luna」に刷新",
+      "summary": "米OpenAIは6月26日（現地時間）、次世代AIモデル「GPT-5.6」シリーズの限定プレビューを始めた。フラッグシップの「Sol」、日常業務向けでバランス型の「Terra」、高速・低価格の「Luna」の3モデルで構成する。コーディングや科学、サイバーセキュ...",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2606/27/2000000134/",
+      "source": "ITmedia AI+",
       "sourceType": "メディア",
-      "category": "半導体・クラウド・基盤",
-      "categoryId": "infrastructure",
-      "accent": "infrastructure",
+      "category": "AIセキュリティ・リスク",
+      "categoryId": "security",
+      "accent": "security",
       "region": "日本",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-25T21:47:00.000Z",
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-26T19:56:10.000Z",
       "freshness": "fresh",
-      "ageHours": 8.7,
+      "ageHours": 1.9,
       "relevanceScore": 4,
-      "priority": 98,
+      "priority": 104,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:44.343Z"
+        "checkedAt": "2026-06-26T21:52:08.421Z"
       }
     },
     {
-      "id": "5955dfc0dd37216d",
-      "title": "NECの国産LLM「cotomi」、Acompanyとの実証で秘匿環境下での推論実行に成功",
-      "summary": "Acompanyは、NECが開発する生成AI「cotomi」を、Confidential Computing（※）を有効にした計算環境上で推論実行する技術実証に成功し、あわせて性能（ベンチマーク）測...",
-      "url": "https://enterprisezine.jp/news/detail/24555",
-      "source": "EnterpriseZine",
+      "id": "11e34260ae456c7e",
+      "title": "It’s not about Anthropic vs. OpenAI anymore",
+      "summary": "AI models have progressed to the point where their capabilities have real political consequences. Dealing with those consequences ...",
+      "url": "https://techcrunch.com/2026/06/26/its-not-about-anthropic-vs-openai-anymore/",
+      "source": "TechCrunch (AI)",
       "sourceType": "メディア",
       "category": "モデル・研究・プロダクト",
       "categoryId": "models",
       "accent": "research",
-      "region": "日本",
-      "date": "2026-06-25",
-      "publishedAt": "2026-06-25T06:52:00.000Z",
+      "region": "海外",
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-26T16:24:47.000Z",
       "freshness": "fresh",
-      "ageHours": 23.6,
+      "ageHours": 5.5,
       "relevanceScore": 4,
-      "priority": 96,
+      "priority": 94,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:45.380Z"
-      }
+        "checkedAt": "2026-06-26T21:52:13.256Z"
+      },
+      "titleJa": "もはやAnthropic対OpenAIの構図ではない"
     },
     {
       "id": "6c330b21f9f9f0a7",
@@ -172,14 +150,14 @@
       "region": "海外",
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T17:38:27.000Z",
-      "freshness": "fresh",
-      "ageHours": 12.8,
+      "freshness": "recent",
+      "ageHours": 28.2,
       "relevanceScore": 4,
       "priority": 94,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:48.458Z"
+        "checkedAt": "2026-06-26T21:52:13.257Z"
       },
       "titleJa": "AnthropicのClaudeが有料ユーザーを獲得中"
     },
@@ -196,60 +174,131 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T21:15:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 9.2,
+      "freshness": "recent",
+      "ageHours": 24.6,
       "relevanceScore": 3,
       "priority": 101,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:44.209Z"
+        "checkedAt": "2026-06-26T21:52:08.424Z"
       }
     },
     {
-      "id": "e772b21b21a4300c",
-      "title": "Notion、メールアプリ「Notion Mail」終了へ AIエージェントに全面移行",
-      "summary": "Notionは、メールアプリ「Notion Mail」を9月22日に終了すると発表した。AIエージェントの高機能化に伴い、受信トレイを1度も開かずにメールを管理するユーザーが半数を超えたためという。今後はエージェントによる受信トレイ運用に全面的にかじを切る。",
-      "url": "https://www.itmedia.co.jp/news/articles/2606/26/news060.html",
-      "source": "ITmedia NEWS",
+      "id": "531f9c2784935552",
+      "title": "Linux Foundation、MythosなどAIによる脆弱性発見を念頭にOSSの業界横断セキュリティ強化イニシアチブを発表",
+      "summary": "Linux Foundationは、Mythosの出現などを念頭に置いた「AIを活用した脆弱性発見」の時代において、オープンソースソフトウェアのセキュリティ強化を目的とした業界横断の共同イニシアチブ...",
+      "url": "https://enterprisezine.jp/news/detail/24568",
+      "source": "EnterpriseZine",
       "sourceType": "メディア",
-      "category": "AIエージェント・業務AI",
-      "categoryId": "agents",
-      "accent": "product",
+      "category": "AIセキュリティ・リスク",
+      "categoryId": "security",
+      "accent": "security",
       "region": "日本",
       "date": "2026-06-26",
-      "publishedAt": "2026-06-25T22:32:00.000Z",
+      "publishedAt": "2026-06-26T10:16:00.000Z",
       "freshness": "fresh",
-      "ageHours": 7.9,
+      "ageHours": 11.6,
       "relevanceScore": 3,
-      "priority": 95,
+      "priority": 93,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:44.342Z"
+        "checkedAt": "2026-06-26T21:52:09.699Z"
       }
     },
     {
-      "id": "aec2d130c8d792ce",
-      "title": "NTTデータ、AIが複数システム横断で業務実行できる環境の構築サービスを開始",
-      "summary": "NTTデータは2026年6月24日、7月よりAIが企業内の複数システムやデータ基盤を横断して業務プロセスを自律的に実行できる環境構築サービスの提供を開始すると発表した。 多くの企業では顧客管理、...",
-      "url": "https://enterprisezine.jp/news/detail/24554",
+      "id": "9987c710773bf266",
+      "title": "日立ソリューションズ・クリエイト、フロンティアAIのサイバー脅威への対応を学ぶ経営者向け研修を開始",
+      "summary": "日立ソリューションズ・クリエイトは、企業のサイバーセキュリティの人材育成、組織体制の強化を支援する「サイバーセキュリティトレーニング」に、経営層向け研修として「サイバー脅威トレンド研修（フロンティア...",
+      "url": "https://enterprisezine.jp/news/detail/24563",
       "source": "EnterpriseZine",
       "sourceType": "メディア",
       "category": "産業活用・導入事例",
       "categoryId": "industry",
       "accent": "adoption",
       "region": "日本",
-      "date": "2026-06-25",
-      "publishedAt": "2026-06-25T05:45:00.000Z",
-      "freshness": "recent",
-      "ageHours": 24.7,
+      "date": "2026-06-26",
+      "publishedAt": "2026-06-26T06:22:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 15.5,
       "relevanceScore": 3,
       "priority": 93,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:45.381Z"
+        "checkedAt": "2026-06-26T21:52:09.699Z"
+      }
+    },
+    {
+      "id": "57d52a15ab61cbeb",
+      "title": "Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)",
+      "summary": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending. OpenAI just shared its plans t...",
+      "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/",
+      "source": "TechCrunch (AI)",
+      "sourceType": "メディア",
+      "category": "半導体・クラウド・基盤",
+      "categoryId": "infrastructure",
+      "accent": "infrastructure",
+      "region": "海外",
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-26T17:43:22.000Z",
+      "freshness": "fresh",
+      "ageHours": 4.1,
+      "relevanceScore": 3,
+      "priority": 91,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-26T21:52:13.256Z"
+      },
+      "titleJa": "OpenAIやSpaceXが独自チップを開発する理由"
+    },
+    {
+      "id": "77a648503e8cff20",
+      "title": "OpenAI’s Jalapeño chip is Big Tech’s spiciest move away from Nvidia",
+      "summary": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending. OpenAI just shared its plans t...",
+      "url": "https://techcrunch.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/",
+      "source": "TechCrunch (AI)",
+      "sourceType": "メディア",
+      "category": "半導体・クラウド・基盤",
+      "categoryId": "infrastructure",
+      "accent": "infrastructure",
+      "region": "海外",
+      "date": "2026-06-26",
+      "publishedAt": "2026-06-26T14:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 7.9,
+      "relevanceScore": 3,
+      "priority": 91,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-26T21:52:13.256Z"
+      },
+      "titleJa": "OpenAIのJalapeñoチップがNvidiaから離脱"
+    },
+    {
+      "id": "64abf4076fbbfa5a",
+      "title": "「AIを使うと他社と似てしまう」課題をどう乗り越える？ 「プロダクトの差別化」の要点",
+      "summary": "生成AIの普及は製品の没個性化や、個人の生産性向上によるチームの分断という課題を生んでいる。米Figmaはカンファレンスで、AI出力を人間が微調整する「素材」として扱う手法を提示。自社ルールを組織全体で共有する仕組みを実装した。個人の暗黙知を資産化する取り組み...",
+      "url": "https://www.itmedia.co.jp/business/articles/2606/26/news076.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-26",
+      "publishedAt": "2026-06-26T09:15:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 12.6,
+      "relevanceScore": 2,
+      "priority": 98,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-26T21:52:08.422Z"
       }
     },
     {
@@ -266,13 +315,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T04:35:00.000Z",
       "freshness": "fresh",
-      "ageHours": 1.9,
+      "ageHours": 17.3,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:44.207Z"
+        "checkedAt": "2026-06-26T21:52:08.423Z"
       }
     },
     {
@@ -289,13 +338,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T04:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 2.5,
+      "ageHours": 17.9,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:44.208Z"
+        "checkedAt": "2026-06-26T21:52:08.423Z"
       }
     },
     {
@@ -312,13 +361,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T02:00:17.000Z",
       "freshness": "fresh",
-      "ageHours": 4.5,
+      "ageHours": 19.9,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:44.208Z"
+        "checkedAt": "2026-06-26T21:52:08.423Z"
       }
     },
     {
@@ -335,13 +384,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T02:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 4.5,
+      "ageHours": 19.9,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:44.208Z"
+        "checkedAt": "2026-06-26T21:52:08.423Z"
       }
     },
     {
@@ -358,13 +407,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T23:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 7.5,
+      "ageHours": 22.9,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:44.209Z"
+        "checkedAt": "2026-06-26T21:52:08.424Z"
       }
     },
     {
@@ -381,13 +430,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T22:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 8.5,
+      "ageHours": 23.9,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:44.209Z"
+        "checkedAt": "2026-06-26T21:52:08.424Z"
       }
     },
     {
@@ -404,13 +453,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T23:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 7.5,
+      "ageHours": 22.9,
       "relevanceScore": 2,
       "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:45.379Z"
+        "checkedAt": "2026-06-26T21:52:09.700Z"
       }
     },
     {
@@ -426,38 +475,39 @@
       "region": "日本",
       "date": "2026-06-25",
       "publishedAt": "2026-06-25T09:22:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 21.1,
+      "freshness": "recent",
+      "ageHours": 36.5,
       "relevanceScore": 2,
       "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:45.380Z"
+        "checkedAt": "2026-06-26T21:52:09.700Z"
       }
     },
     {
-      "id": "a29e6e2c06bfc22a",
-      "title": "JAL、空港の安全管理業務をAIで高度化 AWSに約22万件のヒヤリハット情報を分析する仕組みを構築",
-      "summary": "日鉄ソリューションズ（以下、NSSOL）は、日本航空（以下、JAL）の空港業務における安全管理高度化に向け、JALの社内システム「JAL-AI FALCON（ファルコン）」（以下、FALCON）の構...",
-      "url": "https://enterprisezine.jp/news/detail/24553",
-      "source": "EnterpriseZine",
+      "id": "67481052fb25e69c",
+      "title": "OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn’t be the norm",
+      "summary": "“We don’t believe this kind of government access process should become the long-term default,” says OpenAI. “It keeps the best too...",
+      "url": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/",
+      "source": "TechCrunch (AI)",
       "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "日本",
-      "date": "2026-06-25",
-      "publishedAt": "2026-06-25T04:03:00.000Z",
-      "freshness": "recent",
-      "ageHours": 26.4,
+      "category": "AIセキュリティ・リスク",
+      "categoryId": "security",
+      "accent": "security",
+      "region": "海外",
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-26T18:32:14.000Z",
+      "freshness": "fresh",
+      "ageHours": 3.3,
       "relevanceScore": 2,
-      "priority": 90,
+      "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:45.381Z"
-      }
+        "checkedAt": "2026-06-26T21:52:13.255Z"
+      },
+      "titleJa": "OpenAI、政府要請後にGPT-5.6の展開を制限"
     },
     {
       "id": "1b0af514e4134d71",
@@ -473,15 +523,15 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T23:34:39.000Z",
       "freshness": "fresh",
-      "ageHours": 6.9,
+      "ageHours": 22.3,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:48.457Z"
+        "checkedAt": "2026-06-26T21:52:13.257Z"
       },
-      "titleJa": "ホワイトハウス、OpenAIに新モデルの公開を遅延要請"
+      "titleJa": "ホワイトハウス、OpenAIに新モデルのリリースを遅延要請"
     },
     {
       "id": "51cfd91731867cb8",
@@ -496,16 +546,16 @@
       "region": "海外",
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T20:19:25.000Z",
-      "freshness": "fresh",
-      "ageHours": 10.1,
+      "freshness": "recent",
+      "ageHours": 25.5,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:48.457Z"
+        "checkedAt": "2026-06-26T21:52:13.257Z"
       },
-      "titleJa": "Patronus AIがAIエージェントのストレステスト用デジタル世界構築に$50M調達"
+      "titleJa": "Patronus AI、AIエージェントテスト用のデジタル世界構築に5000万ドル調達"
     },
     {
       "id": "7093e5d3194f8e30",
@@ -520,16 +570,16 @@
       "region": "海外",
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T16:55:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 13.5,
+      "freshness": "recent",
+      "ageHours": 29,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:48.458Z"
+        "checkedAt": "2026-06-26T21:52:13.257Z"
       },
-      "titleJa": "General IntuitionがAIエージェント育成に$23億の賭け"
+      "titleJa": "General Intuition、ゲームでAIを訓練する23億ドルの賭け"
     },
     {
       "id": "22ebbe767229e601",
@@ -544,61 +594,61 @@
       "region": "海外",
       "date": "2026-06-25",
       "publishedAt": "2026-06-25T14:55:38.000Z",
-      "freshness": "fresh",
-      "ageHours": 15.5,
+      "freshness": "recent",
+      "ageHours": 30.9,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:48.459Z"
+        "checkedAt": "2026-06-26T21:52:13.257Z"
       },
-      "titleJa": "Netris、a16zから1500万ドル調達でAIネオクラウド加速"
+      "titleJa": "Netris、a16zから1500万ドルを調達しAI neocloudsの迅速展開を支援"
     },
     {
-      "id": "a0aff8120a2a4162",
-      "title": "Office 2年付きCopilot+ PC、13インチSurface Laptopが16万円台",
-      "summary": "マイクロソフトの「Surface Laptop 13インチ（EP2-30351）」がAmazonで割引対象。参考価格179,080円のところ、8％オフの165,051円で販売中。Office 2年付きのCopilot+ PC。13インチのSurface Lap...",
-      "url": "https://ascii.jp/elem/000/004/413/4413726/?rss",
+      "id": "d1be7bcd1d22e96d",
+      "title": "特価で24万5300円！ AMD Ryzen AI 7 350搭載の一体型デスクトップ「FMV WF3-L1」がお買い得",
+      "summary": "FMVパソコン通販サイト「FMV Store」では、複数のモデルを対象にセールを開催中。",
+      "url": "https://ascii.jp/elem/000/004/413/4413748/?rss",
       "source": "ASCII.jp",
       "sourceType": "メディア",
-      "category": "AIエージェント・業務AI",
-      "categoryId": "agents",
-      "accent": "product",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
       "region": "日本",
       "date": "2026-06-26",
-      "publishedAt": "2026-06-26T06:00:00.000Z",
+      "publishedAt": "2026-06-26T13:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 0.5,
+      "ageHours": 8.9,
       "relevanceScore": 2,
       "priority": 86,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:47.622Z"
+        "checkedAt": "2026-06-26T21:52:12.327Z"
       }
     },
     {
-      "id": "6a970f4b92b6ed4e",
-      "title": "Ridgelinez、「AIガバナンス/セキュリティ態勢構築支援サービス」を提供開始",
-      "summary": "ASCII.jpが報じたAI規制・倫理・ガバナンス関連ニュースです。法務、セキュリティ、リスク管理への影響を確認する材料です。",
-      "url": "https://ascii.jp/elem/000/004/413/4413980/?rss",
-      "source": "ASCII.jp",
+      "id": "272f07ee97a45dc8",
+      "title": "OpenAI、ミュトス対抗「GPT-5.6」発表 Sol・Terra・Lunaの3モデル、一般提供は数週間後",
+      "summary": "米OpenAIは6月26日（米国時間）、次世代モデル「GPT-5.6」シリーズを発表した。最上位の「Sol」、日常業務向けの「Terra」、低価格の「Luna」という3モデルをそろえる。数週間のうちに広く提供する計画だが、まずは一部の信頼できるパートナー向けの...",
+      "url": "https://japan.cnet.com/article/35249508/",
+      "source": "CNET Japan",
       "sourceType": "メディア",
-      "category": "規制・倫理・著作権",
-      "categoryId": "regulation",
-      "accent": "governance",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
       "region": "日本",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-26T05:00:00.000Z",
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-26T20:31:00.000Z",
       "freshness": "fresh",
-      "ageHours": 1.5,
+      "ageHours": 1.4,
       "relevanceScore": 2,
-      "priority": 86,
+      "priority": 84,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:47.623Z"
+        "checkedAt": "2026-06-26T21:52:11.951Z"
       }
     },
     {
@@ -615,13 +665,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T22:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 8.5,
+      "ageHours": 23.9,
       "relevanceScore": 1,
       "priority": 95,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:44.209Z"
+        "checkedAt": "2026-06-26T21:52:08.424Z"
       }
     },
     {
@@ -637,38 +687,62 @@
       "region": "日本",
       "date": "2026-06-25",
       "publishedAt": "2026-06-25T12:05:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 18.4,
+      "freshness": "recent",
+      "ageHours": 33.8,
       "relevanceScore": 1,
       "priority": 95,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:44.210Z"
+        "checkedAt": "2026-06-26T21:52:08.425Z"
       }
     },
     {
-      "id": "72783ad685c07173",
-      "title": "男性に美人局容疑で3人逮捕 ChatGPTの示談相場示し脅迫か 警視庁",
-      "summary": "美人局の手口で、少女とホテルに入った男性から現金を脅し取ったとして、警視庁少年事件課は恐喝の疑いで、東京都練馬区上石神井の職業不詳、斎藤蓮容疑者（22）ら男3人を逮捕、男女2人を書類送検した。斎藤容疑者は黙秘し、4人は容疑を認めている。",
-      "url": "https://www.itmedia.co.jp/news/articles/2606/25/news129.html",
-      "source": "ITmedia AI+",
+      "id": "bf4fb57dcc2490c2",
+      "title": "OpenAI、「GPT-5.6」のリリースは特定のパートナーに限定か 上場は来年への延期を検討",
+      "summary": "ITmedia NEWSが報じたAI活用・導入事例のニュースです。市場動向、業務適用、PoCから本番展開への流れを把握できます。",
+      "url": "https://www.itmedia.co.jp/news/articles/2606/26/news104.html",
+      "source": "ITmedia NEWS",
       "sourceType": "メディア",
       "category": "産業活用・導入事例",
       "categoryId": "industry",
       "accent": "adoption",
       "region": "日本",
-      "date": "2026-06-25",
-      "publishedAt": "2026-06-25T09:11:00.000Z",
+      "date": "2026-06-26",
+      "publishedAt": "2026-06-26T06:30:00.000Z",
       "freshness": "fresh",
-      "ageHours": 21.3,
+      "ageHours": 15.4,
       "relevanceScore": 1,
-      "priority": 95,
+      "priority": 89,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:44.210Z"
+        "checkedAt": "2026-06-26T21:52:08.599Z"
       }
+    },
+    {
+      "id": "e3bab3fd464a0a28",
+      "title": "OpenAI poaches Uber India chief to lead its biggest market outside the US",
+      "summary": "The hire marks OpenAI's latest push into India, expanding offices, partnerships and hiring.",
+      "url": "https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/",
+      "source": "TechCrunch (AI)",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "海外",
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-26T18:19:36.000Z",
+      "freshness": "fresh",
+      "ageHours": 3.5,
+      "relevanceScore": 1,
+      "priority": 85,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-26T21:52:13.256Z"
+      },
+      "titleJa": "OpenAI、米国外市場のリーダーにUber Indiaの責任者を招聘"
     },
     {
       "id": "a1a5cdb6d14e91fd",
@@ -683,87 +757,16 @@
       "region": "海外",
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T16:48:11.000Z",
-      "freshness": "fresh",
-      "ageHours": 13.7,
-      "relevanceScore": 1,
-      "priority": 85,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:48.458Z"
-      },
-      "titleJa": "Databricks元AI責任者、AI電力コストを1000倍削減可能と発言"
-    },
-    {
-      "id": "ec83a73864afdf2d",
-      "title": "Amazon ups India bet with fresh $13B AI infrastructure investment",
-      "summary": "Amazon’s latest India investment comes as global tech companies race to expand AI infrastructure in the country.",
-      "url": "https://techcrunch.com/2026/06/25/amazon-ups-india-bet-with-fresh-13b-ai-infrastructure-investment/",
-      "source": "TechCrunch (AI)",
-      "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "海外",
-      "date": "2026-06-25",
-      "publishedAt": "2026-06-25T12:00:38.000Z",
-      "freshness": "fresh",
-      "ageHours": 18.5,
-      "relevanceScore": 1,
-      "priority": 85,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:48.459Z"
-      },
-      "titleJa": "Amazon、インドに新たに130億ドルのAIインフラ投資"
-    },
-    {
-      "id": "976b12fc06105ab7",
-      "title": "Cerebras stock plunges after earnings as CEO says margin outlook was misunderstood",
-      "summary": "In its first earnings report since going public, the AI chipmaker forecast a narrower gross margin in its core business, scaring i...",
-      "url": "https://techcrunch.com/2026/06/24/cerebras-stock-plunges-after-earnings-as-ceo-says-margin-outlook-was-misunderstood/",
-      "source": "TechCrunch (AI)",
-      "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "海外",
-      "date": "2026-06-25",
-      "publishedAt": "2026-06-24T22:41:41.000Z",
       "freshness": "recent",
-      "ageHours": 31.8,
+      "ageHours": 29.1,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:48.460Z"
+        "checkedAt": "2026-06-26T21:52:13.257Z"
       },
-      "titleJa": "Cerebras、CEO発言で株価急落、マージン見通し誤解される"
-    },
-    {
-      "id": "ddc42c668e617bec",
-      "title": "AIでガソリン価格をつり上げか、BPやウォルマートなど大手に集団訴訟",
-      "summary": "ここ数カ月でガソリン価格が高騰し、家計への圧迫を感じているカリフォルニア州民は、このほど提起された集団訴訟が認められれば、何らかの救済措置を得られる可能性がある。",
-      "url": "https://japan.cnet.com/article/35249415/",
-      "source": "CNET Japan",
-      "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "日本",
-      "date": "2026-06-25",
-      "publishedAt": "2026-06-25T04:21:00.000Z",
-      "freshness": "recent",
-      "ageHours": 26.1,
-      "relevanceScore": 1,
-      "priority": 81,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T06:27:47.378Z"
-      }
+      "titleJa": "Databricks前AI責任者、AIの電力コスト1000倍削減を目指す"
     }
   ],
   "errors": []
