@@ -372,13 +372,14 @@ function tickerTagLabel(item) {
 }
 
 function buildTickerMessage(item) {
-  if (item.text) return item.text;
-  // 速く流れるティッカーは一目で読めることが優先。日本語タイトル(titleJa)があれば
-  // それを流し、無ければ英語タイトルにフォールバックする。
-  const headline = item.titleJa || item.title || "";
-  const cleanTitle = String(headline).replace(/\s+/g, " ").trim();
   const meta = `${formatDate(item.date)} / ${item.source}`;
-  return `${cleanTitle} / ${meta}`;
+  // 速く流れるティッカーは一目で読めることが優先。日本語タイトル(titleJa)を最優先で流す。
+  // item.text は英語の旧ティッカー文なので、titleJaが無いときだけ使う。
+  if (item.titleJa) {
+    return `${String(item.titleJa).replace(/\s+/g, " ").trim()} / ${meta}`;
+  }
+  if (item.text) return item.text;
+  return `${String(item.title || "").replace(/\s+/g, " ").trim()} / ${meta}`;
 }
 
 // ティッカーの見た目スクロール速度を一定(px/秒)に揃える。
