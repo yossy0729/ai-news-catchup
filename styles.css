@@ -531,7 +531,8 @@ h1 {
 }
 
 .category-workspace {
-  margin-top: 18px;
+  margin-top: 8px;
+  padding: 14px;
 }
 
 .search-panel {
@@ -1249,7 +1250,8 @@ main {
 }
 
 .category-workspace {
-  display: contents;
+  /* 他タブ(media-radar等)と同じパネルとして見せるため通常のブロックにする。 */
+  display: block;
 }
 
 .search-panel {
@@ -1734,15 +1736,17 @@ body {
 
 .official-radar,
 .media-radar,
+.category-workspace,
 .daily-brief {
-  border: 1px solid #cfd8d3;
-  background: rgba(255, 255, 255, 0.92);
+  /* 左3タブ(今日の動向/カテゴリ別/公式動向)は同種の情報なので、同一のパネルで見せる。 */
+  border: 1px solid #cdd6d0;
+  background: #ffffff;
   box-shadow: 0 14px 40px rgba(22, 34, 27, 0.08);
 }
 
 .official-radar {
   margin-top: 8px;
-  padding: 12px;
+  padding: 14px;
 }
 
 .media-radar {
@@ -2417,8 +2421,6 @@ body {
 
 .media-radar {
   padding: 14px;
-  border: 1px solid #bfd3c9;
-  background: #fdfefd;
 }
 
 .media-title-row {
