@@ -1356,7 +1356,8 @@ function renderOfficialTicker() {
       const tag = document.createElement("em");
       tag.textContent = item.vendorName || item.source || "公式";
       const headline = document.createElement("strong");
-      headline.textContent = String(item.title || "").replace(/\s+/g, " ").trim();
+      // 日本語タイトルがあれば優先表示。無ければ英語タイトルにフォールバック。
+      headline.textContent = String(item.titleJa || item.title || "").replace(/\s+/g, " ").trim();
 
       link.append(tag, headline);
       fragment.append(link);
