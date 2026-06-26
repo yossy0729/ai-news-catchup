@@ -2607,8 +2607,10 @@ body {
     animation-duration: 92s;
   }
 
+  /* スマホ: 入力欄は1行、ボタン3つ(公式ソース検索/今すぐ取得/クリア)を1行に収め、
+     縦の占有を減らして記事エリアを広く取る(UX優先)。 */
   .search-box {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-column: 1 / -1;
   }
 
@@ -2625,7 +2627,7 @@ body {
   }
 
   #clearSearch {
-    grid-column: 1 / -1;
+    grid-column: auto;
   }
 
   .search-box .text-button,
