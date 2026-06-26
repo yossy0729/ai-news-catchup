@@ -944,6 +944,19 @@ h1 {
   gap: 5px;
 }
 
+/* 公式動向タブ専用の注記（カード色＝各社ブランド色）。位置・字面は凡例に合わせる。 */
+.legend-note {
+  margin: 7px 2px 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.legend-note strong {
+  color: var(--ink, #17201b);
+  font-weight: 800;
+}
+
 .tone-dot {
   display: inline-block;
   width: 9px;
