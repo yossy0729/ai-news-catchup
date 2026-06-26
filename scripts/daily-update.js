@@ -23,6 +23,7 @@ const replaceCategories = args.has("--replace-categories");
 const noAccept = args.has("--no-accept");
 const llmSummary = args.has("--llm-summary") || process.env.AI_NEWS_LLM_SUMMARY === "1";
 const llmLimit = getArg("--llm-limit=", reviewLimit);
+const newsSummaryLimit = getArg("--news-summary-limit=", "40");
 
 if (args.has("--help")) {
   printHelp();
@@ -69,6 +70,7 @@ Options:
   --no-accept            Do not mark promoted review items as accepted.
   --llm-summary          Run optional OpenAI-powered Japanese summaries when OPENAI_API_KEY is set.
   --llm-limit=N          Number of review items to summarize with LLM. Default: review-limit.
+  --news-summary-limit=N Max news.json items to back-fill with LLM summaries. Default: 40.
   --no-log               Print only; do not write logs/daily-update-YYYY-MM-DD.log.
 `);
 }
@@ -174,6 +176,12 @@ function main() {
     runStep("summarize-review", "scripts/summarize-review.js", summarizeArgs);
   }
   runStep("promote-review", "scripts/promote-review.js", promoteArgs);
+  // 表示確定後の news.json で、要約が未生成のまま残る記事（蓄積された過去分など）を埋める。
+  if (llmSummary) {
+    const summarizeNewsArgs = [`--limit=${newsSummaryLimit}`];
+    if (!dryRun) summarizeNewsArgs.push("--write");
+    runStep("summarize-news", "scripts/summarize-news.js", summarizeNewsArgs);
+  }
 
   // SOTA収集は外部API(paperswithcode.co)依存のため、失敗してもニュース更新は止めない。
   // 1位交代時のみ前回値へ退避するので毎日実行で履歴が自然に蓄積する。
