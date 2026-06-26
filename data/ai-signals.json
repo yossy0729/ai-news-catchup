@@ -1,72 +1,77 @@
 {
   "schemaVersion": 1,
-  "generatedDate": "2026-06-25",
+  "generatedDate": "2026-06-26",
   "sourcePolicy": "HF Papers、公式ベンダー発表、公式価格ページからAIシグナルを構造化。価格数値は取得できる公式ページのみ検出例として保存し、取得不能なページは公式リンク確認に留める。",
   "items": [
     {
-      "id": "c666fa0463962550",
+      "id": "844a387ed6f9de96",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
-      "date": "2026-06-25",
+      "date": "2026-06-26",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #1: Are We Ready For An Agent-Native Memory System?",
+      "title": "HF Papers #1: DanceOPD: On-Policy Generative Field Distillation",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #1: Are We Ready For An Agent-Native Memory System?",
-      "url": "https://huggingface.co/papers/2606.24775",
-      "priority": 95
+      "text": "HF Papers #1: DanceOPD: On-Policy Generative Field Distillation",
+      "url": "https://huggingface.co/papers/2606.27377",
+      "priority": 95,
+      "titleJa": "HF論文#1: DanceOPD: 行動方針生成フィールド蒸留"
     },
     {
-      "id": "c2cc3089bc3e75b3",
+      "id": "d714bd79b898af1a",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
-      "date": "2026-06-25",
+      "date": "2026-06-26",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #2: DomainShuttle: Freeform Open Domain Subject-driven Text-to-video Generation",
+      "title": "HF Papers #2: ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #2: DomainShuttle: Freeform Open Domain Subject-driven Text-to-video Generation",
-      "url": "https://huggingface.co/papers/2606.26058",
-      "priority": 94
+      "text": "HF Papers #2: ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
+      "url": "https://huggingface.co/papers/2606.27313",
+      "priority": 94,
+      "titleJa": "HF論文#2: ViQ: 解像度に依存しないテキスト整列視覚表現"
     },
     {
-      "id": "d8fc7d466c94f7cb",
+      "id": "e402e792da41acf8",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
-      "date": "2026-06-25",
+      "date": "2026-06-26",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #3: ShutterMuse: Capture-Time Photography Guidance with MLLMs",
+      "title": "HF Papers #3: OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #3: ShutterMuse: Capture-Time Photography Guidance with MLLMs",
-      "url": "https://huggingface.co/papers/2606.25763",
-      "priority": 93
+      "text": "HF Papers #3: OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning",
+      "url": "https://huggingface.co/papers/2606.26790",
+      "priority": 93,
+      "titleJa": "HF論文#3: OPID: エージェント強化学習の行動方針スキル蒸留"
     },
     {
-      "id": "fb4f5a622549da38",
+      "id": "fc6e4003579cd0f0",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
-      "date": "2026-06-25",
+      "date": "2026-06-26",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #4: Wan-Streamer v0.1: End-to-end Real-time Interactive Foundation Models",
+      "title": "HF Papers #4: Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #4: Wan-Streamer v0.1: End-to-end Real-time Interactive Foundation Models",
-      "url": "https://huggingface.co/papers/2606.25041",
-      "priority": 92
+      "text": "HF Papers #4: Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation",
+      "url": "https://huggingface.co/papers/2606.26907",
+      "priority": 92,
+      "titleJa": "HF論文#4: Qwen-Image-Agent: 現実世界の画像生成の文脈ギャップ解消"
     },
     {
-      "id": "7068fba16f55c39f",
+      "id": "9f4dbb70348a5f62",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
-      "date": "2026-06-25",
+      "date": "2026-06-26",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #5: Beyond NL2Code: A Structured Survey of Multimodal Code Intelligence",
+      "title": "HF Papers #5: JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #5: Beyond NL2Code: A Structured Survey of Multimodal Code Intelligence",
-      "url": "https://huggingface.co/papers/2606.15932",
-      "priority": 91
+      "text": "HF Papers #5: JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting",
+      "url": "https://huggingface.co/papers/2606.18394",
+      "priority": 91,
+      "titleJa": "HF論文#5: JetSpec: 仕様デコーディングのスケーリング限界突破"
     },
     {
       "id": "6cc848adcda7cc35",
@@ -79,7 +84,8 @@
       "summary": "OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.",
       "text": "Research: OpenAI and Broadcom unveil LLM-optimized inference chip / OpenAI News",
       "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
-      "priority": 88
+      "priority": 88,
+      "titleJa": "OpenAIとBroadcom、LLM最適化推論チップを発表"
     },
     {
       "id": "281c9c8c57a2f979",
@@ -92,7 +98,8 @@
       "summary": "Hugging FaceがAI性能評価・学習基盤に関する情報を公開。モデル開発、GPU基盤、推論・学習コスト判断に関わる一次情報です。",
       "text": "SOTA: Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World / Hugging Face Blog",
       "url": "https://huggingface.co/blog/ffasr-leaderboard",
-      "priority": 88
+      "priority": 88,
+      "titleJa": "FFASRリーダーボード発表: 実世界でのASRのベンチマーク"
     },
     {
       "id": "80e079423bcb8ee7",
@@ -105,7 +112,8 @@
       "summary": "NVIDIA TechnicalがAI性能評価・学習基盤に関する情報を公開。モデル開発、GPU基盤、推論・学習コスト判断に関わる一次情報です。",
       "text": "Research: Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding / NVIDIA Technical Blog AI",
       "url": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding",
-      "priority": 88
+      "priority": 88,
+      "titleJa": "NVIDIA BlackwellでDFlash仕様デコーディングにより推論性能15倍向上"
     },
     {
       "id": "2c255983884091d3",
@@ -118,46 +126,50 @@
       "summary": "Apple Machine LearningがAI研究・学会発表に関する情報を公開。研究テーマ、モデル評価、技術トレンドを把握する材料になります。",
       "text": "Research: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 / Apple Machine Learning Research",
       "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
-      "priority": 88
+      "priority": 88,
+      "titleJa": "IEEE/CVFコンピュータビジョンとパターン認識会議(CVPR)2026"
     },
     {
       "id": "7d95e1b1656fe4ae",
       "lane": "research",
       "tag": "Price",
       "tone": "amber",
-      "date": "2026-06-25",
+      "date": "2026-06-26",
       "source": "OpenAI Pricing",
       "title": "OpenAI token pricing",
       "summary": "公式価格ページ。Node直取得は403になる場合があるため、現MVPではリンク確認シグナルとして扱います。",
       "text": "Price: OpenAI 入力/出力トークン価格表を確認",
       "url": "https://openai.com/api/pricing/",
-      "priority": 76
+      "priority": 76,
+      "titleJa": "OpenAIトークンプライシング"
     },
     {
       "id": "da08ee3f7c1156ae",
       "lane": "research",
       "tag": "Price",
       "tone": "amber",
-      "date": "2026-06-25",
+      "date": "2026-06-26",
       "source": "Anthropic Pricing",
       "title": "Anthropic token pricing",
       "summary": "Claudeの入力/出力MTok単価を確認する公式価格表です。 検出例: $10 / MTok / $12.50 / MTok / $20 / MTok / $1 / MTok",
       "text": "Price: Anthropic 入力/出力トークン価格表を確認",
       "url": "https://docs.anthropic.com/en/docs/about-claude/pricing",
-      "priority": 76
+      "priority": 76,
+      "titleJa": "Anthropicトークンプライシング"
     },
     {
       "id": "acbe155951267feb",
       "lane": "research",
       "tag": "Price",
       "tone": "amber",
-      "date": "2026-06-25",
+      "date": "2026-06-26",
       "source": "Google Gemini Pricing",
       "title": "Google Gemini token pricing",
-      "summary": "Gemini APIの入力/出力トークン単価を確認する公式価格表です。 検出例: $0.04 / $0.08 / $0.20 / $0.45",
+      "summary": "Gemini APIの入力/出力トークン単価を確認する公式価格表です。 検出例: $1.50 / $9.00 / $0.15 / $1.00 / 1,000,000 tokens",
       "text": "Price: Google Gemini 入力/出力トークン価格表を確認",
       "url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "priority": 76
+      "priority": 76,
+      "titleJa": "Google Geminiのトークン価格設定"
     }
   ],
   "errors": []
