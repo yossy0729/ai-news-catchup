@@ -506,12 +506,17 @@ h1 {
   -webkit-line-clamp: 2;
 }
 
+/* 日本語タイトルを主役に（見出しサイズを継承）。 */
 .title-ja {
-  margin-top: 3px;
-  color: var(--accent);
-  font-size: 0.86em;
-  font-weight: 800;
   -webkit-line-clamp: 2;
+}
+
+/* 日本語が主役のとき、続く英語原題は参照用に控えめ表示。 */
+.title-ja + .title-original {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.82em;
+  font-weight: 400;
 }
 
 .priority-card p {

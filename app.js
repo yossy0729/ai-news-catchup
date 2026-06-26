@@ -240,17 +240,19 @@ function itemMatchesQuery(item, query) {
 function appendTitle(titleElement, item) {
   titleElement.replaceChildren();
 
-  const original = document.createElement("span");
-  original.className = "title-original";
-  original.textContent = item.title;
-  titleElement.append(original);
-
-  if (item.titleJa && normalizeText(item.titleJa) !== normalizeText(item.title)) {
+  // 日本語タイトルがあれば主役として先頭に置き、英語原題は参照用に下へ。
+  const hasJa = item.titleJa && normalizeText(item.titleJa) !== normalizeText(item.title);
+  if (hasJa) {
     const translated = document.createElement("span");
     translated.className = "title-ja";
     translated.textContent = item.titleJa;
     titleElement.append(translated);
   }
+
+  const original = document.createElement("span");
+  original.className = "title-original";
+  original.textContent = item.title;
+  titleElement.append(original);
 }
 
 function renderSourceResults(data) {
