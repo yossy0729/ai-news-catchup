@@ -1,25 +1,25 @@
 {
   "schemaVersion": 1,
   "status": "warning",
-  "generatedAt": "2026-06-27T10:28:43.839Z",
+  "generatedAt": "2026-06-27T12:41:16.380Z",
   "generatedDate": "2026-06-27",
-  "startedAt": "2026-06-27T10:26:59.487Z",
-  "finishedAt": "2026-06-27T10:28:43.840Z",
-  "durationSeconds": 104,
+  "startedAt": "2026-06-27T12:36:40.741Z",
+  "finishedAt": "2026-06-27T12:41:16.380Z",
+  "durationSeconds": 276,
   "error": null,
   "summary": {
-    "mediaItems": 32,
+    "mediaItems": 33,
     "primaryCategories": 10,
     "primaryItems": 39,
     "officialItems": 26,
     "aiSignals": 12,
     "sotaEntries": 85,
-    "candidates": 142,
-    "reviewItems": 141,
+    "candidates": 36,
+    "reviewItems": 20,
     "sourceTotal": 54,
-    "sourceOk": 31,
+    "sourceOk": 32,
     "sourceFailed": 3,
-    "sourceNoItems": 15,
+    "sourceNoItems": 14,
     "failedSteps": 0
   },
   "steps": [
@@ -27,49 +27,67 @@
       "name": "collect-official-news",
       "commandLine": "node scripts/collect-official-news.js --limit=36 --write",
       "exitCode": 0,
-      "durationMs": 56572
+      "durationMs": 60546
     },
     {
       "name": "collect-ai-signals",
       "commandLine": "node scripts/collect-ai-signals.js --limit=32 --write",
       "exitCode": 0,
-      "durationMs": 2948
+      "durationMs": 1896
     },
     {
       "name": "collect-media-news",
       "commandLine": "node scripts/collect-media-news.js --limit=45 --write",
       "exitCode": 0,
-      "durationMs": 1603
+      "durationMs": 4975
     },
     {
       "name": "collect",
       "commandLine": "node scripts/collect-news.js --write --per-source=3 --max-candidates=50",
       "exitCode": 0,
-      "durationMs": 29623
+      "durationMs": 25622
+    },
+    {
+      "name": "translate-titles",
+      "commandLine": "node scripts/translate-titles.js --write",
+      "exitCode": 0,
+      "durationMs": 35151
     },
     {
       "name": "prepare-review",
       "commandLine": "node scripts/prepare-review.js --limit=20 --write",
       "exitCode": 0,
-      "durationMs": 9711
+      "durationMs": 21420
+    },
+    {
+      "name": "summarize-review",
+      "commandLine": "node scripts/summarize-review.js --limit=20 --write",
+      "exitCode": 0,
+      "durationMs": 56698
     },
     {
       "name": "promote-review",
       "commandLine": "node scripts/promote-review.js --min-priority=60 --max-age-days=30 --max-items=12 --write --accept",
       "exitCode": 0,
-      "durationMs": 101
+      "durationMs": 56
+    },
+    {
+      "name": "summarize-news",
+      "commandLine": "node scripts/summarize-news.js --limit=40 --write",
+      "exitCode": 0,
+      "durationMs": 28
     },
     {
       "name": "collect-sota",
       "commandLine": "node scripts/collect-sota.js --write",
       "exitCode": 0,
-      "durationMs": 3659
+      "durationMs": 69164
     },
     {
       "name": "validate-data",
       "commandLine": "node scripts/validate-data.js",
       "exitCode": 0,
-      "durationMs": 83
+      "durationMs": 35
     }
   ]
 }
