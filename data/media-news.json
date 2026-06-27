@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedDate": "2026-06-27",
+  "generatedDate": "2026-06-28",
   "sourcePolicy": "直接RSSで元記事URLと公開日時を確認できる固定・厳選プールの2次情報媒体のみを速報対象にする。公開から72時間以内に限定し、24時間以内をfresh・24〜72時間をrecentとして区別する（空カテゴリはrecentで補完）。Google News RSSの検出時刻は元記事公開日と一致しないため、日付検証なしでは掲載しない。",
   "freshnessPolicy": {
     "maxAgeHours": 72,
@@ -58,13 +58,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T00:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 36.6,
+      "ageHours": 45.7,
       "relevanceScore": 6,
       "priority": 96,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:45.017Z"
+        "checkedAt": "2026-06-27T21:43:32.206Z"
       }
     },
     {
@@ -81,13 +81,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T23:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 37.6,
+      "ageHours": 46.7,
       "relevanceScore": 5,
       "priority": 96,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:45.017Z"
+        "checkedAt": "2026-06-27T21:43:32.206Z"
       }
     },
     {
@@ -104,13 +104,13 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-27T02:07:50.000Z",
       "freshness": "fresh",
-      "ageHours": 10.5,
+      "ageHours": 19.6,
       "relevanceScore": 4,
       "priority": 104,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:43.870Z"
+        "checkedAt": "2026-06-27T21:43:31.124Z"
       }
     },
     {
@@ -126,14 +126,14 @@
       "region": "日本",
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T19:56:10.000Z",
-      "freshness": "fresh",
-      "ageHours": 16.7,
+      "freshness": "recent",
+      "ageHours": 25.8,
       "relevanceScore": 4,
       "priority": 104,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:43.872Z"
+        "checkedAt": "2026-06-27T21:43:31.126Z"
       }
     },
     {
@@ -149,42 +149,17 @@
       "region": "海外",
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T16:24:47.000Z",
-      "freshness": "fresh",
-      "ageHours": 20.2,
-      "relevanceScore": 4,
-      "priority": 94,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:48.184Z"
-      },
-      "titleJa": "Anthropic対OpenAIの構図は変化",
-      "summaryJa": "AIモデルの進化により、その能力が政治的な影響を持つようになった。これにどう対処するかが今後の課題となる。"
-    },
-    {
-      "id": "6c330b21f9f9f0a7",
-      "title": "Anthropic’s Claude is winning over paid consumers, a market owned by ChatGPT",
-      "summary": "Despite ChatGPT's commanding market lead, consumers who pay for AI have been increasingly choosing Anthropic's Claude, data shows.",
-      "url": "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/",
-      "source": "TechCrunch (AI)",
-      "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "海外",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-25T17:38:27.000Z",
       "freshness": "recent",
-      "ageHours": 43,
+      "ageHours": 29.3,
       "relevanceScore": 4,
       "priority": 94,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:48.185Z"
+        "checkedAt": "2026-06-27T21:43:34.464Z"
       },
-      "titleJa": "AnthropicのClaudeが消費者に人気",
-      "summaryJa": "ChatGPTが市場をリードする中、AIに対してお金を払う消費者がAnthropicのClaudeを選ぶ傾向が強まっているというデータが示された。"
+      "titleJa": "AnthropicとOpenAIの対立は終わり",
+      "summaryJa": "AIモデルの進展により、その能力が実際の政治的影響を持つようになりました。この影響に対処することが課題です。"
     },
     {
       "id": "b0f1da588b5ca6e4",
@@ -200,13 +175,13 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-27T02:32:57.000Z",
       "freshness": "fresh",
-      "ageHours": 10.1,
+      "ageHours": 19.2,
       "relevanceScore": 4,
       "priority": 86,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:48.050Z"
+        "checkedAt": "2026-06-27T21:43:34.401Z"
       }
     },
     {
@@ -223,13 +198,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T10:16:00.000Z",
       "freshness": "recent",
-      "ageHours": 26.4,
+      "ageHours": 35.5,
       "relevanceScore": 3,
       "priority": 93,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:45.016Z"
+        "checkedAt": "2026-06-27T21:43:32.205Z"
       }
     },
     {
@@ -246,13 +221,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T06:22:00.000Z",
       "freshness": "recent",
-      "ageHours": 30.3,
+      "ageHours": 39.4,
       "relevanceScore": 3,
       "priority": 93,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:45.017Z"
+        "checkedAt": "2026-06-27T21:43:32.206Z"
       }
     },
     {
@@ -269,16 +244,16 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-27T12:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 0.6,
+      "ageHours": 9.7,
       "relevanceScore": 3,
       "priority": 91,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:48.182Z"
+        "checkedAt": "2026-06-27T21:43:34.463Z"
       },
-      "titleJa": "アジアのAIスタートアップが新モデルを発表",
-      "summaryJa": "Anthropicの輸出禁止が続く中、アジアではMythosのような能力を備えた新モデルが登場している。"
+      "titleJa": "アジアのAIスタートアップが新機能を発表",
+      "summaryJa": "アジアで新たに発表されたモデルは、エクスポート禁止の懸念なくMythosのような機能を提供します。米国のAIラボは回復できないかもしれません。"
     },
     {
       "id": "57d52a15ab61cbeb",
@@ -293,17 +268,17 @@
       "region": "海外",
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T17:43:22.000Z",
-      "freshness": "fresh",
-      "ageHours": 18.9,
+      "freshness": "recent",
+      "ageHours": 28,
       "relevanceScore": 3,
       "priority": 91,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:48.184Z"
+        "checkedAt": "2026-06-27T21:43:34.464Z"
       },
-      "titleJa": "企業が自社チップを開発する理由",
-      "summaryJa": "NvidiaはAIチップ市場で長年の優位を持っているが、依存関係が終わる可能性がある。OpenAIが独自のチップ計画を発表した。"
+      "titleJa": "OpenAIもSpaceXも独自チップを開発",
+      "summaryJa": "Nvidiaは長年にわたりAIチップ市場を支配してきましたが、依存度が減少する兆しがあります。OpenAIは独自の計画を発表しました。"
     },
     {
       "id": "77a648503e8cff20",
@@ -318,17 +293,17 @@
       "region": "海外",
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T14:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 22.6,
+      "freshness": "recent",
+      "ageHours": 31.7,
       "relevanceScore": 3,
       "priority": 91,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:48.184Z"
+        "checkedAt": "2026-06-27T21:43:34.465Z"
       },
-      "titleJa": "OpenAIのJalapeñoチップがNvidiaからの脱却を促進",
-      "summaryJa": "NvidiaはAIチップ市場で長年の支配を続けてきたが、その依存時代が終わる可能性がある。OpenAIは新たな計画を発表した。"
+      "titleJa": "OpenAIのJalapeñoチップ、Nvidiaからの脱却",
+      "summaryJa": "Nvidiaの支配が続く中、OpenAIの新しいチップJalapeñoがその変化を示しています。AIチップ市場の動向が変わる可能性があります。"
     },
     {
       "id": "8dec65e5d96f0fe2",
@@ -344,13 +319,13 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-27T12:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 0.6,
+      "ageHours": 9.7,
       "relevanceScore": 3,
       "priority": 89,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:47.396Z"
+        "checkedAt": "2026-06-27T21:43:33.854Z"
       }
     },
     {
@@ -367,13 +342,13 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-27T01:57:44.000Z",
       "freshness": "fresh",
-      "ageHours": 10.7,
+      "ageHours": 19.8,
       "relevanceScore": 3,
       "priority": 83,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:48.050Z"
+        "checkedAt": "2026-06-27T21:43:34.401Z"
       }
     },
     {
@@ -390,13 +365,13 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T23:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 13.6,
+      "ageHours": 22.7,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:43.872Z"
+        "checkedAt": "2026-06-27T21:43:31.125Z"
       }
     },
     {
@@ -413,13 +388,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T09:15:00.000Z",
       "freshness": "recent",
-      "ageHours": 27.4,
+      "ageHours": 36.5,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:43.872Z"
+        "checkedAt": "2026-06-27T21:43:31.126Z"
       }
     },
     {
@@ -436,13 +411,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T04:35:00.000Z",
       "freshness": "recent",
-      "ageHours": 32,
+      "ageHours": 41.1,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:43.872Z"
+        "checkedAt": "2026-06-27T21:43:31.126Z"
       }
     },
     {
@@ -459,13 +434,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T04:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 32.6,
+      "ageHours": 41.7,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:43.873Z"
+        "checkedAt": "2026-06-27T21:43:31.126Z"
       }
     },
     {
@@ -482,13 +457,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T02:00:17.000Z",
       "freshness": "recent",
-      "ageHours": 34.6,
+      "ageHours": 43.7,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:43.873Z"
+        "checkedAt": "2026-06-27T21:43:31.126Z"
       }
     },
     {
@@ -505,13 +480,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T02:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 34.6,
+      "ageHours": 43.7,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:43.873Z"
+        "checkedAt": "2026-06-27T21:43:31.127Z"
       }
     },
     {
@@ -528,13 +503,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T23:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 37.6,
+      "ageHours": 46.7,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:43.873Z"
+        "checkedAt": "2026-06-27T21:43:31.127Z"
       }
     },
     {
@@ -551,13 +526,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T23:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 37.6,
+      "ageHours": 46.7,
       "relevanceScore": 2,
       "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:45.017Z"
+        "checkedAt": "2026-06-27T21:43:32.206Z"
       }
     },
     {
@@ -574,14 +549,39 @@
       "date": "2026-06-25",
       "publishedAt": "2026-06-25T09:22:00.000Z",
       "freshness": "recent",
-      "ageHours": 51.3,
+      "ageHours": 60.4,
       "relevanceScore": 2,
       "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:45.018Z"
+        "checkedAt": "2026-06-27T21:43:32.207Z"
       }
+    },
+    {
+      "id": "82635cb30cdb1692",
+      "title": "The fittest founder in the room got cancer. Here’s how he used AI to fight back.",
+      "summary": "When confronted with cancer, Connor Christou fed everything tied tied to his regime — blood results, scan data, wearable output, j...",
+      "url": "https://techcrunch.com/2026/06/27/the-fittest-founder-in-the-room-got-cancer-heres-how-he-used-ai-to-fight-back/",
+      "source": "TechCrunch (AI)",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "海外",
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-27T14:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 7.7,
+      "relevanceScore": 2,
+      "priority": 88,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-27T21:43:34.462Z"
+      },
+      "titleJa": "がんを患った創業者のAI活用法",
+      "summaryJa": "Connor Christouは、がんに直面した際に、自身の健康データ（血液検査結果やスキャンデータなど）をAIに提供し、治療に役立てました。"
     },
     {
       "id": "67481052fb25e69c",
@@ -596,17 +596,17 @@
       "region": "海外",
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T18:32:14.000Z",
-      "freshness": "fresh",
-      "ageHours": 18.1,
+      "freshness": "recent",
+      "ageHours": 27.2,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:48.183Z"
+        "checkedAt": "2026-06-27T21:43:34.464Z"
       },
-      "titleJa": "OpenAI、政府要請でGPT-5.6の展開制限",
-      "summaryJa": "OpenAIは「このような政府のアクセスプロセスが長期的なデフォルトになるべきではない」と述べ、制限的な行動は避けるべきと主張。"
+      "titleJa": "OpenAI、政府要請でGPT-5.6の展開を制限",
+      "summaryJa": "OpenAIは、政府によるアクセス要請のプロセスが長期的な標準になってほしくないとし、制限を設けたと発表しました。"
     },
     {
       "id": "1b0af514e4134d71",
@@ -622,66 +622,39 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T23:34:39.000Z",
       "freshness": "recent",
-      "ageHours": 37.1,
+      "ageHours": 46.1,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:48.184Z"
+        "checkedAt": "2026-06-27T21:43:34.465Z"
       },
-      "titleJa": "ホワイトハウス、OpenAIに新モデルの展開を遅らせる要求",
-      "summaryJa": "OpenAIは最新のモデルGPT 5.6を一般ではなく、選ばれたパートナーにのみ配布する計画を持っている。安全性が懸念されている。"
+      "titleJa": "ホワイトハウス、OpenAIに新モデルのリリースを遅延要請",
+      "summaryJa": "OpenAIは、新しいモデルGPT 5.6を、一般向けではなく限定的なパートナーに共有する意向を示しました。"
     },
     {
-      "id": "51cfd91731867cb8",
-      "title": "Patronus AI lands $50M to build ‘digital worlds’ that stress-test AI agents",
-      "summary": "Agent-testing startup Patronus AI, founded by former Meta AI researchers, is experiencing nearly insatiable demand, its investor s...",
-      "url": "https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/",
-      "source": "TechCrunch (AI)",
+      "id": "82432235c4529562",
+      "title": "AMD Ryzen AI 7 350搭載の一体型デスクトップ「FMV WF3-L1」が、特価で24万5300円！",
+      "summary": "FMVパソコン通販サイト「FMV Store」では、複数のモデルを対象にセールを開催中。",
+      "url": "https://ascii.jp/elem/000/004/413/4413749/?rss",
+      "source": "ASCII.jp",
       "sourceType": "メディア",
-      "category": "AIエージェント・業務AI",
-      "categoryId": "agents",
-      "accent": "product",
-      "region": "海外",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-25T20:19:25.000Z",
-      "freshness": "recent",
-      "ageHours": 40.3,
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
+      "region": "日本",
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-27T13:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 8.7,
       "relevanceScore": 2,
-      "priority": 88,
+      "priority": 86,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:48.185Z"
-      },
-      "titleJa": "Patronus AI、AIエージェントのストレステストを行う資金を調達",
-      "summaryJa": "元Meta AI研究者により設立されたエージェントテストスタートアップPatronus AIは、投資家の間で需要が高まっている。"
-    },
-    {
-      "id": "7093e5d3194f8e30",
-      "title": "General Intuition’s $2.3B bet that video games can train AI agents for the real world",
-      "summary": "General Intuition has raised $320 million to scale AI trained on millions of hours of gameplay, betting action data can help AI de...",
-      "url": "https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/",
-      "source": "TechCrunch (AI)",
-      "sourceType": "メディア",
-      "category": "AIエージェント・業務AI",
-      "categoryId": "agents",
-      "accent": "product",
-      "region": "海外",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-25T16:55:00.000Z",
-      "freshness": "recent",
-      "ageHours": 43.7,
-      "relevanceScore": 2,
-      "priority": 88,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:48.185Z"
-      },
-      "titleJa": "General Intuition、ゲームでAIを訓練する2.3Bドルの投資",
-      "summaryJa": "General Intuitionは、数百万時間のゲームプレイを基に訓練されたAIに320百万ドルを調達し、アクションデータの活用を目指す。"
+        "checkedAt": "2026-06-27T21:43:33.854Z"
+      }
     },
     {
       "id": "272f07ee97a45dc8",
@@ -696,14 +669,14 @@
       "region": "日本",
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T20:31:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 16.1,
+      "freshness": "recent",
+      "ageHours": 25.2,
       "relevanceScore": 2,
       "priority": 84,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:46.932Z"
+        "checkedAt": "2026-06-27T21:43:33.699Z"
       }
     },
     {
@@ -720,13 +693,13 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T22:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 14.6,
+      "ageHours": 23.7,
       "relevanceScore": 1,
       "priority": 95,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:43.872Z"
+        "checkedAt": "2026-06-27T21:43:31.125Z"
       }
     },
     {
@@ -743,13 +716,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T22:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 38.6,
+      "ageHours": 47.7,
       "relevanceScore": 1,
       "priority": 95,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:43.874Z"
+        "checkedAt": "2026-06-27T21:43:31.127Z"
       }
     },
     {
@@ -766,14 +739,39 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T06:30:00.000Z",
       "freshness": "recent",
-      "ageHours": 30.1,
+      "ageHours": 39.2,
       "relevanceScore": 1,
       "priority": 89,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:43.997Z"
+        "checkedAt": "2026-06-27T21:43:31.245Z"
       }
+    },
+    {
+      "id": "ba9677ef474e757f",
+      "title": "Apple Vision Pro exec is reportedly leaving for OpenAI",
+      "summary": "Paul Meade, the Apple vice president in charge of the Vision Pro headset, is reportedly leaving the company to join OpenAI’s hardw...",
+      "url": "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/",
+      "source": "TechCrunch (AI)",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "海外",
+      "date": "2026-06-28",
+      "publishedAt": "2026-06-27T16:45:09.000Z",
+      "freshness": "fresh",
+      "ageHours": 5,
+      "relevanceScore": 1,
+      "priority": 85,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-27T21:43:34.462Z"
+      },
+      "titleJa": "AppleのVision Pro責任者がOpenAIに移るとの報道",
+      "summaryJa": "Vision Proヘッドセットの責任者Paul MeadeがAppleを離れ、OpenAIのハードウェア部門に参加するという情報があります。"
     },
     {
       "id": "0bdf95932beada39",
@@ -789,16 +787,16 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-27T01:01:37.000Z",
       "freshness": "fresh",
-      "ageHours": 11.6,
+      "ageHours": 20.7,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:48.183Z"
+        "checkedAt": "2026-06-27T21:43:34.463Z"
       },
-      "titleJa": "トランプ政権、Anthropic Mythosを100社以上に提供",
-      "summaryJa": "100以上の企業と政府機関が、非アメリカ人従業員も含めてMythos 5の使用を許可されているという。"
+      "titleJa": "トランプ政権がAnthropic Mythosを公開",
+      "summaryJa": "100社以上の企業や政府機関が、AnthropicのMythos 5を使用する権限を得たと報じられています。"
     },
     {
       "id": "e3bab3fd464a0a28",
@@ -813,17 +811,17 @@
       "region": "海外",
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T18:19:36.000Z",
-      "freshness": "fresh",
-      "ageHours": 18.3,
+      "freshness": "recent",
+      "ageHours": 27.4,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-27T12:37:48.183Z"
+        "checkedAt": "2026-06-27T21:43:34.464Z"
       },
-      "titleJa": "OpenAI、インドのUber責任者を採用",
-      "summaryJa": "この採用は、OpenAIがインド市場に進出するための新たな試みを示しており、オフィスやパートナーシップの拡大を目指している。"
+      "titleJa": "OpenAI、Uberインディアの責任者をスカウト",
+      "summaryJa": "この採用は、OpenAIがインド市場に進出する一環として行われ、オフィスの拡大やパートナーシップ強化を図っています。"
     }
   ],
   "errors": [],
@@ -836,8 +834,8 @@
       "url": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
       "status": "ok",
       "itemsFound": 11,
-      "lastCheckedAt": "2026-06-27T12:37:43.874Z",
-      "lastSuccessAt": "2026-06-27T12:37:43.874Z",
+      "lastCheckedAt": "2026-06-27T21:43:31.127Z",
+      "lastSuccessAt": "2026-06-27T21:43:31.127Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -849,8 +847,8 @@
       "url": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
       "status": "ok",
       "itemsFound": 2,
-      "lastCheckedAt": "2026-06-27T12:37:43.998Z",
-      "lastSuccessAt": "2026-06-27T12:37:43.998Z",
+      "lastCheckedAt": "2026-06-27T21:43:31.246Z",
+      "lastSuccessAt": "2026-06-27T21:43:31.246Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -862,8 +860,8 @@
       "url": "https://enterprisezine.jp/rss/new/20/index.xml",
       "status": "ok",
       "itemsFound": 6,
-      "lastCheckedAt": "2026-06-27T12:37:45.018Z",
-      "lastSuccessAt": "2026-06-27T12:37:45.018Z",
+      "lastCheckedAt": "2026-06-27T21:43:32.207Z",
+      "lastSuccessAt": "2026-06-27T21:43:32.207Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -875,8 +873,8 @@
       "url": "https://japan.cnet.com/rss/index.rdf",
       "status": "ok",
       "itemsFound": 1,
-      "lastCheckedAt": "2026-06-27T12:37:46.934Z",
-      "lastSuccessAt": "2026-06-27T12:37:46.934Z",
+      "lastCheckedAt": "2026-06-27T21:43:33.701Z",
+      "lastSuccessAt": "2026-06-27T21:43:33.701Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -887,9 +885,9 @@
       "type": "rss",
       "url": "https://ascii.jp/rss.xml",
       "status": "ok",
-      "itemsFound": 1,
-      "lastCheckedAt": "2026-06-27T12:37:47.397Z",
-      "lastSuccessAt": "2026-06-27T12:37:47.397Z",
+      "itemsFound": 2,
+      "lastCheckedAt": "2026-06-27T21:43:33.855Z",
+      "lastSuccessAt": "2026-06-27T21:43:33.855Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -901,8 +899,8 @@
       "url": "https://www.watch.impress.co.jp/data/rss/1.0/ipw/feed.rdf",
       "status": "ok",
       "itemsFound": 2,
-      "lastCheckedAt": "2026-06-27T12:37:48.051Z",
-      "lastSuccessAt": "2026-06-27T12:37:48.051Z",
+      "lastCheckedAt": "2026-06-27T21:43:34.403Z",
+      "lastSuccessAt": "2026-06-27T21:43:34.403Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -913,9 +911,9 @@
       "type": "rss",
       "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
       "status": "ok",
-      "itemsFound": 11,
-      "lastCheckedAt": "2026-06-27T12:37:48.185Z",
-      "lastSuccessAt": "2026-06-27T12:37:48.185Z",
+      "itemsFound": 10,
+      "lastCheckedAt": "2026-06-27T21:43:34.465Z",
+      "lastSuccessAt": "2026-06-27T21:43:34.465Z",
       "lastFailureAt": null,
       "lastError": null
     }

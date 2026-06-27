@@ -1,5 +1,5 @@
 {
-  "generatedDate": "2026-06-27",
+  "generatedDate": "2026-06-28",
   "categories": [
     {
       "id": "jp-cases",
@@ -508,44 +508,6 @@
               "business": 12,
               "regulatory": 0,
               "implementation": 24,
-              "market": 0
-            }
-          },
-          "importanceLabel": "技術",
-          "importanceReason": "技術的に重要"
-        },
-        {
-          "title": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026",
-          "titleJa": "AppleがCVPR 2026で発表する機械学習研究を紹介",
-          "summary": "AppleはCVPR 2026で発表するコンピュータビジョン関連研究を紹介。AppleのオンデバイスAI、視覚認識、研究開発テーマを追う材料になります。",
-          "summaryStatus": "manual-ja",
-          "impact": "研究価値",
-          "source": "Apple Machine Learning Research",
-          "type": "論文・技術文書",
-          "date": "2026-05-28",
-          "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
-          "priority": 75,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "eef9527c7b75b65ab8c9f5dc",
-          "importance": {
-            "total": 75,
-            "primaryAxis": "technical",
-            "primaryLabel": "技術",
-            "primaryReason": "技術的に重要",
-            "labels": [
-              "技術",
-              "事業"
-            ],
-            "reasons": [
-              "技術的に重要",
-              "事業・調達に影響"
-            ],
-            "axes": {
-              "technical": 24,
-              "business": 12,
-              "regulatory": 0,
-              "implementation": 0,
               "market": 0
             }
           },
