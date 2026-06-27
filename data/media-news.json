@@ -57,14 +57,14 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T00:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 21.9,
+      "freshness": "recent",
+      "ageHours": 34.5,
       "relevanceScore": 6,
       "priority": 96,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:09.699Z"
+        "checkedAt": "2026-06-27T10:27:59.785Z"
       }
     },
     {
@@ -80,14 +80,37 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T23:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 22.9,
+      "freshness": "recent",
+      "ageHours": 35.5,
       "relevanceScore": 5,
       "priority": 96,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:09.700Z"
+        "checkedAt": "2026-06-27T10:27:59.785Z"
+      }
+    },
+    {
+      "id": "640e14a4e67ad28a",
+      "title": "AIモデル「ミュトス」、米国の一部組織に再提供へ 米政府が許可",
+      "summary": "米Anthropicは6月26日（現地時間）、12日から提供を一時停止していたAIモデル「Claude Mythos 5」について、米国の一部組織に限定して再提供を始めると発表した。米政府から許可を得たという。",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2606/27/2000000135/",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
+      "region": "日本",
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-27T02:07:50.000Z",
+      "freshness": "fresh",
+      "ageHours": 8.3,
+      "relevanceScore": 4,
+      "priority": 104,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-27T10:27:59.353Z"
       }
     },
     {
@@ -104,13 +127,13 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T19:56:10.000Z",
       "freshness": "fresh",
-      "ageHours": 1.9,
+      "ageHours": 14.5,
       "relevanceScore": 4,
       "priority": 104,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:08.421Z"
+        "checkedAt": "2026-06-27T10:27:59.355Z"
       }
     },
     {
@@ -127,15 +150,14 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T16:24:47.000Z",
       "freshness": "fresh",
-      "ageHours": 5.5,
+      "ageHours": 18.1,
       "relevanceScore": 4,
       "priority": 94,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:13.256Z"
-      },
-      "titleJa": "もはやAnthropic対OpenAIの構図ではない"
+        "checkedAt": "2026-06-27T10:28:00.622Z"
+      }
     },
     {
       "id": "6c330b21f9f9f0a7",
@@ -151,37 +173,36 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T17:38:27.000Z",
       "freshness": "recent",
-      "ageHours": 28.2,
+      "ageHours": 40.8,
       "relevanceScore": 4,
       "priority": 94,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:13.257Z"
-      },
-      "titleJa": "AnthropicのClaudeが有料ユーザーを獲得中"
+        "checkedAt": "2026-06-27T10:28:00.623Z"
+      }
     },
     {
-      "id": "3e8cd1562c907265",
-      "title": "リコーが多能工ヒューマノイドを披露、工場ではPoCから導入に向けた実証段階へ",
-      "summary": "リコーは、「AWS Summit Japan 2026」において、フィジカルAI搭載の多能工ヒューマノイドのデモンストレーションを披露した。既に工場内でPoCを始めており、今夏までをめどに多能工ヒューマノイドが一部の工程を担うより実用的な実証を始めたい考えだ。",
-      "url": "https://monoist.itmedia.co.jp/mn/articles/2606/26/news056.html",
-      "source": "ITmedia AI+",
+      "id": "b0f1da588b5ca6e4",
+      "title": "アンソロピック「ミュトス5」を復活 米国のインフラ組織に再展開",
+      "summary": "Anthropicは26日、米国政府の指示により公開を停止していた、最上位のAIモデル「Claude Mythos 5」(ミュトス5)について、重要インフラの運用と防御を行なう米国組織に限定し、再展開可能であるとの通知を受け取ったと発表した。",
+      "url": "https://www.watch.impress.co.jp/docs/news/2120572.html",
+      "source": "Impress Watch",
       "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
       "region": "日本",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-25T21:15:00.000Z",
-      "freshness": "recent",
-      "ageHours": 24.6,
-      "relevanceScore": 3,
-      "priority": 101,
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-27T02:32:57.000Z",
+      "freshness": "fresh",
+      "ageHours": 7.9,
+      "relevanceScore": 4,
+      "priority": 86,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:08.424Z"
+        "checkedAt": "2026-06-27T10:28:00.500Z"
       }
     },
     {
@@ -197,14 +218,14 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T10:16:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 11.6,
+      "freshness": "recent",
+      "ageHours": 24.2,
       "relevanceScore": 3,
       "priority": 93,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:09.699Z"
+        "checkedAt": "2026-06-27T10:27:59.785Z"
       }
     },
     {
@@ -220,14 +241,14 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T06:22:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 15.5,
+      "freshness": "recent",
+      "ageHours": 28.1,
       "relevanceScore": 3,
       "priority": 93,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:09.699Z"
+        "checkedAt": "2026-06-27T10:27:59.785Z"
       }
     },
     {
@@ -244,15 +265,14 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T17:43:22.000Z",
       "freshness": "fresh",
-      "ageHours": 4.1,
+      "ageHours": 16.7,
       "relevanceScore": 3,
       "priority": 91,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:13.256Z"
-      },
-      "titleJa": "OpenAIやSpaceXが独自チップを開発する理由"
+        "checkedAt": "2026-06-27T10:28:00.622Z"
+      }
     },
     {
       "id": "77a648503e8cff20",
@@ -268,15 +288,60 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T14:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 7.9,
+      "ageHours": 20.5,
       "relevanceScore": 3,
       "priority": 91,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:13.256Z"
-      },
-      "titleJa": "OpenAIのJalapeñoチップがNvidiaから離脱"
+        "checkedAt": "2026-06-27T10:28:00.622Z"
+      }
+    },
+    {
+      "id": "0a20c671f60560ff",
+      "title": "OpenAI「GPT-5.6」発表 最上位「Sol」など3モデルを政府要請で段階提供",
+      "summary": "OpenAIは26日(米国時間)、最新のAIモデル「GPT-5.6」を発表した。フラッグシップモデルの「Sol」、日常業務向けのバランスの取れたモデル「Terra」、高速で価格を抑えた「Luna」の3モデルとなり、今後数週間で段階的に公開していく。",
+      "url": "https://www.watch.impress.co.jp/docs/news/2120569.html",
+      "source": "Impress Watch",
+      "sourceType": "メディア",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
+      "region": "日本",
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-27T01:57:44.000Z",
+      "freshness": "fresh",
+      "ageHours": 8.5,
+      "relevanceScore": 3,
+      "priority": 83,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-27T10:28:00.500Z"
+      }
+    },
+    {
+      "id": "c517719e9a6e94d2",
+      "title": "東電出資に意欲 孫正義氏が「国内データセンター誘致」で狙うインフラ戦略",
+      "summary": "ソフトバンクグループ株主総会で、会長兼社長の孫正義氏が、将来的な目標として「純資産価値1000兆円」の展望を語った。AIインフラの最大のボトルネックである「電力確保」を巡り、子会社のソフトバンクが東京電力の次期オーナー候補に名乗りを上げている事実にも言及した。...",
+      "url": "https://www.itmedia.co.jp/business/articles/2606/27/news024.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "半導体・クラウド・基盤",
+      "categoryId": "infrastructure",
+      "accent": "infrastructure",
+      "region": "日本",
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-26T23:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 11.5,
+      "relevanceScore": 2,
+      "priority": 98,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-27T10:27:59.354Z"
+      }
     },
     {
       "id": "64abf4076fbbfa5a",
@@ -291,14 +356,14 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T09:15:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 12.6,
+      "freshness": "recent",
+      "ageHours": 25.2,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:08.422Z"
+        "checkedAt": "2026-06-27T10:27:59.355Z"
       }
     },
     {
@@ -314,14 +379,14 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T04:35:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 17.3,
+      "freshness": "recent",
+      "ageHours": 29.9,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:08.423Z"
+        "checkedAt": "2026-06-27T10:27:59.355Z"
       }
     },
     {
@@ -337,14 +402,14 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T04:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 17.9,
+      "freshness": "recent",
+      "ageHours": 30.5,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:08.423Z"
+        "checkedAt": "2026-06-27T10:27:59.355Z"
       }
     },
     {
@@ -360,14 +425,14 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T02:00:17.000Z",
-      "freshness": "fresh",
-      "ageHours": 19.9,
+      "freshness": "recent",
+      "ageHours": 32.5,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:08.423Z"
+        "checkedAt": "2026-06-27T10:27:59.356Z"
       }
     },
     {
@@ -383,14 +448,14 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T02:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 19.9,
+      "freshness": "recent",
+      "ageHours": 32.5,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:08.423Z"
+        "checkedAt": "2026-06-27T10:27:59.356Z"
       }
     },
     {
@@ -406,37 +471,14 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T23:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 22.9,
+      "freshness": "recent",
+      "ageHours": 35.5,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:08.424Z"
-      }
-    },
-    {
-      "id": "3bf0cfd437af2ae5",
-      "title": "“流れていく会話”をAIが構造化 チャット履歴を会社の資産に",
-      "summary": "業務上の会話には、後から参照すべき貴重な情報が多く含まれる。しかし、従来型のチャットでは、こうした情報が整理されないまま流れ、必要な場面で見つけにくい。そうした課題を解決するために、AIチャットエージェントが役立つかもしれない。",
-      "url": "https://kn.itmedia.co.jp/kn/articles/2606/26/news041.html",
-      "source": "ITmedia AI+",
-      "sourceType": "メディア",
-      "category": "AIエージェント・業務AI",
-      "categoryId": "agents",
-      "accent": "product",
-      "region": "日本",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-25T22:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 23.9,
-      "relevanceScore": 2,
-      "priority": 98,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:08.424Z"
+        "checkedAt": "2026-06-27T10:27:59.356Z"
       }
     },
     {
@@ -452,14 +494,14 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T23:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 22.9,
+      "freshness": "recent",
+      "ageHours": 35.5,
       "relevanceScore": 2,
       "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:09.700Z"
+        "checkedAt": "2026-06-27T10:27:59.786Z"
       }
     },
     {
@@ -476,13 +518,13 @@
       "date": "2026-06-25",
       "publishedAt": "2026-06-25T09:22:00.000Z",
       "freshness": "recent",
-      "ageHours": 36.5,
+      "ageHours": 49.1,
       "relevanceScore": 2,
       "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:09.700Z"
+        "checkedAt": "2026-06-27T10:27:59.786Z"
       }
     },
     {
@@ -499,15 +541,14 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T18:32:14.000Z",
       "freshness": "fresh",
-      "ageHours": 3.3,
+      "ageHours": 15.9,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:13.255Z"
-      },
-      "titleJa": "OpenAI、政府要請後にGPT-5.6の展開を制限"
+        "checkedAt": "2026-06-27T10:28:00.621Z"
+      }
     },
     {
       "id": "1b0af514e4134d71",
@@ -522,16 +563,15 @@
       "region": "海外",
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T23:34:39.000Z",
-      "freshness": "fresh",
-      "ageHours": 22.3,
+      "freshness": "recent",
+      "ageHours": 34.9,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:13.257Z"
-      },
-      "titleJa": "ホワイトハウス、OpenAIに新モデルのリリースを遅延要請"
+        "checkedAt": "2026-06-27T10:28:00.623Z"
+      }
     },
     {
       "id": "51cfd91731867cb8",
@@ -547,15 +587,14 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T20:19:25.000Z",
       "freshness": "recent",
-      "ageHours": 25.5,
+      "ageHours": 38.1,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:13.257Z"
-      },
-      "titleJa": "Patronus AI、AIエージェントテスト用のデジタル世界構築に5000万ドル調達"
+        "checkedAt": "2026-06-27T10:28:00.623Z"
+      }
     },
     {
       "id": "7093e5d3194f8e30",
@@ -571,61 +610,13 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T16:55:00.000Z",
       "freshness": "recent",
-      "ageHours": 29,
+      "ageHours": 41.6,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:13.257Z"
-      },
-      "titleJa": "General Intuition、ゲームでAIを訓練する23億ドルの賭け"
-    },
-    {
-      "id": "22ebbe767229e601",
-      "title": "Netris raises $15M Series A from a16z to help AI neoclouds go live faster",
-      "summary": "Netris provides software that runs on network switches, and offers a platform that helps neocloud operators reduce the time it tak...",
-      "url": "https://techcrunch.com/2026/06/25/netris-raises-15m-series-a-from-a16z-to-help-ai-neoclouds-go-live-faster/",
-      "source": "TechCrunch (AI)",
-      "sourceType": "メディア",
-      "category": "半導体・クラウド・基盤",
-      "categoryId": "infrastructure",
-      "accent": "infrastructure",
-      "region": "海外",
-      "date": "2026-06-25",
-      "publishedAt": "2026-06-25T14:55:38.000Z",
-      "freshness": "recent",
-      "ageHours": 30.9,
-      "relevanceScore": 2,
-      "priority": 88,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:13.257Z"
-      },
-      "titleJa": "Netris、a16zから1500万ドルを調達しAI neocloudsの迅速展開を支援"
-    },
-    {
-      "id": "d1be7bcd1d22e96d",
-      "title": "特価で24万5300円！ AMD Ryzen AI 7 350搭載の一体型デスクトップ「FMV WF3-L1」がお買い得",
-      "summary": "FMVパソコン通販サイト「FMV Store」では、複数のモデルを対象にセールを開催中。",
-      "url": "https://ascii.jp/elem/000/004/413/4413748/?rss",
-      "source": "ASCII.jp",
-      "sourceType": "メディア",
-      "category": "モデル・研究・プロダクト",
-      "categoryId": "models",
-      "accent": "research",
-      "region": "日本",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-26T13:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 8.9,
-      "relevanceScore": 2,
-      "priority": 86,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:12.327Z"
+        "checkedAt": "2026-06-27T10:28:00.623Z"
       }
     },
     {
@@ -642,13 +633,36 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T20:31:00.000Z",
       "freshness": "fresh",
-      "ageHours": 1.4,
+      "ageHours": 14,
       "relevanceScore": 2,
       "priority": 84,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:11.951Z"
+        "checkedAt": "2026-06-27T10:28:00.216Z"
+      }
+    },
+    {
+      "id": "4ffce1fe9275068a",
+      "title": "官民投資フィジカルAIに10.5兆円示す、「実証から実装へ」動き出す現場",
+      "summary": "2026年6月22日～26日に公開された記事の中から、MONOist編集部が厳選した今週の注目ニュースをお届けします。",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2606/27/news009.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-26T22:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 12.5,
+      "relevanceScore": 1,
+      "priority": 95,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-27T10:27:59.355Z"
       }
     },
     {
@@ -664,37 +678,14 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T22:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 23.9,
-      "relevanceScore": 1,
-      "priority": 95,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:08.424Z"
-      }
-    },
-    {
-      "id": "570cb5f0351b1fab",
-      "title": "Flashの再来？ Figmaの新機能「Figma Motion」に懐かしいとの声 アニメーション生成するAI機能も",
-      "summary": "Figmaが発表した新機能「Figma Motion」が、かつてのAdobe Flashを思わせるとSNSで話題だ。タイムラインでキーフレームを打つ操作感が懐かしさを呼んだが、実際に触ると別物との声もみられる。",
-      "url": "https://www.itmedia.co.jp/news/articles/2606/25/news132.html",
-      "source": "ITmedia AI+",
-      "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "日本",
-      "date": "2026-06-25",
-      "publishedAt": "2026-06-25T12:05:00.000Z",
       "freshness": "recent",
-      "ageHours": 33.8,
+      "ageHours": 36.5,
       "relevanceScore": 1,
       "priority": 95,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:08.425Z"
+        "checkedAt": "2026-06-27T10:27:59.356Z"
       }
     },
     {
@@ -710,14 +701,37 @@
       "region": "日本",
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T06:30:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 15.4,
+      "freshness": "recent",
+      "ageHours": 28,
       "relevanceScore": 1,
       "priority": 89,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:08.599Z"
+        "checkedAt": "2026-06-27T10:27:59.390Z"
+      }
+    },
+    {
+      "id": "0bdf95932beada39",
+      "title": "Trump Admin releases Anthropic Mythos to be used by more than 100 US companies, agencies",
+      "summary": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.",
+      "url": "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/",
+      "source": "TechCrunch (AI)",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "海外",
+      "date": "2026-06-27",
+      "publishedAt": "2026-06-27T01:01:37.000Z",
+      "freshness": "fresh",
+      "ageHours": 9.4,
+      "relevanceScore": 1,
+      "priority": 85,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-27T10:28:00.621Z"
       }
     },
     {
@@ -734,15 +748,14 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T18:19:36.000Z",
       "freshness": "fresh",
-      "ageHours": 3.5,
+      "ageHours": 16.1,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:13.256Z"
-      },
-      "titleJa": "OpenAI、米国外市場のリーダーにUber Indiaの責任者を招聘"
+        "checkedAt": "2026-06-27T10:28:00.622Z"
+      }
     },
     {
       "id": "a1a5cdb6d14e91fd",
@@ -758,16 +771,108 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-25T16:48:11.000Z",
       "freshness": "recent",
-      "ageHours": 29.1,
+      "ageHours": 41.7,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-26T21:52:13.257Z"
-      },
-      "titleJa": "Databricks前AI責任者、AIの電力コスト1000倍削減を目指す"
+        "checkedAt": "2026-06-27T10:28:00.623Z"
+      }
     }
   ],
-  "errors": []
+  "errors": [],
+  "sourceHealth": [
+    {
+      "id": "aeda38d3d92a7fe7",
+      "name": "ITmedia AI+",
+      "group": "media",
+      "type": "rss",
+      "url": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "status": "ok",
+      "itemsFound": 11,
+      "lastCheckedAt": "2026-06-27T10:27:59.357Z",
+      "lastSuccessAt": "2026-06-27T10:27:59.357Z",
+      "lastFailureAt": null,
+      "lastError": null
+    },
+    {
+      "id": "f6ff8369e9796798",
+      "name": "ITmedia NEWS",
+      "group": "media",
+      "type": "rss",
+      "url": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "status": "ok",
+      "itemsFound": 2,
+      "lastCheckedAt": "2026-06-27T10:27:59.391Z",
+      "lastSuccessAt": "2026-06-27T10:27:59.391Z",
+      "lastFailureAt": null,
+      "lastError": null
+    },
+    {
+      "id": "9f2cf61704f97690",
+      "name": "EnterpriseZine",
+      "group": "media",
+      "type": "rss",
+      "url": "https://enterprisezine.jp/rss/new/20/index.xml",
+      "status": "ok",
+      "itemsFound": 6,
+      "lastCheckedAt": "2026-06-27T10:27:59.786Z",
+      "lastSuccessAt": "2026-06-27T10:27:59.786Z",
+      "lastFailureAt": null,
+      "lastError": null
+    },
+    {
+      "id": "a41567ae48836fc1",
+      "name": "CNET Japan",
+      "group": "media",
+      "type": "rss",
+      "url": "https://japan.cnet.com/rss/index.rdf",
+      "status": "ok",
+      "itemsFound": 1,
+      "lastCheckedAt": "2026-06-27T10:28:00.218Z",
+      "lastSuccessAt": "2026-06-27T10:28:00.218Z",
+      "lastFailureAt": null,
+      "lastError": null
+    },
+    {
+      "id": "7afdf87d6e207a4d",
+      "name": "ASCII.jp",
+      "group": "media",
+      "type": "rss",
+      "url": "https://ascii.jp/rss.xml",
+      "status": "no_items",
+      "itemsFound": 0,
+      "lastCheckedAt": "2026-06-27T10:28:00.347Z",
+      "lastSuccessAt": "2026-06-27T10:28:00.347Z",
+      "lastFailureAt": null,
+      "lastError": null
+    },
+    {
+      "id": "6db6856fca880038",
+      "name": "Impress Watch",
+      "group": "media",
+      "type": "rss",
+      "url": "https://www.watch.impress.co.jp/data/rss/1.0/ipw/feed.rdf",
+      "status": "ok",
+      "itemsFound": 2,
+      "lastCheckedAt": "2026-06-27T10:28:00.501Z",
+      "lastSuccessAt": "2026-06-27T10:28:00.501Z",
+      "lastFailureAt": null,
+      "lastError": null
+    },
+    {
+      "id": "0e9770270556fa3f",
+      "name": "TechCrunch (AI)",
+      "group": "media",
+      "type": "rss",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "status": "ok",
+      "itemsFound": 11,
+      "lastCheckedAt": "2026-06-27T10:28:00.623Z",
+      "lastSuccessAt": "2026-06-27T10:28:00.623Z",
+      "lastFailureAt": null,
+      "lastError": null
+    }
+  ]
 }

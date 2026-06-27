@@ -259,6 +259,11 @@ h1 {
   color: var(--green);
 }
 
+.freshness.stale {
+  background: var(--amber-soft);
+  color: var(--amber);
+}
+
 .freshness.error {
   background: var(--red-soft);
   color: var(--red);
@@ -1096,6 +1101,19 @@ h1 {
   color: var(--accent);
   font-size: 0.76rem;
   font-weight: 800;
+}
+
+.value-label {
+  flex: 0 0 auto;
+  padding: 2px 7px;
+  border: 1px solid color-mix(in srgb, var(--accent) 34%, #d9e0dc);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 10%, #ffffff);
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .empty-state {

@@ -32,6 +32,8 @@ if (args.has("--help")) {
 
 const startedAt = new Date();
 const logPath = path.join(root, "logs", `daily-update-${todayInTokyo()}.log`);
+const healthPath = path.join(root, "data", "health.json");
+const sourceHealthPath = path.join(root, "data", "source-health.json");
 const results = [];
 
 function getArg(prefix, fallback) {
@@ -114,7 +116,7 @@ function runStep(name, script, scriptArgs) {
   }
 
   const exitCode = result.status ?? (result.error ? 1 : 0);
-  results.push({ name, commandLine, exitCode, durationMs });
+  results.push({ name, commandLine, exitCode, durationMs, stdout, stderr });
   appendLog(`[exit=${exitCode}] duration=${durationMs}ms`);
 
   if (result.error) {
@@ -124,6 +126,201 @@ function runStep(name, script, scriptArgs) {
   if (exitCode !== 0) {
     throw new Error(`${name} failed with exit code ${exitCode}`);
   }
+}
+
+function readJson(relativePath, fallback = null) {
+  const absolutePath = path.join(root, relativePath);
+  if (!fs.existsSync(absolutePath)) return fallback;
+  try {
+    return JSON.parse(fs.readFileSync(absolutePath, "utf8"));
+  } catch {
+    return fallback;
+  }
+}
+
+function countBy(items, key) {
+  const counts = new Map();
+  for (const item of items || []) {
+    const value = item[key] || "unknown";
+    counts.set(value, (counts.get(value) || 0) + 1);
+  }
+  return counts;
+}
+
+function parseCollectNewsHealth(stepResult) {
+  const sources = readJson("data/sources.json", { sources: [] }).sources || [];
+  const sourceById = new Map(sources.map((source) => [source.id, source]));
+  const bySource = countBy(readJson("data/candidates.json", { items: [] }).items || [], "sourceId");
+  const seen = new Set();
+  const health = [];
+  const checkedAt = new Date().toISOString();
+
+  for (const line of String(stepResult?.stdout || "").split(/\r?\n/)) {
+    let match = /^OK\s+(\S+)\s+(\S+)\s+candidates=(\d+)/.exec(line);
+    if (match) {
+      const [, id, httpStatus, count] = match;
+      const source = sourceById.get(id);
+      seen.add(id);
+      health.push({
+        id,
+        name: source?.name || id,
+        group: "primary",
+        type: source?.fetchMethod || "html",
+        url: source?.url || "",
+        status: Number(count) > 0 ? "ok" : "no_items",
+        httpStatus,
+        itemsFound: Number(count),
+        totalCandidates: bySource.get(id) || 0,
+        lastCheckedAt: checkedAt,
+        lastSuccessAt: checkedAt,
+        lastFailureAt: null,
+        lastError: null
+      });
+      continue;
+    }
+
+    match = /^NG\s+(\S+)\s+(\S+)\s*(.*)$/.exec(line);
+    if (match) {
+      const [, id, httpStatus, error] = match;
+      const source = sourceById.get(id);
+      seen.add(id);
+      health.push({
+        id,
+        name: source?.name || id,
+        group: "primary",
+        type: source?.fetchMethod || "html",
+        url: source?.url || "",
+        status: "failed",
+        httpStatus,
+        itemsFound: 0,
+        totalCandidates: bySource.get(id) || 0,
+        lastCheckedAt: checkedAt,
+        lastSuccessAt: null,
+        lastFailureAt: checkedAt,
+        lastError: error || `HTTP ${httpStatus}`
+      });
+    }
+  }
+
+  for (const source of sources) {
+    if (!source.enabled || seen.has(source.id)) continue;
+    if (["api", "github", "manual_review"].includes(source.fetchMethod)) {
+      health.push({
+        id: source.id,
+        name: source.name,
+        group: "primary",
+        type: source.fetchMethod,
+        url: source.url,
+        status: "skipped",
+        itemsFound: 0,
+        totalCandidates: bySource.get(source.id) || 0,
+        lastCheckedAt: checkedAt,
+        lastSuccessAt: null,
+        lastFailureAt: null,
+        lastError: "日次HTML収集の対象外"
+      });
+    }
+  }
+
+  return health;
+}
+
+function normalizeSourceHealth(item, groupFallback) {
+  return {
+    id: item.id || item.name || item.source || item.url,
+    name: item.name || item.source || item.id || item.url,
+    group: item.group || groupFallback,
+    type: item.type || item.method || "",
+    vendorId: item.vendorId,
+    vendorName: item.vendorName,
+    url: item.url || "",
+    status: item.status || "unknown",
+    httpStatus: item.httpStatus,
+    itemsFound: Number(item.itemsFound || 0),
+    totalCandidates: item.totalCandidates,
+    lastCheckedAt: item.lastCheckedAt || new Date().toISOString(),
+    lastSuccessAt: item.lastSuccessAt || null,
+    lastFailureAt: item.lastFailureAt || null,
+    lastError: item.lastError || null
+  };
+}
+
+function buildSourceHealth() {
+  const collectStep = results.find((item) => item.name === "collect");
+  const sourceItems = [
+    ...parseCollectNewsHealth(collectStep),
+    ...(readJson("data/media-news.json", { sourceHealth: [] }).sourceHealth || []).map((item) => normalizeSourceHealth(item, "media")),
+    ...(readJson("data/official-news.json", { sourceHealth: [] }).sourceHealth || []).map((item) => normalizeSourceHealth(item, "official")),
+    ...(readJson("data/ai-signals.json", { sourceHealth: [] }).sourceHealth || []).map((item) => normalizeSourceHealth(item, "ai-signals"))
+  ].sort((a, b) => String(a.group).localeCompare(String(b.group)) || String(a.name).localeCompare(String(b.name)));
+
+  const summary = sourceItems.reduce(
+    (acc, item) => {
+      acc.total += 1;
+      if (item.status === "failed") acc.failed += 1;
+      if (item.status === "no_items") acc.noItems += 1;
+      if (item.status === "skipped") acc.skipped += 1;
+      if (item.status === "ok") acc.ok += 1;
+      return acc;
+    },
+    { total: 0, ok: 0, failed: 0, noItems: 0, skipped: 0 }
+  );
+
+  return {
+    schemaVersion: 1,
+    generatedAt: new Date().toISOString(),
+    generatedDate: todayInTokyo(),
+    summary,
+    sources: sourceItems
+  };
+}
+
+function buildHealth(status, error = null) {
+  const news = readJson("data/news.json", { categories: [] });
+  const media = readJson("data/media-news.json", { items: [], errors: [] });
+  const official = readJson("data/official-news.json", { items: [], errors: [] });
+  const signals = readJson("data/ai-signals.json", { items: [], errors: [] });
+  const sota = readJson("data/sota.json", { entries: [] });
+  const candidates = readJson("data/candidates.json", { items: [] });
+  const review = readJson("data/review.json", { items: [] });
+  const sourceHealth = buildSourceHealth();
+  const failedSteps = results.filter((item) => item.exitCode !== 0);
+  const warningCount = sourceHealth.summary.failed + sourceHealth.summary.noItems;
+  const effectiveStatus = status === "ok" && warningCount > 0 ? "warning" : status;
+
+  return {
+    schemaVersion: 1,
+    status: effectiveStatus,
+    generatedAt: new Date().toISOString(),
+    generatedDate: todayInTokyo(),
+    startedAt: startedAt.toISOString(),
+    finishedAt: new Date().toISOString(),
+    durationSeconds: Math.round((Date.now() - startedAt.getTime()) / 1000),
+    error: error ? String(error.message || error) : null,
+    summary: {
+      mediaItems: (media.items || []).length,
+      primaryCategories: (news.categories || []).length,
+      primaryItems: (news.categories || []).reduce((total, category) => total + ((category.items || []).length), 0),
+      officialItems: (official.items || []).length,
+      aiSignals: (signals.items || []).length,
+      sotaEntries: (sota.entries || []).length,
+      candidates: (candidates.items || []).length,
+      reviewItems: (review.items || []).length,
+      sourceTotal: sourceHealth.summary.total,
+      sourceOk: sourceHealth.summary.ok,
+      sourceFailed: sourceHealth.summary.failed,
+      sourceNoItems: sourceHealth.summary.noItems,
+      failedSteps: failedSteps.length
+    },
+    steps: results.map(({ stdout, stderr, ...item }) => item)
+  };
+}
+
+function writeHealthFiles(status, error = null) {
+  if (dryRun) return;
+  const sourceHealth = buildSourceHealth();
+  fs.writeFileSync(sourceHealthPath, `${JSON.stringify(sourceHealth, null, 2)}\n`, "utf8");
+  fs.writeFileSync(healthPath, `${JSON.stringify(buildHealth(status, error), null, 2)}\n`, "utf8");
 }
 
 function main() {
@@ -194,6 +391,7 @@ function main() {
   }
 
   runStep("validate-data", "scripts/validate-data.js", []);
+  writeHealthFiles("ok");
 
   const durationMs = Date.now() - startedAt.getTime();
   const summary = `Daily update ${dryRun ? "dry-run" : "write"} completed in ${Math.round(durationMs / 1000)}s`;
@@ -214,5 +412,6 @@ try {
   console.error(`\n${message}`);
   appendLog("");
   appendLog(message);
+  writeHealthFiles("failed", error);
   process.exit(1);
 }

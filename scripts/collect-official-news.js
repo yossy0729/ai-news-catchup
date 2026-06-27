@@ -436,14 +436,46 @@ function officialSort(a, b) {
 async function collect() {
   const items = [];
   const errors = [];
+  const sourceHealth = [];
 
   for (const vendor of vendors) {
     for (const source of vendor.sources) {
       if (source.enabled === false) continue;
       try {
-        items.push(...await collectSource(vendor, source));
+        const collected = await collectSource(vendor, source);
+        items.push(...collected);
+        sourceHealth.push({
+          id: crypto.createHash("sha256").update(`${vendor.id}|${source.url}`).digest("hex").slice(0, 16),
+          name: source.name,
+          group: "official",
+          type: source.method,
+          vendorId: vendor.id,
+          vendorName: vendor.name,
+          url: source.url,
+          status: collected.length ? "ok" : "no_items",
+          itemsFound: collected.length,
+          lastCheckedAt: new Date().toISOString(),
+          lastSuccessAt: new Date().toISOString(),
+          lastFailureAt: null,
+          lastError: null
+        });
       } catch (error) {
         errors.push({ vendor: vendor.id, source: source.name, url: source.url, error: error.message });
+        sourceHealth.push({
+          id: crypto.createHash("sha256").update(`${vendor.id}|${source.url}`).digest("hex").slice(0, 16),
+          name: source.name,
+          group: "official",
+          type: source.method,
+          vendorId: vendor.id,
+          vendorName: vendor.name,
+          url: source.url,
+          status: "failed",
+          itemsFound: 0,
+          lastCheckedAt: new Date().toISOString(),
+          lastSuccessAt: null,
+          lastFailureAt: new Date().toISOString(),
+          lastError: error.message
+        });
       }
     }
   }
@@ -460,7 +492,8 @@ async function collect() {
     sourcePolicy: "AIベンダー/GAFAMの公式RSSまたは公式一覧HTMLから直接取得し、元記事URLと公開日メタデータを確認できたものだけを保存。",
     vendors: vendors.map(({ id, name, accent, homepage }) => ({ id, name, accent, homepage })),
     items: Array.from(byUrl.values()).sort(officialSort).slice(0, limit),
-    errors
+    errors,
+    sourceHealth
   };
 }
 

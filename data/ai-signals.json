@@ -14,22 +14,20 @@
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
       "text": "HF Papers #1: DanceOPD: On-Policy Generative Field Distillation",
       "url": "https://huggingface.co/papers/2606.27377",
-      "priority": 95,
-      "titleJa": "HF Papers #1: DanceOPDによるオンポリシー生成フィールド蒸留"
+      "priority": 95
     },
     {
-      "id": "d714bd79b898af1a",
+      "id": "2855a1b01cacfe3a",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
       "date": "2026-06-27",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #2: ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
+      "title": "HF Papers #2: In-Context World Modeling for Robotic Control",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #2: ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
-      "url": "https://huggingface.co/papers/2606.27313",
-      "priority": 94,
-      "titleJa": "HF Papers #2: ViQによる任意解像度のテキスト整列視覚量子化表現"
+      "text": "HF Papers #2: In-Context World Modeling for Robotic Control",
+      "url": "https://huggingface.co/papers/2606.26025",
+      "priority": 94
     },
     {
       "id": "e402e792da41acf8",
@@ -42,8 +40,7 @@
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
       "text": "HF Papers #3: OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning",
       "url": "https://huggingface.co/papers/2606.26790",
-      "priority": 93,
-      "titleJa": "HF Papers #3: OPIDによるエージェント強化学習のスキル蒸留"
+      "priority": 93
     },
     {
       "id": "fc6e4003579cd0f0",
@@ -56,22 +53,20 @@
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
       "text": "HF Papers #4: Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation",
       "url": "https://huggingface.co/papers/2606.26907",
-      "priority": 92,
-      "titleJa": "HF Papers #4: Qwen-Image-Agentによるリアルな画像生成の文脈融合"
+      "priority": 92
     },
     {
-      "id": "6786d6dcd0a8bbe5",
+      "id": "d714bd79b898af1a",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
       "date": "2026-06-27",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #5: The Verification Horizon: No Silver Bullet for Coding Agent Rewards",
+      "title": "HF Papers #5: ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #5: The Verification Horizon: No Silver Bullet for Coding Agent Rewards",
-      "url": "https://huggingface.co/papers/2606.26300",
-      "priority": 91,
-      "titleJa": "HF Papers #5: コーディングエージェント報酬の最適化に銀弾なし"
+      "text": "HF Papers #5: ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
+      "url": "https://huggingface.co/papers/2606.27313",
+      "priority": 91
     },
     {
       "id": "6cc848adcda7cc35",
@@ -84,8 +79,7 @@
       "summary": "OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.",
       "text": "Research: OpenAI and Broadcom unveil LLM-optimized inference chip / OpenAI News",
       "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
-      "priority": 88,
-      "titleJa": "OpenAIとBroadcom、LLM最適化推論用チップ発表"
+      "priority": 88
     },
     {
       "id": "281c9c8c57a2f979",
@@ -98,8 +92,7 @@
       "summary": "Hugging FaceがAI性能評価・学習基盤に関する情報を公開。モデル開発、GPU基盤、推論・学習コスト判断に関わる一次情報です。",
       "text": "SOTA: Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World / Hugging Face Blog",
       "url": "https://huggingface.co/blog/ffasr-leaderboard",
-      "priority": 88,
-      "titleJa": "FFASRリーダーボード導入：実世界のASRを評価"
+      "priority": 88
     },
     {
       "id": "80e079423bcb8ee7",
@@ -112,8 +105,7 @@
       "summary": "NVIDIA TechnicalがAI性能評価・学習基盤に関する情報を公開。モデル開発、GPU基盤、推論・学習コスト判断に関わる一次情報です。",
       "text": "Research: Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding / NVIDIA Technical Blog AI",
       "url": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding",
-      "priority": 88,
-      "titleJa": "NVIDIA Blackwellで推論性能を最大15倍向上、DFlash活用"
+      "priority": 88
     },
     {
       "id": "2c255983884091d3",
@@ -126,8 +118,7 @@
       "summary": "Apple Machine LearningがAI研究・学会発表に関する情報を公開。研究テーマ、モデル評価、技術トレンドを把握する材料になります。",
       "text": "Research: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 / Apple Machine Learning Research",
       "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
-      "priority": 88,
-      "titleJa": "IEEE/CVF 2026年コンピュータビジョン会議"
+      "priority": 88
     },
     {
       "id": "7d95e1b1656fe4ae",
@@ -140,8 +131,7 @@
       "summary": "公式価格ページ。Node直取得は403になる場合があるため、現MVPではリンク確認シグナルとして扱います。",
       "text": "Price: OpenAI 入力/出力トークン価格表を確認",
       "url": "https://openai.com/api/pricing/",
-      "priority": 76,
-      "titleJa": "OpenAIのトークン価格"
+      "priority": 76
     },
     {
       "id": "da08ee3f7c1156ae",
@@ -154,8 +144,7 @@
       "summary": "Claudeの入力/出力MTok単価を確認する公式価格表です。 検出例: $10 / MTok / $12.50 / MTok / $20 / MTok / $1 / MTok",
       "text": "Price: Anthropic 入力/出力トークン価格表を確認",
       "url": "https://docs.anthropic.com/en/docs/about-claude/pricing",
-      "priority": 76,
-      "titleJa": "Anthropicのトークン価格"
+      "priority": 76
     },
     {
       "id": "acbe155951267feb",
@@ -168,9 +157,49 @@
       "summary": "Gemini APIの入力/出力トークン単価を確認する公式価格表です。 検出例: $1.50 / $9.00 / $0.15 / $1.00 / 1,000,000 tokens",
       "text": "Price: Google Gemini 入力/出力トークン価格表を確認",
       "url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "priority": 76,
-      "titleJa": "Google Geminiのトークン価格"
+      "priority": 76
     }
   ],
-  "errors": []
+  "errors": [],
+  "sourceHealth": [
+    {
+      "id": "hf-papers",
+      "name": "hf-papers",
+      "group": "ai-signals",
+      "type": "mixed",
+      "url": "",
+      "status": "ok",
+      "itemsFound": 5,
+      "lastCheckedAt": "2026-06-27T10:27:56.823Z",
+      "lastSuccessAt": "2026-06-27T10:27:56.823Z",
+      "lastFailureAt": null,
+      "lastError": null
+    },
+    {
+      "id": "official-sota",
+      "name": "official-sota",
+      "group": "ai-signals",
+      "type": "mixed",
+      "url": "",
+      "status": "ok",
+      "itemsFound": 4,
+      "lastCheckedAt": "2026-06-27T10:27:56.824Z",
+      "lastSuccessAt": "2026-06-27T10:27:56.824Z",
+      "lastFailureAt": null,
+      "lastError": null
+    },
+    {
+      "id": "model-price",
+      "name": "model-price",
+      "group": "ai-signals",
+      "type": "mixed",
+      "url": "",
+      "status": "ok",
+      "itemsFound": 3,
+      "lastCheckedAt": "2026-06-27T10:27:59.022Z",
+      "lastSuccessAt": "2026-06-27T10:27:59.022Z",
+      "lastFailureAt": null,
+      "lastError": null
+    }
+  ]
 }

@@ -25,6 +25,12 @@ const officialNews = fs.existsSync(path.join(root, "data/official-news.json"))
 const aiSignals = fs.existsSync(path.join(root, "data/ai-signals.json"))
   ? readJson("data/ai-signals.json")
   : { items: [] };
+const health = fs.existsSync(path.join(root, "data/health.json"))
+  ? readJson("data/health.json")
+  : null;
+const sourceHealth = fs.existsSync(path.join(root, "data/source-health.json"))
+  ? readJson("data/source-health.json")
+  : null;
 
 const categoryIds = new Set(news.categories.map((category) => category.id));
 const sourceIds = new Set();
@@ -43,11 +49,18 @@ const invalidOfficialItems = [];
 const duplicateOfficialUrls = new Set();
 const invalidSignals = [];
 const duplicateSignalIds = new Set();
+const invalidImportanceItems = [];
+const invalidHealth = [];
+const invalidSourceHealth = [];
+const duplicateSourceHealthIds = new Set();
 
 const allowedSourceTypes = new Set(sources.sourceTypes);
 const allowedFetchMethods = new Set(sources.fetchMethods);
 const allowedCandidateStatuses = new Set(["candidate", "accepted", "rejected", "expired"]);
 const allowedReviewStatuses = new Set(["needs_review", "fetch_failed", "accepted", "rejected"]);
+const allowedHealthStatuses = new Set(["ok", "warning", "failed"]);
+const allowedSourceHealthStatuses = new Set(["ok", "no_items", "failed", "skipped", "unknown"]);
+const allowedImportanceAxes = new Set(["technical", "business", "regulatory", "implementation", "market"]);
 
 for (const source of sources.sources) {
   if (sourceIds.has(source.id)) {
@@ -158,6 +171,48 @@ for (const item of aiSignals.items || []) {
   signalIds.add(item.id);
 }
 
+for (const category of news.categories || []) {
+  for (const item of category.items || []) {
+    if (!item.importance) continue;
+    if (
+      typeof item.importance.total !== "number" ||
+      !allowedImportanceAxes.has(item.importance.primaryAxis) ||
+      !Array.isArray(item.importance.labels) ||
+      !item.importance.primaryReason
+    ) {
+      invalidImportanceItems.push(item.title || item.url || JSON.stringify(item).slice(0, 80));
+    }
+  }
+}
+
+if (health) {
+  if (!allowedHealthStatuses.has(health.status)) {
+    invalidHealth.push(`invalid status: ${health.status}`);
+  }
+  if (!health.generatedAt || !health.generatedDate || !health.summary) {
+    invalidHealth.push("missing generatedAt/generatedDate/summary");
+  }
+}
+
+if (sourceHealth) {
+  if (!sourceHealth.generatedAt || !sourceHealth.generatedDate || !sourceHealth.summary || !Array.isArray(sourceHealth.sources)) {
+    invalidSourceHealth.push("missing generatedAt/generatedDate/summary/sources");
+  }
+
+  const sourceHealthIds = new Set();
+  for (const item of sourceHealth.sources || []) {
+    if (!item.id || !item.name || !item.group || !allowedSourceHealthStatuses.has(item.status)) {
+      invalidSourceHealth.push(item.id || item.name || JSON.stringify(item).slice(0, 80));
+    }
+
+    const id = `${item.group}:${item.id}`;
+    if (sourceHealthIds.has(id)) {
+      duplicateSourceHealthIds.add(id);
+    }
+    sourceHealthIds.add(id);
+  }
+}
+
 if (duplicateSourceIds.size > 0) {
   fail(`Duplicate source ids:\n${Array.from(duplicateSourceIds).join("\n")}`);
 }
@@ -218,8 +273,24 @@ if (duplicateSignalIds.size > 0) {
   fail(`Duplicate AI signal ids:\n${Array.from(duplicateSignalIds).join("\n")}`);
 }
 
+if (invalidImportanceItems.length > 0) {
+  fail(`Invalid importance data:\n${invalidImportanceItems.join("\n")}`);
+}
+
+if (invalidHealth.length > 0) {
+  fail(`Invalid health data:\n${invalidHealth.join("\n")}`);
+}
+
+if (invalidSourceHealth.length > 0) {
+  fail(`Invalid source health data:\n${invalidSourceHealth.join("\n")}`);
+}
+
+if (duplicateSourceHealthIds.size > 0) {
+  fail(`Duplicate source health ids:\n${Array.from(duplicateSourceHealthIds).join("\n")}`);
+}
+
 if (process.exitCode) {
   process.exit();
 }
 
-console.log(`Data validation passed: ${news.categories.length} categories, ${sources.sources.length} sources, ${candidates.items.length} candidates, ${review.items.length} review items, ${(mediaNews.items || []).length} media items, ${(officialNews.items || []).length} official items, ${(aiSignals.items || []).length} AI signals`);
+console.log(`Data validation passed: ${news.categories.length} categories, ${sources.sources.length} sources, ${candidates.items.length} candidates, ${review.items.length} review items, ${(mediaNews.items || []).length} media items, ${(officialNews.items || []).length} official items, ${(aiSignals.items || []).length} AI signals${sourceHealth ? `, ${sourceHealth.sources.length} source health items` : ""}`);

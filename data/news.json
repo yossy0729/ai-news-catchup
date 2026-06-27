@@ -12,36 +12,6 @@
       "title": "AI活用・成果事例",
       "items": [
         {
-          "title": "「HFS Horizons: Agentic Services, 2026」においてマーケットリーダーの1社に選出",
-          "titleJa": "",
-          "summary": "株式会社NTTデータグループ、株式会社NTTデータ、および株式会社NTT DATA, Inc.（以下：NTTデータグループと総称）は、HFS Research社発行のレポート「HFS Horizons: Agentic Services, 2026」（以下：本レポート）において最高位に当たる「Hor...",
-          "summaryStatus": "extracted-ja",
-          "impact": "社会的影響",
-          "source": "NTT DATA ニュース",
-          "type": "公式発表",
-          "date": "2026-06-08",
-          "url": "https://www.nttdata.com/global/ja/news/evaluation/2026/060801",
-          "priority": 85,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "30d30365a817128c57d13a5f"
-        },
-        {
-          "title": "フォーティエンスコンサルティング、日本CFO協会主催「AI時代における戦略的CFO機能再構築プロジェクト」に協力パートナーとして参画（フォーティエンスコンサルティング株式会社）",
-          "titleJa": "",
-          "summary": "フォーティエンスコンサルティング株式会社は、2026年6月9日付で、下記のニュースリリースを発表いたしました。",
-          "summaryStatus": "extracted-ja",
-          "impact": "社会的影響",
-          "source": "NTT DATA ニュース",
-          "type": "公式発表",
-          "date": "2026-06-09",
-          "url": "https://www.nttdata.com/global/ja/news/group/2026/060901",
-          "priority": 80,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "099d0eae669af89035cfec1f"
-        },
-        {
           "title": "Data + AI Summitにて「2026 Databricks APJ Growth Partner of the Year」を受賞",
           "titleJa": "",
           "summary": "株式会社NTTデータ（以下：NTTデータ）は、2026年6月に米国サンフランシスコで開催されたDatabricks Inc.（以下：データブリックス）の年次イベント「Data + AI Summit 2026」において、2026 Databricks Partner Awardの「APJ Growt...",
@@ -51,25 +21,71 @@
           "type": "公式発表",
           "date": "2026-06-23",
           "url": "https://www.nttdata.com/global/ja/news/evaluation/2026/062301",
-          "priority": 80,
+          "priority": 81,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "6cd83257a2522ee76b73edab"
+          "candidateId": "6cd83257a2522ee76b73edab",
+          "importance": {
+            "total": 81,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業",
+              "市場"
+            ],
+            "reasons": [
+              "事業・調達に影響",
+              "市場・社会影響が大きい"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 34,
+              "regulatory": 0,
+              "implementation": 10,
+              "market": 12
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
         },
         {
-          "title": "プレス成形シミュレーションソフトウエア「JSTAMP®」に初のAI機能を搭載（株式会社JSOL）",
+          "title": "「HFS Horizons: Agentic Services, 2026」においてマーケットリーダーの1社に選出",
           "titleJa": "",
-          "summary": "株式会社JSOLは、2026年6月17日付で、下記のニュースリリースを発表いたしました。",
+          "summary": "株式会社NTTデータグループ、株式会社NTTデータ、および株式会社NTT DATA, Inc.（以下：NTTデータグループと総称）は、HFS Research社発行のレポート「HFS Horizons: Agentic Services, 2026」（以下：本レポート）において最高位に当たる「Hor...",
           "summaryStatus": "extracted-ja",
           "impact": "社会的影響",
           "source": "NTT DATA ニュース",
           "type": "公式発表",
-          "date": "2026-06-17",
-          "url": "https://www.nttdata.com/global/ja/news/group/2026/061700",
-          "priority": 80,
+          "date": "2026-06-08",
+          "url": "https://www.nttdata.com/global/ja/news/evaluation/2026/060801",
+          "priority": 78,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "6ffa3915568106326e67ebed"
+          "candidateId": "30d30365a817128c57d13a5f",
+          "importance": {
+            "total": 78,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "実装"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "実装・運用に有益"
+            ],
+            "axes": {
+              "technical": 24,
+              "business": 10,
+              "regulatory": 0,
+              "implementation": 22,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
         },
         {
           "title": "フォーティエンスコンサルティング、AI時代の成果創出を加速するFDE型コンサルティングを提供開始（フォーティエンスコンサルティング株式会社）",
@@ -81,10 +97,105 @@
           "type": "公式発表",
           "date": "2026-06-16",
           "url": "https://www.nttdata.com/global/ja/news/group/2026/061600",
-          "priority": 80,
+          "priority": 77,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "4eddb65339beaed4d62bb44f"
+          "candidateId": "4eddb65339beaed4d62bb44f",
+          "importance": {
+            "total": 77,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業",
+              "実装"
+            ],
+            "reasons": [
+              "事業・調達に影響",
+              "実装・運用に有益"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 22,
+              "regulatory": 0,
+              "implementation": 22,
+              "market": 0
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
+        },
+        {
+          "title": "フォーティエンスコンサルティング、日本CFO協会主催「AI時代における戦略的CFO機能再構築プロジェクト」に協力パートナーとして参画（フォーティエンスコンサルティング株式会社）",
+          "titleJa": "",
+          "summary": "フォーティエンスコンサルティング株式会社は、2026年6月9日付で、下記のニュースリリースを発表いたしました。",
+          "summaryStatus": "extracted-ja",
+          "impact": "社会的影響",
+          "source": "NTT DATA ニュース",
+          "type": "公式発表",
+          "date": "2026-06-09",
+          "url": "https://www.nttdata.com/global/ja/news/group/2026/060901",
+          "priority": 74,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "099d0eae669af89035cfec1f",
+          "importance": {
+            "total": 74,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業"
+            ],
+            "reasons": [
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 22,
+              "regulatory": 0,
+              "implementation": 10,
+              "market": 0
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
+        },
+        {
+          "title": "プレス成形シミュレーションソフトウエア「JSTAMP®」に初のAI機能を搭載（株式会社JSOL）",
+          "titleJa": "",
+          "summary": "株式会社JSOLは、2026年6月17日付で、下記のニュースリリースを発表いたしました。",
+          "summaryStatus": "extracted-ja",
+          "impact": "社会的影響",
+          "source": "NTT DATA ニュース",
+          "type": "公式発表",
+          "date": "2026-06-17",
+          "url": "https://www.nttdata.com/global/ja/news/group/2026/061700",
+          "priority": 74,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "6ffa3915568106326e67ebed",
+          "importance": {
+            "total": 74,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業"
+            ],
+            "reasons": [
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 22,
+              "regulatory": 0,
+              "implementation": 10,
+              "market": 0
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
         },
         {
           "title": "パロアルトネットワークスのManaged Security Service Providersで最高ランクに認定",
@@ -96,10 +207,33 @@
           "type": "公式発表",
           "date": "2026-06-08",
           "url": "https://www.nttdata.com/global/ja/news/evaluation/2026/060800",
-          "priority": 80,
+          "priority": 74,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "0c39b8985af22217cb94be39"
+          "candidateId": "0c39b8985af22217cb94be39",
+          "importance": {
+            "total": 74,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業",
+              "規制"
+            ],
+            "reasons": [
+              "事業・調達に影響",
+              "規制・リスク上重要"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 22,
+              "regulatory": 12,
+              "implementation": 10,
+              "market": 0
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
         }
       ]
     },
@@ -124,10 +258,31 @@
           "type": "論文・技術文書",
           "date": "2026-06-09",
           "url": "https://aip.riken.jp/news/jmai_2026",
-          "priority": 88,
+          "priority": 65,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "adec0fd325a40b85054c391d"
+          "candidateId": "adec0fd325a40b85054c391d",
+          "importance": {
+            "total": 65,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術"
+            ],
+            "reasons": [
+              "技術的に重要"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 0,
+              "regulatory": 0,
+              "implementation": 0,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
         }
       ]
     },
@@ -163,10 +318,33 @@
           "type": "公式ブログ",
           "date": "2026-06-02",
           "url": "https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will",
-          "priority": 97,
+          "priority": 77,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "8e5019b6c9475b8ead966f42"
+          "candidateId": "8e5019b6c9475b8ead966f42",
+          "importance": {
+            "total": 77,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業",
+              "実装"
+            ],
+            "reasons": [
+              "事業・調達に影響",
+              "実装・運用に有益"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 22,
+              "regulatory": 0,
+              "implementation": 22,
+              "market": 0
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
         }
       ]
     },
@@ -182,66 +360,6 @@
       "title": "海外AI・研究・モデル",
       "items": [
         {
-          "title": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026",
-          "titleJa": "AppleがCVPR 2026で発表する機械学習研究を紹介",
-          "summary": "AppleはCVPR 2026で発表するコンピュータビジョン関連研究を紹介。AppleのオンデバイスAI、視覚認識、研究開発テーマを追う材料になります。",
-          "summaryStatus": "manual-ja",
-          "impact": "研究価値",
-          "source": "Apple Machine Learning Research",
-          "type": "論文・技術文書",
-          "date": "2026-05-28",
-          "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
-          "priority": 98,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "eef9527c7b75b65ab8c9f5dc"
-        },
-        {
-          "title": "What we learned mapping a year’s worth of AI-enabled cyber threats",
-          "titleJa": "AnthropicがAIを悪用したサイバー脅威の1年分の分析を公開",
-          "summary": "Anthropicは、AIがサイバー攻撃の手法に与える影響をMITRE ATT&CKの観点から分析。AI悪用、検知、防御フレームワークの見直しに関わる重要な報告です。",
-          "summaryStatus": "manual-ja",
-          "impact": "研究価値",
-          "source": "Anthropic Research",
-          "type": "論文・技術文書",
-          "date": "2026-06-03",
-          "url": "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack",
-          "priority": 95,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "b531a6249412cc4f4209ed36"
-        },
-        {
-          "title": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel",
-          "titleJa": "NVIDIA NeMo AutoModelによるTransformerのファインチューニングの加速",
-          "summary": "Hugging Faceが発表したNVIDIA NeMo AutoModelを用いた新しい方法で、Transformerモデルのファインチューニングを効率的に行うことができる。",
-          "summaryStatus": "llm-ja",
-          "impact": "研究価値",
-          "source": "Hugging Face Blog",
-          "type": "公式ブログ",
-          "date": "2026-06-24",
-          "url": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel",
-          "priority": 90,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "ad312ce435987076fb9f67d2"
-        },
-        {
-          "title": "MosaicLeaks: Can your research agent keep a secret?",
-          "titleJa": "MosaicLeaks: 研究エージェントは秘密を守れるか？",
-          "summary": "Hugging Face Blogが、MosaicLeaksについて、研究エージェントがどの程度の秘密を守る能力を持つかを検証しています。",
-          "summaryStatus": "llm-ja",
-          "impact": "研究価値",
-          "source": "Hugging Face Blog",
-          "type": "公式ブログ",
-          "date": "2026-06-18",
-          "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
-          "priority": 90,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "2eb5bcc3ad88b97ec36616da"
-        },
-        {
           "title": "Is it agentic enough? Benchmarking open models on your own tooling",
           "titleJa": "オープンモデルの評価基準",
           "summary": "Hugging Face Blogが、オープンモデルを自身のツールで評価する方法について検証し、エージェント性の基準を提起しています。",
@@ -254,67 +372,108 @@
           "priority": 90,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "432c23c0dd1c00f1ba41d7bd"
+          "candidateId": "432c23c0dd1c00f1ba41d7bd",
+          "importance": {
+            "total": 90,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "規制",
+              "実装"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "規制・リスク上重要"
+            ],
+            "axes": {
+              "technical": 48,
+              "business": 0,
+              "regulatory": 12,
+              "implementation": 12,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
         },
         {
-          "title": "We got local models to triage the OpenClaw repo for FREE!*",
-          "titleJa": "無料でOpenClawリポジトリをトリアージするローカルモデルを取得しました！",
-          "summary": "Hugging Faceは、オープンソースとオープンサイエンスを通じてAIを推進し、民主化する取り組みの一環として、OpenClawリポジトリのトリアージにローカルモデルを適用しました。",
+          "title": "MosaicLeaks: Can your research agent keep a secret?",
+          "titleJa": "MosaicLeaks: 研究エージェントは秘密を守れるか？",
+          "summary": "Hugging Face Blogが、MosaicLeaksについて、研究エージェントがどの程度の秘密を守る能力を持つかを検証しています。",
           "summaryStatus": "llm-ja",
           "impact": "研究価値",
           "source": "Hugging Face Blog",
           "type": "公式ブログ",
-          "date": "2026-06-22",
-          "url": "https://huggingface.co/blog/local-models-pr-triage",
-          "priority": 90,
+          "date": "2026-06-18",
+          "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+          "priority": 83,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "965bb4d2ca17efb526463684"
+          "candidateId": "2eb5bcc3ad88b97ec36616da",
+          "importance": {
+            "total": 83,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "実装"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "実装・運用に有益"
+            ],
+            "axes": {
+              "technical": 36,
+              "business": 0,
+              "regulatory": 0,
+              "implementation": 12,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
         },
         {
-          "title": "Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World",
-          "titleJa": "FFASRリーダーボードの導入: 実世界におけるASRのベンチマーク",
-          "summary": "Hugging FaceがFFASRリーダーボードを発表し、実世界での音声認識技術（ASR）の性能を評価する新たな基準を提供します。",
+          "title": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel",
+          "titleJa": "NVIDIA NeMo AutoModelによるTransformerのファインチューニングの加速",
+          "summary": "Hugging Faceが発表したNVIDIA NeMo AutoModelを用いた新しい方法で、Transformerモデルのファインチューニングを効率的に行うことができる。",
           "summaryStatus": "llm-ja",
           "impact": "研究価値",
           "source": "Hugging Face Blog",
           "type": "公式ブログ",
           "date": "2026-06-24",
-          "url": "https://huggingface.co/blog/ffasr-leaderboard",
-          "priority": 85,
+          "url": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel",
+          "priority": 78,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "bb6dca4045d63cf1125428b6"
-        },
-        {
-          "title": "GLM-5.2: Built for Long-Horizon Tasks",
-          "titleJa": "GLM-5.2: 長期タスク向けに設計されたモデル",
-          "summary": "Hugging Faceが発表したGLM-5.2は、長期的なタスクに対応するために最適化された言語モデルです。",
-          "summaryStatus": "llm-ja",
-          "impact": "研究価値",
-          "source": "Hugging Face Blog",
-          "type": "公式ブログ",
-          "date": "2026-06-17",
-          "url": "https://huggingface.co/blog/zai-org/glm-52-blog",
-          "priority": 85,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "9e3636b0b0345d81fb9b468a"
-        },
-        {
-          "title": "From the Hugging Face Hub to robot hardware with Strands Agents and LeRobot",
-          "titleJa": "Hugging Face Hubからロボットハードウェアへの展開",
-          "summary": "Strands AgentsとLeRobotを使用して、Hugging Face HubのAIモデルをロボットハードウェアに適用する取り組みが進行中です。",
-          "summaryStatus": "llm-ja",
-          "impact": "研究価値",
-          "source": "Hugging Face Blog",
-          "type": "公式ブログ",
-          "date": "2026-06-17",
-          "url": "https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware",
-          "priority": 85,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "270262b3426624723b51ff57"
+          "candidateId": "ad312ce435987076fb9f67d2",
+          "importance": {
+            "total": 78,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "事業",
+              "規制"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 24,
+              "business": 24,
+              "regulatory": 12,
+              "implementation": 0,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
         },
         {
           "title": "The Open Source Community is backing OpenEnv for Agentic RL",
@@ -326,10 +485,225 @@
           "type": "公式ブログ",
           "date": "2026-06-08",
           "url": "https://huggingface.co/blog/openenv-agentic-rl",
-          "priority": 72,
+          "priority": 78,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "02b9c90015956d47433b2536"
+          "candidateId": "02b9c90015956d47433b2536",
+          "importance": {
+            "total": 78,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "実装",
+              "事業"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "実装・運用に有益"
+            ],
+            "axes": {
+              "technical": 24,
+              "business": 12,
+              "regulatory": 0,
+              "implementation": 24,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
+        },
+        {
+          "title": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026",
+          "titleJa": "AppleがCVPR 2026で発表する機械学習研究を紹介",
+          "summary": "AppleはCVPR 2026で発表するコンピュータビジョン関連研究を紹介。AppleのオンデバイスAI、視覚認識、研究開発テーマを追う材料になります。",
+          "summaryStatus": "manual-ja",
+          "impact": "研究価値",
+          "source": "Apple Machine Learning Research",
+          "type": "論文・技術文書",
+          "date": "2026-05-28",
+          "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
+          "priority": 75,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "eef9527c7b75b65ab8c9f5dc",
+          "importance": {
+            "total": 75,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "事業"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 24,
+              "business": 12,
+              "regulatory": 0,
+              "implementation": 0,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
+        },
+        {
+          "title": "What we learned mapping a year’s worth of AI-enabled cyber threats",
+          "titleJa": "AnthropicがAIを悪用したサイバー脅威の1年分の分析を公開",
+          "summary": "Anthropicは、AIがサイバー攻撃の手法に与える影響をMITRE ATT&CKの観点から分析。AI悪用、検知、防御フレームワークの見直しに関わる重要な報告です。",
+          "summaryStatus": "manual-ja",
+          "impact": "研究価値",
+          "source": "Anthropic Research",
+          "type": "論文・技術文書",
+          "date": "2026-06-03",
+          "url": "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack",
+          "priority": 75,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "b531a6249412cc4f4209ed36",
+          "importance": {
+            "total": 75,
+            "primaryAxis": "regulatory",
+            "primaryLabel": "規制",
+            "primaryReason": "規制・リスク上重要",
+            "labels": [
+              "規制",
+              "技術"
+            ],
+            "reasons": [
+              "規制・リスク上重要",
+              "技術的に重要"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 0,
+              "regulatory": 24,
+              "implementation": 0,
+              "market": 0
+            }
+          },
+          "importanceLabel": "規制",
+          "importanceReason": "規制・リスク上重要"
+        },
+        {
+          "title": "We got local models to triage the OpenClaw repo for FREE!*",
+          "titleJa": "無料でOpenClawリポジトリをトリアージするローカルモデルを取得しました！",
+          "summary": "Hugging Faceは、オープンソースとオープンサイエンスを通じてAIを推進し、民主化する取り組みの一環として、OpenClawリポジトリのトリアージにローカルモデルを適用しました。",
+          "summaryStatus": "llm-ja",
+          "impact": "研究価値",
+          "source": "Hugging Face Blog",
+          "type": "公式ブログ",
+          "date": "2026-06-22",
+          "url": "https://huggingface.co/blog/local-models-pr-triage",
+          "priority": 75,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "965bb4d2ca17efb526463684",
+          "importance": {
+            "total": 75,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "規制",
+              "実装"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "規制・リスク上重要"
+            ],
+            "axes": {
+              "technical": 24,
+              "business": 0,
+              "regulatory": 12,
+              "implementation": 12,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
+        },
+        {
+          "title": "Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World",
+          "titleJa": "FFASRリーダーボードの導入: 実世界におけるASRのベンチマーク",
+          "summary": "Hugging FaceがFFASRリーダーボードを発表し、実世界での音声認識技術（ASR）の性能を評価する新たな基準を提供します。",
+          "summaryStatus": "llm-ja",
+          "impact": "研究価値",
+          "source": "Hugging Face Blog",
+          "type": "公式ブログ",
+          "date": "2026-06-24",
+          "url": "https://huggingface.co/blog/ffasr-leaderboard",
+          "priority": 75,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "bb6dca4045d63cf1125428b6",
+          "importance": {
+            "total": 75,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "事業"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 24,
+              "business": 12,
+              "regulatory": 0,
+              "implementation": 0,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
+        },
+        {
+          "title": "From the Hugging Face Hub to robot hardware with Strands Agents and LeRobot",
+          "titleJa": "Hugging Face Hubからロボットハードウェアへの展開",
+          "summary": "Strands AgentsとLeRobotを使用して、Hugging Face HubのAIモデルをロボットハードウェアに適用する取り組みが進行中です。",
+          "summaryStatus": "llm-ja",
+          "impact": "研究価値",
+          "source": "Hugging Face Blog",
+          "type": "公式ブログ",
+          "date": "2026-06-17",
+          "url": "https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware",
+          "priority": 75,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "270262b3426624723b51ff57",
+          "importance": {
+            "total": 75,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "実装"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "実装・運用に有益"
+            ],
+            "axes": {
+              "technical": 24,
+              "business": 0,
+              "regulatory": 0,
+              "implementation": 12,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
         },
         {
           "title": "Agentic Resource Discovery: Let agents search",
@@ -341,10 +715,71 @@
           "type": "公式ブログ",
           "date": "2026-06-17",
           "url": "https://huggingface.co/blog/agentic-resource-discovery-launch",
-          "priority": 72,
+          "priority": 75,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "b59b3271b775356f43c3e1f3"
+          "candidateId": "b59b3271b775356f43c3e1f3",
+          "importance": {
+            "total": 75,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "実装"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "実装・運用に有益"
+            ],
+            "axes": {
+              "technical": 24,
+              "business": 0,
+              "regulatory": 0,
+              "implementation": 12,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
+        },
+        {
+          "title": "GLM-5.2: Built for Long-Horizon Tasks",
+          "titleJa": "GLM-5.2: 長期タスク向けに設計されたモデル",
+          "summary": "Hugging Faceが発表したGLM-5.2は、長期的なタスクに対応するために最適化された言語モデルです。",
+          "summaryStatus": "llm-ja",
+          "impact": "研究価値",
+          "source": "Hugging Face Blog",
+          "type": "公式ブログ",
+          "date": "2026-06-17",
+          "url": "https://huggingface.co/blog/zai-org/glm-52-blog",
+          "priority": 68,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "9e3636b0b0345d81fb9b468a",
+          "importance": {
+            "total": 68,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "事業"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 12,
+              "regulatory": 0,
+              "implementation": 0,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
         }
       ]
     },
@@ -371,81 +806,6 @@
       "title": "新モデル・プロダクト",
       "items": [
         {
-          "title": "Introducing the Services Track and Partner Hub of the Claude Partner Network",
-          "titleJa": "Claudeパートナーネットワークのサービストラックとパートナーハブを紹介",
-          "summary": "AnthropicがClaudeパートナーネットワークの一環として、新しいサービストラックとパートナーハブを発表しました。",
-          "summaryStatus": "llm-ja",
-          "impact": "技術重要度",
-          "source": "Anthropic News",
-          "type": "公式発表",
-          "date": "2026-06-03",
-          "url": "https://www.anthropic.com/news/services-track-partner-hub",
-          "priority": 97,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "c265f4d09da60a8497d8b1be"
-        },
-        {
-          "title": "Introducing Claude Corps",
-          "titleJa": "Anthropicが若手向けフェローシップClaude Corpsを開始",
-          "summary": "Anthropicは、AIの便益を米国内コミュニティへ広げることに関心を持つ若手人材向けの全国フェローシップClaude Corpsを開始。AI人材育成と社会実装の取り組みです。",
-          "summaryStatus": "manual-ja",
-          "impact": "技術重要度",
-          "source": "Anthropic News",
-          "type": "公式発表",
-          "date": "2026-06-11",
-          "url": "https://www.anthropic.com/news/claude-corps",
-          "priority": 97,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "72c805579f21b6e81058f27d"
-        },
-        {
-          "title": "Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem",
-          "titleJa": "Anthropicがソウル拠点を開設し韓国AIエコシステムと提携拡大",
-          "summary": "Anthropicはソウルオフィスを開設し、韓国の企業・スタートアップ・研究者との提携を発表。Claudeのアジア展開と地域AIエコシステム連携の動きです。",
-          "summaryStatus": "manual-ja",
-          "impact": "技術重要度",
-          "source": "Anthropic News",
-          "type": "公式発表",
-          "date": "2026-06-17",
-          "url": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem",
-          "priority": 97,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "47e96fb85bcbcad48e728a49"
-        },
-        {
-          "title": "TCS and Anthropic partner to bring Claude to regulated industries",
-          "titleJa": "TCSとAnthropicが規制産業向けClaude導入で提携",
-          "summary": "Tata Consultancy ServicesはAnthropicと提携し、自社5万人へのClaude提供や規制産業向けソリューション構築を進めます。大企業・規制業界での生成AI展開事例です。",
-          "summaryStatus": "manual-ja",
-          "impact": "技術重要度",
-          "source": "Anthropic News",
-          "type": "公式発表",
-          "date": "2026-06-12",
-          "url": "https://www.anthropic.com/news/tcs-anthropic-partnership",
-          "priority": 92,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "7f42ae0d5b44a6eff498ea81"
-        },
-        {
-          "title": "See what 3 builders are making with Gemma 4",
-          "titleJa": "Gemma 4を用いた3人の開発者の作品を紹介",
-          "summary": "Google AI Blogでは、Gemma 4を使用している3人の開発者がどのようなプロジェクトを作成しているかを紹介しています。",
-          "summaryStatus": "llm-ja",
-          "impact": "技術重要度",
-          "source": "Google AI Blog",
-          "type": "公式ブログ",
-          "date": "2026-06-09",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4-builders",
-          "priority": 90,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "3c37532039cf5c1d42bdc1e0"
-        },
-        {
           "title": "Bringing the latest Gemini models to Apple developers",
           "titleJa": "Apple開発者向けに最新のGeminiモデルを提供",
           "summary": "Googleは最新のGeminiモデルをAppleの開発者に提供し、アプリ開発を促進することを発表しました。",
@@ -455,25 +815,34 @@
           "type": "公式ブログ",
           "date": "2026-06-08",
           "url": "https://blog.google/innovation-and-ai/technology/developers-tools/bringing-gemini-models-to-apple-developers",
-          "priority": 90,
+          "priority": 78,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "16f9544453cd2bcae7c7b1b0"
-        },
-        {
-          "title": "DiffusionGemma: 4x faster text generation",
-          "titleJa": "DiffusionGemmaによるテキスト生成の高速化",
-          "summary": "GoogleのDiffusionGemmaは、従来の方法に比べて4倍速いテキスト生成を実現しました。",
-          "summaryStatus": "llm-ja",
-          "impact": "技術重要度",
-          "source": "Google AI Blog",
-          "type": "公式ブログ",
-          "date": "2026-06-10",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation",
-          "priority": 90,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "ab88a3c87c1e088bcf590d3e"
+          "candidateId": "16f9544453cd2bcae7c7b1b0",
+          "importance": {
+            "total": 78,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "実装",
+              "事業"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "実装・運用に有益"
+            ],
+            "axes": {
+              "technical": 24,
+              "business": 12,
+              "regulatory": 0,
+              "implementation": 22,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
         },
         {
           "title": "Save time and grow your business with new Gemini tools",
@@ -485,10 +854,263 @@
           "type": "公式ブログ",
           "date": "2026-06-10",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-features-for-businesses",
-          "priority": 85,
+          "priority": 78,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "185487b0a16625f2d4820ce3"
+          "candidateId": "185487b0a16625f2d4820ce3",
+          "importance": {
+            "total": 78,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "実装"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "実装・運用に有益"
+            ],
+            "axes": {
+              "technical": 24,
+              "business": 0,
+              "regulatory": 0,
+              "implementation": 22,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
+        },
+        {
+          "title": "Introducing Claude Corps",
+          "titleJa": "Anthropicが若手向けフェローシップClaude Corpsを開始",
+          "summary": "Anthropicは、AIの便益を米国内コミュニティへ広げることに関心を持つ若手人材向けの全国フェローシップClaude Corpsを開始。AI人材育成と社会実装の取り組みです。",
+          "summaryStatus": "manual-ja",
+          "impact": "技術重要度",
+          "source": "Anthropic News",
+          "type": "公式発表",
+          "date": "2026-06-11",
+          "url": "https://www.anthropic.com/news/claude-corps",
+          "priority": 74,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "72c805579f21b6e81058f27d",
+          "importance": {
+            "total": 74,
+            "primaryAxis": "implementation",
+            "primaryLabel": "実装",
+            "primaryReason": "実装・運用に有益",
+            "labels": [
+              "実装",
+              "技術"
+            ],
+            "reasons": [
+              "実装・運用に有益",
+              "技術的に重要"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 0,
+              "regulatory": 0,
+              "implementation": 22,
+              "market": 0
+            }
+          },
+          "importanceLabel": "実装",
+          "importanceReason": "実装・運用に有益"
+        },
+        {
+          "title": "TCS and Anthropic partner to bring Claude to regulated industries",
+          "titleJa": "TCSとAnthropicが規制産業向けClaude導入で提携",
+          "summary": "Tata Consultancy ServicesはAnthropicと提携し、自社5万人へのClaude提供や規制産業向けソリューション構築を進めます。大企業・規制業界での生成AI展開事例です。",
+          "summaryStatus": "manual-ja",
+          "impact": "技術重要度",
+          "source": "Anthropic News",
+          "type": "公式発表",
+          "date": "2026-06-12",
+          "url": "https://www.anthropic.com/news/tcs-anthropic-partnership",
+          "priority": 74,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "7f42ae0d5b44a6eff498ea81",
+          "importance": {
+            "total": 74,
+            "primaryAxis": "implementation",
+            "primaryLabel": "実装",
+            "primaryReason": "実装・運用に有益",
+            "labels": [
+              "実装",
+              "技術",
+              "事業"
+            ],
+            "reasons": [
+              "実装・運用に有益",
+              "技術的に重要"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 12,
+              "regulatory": 12,
+              "implementation": 22,
+              "market": 12
+            }
+          },
+          "importanceLabel": "実装",
+          "importanceReason": "実装・運用に有益"
+        },
+        {
+          "title": "See what 3 builders are making with Gemma 4",
+          "titleJa": "Gemma 4を用いた3人の開発者の作品を紹介",
+          "summary": "Google AI Blogでは、Gemma 4を使用している3人の開発者がどのようなプロジェクトを作成しているかを紹介しています。",
+          "summaryStatus": "llm-ja",
+          "impact": "技術重要度",
+          "source": "Google AI Blog",
+          "type": "公式ブログ",
+          "date": "2026-06-09",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4-builders",
+          "priority": 74,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "3c37532039cf5c1d42bdc1e0",
+          "importance": {
+            "total": 74,
+            "primaryAxis": "implementation",
+            "primaryLabel": "実装",
+            "primaryReason": "実装・運用に有益",
+            "labels": [
+              "実装",
+              "技術"
+            ],
+            "reasons": [
+              "実装・運用に有益",
+              "技術的に重要"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 0,
+              "regulatory": 0,
+              "implementation": 22,
+              "market": 0
+            }
+          },
+          "importanceLabel": "実装",
+          "importanceReason": "実装・運用に有益"
+        },
+        {
+          "title": "Introducing the Services Track and Partner Hub of the Claude Partner Network",
+          "titleJa": "Claudeパートナーネットワークのサービストラックとパートナーハブを紹介",
+          "summary": "AnthropicがClaudeパートナーネットワークの一環として、新しいサービストラックとパートナーハブを発表しました。",
+          "summaryStatus": "llm-ja",
+          "impact": "技術重要度",
+          "source": "Anthropic News",
+          "type": "公式発表",
+          "date": "2026-06-03",
+          "url": "https://www.anthropic.com/news/services-track-partner-hub",
+          "priority": 68,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "c265f4d09da60a8497d8b1be",
+          "importance": {
+            "total": 68,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "事業"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 12,
+              "regulatory": 0,
+              "implementation": 10,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
+        },
+        {
+          "title": "Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem",
+          "titleJa": "Anthropicがソウル拠点を開設し韓国AIエコシステムと提携拡大",
+          "summary": "Anthropicはソウルオフィスを開設し、韓国の企業・スタートアップ・研究者との提携を発表。Claudeのアジア展開と地域AIエコシステム連携の動きです。",
+          "summaryStatus": "manual-ja",
+          "impact": "技術重要度",
+          "source": "Anthropic News",
+          "type": "公式発表",
+          "date": "2026-06-17",
+          "url": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem",
+          "priority": 68,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "47e96fb85bcbcad48e728a49",
+          "importance": {
+            "total": 68,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "事業",
+              "市場"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 12,
+              "regulatory": 0,
+              "implementation": 10,
+              "market": 12
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
+        },
+        {
+          "title": "DiffusionGemma: 4x faster text generation",
+          "titleJa": "DiffusionGemmaによるテキスト生成の高速化",
+          "summary": "GoogleのDiffusionGemmaは、従来の方法に比べて4倍速いテキスト生成を実現しました。",
+          "summaryStatus": "llm-ja",
+          "impact": "技術重要度",
+          "source": "Google AI Blog",
+          "type": "公式ブログ",
+          "date": "2026-06-10",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation",
+          "priority": 68,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "ab88a3c87c1e088bcf590d3e",
+          "importance": {
+            "total": 68,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "規制"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "規制・リスク上重要"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 0,
+              "regulatory": 12,
+              "implementation": 10,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
         }
       ]
     },
@@ -525,64 +1147,42 @@
       "title": "半導体・クラウド・電力",
       "items": [
         {
-          "title": "Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure | NVIDIA Technical Blog",
-          "titleJa": "NVIDIAのインフラでMiniMax M3を使用した長文コンテキスト推論とエージェントワークフローの展開",
-          "summary": "NVIDIAはMiniMax M3を活用し、長文コンテキスト推論とエージェントワークフローの実装をNVIDIAの加速されたインフラ上で行う方法を解説しています。",
+          "title": "NAVER Expands AI Infrastructure With NVIDIA to Serve Surging Global AI Demand",
+          "titleJa": "NAVERがNVIDIAと協力し、急増するAI需要に応えるインフラを拡充",
+          "summary": "NAVERは、グローバルなAI需要に対応するため、NVIDIAと提携しAIインフラを拡大することを発表しました。",
           "summaryStatus": "llm-ja",
           "impact": "技術重要度",
-          "source": "NVIDIA Technical Blog AI",
-          "type": "公式ブログ",
-          "date": "2026-06-12",
-          "url": "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure",
-          "priority": 90,
+          "source": "NVIDIA Newsroom",
+          "type": "公式発表",
+          "date": "2026-06-22",
+          "url": "https://nvidianews.nvidia.com/news/naver-ai-infrastructure",
+          "priority": 84,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "ac9d048bf4ae9dfe6154a8e4"
-        },
-        {
-          "title": "Building AI Agents for AR Glasses and XR Devices with NVIDIA XR AI | NVIDIA Technical Blog",
-          "titleJa": "NVIDIAがARグラス・XRデバイス向けAIエージェント構築を解説",
-          "summary": "NVIDIAは、ARグラスやウェアラブルでAI体験を構築するためのXR AI基盤を紹介。エッジAI、マルチモーダル、XRデバイス実装のインフラ論点が分かります。",
-          "summaryStatus": "manual-ja",
-          "impact": "技術重要度",
-          "source": "NVIDIA Technical Blog AI",
-          "type": "公式ブログ",
-          "date": "2026-06-16",
-          "url": "https://developer.nvidia.com/blog/building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai",
-          "priority": 90,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "07fe3fe577b3e39e4925c436"
-        },
-        {
-          "title": "Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA | NVIDIA Technical Blog",
-          "titleJa": "MicrosoftとNVIDIAの新ツールでWindows PC上に個人AIエージェントを構築",
-          "summary": "NVIDIAは、Microsoftとの連携ツールによりWindows PC上で個人AIエージェントを構築する方法を紹介。ローカルAI、PC活用、開発者向けエージェント実装の動向です。",
-          "summaryStatus": "manual-ja",
-          "impact": "技術重要度",
-          "source": "NVIDIA Technical Blog AI",
-          "type": "公式ブログ",
-          "date": "2026-06-02",
-          "url": "https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia",
-          "priority": 90,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "6c1843b0c650dfcc0a7f37d9"
-        },
-        {
-          "title": "Boosting MoE Training Throughput with Advanced Fusion Kernels | NVIDIA Technical Blog",
-          "titleJa": "NVIDIAが高度なFusion KernelでMoE学習スループットを改善",
-          "summary": "NVIDIAは、Mixture-of-Expertsモデルの大規模学習で高度なFusion Kernelによりスループットを高める手法を解説。生成AI基盤モデルの訓練効率化に関わる技術記事です。",
-          "summaryStatus": "manual-ja",
-          "impact": "技術重要度",
-          "source": "NVIDIA Technical Blog AI",
-          "type": "公式ブログ",
-          "date": "2026-06-15",
-          "url": "https://developer.nvidia.com/blog/boosting-moe-training-throughput-with-advanced-fusion-kernels",
-          "priority": 90,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "707e6c047c917db51a2f9d5a"
+          "candidateId": "9880c4c71e6bf0ac42816b45",
+          "importance": {
+            "total": 84,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業",
+              "市場"
+            ],
+            "reasons": [
+              "事業・調達に影響",
+              "市場・社会影響が大きい"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 34,
+              "regulatory": 0,
+              "implementation": 0,
+              "market": 22
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
         },
         {
           "title": "Europe Unveils a Record 35 New NVIDIA AI Supercomputers",
@@ -594,10 +1194,31 @@
           "type": "公式発表",
           "date": "2026-06-23",
           "url": "https://nvidianews.nvidia.com/news/europe-unveils-a-record-35-new-nvidia-ai-supercomputers",
-          "priority": 85,
+          "priority": 81,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "9a99f41188b7bc4812b30523"
+          "candidateId": "9a99f41188b7bc4812b30523",
+          "importance": {
+            "total": 81,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業"
+            ],
+            "reasons": [
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 34,
+              "regulatory": 0,
+              "implementation": 0,
+              "market": 10
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
         },
         {
           "title": "Delivering Lifecycle Control for AI Infrastructure at Scale with NVIDIA DGX Spark Enterprise Manageability | NVIDIA Technical Blog",
@@ -609,10 +1230,33 @@
           "type": "公式ブログ",
           "date": "2026-06-09",
           "url": "https://developer.nvidia.com/blog/delivering-lifecycle-control-for-ai-infrastructure-at-scale-with-nvidia-dgx-spark-enterprise-manageability",
-          "priority": 85,
+          "priority": 81,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "d18e690d4cd63750be267205"
+          "candidateId": "d18e690d4cd63750be267205",
+          "importance": {
+            "total": 81,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業",
+              "規制"
+            ],
+            "reasons": [
+              "事業・調達に影響",
+              "規制・リスク上重要"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 34,
+              "regulatory": 12,
+              "implementation": 0,
+              "market": 10
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
         },
         {
           "title": "NVIDIA Announces BioNeMo Agent Toolkit — Tools for Agents to Accelerate Scientific Discovery",
@@ -624,10 +1268,34 @@
           "type": "公式発表",
           "date": "2026-06-22",
           "url": "https://nvidianews.nvidia.com/news/nvidia-launches-bionemo-agent-toolkit-giving-ai-agents-the-tools-to-accelerate-scientific-discovery",
-          "priority": 80,
+          "priority": 81,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "33d2de8d265943976eef0d60"
+          "candidateId": "33d2de8d265943976eef0d60",
+          "importance": {
+            "total": 81,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業",
+              "技術",
+              "実装"
+            ],
+            "reasons": [
+              "事業・調達に影響",
+              "技術的に重要"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 34,
+              "regulatory": 0,
+              "implementation": 12,
+              "market": 10
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
         },
         {
           "title": "NVIDIA Announces Halos for Robotics, the Industry’s First Full-Stack Safety System for Physical AI",
@@ -639,10 +1307,33 @@
           "type": "公式発表",
           "date": "2026-06-23",
           "url": "https://nvidianews.nvidia.com/news/nvidia-announces-halos-for-robotics-the-industrys-first-full-stack-safety-system-for-physical-ai",
-          "priority": 80,
+          "priority": 81,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "e1b092213890de8d270a0b47"
+          "candidateId": "e1b092213890de8d270a0b47",
+          "importance": {
+            "total": 81,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業",
+              "規制"
+            ],
+            "reasons": [
+              "事業・調達に影響",
+              "規制・リスク上重要"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 34,
+              "regulatory": 12,
+              "implementation": 0,
+              "market": 10
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
         },
         {
           "title": "SK Telecom and NVIDIA Build AI Infrastructure to Power Korea’s AI Innovation",
@@ -654,10 +1345,31 @@
           "type": "公式発表",
           "date": "2026-06-22",
           "url": "https://nvidianews.nvidia.com/news/sk-telecom-ai-infrastructure",
-          "priority": 80,
+          "priority": 81,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "65c6ef60768a4c4d44a68647"
+          "candidateId": "65c6ef60768a4c4d44a68647",
+          "importance": {
+            "total": 81,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業"
+            ],
+            "reasons": [
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 34,
+              "regulatory": 0,
+              "implementation": 0,
+              "market": 10
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
         },
         {
           "title": "NVIDIA and SK hynix Announce Multiyear Technology Partnership to Advance Memory for AI Factories",
@@ -669,25 +1381,31 @@
           "type": "公式発表",
           "date": "2026-06-22",
           "url": "https://nvidianews.nvidia.com/news/sk-hynix-ai-factory",
-          "priority": 80,
+          "priority": 81,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "b365d87dc83b3c59af917100"
-        },
-        {
-          "title": "NAVER Expands AI Infrastructure With NVIDIA to Serve Surging Global AI Demand",
-          "titleJa": "NAVERがNVIDIAと協力し、急増するAI需要に応えるインフラを拡充",
-          "summary": "NAVERは、グローバルなAI需要に対応するため、NVIDIAと提携しAIインフラを拡大することを発表しました。",
-          "summaryStatus": "llm-ja",
-          "impact": "技術重要度",
-          "source": "NVIDIA Newsroom",
-          "type": "公式発表",
-          "date": "2026-06-22",
-          "url": "https://nvidianews.nvidia.com/news/naver-ai-infrastructure",
-          "priority": 80,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "9880c4c71e6bf0ac42816b45"
+          "candidateId": "b365d87dc83b3c59af917100",
+          "importance": {
+            "total": 81,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業"
+            ],
+            "reasons": [
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 34,
+              "regulatory": 0,
+              "implementation": 0,
+              "market": 10
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
         },
         {
           "title": "NVIDIA Stockholder Meeting Set for June 24; Individuals Can Participate Online",
@@ -699,10 +1417,187 @@
           "type": "公式発表",
           "date": "2026-06-07",
           "url": "https://nvidianews.nvidia.com/news/nvidia-stockholder-meeting-set-for-june-24-individuals-can-participate-online",
-          "priority": 80,
+          "priority": 81,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
-          "candidateId": "175dda63002511e0cb09e8fd"
+          "candidateId": "175dda63002511e0cb09e8fd",
+          "importance": {
+            "total": 81,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業"
+            ],
+            "reasons": [
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 34,
+              "regulatory": 0,
+              "implementation": 0,
+              "market": 10
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
+        },
+        {
+          "title": "Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure | NVIDIA Technical Blog",
+          "titleJa": "NVIDIAのインフラでMiniMax M3を使用した長文コンテキスト推論とエージェントワークフローの展開",
+          "summary": "NVIDIAはMiniMax M3を活用し、長文コンテキスト推論とエージェントワークフローの実装をNVIDIAの加速されたインフラ上で行う方法を解説しています。",
+          "summaryStatus": "llm-ja",
+          "impact": "技術重要度",
+          "source": "NVIDIA Technical Blog AI",
+          "type": "公式ブログ",
+          "date": "2026-06-12",
+          "url": "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure",
+          "priority": 78,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "ac9d048bf4ae9dfe6154a8e4",
+          "importance": {
+            "total": 78,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "実装",
+              "事業"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "実装・運用に有益"
+            ],
+            "axes": {
+              "technical": 24,
+              "business": 22,
+              "regulatory": 12,
+              "implementation": 24,
+              "market": 10
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要"
+        },
+        {
+          "title": "Building AI Agents for AR Glasses and XR Devices with NVIDIA XR AI | NVIDIA Technical Blog",
+          "titleJa": "NVIDIAがARグラス・XRデバイス向けAIエージェント構築を解説",
+          "summary": "NVIDIAは、ARグラスやウェアラブルでAI体験を構築するためのXR AI基盤を紹介。エッジAI、マルチモーダル、XRデバイス実装のインフラ論点が分かります。",
+          "summaryStatus": "manual-ja",
+          "impact": "技術重要度",
+          "source": "NVIDIA Technical Blog AI",
+          "type": "公式ブログ",
+          "date": "2026-06-16",
+          "url": "https://developer.nvidia.com/blog/building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai",
+          "priority": 78,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "07fe3fe577b3e39e4925c436",
+          "importance": {
+            "total": 78,
+            "primaryAxis": "implementation",
+            "primaryLabel": "実装",
+            "primaryReason": "実装・運用に有益",
+            "labels": [
+              "実装",
+              "事業",
+              "技術"
+            ],
+            "reasons": [
+              "実装・運用に有益",
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 22,
+              "regulatory": 0,
+              "implementation": 24,
+              "market": 10
+            }
+          },
+          "importanceLabel": "実装",
+          "importanceReason": "実装・運用に有益"
+        },
+        {
+          "title": "Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA | NVIDIA Technical Blog",
+          "titleJa": "MicrosoftとNVIDIAの新ツールでWindows PC上に個人AIエージェントを構築",
+          "summary": "NVIDIAは、Microsoftとの連携ツールによりWindows PC上で個人AIエージェントを構築する方法を紹介。ローカルAI、PC活用、開発者向けエージェント実装の動向です。",
+          "summaryStatus": "manual-ja",
+          "impact": "技術重要度",
+          "source": "NVIDIA Technical Blog AI",
+          "type": "公式ブログ",
+          "date": "2026-06-02",
+          "url": "https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia",
+          "priority": 78,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "6c1843b0c650dfcc0a7f37d9",
+          "importance": {
+            "total": 78,
+            "primaryAxis": "implementation",
+            "primaryLabel": "実装",
+            "primaryReason": "実装・運用に有益",
+            "labels": [
+              "実装",
+              "事業",
+              "技術"
+            ],
+            "reasons": [
+              "実装・運用に有益",
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 22,
+              "regulatory": 12,
+              "implementation": 24,
+              "market": 10
+            }
+          },
+          "importanceLabel": "実装",
+          "importanceReason": "実装・運用に有益"
+        },
+        {
+          "title": "Boosting MoE Training Throughput with Advanced Fusion Kernels | NVIDIA Technical Blog",
+          "titleJa": "NVIDIAが高度なFusion KernelでMoE学習スループットを改善",
+          "summary": "NVIDIAは、Mixture-of-Expertsモデルの大規模学習で高度なFusion Kernelによりスループットを高める手法を解説。生成AI基盤モデルの訓練効率化に関わる技術記事です。",
+          "summaryStatus": "manual-ja",
+          "impact": "技術重要度",
+          "source": "NVIDIA Technical Blog AI",
+          "type": "公式ブログ",
+          "date": "2026-06-15",
+          "url": "https://developer.nvidia.com/blog/boosting-moe-training-throughput-with-advanced-fusion-kernels",
+          "priority": 74,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "707e6c047c917db51a2f9d5a",
+          "importance": {
+            "total": 74,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業",
+              "技術",
+              "規制"
+            ],
+            "reasons": [
+              "事業・調達に影響",
+              "技術的に重要"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 22,
+              "regulatory": 12,
+              "implementation": 0,
+              "market": 10
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
         }
       ]
     }

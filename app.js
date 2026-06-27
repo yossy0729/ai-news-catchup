@@ -9,6 +9,7 @@ let aiSignals = [];
 let pricingData = { models: [] };
 let sotaData = { entries: [] };
 let sotaPresets = [];
+let healthData = null;
 
 const dataPath = "data/news.json";
 const mediaPath = "data/media-news.json";
@@ -17,6 +18,7 @@ const signalPath = "data/ai-signals.json";
 const pricingPath = "data/pricing.json";
 const sotaPath = "data/sota.json";
 const sotaPresetsPath = "data/sota-presets.json";
+const healthPath = "data/health.json";
 const categoryGrid = document.querySelector("#categoryGrid");
 const categoryTemplate = document.querySelector("#categoryTemplate");
 const newsTemplate = document.querySelector("#newsTemplate");
@@ -27,6 +29,7 @@ const officialFreshness = document.querySelector("#officialFreshness");
 const tabs = Array.from(document.querySelectorAll(".tab"));
 const todayLabel = document.querySelector("#todayLabel");
 const freshnessLabel = document.querySelector(".freshness");
+const updateRule = document.querySelector("#updateRule");
 const keywordSearch = document.querySelector("#keywordSearch");
 const clearSearch = document.querySelector("#clearSearch");
 const sourceSearch = document.querySelector("#sourceSearch");
@@ -189,6 +192,18 @@ function formatFullDate(value) {
     .replaceAll("/", ".");
 }
 
+function formatDateTime(value) {
+  if (!value) return "";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  return new Intl.DateTimeFormat("ja-JP", {
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit"
+  }).format(date);
+}
+
 function collectItems() {
   return categories.flatMap((category) =>
     category.items.map((item) => ({
@@ -261,6 +276,55 @@ function cardSummary(item) {
   return item.summaryJa || item.summary || "";
 }
 
+function itemValueMeta(item) {
+  if (item.importanceLabel) {
+    return {
+      label: item.importanceLabel,
+      reason: item.importanceReason || item.scoreBasis || "主要ニュースとして優先表示"
+    };
+  }
+
+  const text = [
+    item.title,
+    item.titleJa,
+    item.summary,
+    item.summaryJa,
+    item.category,
+    item.type,
+    item.kind,
+    item.tag,
+    item.lane,
+    item.source
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  if (/regulation|policy|governance|safety|security|privacy|copyright|ciso|risk|規制|政策|安全|セキュリティ|著作権|ガバナンス|リスク/i.test(text)) {
+    return { label: "規制", reason: "規制・リスク上重要" };
+  }
+  if (/pricing|price|token|market|funding|investment|revenue|chip|gpu|cloud|cost|価格|市場|投資|調達|半導体|クラウド|コスト/i.test(text)) {
+    return { label: "事業", reason: "事業・調達に影響" };
+  }
+  if (/agent|rag|api|deploy|inference|workflow|automation|copilot|vllm|production|implementation|実装|運用|導入|自動化|推論/i.test(text)) {
+    return { label: "実装", reason: "実装・運用に有益" };
+  }
+  if (/paper|research|model|benchmark|sota|leaderboard|llm|training|evaluation|論文|研究|モデル|評価|学習/i.test(text)) {
+    return { label: "技術", reason: "技術的に重要" };
+  }
+
+  return { label: "参考", reason: "AI動向把握の補助情報" };
+}
+
+function appendValueLabel(container, item) {
+  const meta = itemValueMeta(item);
+  if (!meta?.label) return;
+  const label = document.createElement("span");
+  label.className = "value-label";
+  label.textContent = meta.label;
+  label.title = meta.reason || "";
+  container.append(label);
+}
+
 function renderSourceResults(data) {
   sourceSearchResults.replaceChildren();
   latestSourceSearch = data;
@@ -304,6 +368,40 @@ function renderMetrics() {
   document.querySelector("#primaryCount").textContent = items.length;
 }
 
+function renderHealth() {
+  if (!freshnessLabel) return;
+
+  const status = healthData?.status || "unknown";
+  const summary = healthData?.summary || {};
+  freshnessLabel.classList.remove("good", "stale", "error");
+
+  if (status === "ok") {
+    freshnessLabel.textContent = "更新正常";
+    freshnessLabel.classList.add("good");
+  } else if (status === "warning") {
+    freshnessLabel.textContent = "一部未取得";
+    freshnessLabel.classList.add("stale");
+  } else if (status === "failed") {
+    freshnessLabel.textContent = "更新失敗";
+    freshnessLabel.classList.add("error");
+  } else {
+    freshnessLabel.textContent = "更新状態未取得";
+    freshnessLabel.classList.add("stale");
+  }
+
+  const failed = Number(summary.sourceFailed || 0);
+  const noItems = Number(summary.sourceNoItems || 0);
+  const checked = Number(summary.sourceTotal || 0);
+  freshnessLabel.title = checked
+    ? `ソース確認 ${checked}件 / 失敗 ${failed}件 / 0件 ${noItems}件`
+    : "更新状態データがありません";
+
+  if (updateRule) {
+    const updated = formatDateTime(healthData?.finishedAt || healthData?.generatedAt);
+    updateRule.textContent = updated ? `最終更新 ${updated}` : "毎日 7:00 自動更新";
+  }
+}
+
 function mediaSort(a, b) {
   return (
     Number(b.relevanceScore || 0) - Number(a.relevanceScore || 0) ||
@@ -316,6 +414,13 @@ function mediaSort(a, b) {
 // publishedAt(時刻あり)を優先し、無ければ date(日付)で比較。降順。
 function byRecencyDesc(a, b) {
   return String(b.publishedAt || b.date || "").localeCompare(String(a.publishedAt || a.date || ""));
+}
+
+function byImportanceDesc(a, b) {
+  return (
+    Number(b.priority || b.importance?.total || 0) - Number(a.priority || a.importance?.total || 0) ||
+    byRecencyDesc(a, b)
+  );
 }
 
 function chooseVisibleMediaItems(items) {
@@ -566,6 +671,7 @@ function renderMediaCard(item) {
   if (relative) {
     fragment.querySelector(".media-source").title = `${item.source} / ${formatFullDate(item.date)}`;
   }
+  appendValueLabel(fragment.querySelector(".media-meta"), item);
   // 他カードと同様、日本語タイトル(titleJa)を主役に。要約も日本語版(summaryJa)があれば優先。
   appendTitle(fragment.querySelector("h3"), item);
   fragment.querySelector("p").textContent = cardSummary(item);
@@ -617,6 +723,7 @@ function renderOfficialCard(item, vendor) {
   const type = document.createElement("span");
   type.textContent = item.type || "公式";
   meta.append(date, type);
+  appendValueLabel(meta, item);
 
   const title = document.createElement("h3");
   appendTitle(title, item);
@@ -747,7 +854,9 @@ function renderNewsCard(item, accent) {
   fragment.querySelector(".published").textContent = formatDate(item.date);
   appendTitle(fragment.querySelector("h4"), item);
   fragment.querySelector("p").textContent = cardSummary(item);
-  fragment.querySelector(".impact-label").textContent = item.impact;
+  const impact = fragment.querySelector(".impact-label");
+  impact.textContent = item.importanceLabel || item.impact;
+  impact.title = item.importanceReason || item.scoreBasis || "";
   fragment.querySelector(".source-name").textContent = item.source;
   return fragment;
 }
@@ -798,7 +907,7 @@ function renderCategories(nextTab = "all") {
         }
       }
       items = diversifyBySource(items);
-      items.sort(byRecencyDesc);
+      items.sort(byImportanceDesc);
       matchedItemCount += items.length;
       return { ...fg, items };
     })
@@ -1389,7 +1498,7 @@ function renderCategoryTicker() {
 
   const items = collectItems()
     .filter((item) => item.url)
-    .sort(byRecencyDesc)
+    .sort(byImportanceDesc)
     .slice(0, 10);
   if (!items.length) {
     categoryTickerTrack.textContent = "一次情報はまだ取得されていません。今すぐ取得で更新してください。";
@@ -1468,7 +1577,7 @@ function setActivePage(name) {
   savePage(validName);
 }
 
-function renderApp(newsData, mediaData, officialData, signalData, pricing, sota, presets) {
+function renderApp(newsData, mediaData, officialData, signalData, pricing, sota, presets, health) {
   today = newsData.generatedDate || mediaData.generatedDate || officialData.generatedDate || signalData.generatedDate;
   categories = newsData.categories || [];
   mediaItems = mediaData.items || [];
@@ -1479,9 +1588,9 @@ function renderApp(newsData, mediaData, officialData, signalData, pricing, sota,
   pricingData = pricing || { models: [] };
   sotaData = sota || { entries: [] };
   sotaPresets = (presets && Array.isArray(presets.slugs)) ? presets.slugs : [];
+  healthData = health || null;
   todayLabel.textContent = formatFullDate(today);
-  freshnessLabel.textContent = "自動収集中";
-  freshnessLabel.classList.remove("error");
+  renderHealth();
   renderMetrics();
   renderTicker();
   renderMediaRadar();
@@ -1523,16 +1632,17 @@ async function loadJson(path, fallback) {
 
 async function loadAllData() {
   freshnessLabel.textContent = "読み込み中";
-  const [newsData, mediaData, officialData, signalData, pricing, sota, presets] = await Promise.all([
+  const [newsData, mediaData, officialData, signalData, pricing, sota, presets, health] = await Promise.all([
     loadJson(dataPath),
     loadJson(mediaPath, { generatedDate: "", items: [] }),
     loadJson(officialPath, { generatedDate: "", vendors: [], items: [] }),
     loadJson(signalPath, { generatedDate: "", items: [] }),
     loadJson(pricingPath, { models: [] }),
     loadJson(sotaPath, { entries: [] }),
-    loadJson(sotaPresetsPath, { slugs: [] })
+    loadJson(sotaPresetsPath, { slugs: [] }),
+    loadJson(healthPath, null)
   ]);
-  return [newsData, mediaData, officialData, signalData, pricing, sota, presets];
+  return [newsData, mediaData, officialData, signalData, pricing, sota, presets, health];
 }
 
 tabs.forEach((tab) => {
@@ -1685,8 +1795,8 @@ runUpdate.addEventListener("click", async () => {
 
     const promoted = result.summary?.promoted?.promoted ?? 0;
     freshnessLabel.textContent = `更新完了 ${promoted}件`;
-    const [newsData, mediaData, officialData, signalData, pricing, sota, presets] = await loadAllData();
-    renderApp(newsData, mediaData, officialData, signalData, pricing, sota, presets);
+    const [newsData, mediaData, officialData, signalData, pricing, sota, presets, health] = await loadAllData();
+    renderApp(newsData, mediaData, officialData, signalData, pricing, sota, presets, health);
   } catch (error) {
     console.error(error);
     freshnessLabel.textContent = "取得失敗";
@@ -1703,5 +1813,5 @@ const isLocalServer = ["localhost", "127.0.0.1", ""].includes(location.hostname)
 if (!isLocalServer) document.body.classList.add("view-only");
 
 loadAllData()
-  .then(([newsData, mediaData, officialData, signalData, pricing, sota, presets]) => renderApp(newsData, mediaData, officialData, signalData, pricing, sota, presets))
+  .then(([newsData, mediaData, officialData, signalData, pricing, sota, presets, health]) => renderApp(newsData, mediaData, officialData, signalData, pricing, sota, presets, health))
   .catch(renderLoadError);

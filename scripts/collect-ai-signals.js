@@ -178,6 +178,7 @@ async function collectPriceSignals() {
 async function collect() {
   const errors = [];
   const batches = [];
+  const sourceHealth = [];
 
   for (const task of [
     ["hf-papers", collectHfPapers],
@@ -185,9 +186,36 @@ async function collect() {
     ["model-price", collectPriceSignals]
   ]) {
     try {
-      batches.push(...await task[1]());
+      const collected = await task[1]();
+      batches.push(...collected);
+      sourceHealth.push({
+        id: task[0],
+        name: task[0],
+        group: "ai-signals",
+        type: "mixed",
+        url: "",
+        status: collected.length ? "ok" : "no_items",
+        itemsFound: collected.length,
+        lastCheckedAt: new Date().toISOString(),
+        lastSuccessAt: new Date().toISOString(),
+        lastFailureAt: null,
+        lastError: null
+      });
     } catch (error) {
       errors.push({ source: task[0], error: error.message });
+      sourceHealth.push({
+        id: task[0],
+        name: task[0],
+        group: "ai-signals",
+        type: "mixed",
+        url: "",
+        status: "failed",
+        itemsFound: 0,
+        lastCheckedAt: new Date().toISOString(),
+        lastSuccessAt: null,
+        lastFailureAt: new Date().toISOString(),
+        lastError: error.message
+      });
     }
   }
 
@@ -200,7 +228,8 @@ async function collect() {
     generatedDate: todayInTokyo(),
     sourcePolicy: "HF Papers、公式ベンダー発表、公式価格ページからAIシグナルを構造化。価格数値は取得できる公式ページのみ検出例として保存し、取得不能なページは公式リンク確認に留める。",
     items,
-    errors
+    errors,
+    sourceHealth
   };
 }
 

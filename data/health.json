@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "status": "warning",
+  "generatedAt": "2026-06-27T10:28:43.839Z",
+  "generatedDate": "2026-06-27",
+  "startedAt": "2026-06-27T10:26:59.487Z",
+  "finishedAt": "2026-06-27T10:28:43.840Z",
+  "durationSeconds": 104,
+  "error": null,
+  "summary": {
+    "mediaItems": 32,
+    "primaryCategories": 10,
+    "primaryItems": 39,
+    "officialItems": 26,
+    "aiSignals": 12,
+    "sotaEntries": 85,
+    "candidates": 142,
+    "reviewItems": 141,
+    "sourceTotal": 54,
+    "sourceOk": 31,
+    "sourceFailed": 3,
+    "sourceNoItems": 15,
+    "failedSteps": 0
+  },
+  "steps": [
+    {
+      "name": "collect-official-news",
+      "commandLine": "node scripts/collect-official-news.js --limit=36 --write",
+      "exitCode": 0,
+      "durationMs": 56572
+    },
+    {
+      "name": "collect-ai-signals",
+      "commandLine": "node scripts/collect-ai-signals.js --limit=32 --write",
+      "exitCode": 0,
+      "durationMs": 2948
+    },
+    {
+      "name": "collect-media-news",
+      "commandLine": "node scripts/collect-media-news.js --limit=45 --write",
+      "exitCode": 0,
+      "durationMs": 1603
+    },
+    {
+      "name": "collect",
+      "commandLine": "node scripts/collect-news.js --write --per-source=3 --max-candidates=50",
+      "exitCode": 0,
+      "durationMs": 29623
+    },
+    {
+      "name": "prepare-review",
+      "commandLine": "node scripts/prepare-review.js --limit=20 --write",
+      "exitCode": 0,
+      "durationMs": 9711
+    },
+    {
+      "name": "promote-review",
+      "commandLine": "node scripts/promote-review.js --min-priority=60 --max-age-days=30 --max-items=12 --write --accept",
+      "exitCode": 0,
+      "durationMs": 101
+    },
+    {
+      "name": "collect-sota",
+      "commandLine": "node scripts/collect-sota.js --write",
+      "exitCode": 0,
+      "durationMs": 3659
+    },
+    {
+      "name": "validate-data",
+      "commandLine": "node scripts/validate-data.js",
+      "exitCode": 0,
+      "durationMs": 83
+    }
+  ]
+}

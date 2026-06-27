@@ -384,13 +384,41 @@ function mediaSort(a, b) {
 async function collect() {
   const collected = [];
   const errors = [];
+  const sourceHealth = [];
 
   for (const feed of directFeeds) {
     try {
       const xml = await fetchFeed(feed);
-      collected.push(...parseRss(xml, feed));
+      const parsed = parseRss(xml, feed);
+      collected.push(...parsed);
+      sourceHealth.push({
+        id: crypto.createHash("sha256").update(feed.url).digest("hex").slice(0, 16),
+        name: feed.name,
+        group: "media",
+        type: "rss",
+        url: feed.url,
+        status: parsed.length ? "ok" : "no_items",
+        itemsFound: parsed.length,
+        lastCheckedAt: new Date().toISOString(),
+        lastSuccessAt: new Date().toISOString(),
+        lastFailureAt: null,
+        lastError: null
+      });
     } catch (error) {
       errors.push({ source: feed.name, url: feed.url, error: error.message });
+      sourceHealth.push({
+        id: crypto.createHash("sha256").update(feed.url).digest("hex").slice(0, 16),
+        name: feed.name,
+        group: "media",
+        type: "rss",
+        url: feed.url,
+        status: "failed",
+        itemsFound: 0,
+        lastCheckedAt: new Date().toISOString(),
+        lastSuccessAt: null,
+        lastFailureAt: new Date().toISOString(),
+        lastError: error.message
+      });
     }
   }
 
@@ -413,7 +441,8 @@ async function collect() {
     freshnessPolicy: { maxAgeHours, freshWithinHours: 24 },
     categories: categories.map(({ id, label, accent }) => ({ id, label, accent })),
     items,
-    errors
+    errors,
+    sourceHealth
   };
 }
 

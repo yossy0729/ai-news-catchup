@@ -1,11 +1,11 @@
 const fs = require("node:fs");
 const path = require("node:path");
 
-// ティッカー/カードに出る英語見出しを日本語化する。
+// ティッカー/カードに出る英語見出しと英語要約を日本語化する。
 // - 対象: official-news / media-news / ai-signals の items[]（ティッカーはこれらを流す）。
 // - OPENAI_API_KEY があるときだけ実行。無ければ何もしない（=英語のままフォールバック）。
 // - 失敗(料金超過429など)はバッチ単位で握りつぶし、その分は英語のまま据え置く。
-// - コスト節約のため複数見出しを1回のAPIでまとめて翻訳する。
+// - コスト節約のため複数項目を1回のAPIでまとめて翻訳する。
 
 const root = path.resolve(__dirname, "..");
 const rawArgs = process.argv.slice(2);
@@ -66,7 +66,7 @@ function parseJsonText(text) {
 function buildPrompt(batch) {
   const list = batch.map((entry, i) => {
     const row = { i, title: entry.item.title };
-    // summaryを持つ項目(メディアの英語要約)は本文も渡して翻訳させる。
+    // 英語要約を持つ項目は本文も渡して翻訳させる。
     if (entry.needSummary) row.summary = compactText(entry.item.summary, 600);
     return row;
   });
@@ -136,15 +136,14 @@ async function main() {
     .filter((filePath) => fs.existsSync(filePath))
     .map((filePath) => ({ filePath, data: readJson(filePath) }));
 
-  // メディアは英語要約も日本語化する（カードで本文が英語のまま残るため）。
-  // official/signals の要約は収集側で日本語化済みなので、ここでは要約を訳さない。
+  // 英語要約が残っている項目はタブを問わず日本語化する。
+  // 収集側ですでに日本語化された要約は hasJapanese で対象外になる。
   const pending = [];
   for (const file of files) {
-    const isMedia = file.filePath.endsWith("media-news.json");
     for (const item of file.data.items || []) {
       const needTitle = Boolean(item.title) && !hasJapanese(item.title) && (force || !item.titleJa);
       const needSummary =
-        isMedia && Boolean(item.summary) && !hasJapanese(item.summary) && (force || !item.summaryJa);
+        Boolean(item.summary) && !hasJapanese(item.summary) && (force || !item.summaryJa);
       if (needTitle || needSummary) pending.push({ item, needTitle, needSummary });
     }
   }

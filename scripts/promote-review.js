@@ -229,6 +229,120 @@ function inferImpact(categoryId) {
   return "社会的影響";
 }
 
+const importanceAxes = [
+  {
+    id: "technical",
+    label: "技術",
+    reason: "技術的に重要",
+    patterns: [
+      /SOTA|benchmark|leaderboard|evaluation|eval|accuracy|解決率|性能|精度/i,
+      /model|LLM|基盤モデル|multimodal|reasoning|推論|inference|training|学習/i,
+      /architecture|agentic|agent|AIエージェント|RAG|MCP|tool|workflow/i,
+      /research|paper|論文|CVPR|ICML|NeurIPS|採択/i
+    ]
+  },
+  {
+    id: "business",
+    label: "事業",
+    reason: "事業・調達に影響",
+    patterns: [
+      /pricing|price|cost|token|料金|価格|値下げ|値上げ|license|ライセンス/i,
+      /enterprise|customer|partner|partnership|導入|提供開始|launch|release|発表/i,
+      /Databricks|Google Cloud|AWS|Azure|NVIDIA|GPU|cloud|クラウド/i
+    ]
+  },
+  {
+    id: "regulatory",
+    label: "規制",
+    reason: "規制・リスク上重要",
+    patterns: [
+      /regulation|regulatory|policy|governance|compliance|copyright|privacy|law|legal/i,
+      /規制|法|著作権|個人情報|ガバナンス|ポリシー|省庁|政府|裁判|指針/i,
+      /security|safety|risk|threat|abuse|脅威|悪用|安全性|セキュリティ/i
+    ]
+  },
+  {
+    id: "implementation",
+    label: "実装",
+    reason: "実装・運用に有益",
+    patterns: [
+      /API|SDK|GitHub|open source|オープンソース|developer|開発者|実装/i,
+      /agent|RAG|workflow|automation|tool|MCP|エージェント|自動化|業務AI/i,
+      /case study|事例|PoC|本番|運用|導入支援|FDE/i
+    ]
+  },
+  {
+    id: "market",
+    label: "市場",
+    reason: "市場・社会影響が大きい",
+    patterns: [
+      /funding|investment|M&A|acquisition|IPO|market|growth|revenue/i,
+      /投資|買収|資金調達|提携|協業|市場|成長|売上|シェア/i,
+      /government|public sector|医療|教育|金融|製造|公共|自治体/i
+    ]
+  }
+];
+
+function scoreAxis(text, axis, categoryId, item, candidate) {
+  let score = 0;
+  for (const pattern of axis.patterns) {
+    if (pattern.test(text)) score += 12;
+  }
+
+  if (axis.id === "technical" && (categoryId.includes("research") || categoryId === "product-release" || candidate?.sourceType === "research_lab" || candidate?.sourceType === "paper_index")) score += 12;
+  if (axis.id === "business" && (categoryId === "business" || categoryId === "infrastructure" || categoryId.includes("cases"))) score += 10;
+  if (axis.id === "regulatory" && (categoryId.includes("governance") || categoryId === "security")) score += 14;
+  if (axis.id === "implementation" && (categoryId.includes("cases") || categoryId === "product-release")) score += 10;
+  if (axis.id === "market" && (categoryId === "business" || categoryId === "infrastructure")) score += 10;
+  if (item?.trustLevel === "primary" || candidate?.trustLevel === "primary") score += 3;
+
+  return Math.min(100, score);
+}
+
+function evaluateImportance({ item, candidate, categoryId, title, summary }) {
+  const text = normalizeSpaces([
+    title,
+    summary,
+    item?.title,
+    item?.description,
+    item?.excerpt,
+    item?.sourceName,
+    candidate?.title,
+    candidate?.sourceName,
+    candidate?.sourceType,
+    ...(item?.categories || []),
+    ...(candidate?.categories || [])
+  ].filter(Boolean).join(" "));
+
+  const axes = {};
+  for (const axis of importanceAxes) {
+    axes[axis.id] = scoreAxis(text, axis, categoryId, item, candidate);
+  }
+
+  const ranked = importanceAxes
+    .map((axis) => ({ ...axis, score: axes[axis.id] }))
+    .sort((a, b) => b.score - a.score);
+  const top = ranked[0];
+  const labels = ranked.filter((axis) => axis.score >= 12).slice(0, 3).map((axis) => axis.label);
+  const reasons = ranked.filter((axis) => axis.score >= 12).slice(0, 2).map((axis) => axis.reason);
+  const base = Math.max(Number(item?.priority || 0), Number(item?.initialPriority || 0), Number(candidate?.score || 0), 45);
+  const freshnessBoost = parseDateFromText(candidate?.publishedDate, item?.title, candidate?.title) === todayInTokyo() ? 8 : 0;
+  const axisBoost = Math.round(top.score * 0.25 + ranked[1].score * 0.12);
+  const sourceBoost = /公式|official|論文|技術文書/i.test(`${item?.type || ""} ${item?.sourceType || ""} ${candidate?.sourceType || ""}`) ? 6 : 0;
+  const ruleScore = Math.round(52 + top.score * 0.6 + ranked[1].score * 0.25 + sourceBoost + freshnessBoost);
+  const total = Math.max(1, Math.min(100, Math.round(Math.max(ruleScore, base * 0.72 + axisBoost + freshnessBoost))));
+
+  return {
+    total,
+    primaryAxis: top.id,
+    primaryLabel: top.score >= 12 ? top.label : "注目",
+    primaryReason: top.score >= 12 ? top.reason : "AI関連の一次情報",
+    labels: labels.length ? labels : ["注目"],
+    reasons: reasons.length ? reasons : ["AI関連の一次情報として確認"],
+    axes
+  };
+}
+
 function normalizeCategory(categoryId, fallbackCategories) {
   if (categoryMeta[categoryId]) return categoryId;
   return (fallbackCategories || []).find((id) => categoryMeta[id]) || "global-research";
@@ -404,6 +518,7 @@ function toNewsItem(item, candidate, today, existingItem, localizedOverride) {
   const title = displayTitle(item, candidate);
   const titleJa = titleJaForItem(item, title, existingItem, localizedOverride);
   const summaryResult = buildSummary(item, categoryId, title, existingItem, localizedOverride);
+  const importance = evaluateImportance({ item, candidate, categoryId, title, summary: summaryResult.summary });
   const publishedDate = parseDateFromText(
     candidate?.publishedDate,
     item.title,
@@ -424,10 +539,25 @@ function toNewsItem(item, candidate, today, existingItem, localizedOverride) {
     type: sourceTypeLabels[item.sourceType || candidate?.sourceType] || "一次情報",
     date,
     url: item.url,
-    priority: Math.max(1, Math.min(100, Number(item.initialPriority || candidate?.score || 50))),
-    scoreBasis: "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+    priority: importance.total,
+    importance,
+    importanceLabel: importance.primaryLabel,
+    importanceReason: importance.primaryReason,
+    scoreBasis: `${importance.primaryReason}。${importance.labels.join(" / ")} の観点で優先度を算定。`,
     new: publishedDate === today,
     candidateId: item.candidateId
+  };
+}
+
+function enrichExistingNewsItem(item, categoryId) {
+  const importance = evaluateImportance({ item, candidate: null, categoryId, title: item.title, summary: item.summary });
+  return {
+    ...item,
+    priority: importance.total,
+    importance,
+    importanceLabel: importance.primaryLabel,
+    importanceReason: importance.primaryReason,
+    scoreBasis: item.scoreBasis || `${importance.primaryReason}。${importance.labels.join(" / ")} の観点で優先度を算定。`
   };
 }
 
@@ -484,6 +614,7 @@ function main() {
 
   for (const category of categories) {
     category.items = (category.items || [])
+      .map((item) => enrichExistingNewsItem(item, category.id))
       // 日付が読めるものだけ窓で間引く。日付不明の項目は誤って消さないよう残す。
       .filter((item) => !item.date || ageInDays(item.date, today) <= maxAgeDays)
       .sort((a, b) => (b.priority || 0) - (a.priority || 0))
