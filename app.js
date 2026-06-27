@@ -255,6 +255,12 @@ function appendTitle(titleElement, item) {
   titleElement.append(original);
 }
 
+// カードに出す要約文を1か所で決める（全カード共通）。日本語版(summaryJa)があれば優先。
+// summaryJaを持たないタブは従来どおり summary を返すので無害、かつ将来も自動で揃う。
+function cardSummary(item) {
+  return item.summaryJa || item.summary || "";
+}
+
 function renderSourceResults(data) {
   sourceSearchResults.replaceChildren();
   latestSourceSearch = data;
@@ -562,7 +568,7 @@ function renderMediaCard(item) {
   }
   // 他カードと同様、日本語タイトル(titleJa)を主役に。要約も日本語版(summaryJa)があれば優先。
   appendTitle(fragment.querySelector("h3"), item);
-  fragment.querySelector("p").textContent = item.summaryJa || item.summary;
+  fragment.querySelector("p").textContent = cardSummary(item);
 
   if (isFreshItem(item)) {
     card.classList.add("is-fresh");
@@ -616,7 +622,7 @@ function renderOfficialCard(item, vendor) {
   appendTitle(title, item);
 
   const summary = document.createElement("p");
-  summary.textContent = item.summary;
+  summary.textContent = cardSummary(item);
 
   const source = document.createElement("div");
   source.className = "official-source";
@@ -740,7 +746,7 @@ function renderNewsCard(item, accent) {
   fragment.querySelector(".source-type").textContent = item.type;
   fragment.querySelector(".published").textContent = formatDate(item.date);
   appendTitle(fragment.querySelector("h4"), item);
-  fragment.querySelector("p").textContent = item.summary;
+  fragment.querySelector("p").textContent = cardSummary(item);
   fragment.querySelector(".impact-label").textContent = item.impact;
   fragment.querySelector(".source-name").textContent = item.source;
   return fragment;
