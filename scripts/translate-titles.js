@@ -64,16 +64,22 @@ function parseJsonText(text) {
 }
 
 function buildPrompt(batch) {
-  const list = batch.map((entry, i) => ({ i, title: entry.item.title }));
+  const list = batch.map((entry, i) => {
+    const row = { i, title: entry.item.title };
+    // summaryを持つ項目(メディアの英語要約)は本文も渡して翻訳させる。
+    if (entry.needSummary) row.summary = compactText(entry.item.summary, 600);
+    return row;
+  });
   return [
-    "次のAI関連ニュースの英語見出しを、日本語の短い見出しに翻訳してください。",
+    "次のAI関連ニュースを日本語化してください。",
     "条件:",
-    "- ニュースティッカー用なので簡潔に（各40字以内目安）",
+    "- titleJaは日本語の短い見出しに（各40字以内目安）",
+    "- summaryがある項目は、その要約も日本語に翻訳（summaryJa。80〜120字目安、誇張しない）",
     "- 製品名・モデル名・企業名・論文名などの固有名詞は、自然な場合は英語のまま残す",
-    "- 原文にない情報を足さない。誇張しない",
+    "- 原文にない情報を足さない",
     "- 入力と同じ i を付けてJSON配列のみで返す",
     "",
-    "JSON schema: [{\"i\":0,\"ja\":\"...\"}]",
+    'JSON schema: [{"i":0,"titleJa":"...","summaryJa":"..."}]（summaryが無い項目はsummaryJa省略可）',
     "",
     `input: ${JSON.stringify(list)}`
   ].join("\n");
@@ -92,11 +98,11 @@ async function translateBatch(batch) {
         {
           role: "developer",
           content:
-            "You translate English AI-news headlines into concise Japanese headlines for a ticker. Keep proper nouns in English when natural. Return only a valid JSON array."
+            "You translate English AI-news headlines and summaries into concise, faithful Japanese for a news dashboard. Keep proper nouns in English when natural. Return only a valid JSON array."
         },
         { role: "user", content: buildPrompt(batch) }
       ],
-      max_output_tokens: Math.max(400, batch.length * 90)
+      max_output_tokens: Math.max(500, batch.length * 140)
     })
   });
 
@@ -111,8 +117,11 @@ async function translateBatch(batch) {
 
   for (const row of parsed) {
     const target = batch[row.i];
-    const ja = compactText(row.ja, 120);
-    if (target && ja) target.item.titleJa = ja;
+    if (!target) continue;
+    const titleJa = compactText(row.titleJa, 120);
+    if (target.needTitle && titleJa) target.item.titleJa = titleJa;
+    const summaryJa = compactText(row.summaryJa, 200);
+    if (target.needSummary && summaryJa) target.item.summaryJa = summaryJa;
   }
 }
 
@@ -127,17 +136,21 @@ async function main() {
     .filter((filePath) => fs.existsSync(filePath))
     .map((filePath) => ({ filePath, data: readJson(filePath) }));
 
+  // メディアは英語要約も日本語化する（カードで本文が英語のまま残るため）。
+  // official/signals の要約は収集側で日本語化済みなので、ここでは要約を訳さない。
   const pending = [];
   for (const file of files) {
+    const isMedia = file.filePath.endsWith("media-news.json");
     for (const item of file.data.items || []) {
-      if (!item.title || hasJapanese(item.title)) continue;
-      if (!force && item.titleJa) continue;
-      pending.push({ item });
+      const needTitle = Boolean(item.title) && !hasJapanese(item.title) && (force || !item.titleJa);
+      const needSummary =
+        isMedia && Boolean(item.summary) && !hasJapanese(item.summary) && (force || !item.summaryJa);
+      if (needTitle || needSummary) pending.push({ item, needTitle, needSummary });
     }
   }
 
   if (!pending.length) {
-    console.log("Translate titles: no English headlines to translate.");
+    console.log("Translate titles: nothing to translate.");
     return;
   }
 
@@ -147,7 +160,7 @@ async function main() {
     const batch = pending.slice(i, i + batchSize);
     try {
       await translateBatch(batch);
-      done += batch.filter((entry) => entry.item.titleJa).length;
+      done += batch.filter((entry) => entry.item.titleJa || entry.item.summaryJa).length;
     } catch (error) {
       failed += batch.length;
       console.log(`NG batch ${i / batchSize}: ${error.message}`);

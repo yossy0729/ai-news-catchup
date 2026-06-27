@@ -560,8 +560,9 @@ function renderMediaCard(item) {
   if (relative) {
     fragment.querySelector(".media-source").title = `${item.source} / ${formatFullDate(item.date)}`;
   }
-  fragment.querySelector("h3").textContent = item.title;
-  fragment.querySelector("p").textContent = item.summary;
+  // 他カードと同様、日本語タイトル(titleJa)を主役に。要約も日本語版(summaryJa)があれば優先。
+  appendTitle(fragment.querySelector("h3"), item);
+  fragment.querySelector("p").textContent = item.summaryJa || item.summary;
 
   if (isFreshItem(item)) {
     card.classList.add("is-fresh");
