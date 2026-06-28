@@ -102,6 +102,11 @@ const LOWER_IS_BETTER_HINTS = [
   "fid", "perplexity", "ppl", "eer", "der", "nll", "loss", "error", "latency"
 ];
 
+function sotaDateKind(entry) {
+  if (entry.dateKind) return entry.dateKind;
+  const boardName = String(entry.boardName || entry.sourceName || "").toLowerCase();
+  return boardName.includes("lmarena") || boardName.includes("open asr") ? "confirmed" : "recorded";
+}
 // 指標の向き(↑/↓)を判定。1位と2位のスコアの大小で判定し、無理なら指標名で推定。
 function inferHigherIsBetter(repRows, metric, topScore) {
   const same = repRows.filter((r) => r.best_metric === metric);
@@ -171,6 +176,7 @@ const officialFetchers = {
       codeUrl: "https://github.com/huggingface/open_asr_leaderboard",
       boardName: "Open ASR",
       boardUrl: "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard",
+      dateKind: "confirmed",
     };
   },
 
@@ -198,6 +204,7 @@ const officialFetchers = {
       codeUrl: null,
       boardName: "LMArena",
       boardUrl: "https://lmarena.ai/leaderboard",
+      dateKind: "confirmed",
     };
   },
 
@@ -224,6 +231,7 @@ const officialFetchers = {
       codeUrl: null,
       boardName: "LMArena",
       boardUrl: "https://lmarena.ai/leaderboard",
+      dateKind: "confirmed",
     };
   },
 
@@ -250,6 +258,7 @@ const officialFetchers = {
       codeUrl: null,
       boardName: "LMArena",
       boardUrl: "https://lmarena.ai/leaderboard",
+      dateKind: "confirmed",
     };
   },
 };
@@ -523,6 +532,9 @@ async function main() {
       e.prevComparable = true;
       changed += 1;
     } else {
+      // 同一1位 → LMArena/Open ASRの確認日は初回確認日を維持する。
+      // これらは元データに「新SOTA日」が無いため、毎日の日付上書きを避ける。
+      if (sotaDateKind(e) === "confirmed" && old.asOf) e.asOf = old.asOf;
       // 同一1位 → 既存の退避履歴を引き継ぐ
       e.prevTopModel = old.prevTopModel ?? null;
       e.prevScore = old.prevScore ?? null;

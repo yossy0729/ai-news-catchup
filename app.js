@@ -1137,6 +1137,16 @@ function normalizeSotaText(value) {
 }
 
 // 端的なキーワード検索。複数語はAND。研究名(日英)・ベンチ名・キーワードを対象。
+function isConfirmedSotaDate(entry) {
+  if (entry.dateKind) return entry.dateKind === "confirmed";
+  const boardName = String(entry.boardName || entry.sourceName || "").toLowerCase();
+  return boardName.includes("lmarena") || boardName.includes("open asr");
+}
+
+function formatSotaDate(entry, date) {
+  if (!date) return "—";
+  return `${isConfirmedSotaDate(entry) ? "確認" : "記録"}: ${date}`;
+}
 function sotaMatches(entry, query) {
   const q = normalizeSotaText(query).trim();
   if (!q) return true;
@@ -1330,7 +1340,7 @@ function renderSota() {
     // 時点列: 2025年より前は鮮度低として控えめ表示。
     const asOf = document.createElement("td");
     if (e.asOf) {
-      asOf.textContent = e.asOf;
+      asOf.textContent = formatSotaDate(e, e.asOf);
       asOf.classList.add("sota-emph");
       const year = Number(String(e.asOf).slice(0, 4));
       if (year && year < 2025) asOf.classList.add("sota-old");
@@ -1387,7 +1397,7 @@ function renderSota() {
       prevRow.append(pScore);
 
       const pAsOf = document.createElement("td");
-      pAsOf.textContent = e.prevAsOf || "—";
+      pAsOf.textContent = formatSotaDate(e, e.prevAsOf);
       prevRow.append(pAsOf);
 
       tbody.append(prevRow);
