@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "asOf": "2026-06-27",
+  "asOf": "2026-06-28",
   "source": "paperswithcode.co API (/api/v1)",
   "note": "全研究分野の現SOTAを自動収集。各分野は評価件数最多のデータセットを代表ベンチとして表示。",
   "entries": [
@@ -217,7 +217,8 @@
       "prevTopModel": null,
       "prevScore": null,
       "prevAsOf": null,
-      "prevComparable": true
+      "prevComparable": true,
+      "dateKind": "confirmed"
     },
     {
       "slug": "agents",
@@ -865,6 +866,7 @@
       "topModel": "gemini-3-pro",
       "score": 1487,
       "asOf": "2026-06-27",
+      "dateKind": "confirmed",
       "verified": true
     },
     {
@@ -2949,7 +2951,8 @@
       "prevTopModel": null,
       "prevScore": null,
       "prevAsOf": null,
-      "prevComparable": true
+      "prevComparable": true,
+      "dateKind": "confirmed"
     },
     {
       "slug": "image-generation",
@@ -2983,7 +2986,8 @@
       "prevTopModel": null,
       "prevScore": null,
       "prevAsOf": null,
-      "prevComparable": true
+      "prevComparable": true,
+      "dateKind": "confirmed"
     },
     {
       "slug": "image-editing",
