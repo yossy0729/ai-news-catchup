@@ -1235,7 +1235,9 @@ function renderSota() {
 
   if (sotaNote) {
     const asOf = sotaData.asOf ? `（基準: ${sotaData.asOf}時点）` : "";
-    sotaNote.textContent = `${scopeLabel}・出典: paperswithcode.co ほか公式リーダーボード${asOf}`;
+    sotaNote.textContent =
+      `${scopeLabel}・出典: paperswithcode.co ほか公式リーダーボード${asOf}。` +
+      "PwC由来は論文・評価日、公式リーダーボード由来は確認日を表示します。";
   }
   if (sotaFreshness) {
     const withData = entries.filter((e) => e.hasData).length;
@@ -1259,7 +1261,7 @@ function renderSota() {
 
   const thead = document.createElement("thead");
   const headRow = document.createElement("tr");
-  ["研究分野", "ベンチマーク", "指標", "トップモデル", "スコア", "時点", "出典"].forEach((label) => {
+  ["研究分野", "ベンチマーク", "指標", "トップモデル", "スコア", "記録日 / 確認日", "出典"].forEach((label) => {
     const th = document.createElement("th");
     th.textContent = label;
     headRow.append(th);
