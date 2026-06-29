@@ -93,11 +93,12 @@ const aiRelevancePatterns = [
   /foundation model/i,
   /\bRAG\b/i,
   /\bFDE\b/i,
+  /Forward[-\s]+Deployed/i,
   /Midjourney/i
 ];
 
 const categoryClassifiers = {
-  fde: [/\bFDE\b/i, /Forward Deployed Engineer/i, /Forward Deployed Engineers/i],
+  fde: [/\bFDE\b/i, /Forward[-\s]+Deployed(?:[-\s]+Engineer(?:s)?)?/i, /フォワード[・\s-]*デプロイ/i],
   agents: [
     /エージェント/i,
     /agent/i,

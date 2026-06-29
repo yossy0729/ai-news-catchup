@@ -437,11 +437,11 @@ function chooseVisibleMediaItems(items) {
 }
 
 function tickerLaneMatches(item, lane) {
-  const text = `${item.title} ${item.summary} ${item.category} ${item.source}`;
+  const text = `${item.title} ${item.titleJa} ${item.summary} ${item.summaryJa} ${item.category} ${item.source}`;
   if (lane === "fde") {
     return (
       item.categoryId === "fde" ||
-      /\bFDE\b|Forward Deployed|AIエージェント|RAG|作業代行|自動化|導入|本番導入|基幹システム|Google Cloud|AWS|クラウド|業務AI/i.test(text)
+      /\bFDE\b|Forward[-\s]+Deployed(?:[-\s]+Engineer(?:s)?)?|フォワード[・\s-]*デプロイ/i.test(text)
     );
   }
   if (lane === "research") return item.categoryId === "models" || /SOTA|ベンチ|benchmark|論文|研究|モデル|LLM|AI for Science|Midjourney/i.test(text);
@@ -453,8 +453,8 @@ function tickerLaneMatches(item, lane) {
 //   モデル/研究=青, インフラ・業務(FDE/エージェント)=橙, 規制=赤, 一般=緑。
 // SOTA/ベンチは「指標・ベンチ」タブの担当なので、ニュース速報では「モデル」に寄せる。
 function tickerTag(item) {
-  const text = `${item.title} ${item.summary}`;
-  if (/\bFDE\b|Forward Deployed/i.test(text)) return "FDE";
+  const text = `${item.title} ${item.titleJa} ${item.summary} ${item.summaryJa}`;
+  if (/\bFDE\b|Forward[-\s]+Deployed/i.test(text)) return "FDE";
   if (/規制|著作権|ガバナンス|プライバシー|CISO|セキュリティ|脆弱性/i.test(text)) return "規制";
   if (/エージェント|Copilot|RAG|作業代行|自動化/i.test(text)) return "エージェント";
   if (/GPU|クラウド|Cloud|AWS|半導体|スパコン|データセンター|基盤/i.test(text)) return "インフラ";
@@ -528,7 +528,9 @@ function renderTicker() {
   ).slice(0, 12);
 
   if (!candidates.length) {
-    tickerTrack.textContent = "AI速報はまだ取得されていません。今すぐ取得で更新してください。";
+    tickerTrack.textContent = activeTickerLane === "fde"
+      ? "FDE関連ニュースは、現在の取得範囲では未検出です。"
+      : "AI速報はまだ取得されていません。今すぐ取得で更新してください。";
     return;
   }
 
