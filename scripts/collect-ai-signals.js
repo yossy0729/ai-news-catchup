@@ -59,7 +59,7 @@ const hfPaperTitleOverrides = new Map([
 function hfPaperTitleJa(title, index) {
   const cleanTitle = String(title || "").replace(/\s+/g, " ").trim();
   const translated = hfPaperTitleOverrides.get(cleanTitle);
-  return translated ? `HF上位論文 #${index + 1}: ${translated}` : "";
+  return translated ? `#${index + 1}: ${translated}` : "";
 }
 
 async function fetchText(url) {
@@ -133,8 +133,10 @@ function collectOfficialSotaSignals() {
       date: item.date,
       source: item.source,
       title: item.title,
+      ...(item.titleJa ? { titleJa: item.titleJa } : {}),
       summary: item.summary,
-      text: `${/MLPerf|benchmark|SOTA|leaderboard/i.test(item.title) ? "SOTA" : "Research"}: ${item.title} / ${item.source}`,
+      ...(item.summaryJa ? { summaryJa: item.summaryJa } : {}),
+      text: `${/MLPerf|benchmark|SOTA|leaderboard/i.test(item.title) ? "SOTA" : "Research"}: ${item.titleJa || item.title} / ${item.source}`,
       url: item.url,
       priority: 88
     }));

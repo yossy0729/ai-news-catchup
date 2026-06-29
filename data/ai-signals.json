@@ -12,10 +12,10 @@
       "source": "Hugging Face Papers",
       "title": "HF Papers #1: DanceOPD: On-Policy Generative Field Distillation",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF上位論文 #1: DanceOPD: オンポリシー生成フィールド蒸留",
+      "text": "#1: DanceOPD: オンポリシー生成フィールド蒸留",
       "url": "https://huggingface.co/papers/2606.27377",
       "priority": 95,
-      "titleJa": "HF上位論文 #1: DanceOPD: オンポリシー生成フィールド蒸留"
+      "titleJa": "#1: DanceOPD: オンポリシー生成フィールド蒸留"
     },
     {
       "id": "2855a1b01cacfe3a",
@@ -26,10 +26,10 @@
       "source": "Hugging Face Papers",
       "title": "HF Papers #2: In-Context World Modeling for Robotic Control",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF上位論文 #2: ロボット制御向けインコンテキスト世界モデル",
+      "text": "#2: ロボット制御向けインコンテキスト世界モデル",
       "url": "https://huggingface.co/papers/2606.26025",
       "priority": 94,
-      "titleJa": "HF上位論文 #2: ロボット制御向けインコンテキスト世界モデル"
+      "titleJa": "#2: ロボット制御向けインコンテキスト世界モデル"
     },
     {
       "id": "e402e792da41acf8",
@@ -40,10 +40,10 @@
       "source": "Hugging Face Papers",
       "title": "HF Papers #3: OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF上位論文 #3: OPID: エージェント強化学習向けオンポリシースキル蒸留",
+      "text": "#3: OPID: エージェント強化学習向けオンポリシースキル蒸留",
       "url": "https://huggingface.co/papers/2606.26790",
       "priority": 93,
-      "titleJa": "HF上位論文 #3: OPID: エージェント強化学習向けオンポリシースキル蒸留"
+      "titleJa": "#3: OPID: エージェント強化学習向けオンポリシースキル蒸留"
     },
     {
       "id": "fc6e4003579cd0f0",
@@ -54,10 +54,10 @@
       "source": "Hugging Face Papers",
       "title": "HF Papers #4: Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF上位論文 #4: Qwen画像エージェント: 実世界画像生成の文脈ギャップを埋める",
+      "text": "#4: Qwen画像エージェント: 実世界画像生成の文脈ギャップを埋める",
       "url": "https://huggingface.co/papers/2606.26907",
       "priority": 92,
-      "titleJa": "HF上位論文 #4: Qwen画像エージェント: 実世界画像生成の文脈ギャップを埋める"
+      "titleJa": "#4: Qwen画像エージェント: 実世界画像生成の文脈ギャップを埋める"
     },
     {
       "id": "6786d6dcd0a8bbe5",
@@ -68,10 +68,10 @@
       "source": "Hugging Face Papers",
       "title": "HF Papers #5: The Verification Horizon: No Silver Bullet for Coding Agent Rewards",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF上位論文 #5: 検証の限界: コーディングエージェント報酬に万能策なし",
+      "text": "#5: 検証の限界: コーディングエージェント報酬に万能策なし",
       "url": "https://huggingface.co/papers/2606.26300",
       "priority": 91,
-      "titleJa": "HF上位論文 #5: 検証の限界: コーディングエージェント報酬に万能策なし"
+      "titleJa": "#5: 検証の限界: コーディングエージェント報酬に万能策なし"
     },
     {
       "id": "6cc848adcda7cc35",
@@ -82,11 +82,11 @@
       "source": "OpenAI News",
       "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
       "summary": "OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.",
-      "text": "Research: OpenAI and Broadcom unveil LLM-optimized inference chip / OpenAI News",
+      "text": "Research: OpenAIとBroadcomが新AIチップを発表 / OpenAI News",
       "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
       "priority": 88,
-      "titleJa": "OpenAIとBroadcom、LLM最適化チップを発表",
-      "summaryJa": "OpenAIとBroadcomが新しいAIチップ「Jalapeño」を発表しました。このチップはLLMの推論性能を向上させるために設計され、AIシステムの効率化とスケールアップが期待されます。"
+      "titleJa": "OpenAIとBroadcomが新AIチップを発表",
+      "summaryJa": "OpenAIとBroadcomは、LLM推論に最適化されたカスタムAIチップ「Jalapeño」を発表しました。このチップの登場により、AIシステム全体のパフォーマンスと効率が向上します。"
     },
     {
       "id": "281c9c8c57a2f979",
@@ -97,9 +97,11 @@
       "source": "Hugging Face Blog",
       "title": "Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World",
       "summary": "Hugging FaceがAI性能評価・学習基盤に関する情報を公開。モデル開発、GPU基盤、推論・学習コスト判断に関わる一次情報です。",
-      "text": "SOTA: Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World / Hugging Face Blog",
+      "text": "SOTA: FFASR指標が現実世界の評価を提供 / Hugging Face Blog",
       "url": "https://huggingface.co/blog/ffasr-leaderboard",
-      "priority": 88
+      "priority": 88,
+      "titleJa": "FFASR指標が現実世界の評価を提供",
+      "summaryJa": "Hugging FaceはFFASRリーダーボードを発表し、現実の自動音声認識（ASR）技術を評価する基準を提供します。この情報は、モデル開発や学習コストの判断に役立つデータを含んでいます。"
     },
     {
       "id": "80e079423bcb8ee7",
@@ -110,9 +112,11 @@
       "source": "NVIDIA Technical Blog AI",
       "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
       "summary": "NVIDIA TechnicalがAI性能評価・学習基盤に関する情報を公開。モデル開発、GPU基盤、推論・学習コスト判断に関わる一次情報です。",
-      "text": "Research: Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding / NVIDIA Technical Blog AI",
+      "text": "Research: NVIDIA Blackwellで推論性能を15倍向上 / NVIDIA Technical Blog AI",
       "url": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding",
-      "priority": 88
+      "priority": 88,
+      "titleJa": "NVIDIA Blackwellで推論性能を15倍向上",
+      "summaryJa": "NVIDIAはBlackwell付きデバイスでDFlashを用いた推論性能の向上方法を公開しました。このフレームワークにより、AIモデルの効率性が大幅に向上します。"
     },
     {
       "id": "2c255983884091d3",
@@ -123,10 +127,11 @@
       "source": "Apple Machine Learning Research",
       "title": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026",
       "summary": "Apple Machine LearningがAI研究・学会発表に関する情報を公開。研究テーマ、モデル評価、技術トレンドを把握する材料になります。",
-      "text": "Research: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 / Apple Machine Learning Research",
+      "text": "Research: CVPR 2026で語られるAI研究の未来 / Apple Machine Learning Research",
       "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
       "priority": 88,
-      "titleJa": "CVPR 2026に関する研究発表"
+      "titleJa": "CVPR 2026で語られるAI研究の未来",
+      "summaryJa": "Apple Machine Learningが、2026年に開催されるコンピュータビジョンに関する学会の詳細を発表しました。新たな研究テーマや技術トレンドの把握に役立ち、業界の最新情報が得られる機会です。"
     },
     {
       "id": "7d95e1b1656fe4ae",
