@@ -1,5 +1,5 @@
 {
-  "generatedDate": "2026-06-29",
+  "generatedDate": "2026-06-30",
   "categories": [
     {
       "id": "jp-cases",
@@ -21,12 +21,12 @@
           "type": "公式発表",
           "date": "2026-06-23",
           "url": "https://www.nttdata.com/global/ja/news/evaluation/2026/062301",
-          "priority": 81,
+          "priority": 84,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
           "candidateId": "6cd83257a2522ee76b73edab",
           "importance": {
-            "total": 81,
+            "total": 84,
             "primaryAxis": "business",
             "primaryLabel": "事業",
             "primaryReason": "事業・調達に影響",
@@ -43,7 +43,7 @@
               "business": 34,
               "regulatory": 0,
               "implementation": 10,
-              "market": 12
+              "market": 24
             }
           },
           "importanceLabel": "事業",
@@ -70,7 +70,8 @@
             "primaryReason": "技術的に重要",
             "labels": [
               "技術",
-              "実装"
+              "実装",
+              "市場"
             ],
             "reasons": [
               "技術的に重要",
@@ -81,7 +82,7 @@
               "business": 10,
               "regulatory": 0,
               "implementation": 22,
-              "market": 0
+              "market": 12
             }
           },
           "importanceLabel": "技術",
@@ -126,78 +127,6 @@
           "importanceReason": "事業・調達に影響"
         },
         {
-          "title": "フォーティエンスコンサルティング、日本CFO協会主催「AI時代における戦略的CFO機能再構築プロジェクト」に協力パートナーとして参画（フォーティエンスコンサルティング株式会社）",
-          "titleJa": "フォーティエンス、CFO機能再構築プロジェクトに参加",
-          "summary": "フォーティエンスコンサルティングが、日本CFO協会主催の「AI時代における戦略的CFO機能再構築プロジェクト」に協力パートナーとして参画します。このプロジェクトは、AIを活用したCFOの役割変革を目指しており、企業の財務戦略に重要な影響を与えることが期待されています。",
-          "summaryStatus": "llm-ja",
-          "impact": "社会的影響",
-          "source": "NTT DATA ニュース",
-          "type": "公式発表",
-          "date": "2026-06-09",
-          "url": "https://www.nttdata.com/global/ja/news/group/2026/060901",
-          "priority": 74,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "099d0eae669af89035cfec1f",
-          "importance": {
-            "total": 74,
-            "primaryAxis": "business",
-            "primaryLabel": "事業",
-            "primaryReason": "事業・調達に影響",
-            "labels": [
-              "事業"
-            ],
-            "reasons": [
-              "事業・調達に影響"
-            ],
-            "axes": {
-              "technical": 0,
-              "business": 22,
-              "regulatory": 0,
-              "implementation": 10,
-              "market": 0
-            }
-          },
-          "importanceLabel": "事業",
-          "importanceReason": "事業・調達に影響"
-        },
-        {
-          "title": "プレス成形シミュレーションソフトウエア「JSTAMP®」に初のAI機能を搭載（株式会社JSOL）",
-          "titleJa": "JSTAMP®にAI機能を追加したJSOL",
-          "summary": "株式会社JSOLが提供するプレス成形シミュレーションソフトウエア「JSTAMP®」に初のAI機能が搭載されました。この新機能により、より精密なシミュレーションが可能となり、製造業界における効率化と品質向上が期待されています。",
-          "summaryStatus": "llm-ja",
-          "impact": "社会的影響",
-          "source": "NTT DATA ニュース",
-          "type": "公式発表",
-          "date": "2026-06-17",
-          "url": "https://www.nttdata.com/global/ja/news/group/2026/061700",
-          "priority": 74,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "6ffa3915568106326e67ebed",
-          "importance": {
-            "total": 74,
-            "primaryAxis": "business",
-            "primaryLabel": "事業",
-            "primaryReason": "事業・調達に影響",
-            "labels": [
-              "事業"
-            ],
-            "reasons": [
-              "事業・調達に影響"
-            ],
-            "axes": {
-              "technical": 0,
-              "business": 22,
-              "regulatory": 0,
-              "implementation": 10,
-              "market": 0
-            }
-          },
-          "importanceLabel": "事業",
-          "importanceReason": "事業・調達に影響"
-        },
-        {
           "title": "パロアルトネットワークスのManaged Security Service Providersで最高ランクに認定",
           "titleJa": "パロアルトネットワークスで最高評価を獲得",
           "summary": "株式会社NTTデータが、パロアルトネットワークスの「NextWave Partner Program」において、Managed Security Service Providersとして最高ランクに認定されました。この評価は、同社のセキュリティサービスの質を裏付けており、業界での信頼性を高めるものです。",
@@ -234,6 +163,78 @@
           },
           "importanceLabel": "事業",
           "importanceReason": "事業・調達に影響"
+        },
+        {
+          "title": "プレス成形シミュレーションソフトウエア「JSTAMP®」に初のAI機能を搭載（株式会社JSOL）",
+          "titleJa": "JSTAMP®にAI機能を追加したJSOL",
+          "summary": "株式会社JSOLが提供するプレス成形シミュレーションソフトウエア「JSTAMP®」に初のAI機能が搭載されました。この新機能により、より精密なシミュレーションが可能となり、製造業界における効率化と品質向上が期待されています。",
+          "summaryStatus": "llm-ja",
+          "impact": "社会的影響",
+          "source": "NTT DATA ニュース",
+          "type": "公式発表",
+          "date": "2026-06-17",
+          "url": "https://www.nttdata.com/global/ja/news/group/2026/061700",
+          "priority": 68,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "6ffa3915568106326e67ebed",
+          "importance": {
+            "total": 68,
+            "primaryAxis": "market",
+            "primaryLabel": "市場",
+            "primaryReason": "市場・社会影響が大きい",
+            "labels": [
+              "市場"
+            ],
+            "reasons": [
+              "市場・社会影響が大きい"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 10,
+              "regulatory": 0,
+              "implementation": 10,
+              "market": 12
+            }
+          },
+          "importanceLabel": "市場",
+          "importanceReason": "市場・社会影響が大きい"
+        },
+        {
+          "title": "フォーティエンスコンサルティング、日本CFO協会主催「AI時代における戦略的CFO機能再構築プロジェクト」に協力パートナーとして参画（フォーティエンスコンサルティング株式会社）",
+          "titleJa": "フォーティエンス、CFO機能再構築プロジェクトに参加",
+          "summary": "フォーティエンスコンサルティングが、日本CFO協会主催の「AI時代における戦略的CFO機能再構築プロジェクト」に協力パートナーとして参画します。このプロジェクトは、AIを活用したCFOの役割変革を目指しており、企業の財務戦略に重要な影響を与えることが期待されています。",
+          "summaryStatus": "llm-ja",
+          "impact": "社会的影響",
+          "source": "NTT DATA ニュース",
+          "type": "公式発表",
+          "date": "2026-06-09",
+          "url": "https://www.nttdata.com/global/ja/news/group/2026/060901",
+          "priority": 67,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "099d0eae669af89035cfec1f",
+          "importance": {
+            "total": 67,
+            "primaryAxis": "business",
+            "primaryLabel": "注目",
+            "primaryReason": "AI関連の一次情報",
+            "labels": [
+              "注目"
+            ],
+            "reasons": [
+              "AI関連の一次情報として確認"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 10,
+              "regulatory": 0,
+              "implementation": 10,
+              "market": 0
+            }
+          },
+          "importanceLabel": "注目",
+          "importanceReason": "AI関連の一次情報"
         }
       ]
     },
@@ -258,27 +259,29 @@
           "type": "論文・技術文書",
           "date": "2026-06-09",
           "url": "https://aip.riken.jp/news/jmai_2026",
-          "priority": 65,
+          "priority": 68,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
           "candidateId": "adec0fd325a40b85054c391d",
           "importance": {
-            "total": 65,
+            "total": 68,
             "primaryAxis": "technical",
             "primaryLabel": "技術",
             "primaryReason": "技術的に重要",
             "labels": [
-              "技術"
+              "技術",
+              "市場"
             ],
             "reasons": [
-              "技術的に重要"
+              "技術的に重要",
+              "市場・社会影響が大きい"
             ],
             "axes": {
               "technical": 12,
               "business": 0,
               "regulatory": 0,
               "implementation": 0,
-              "market": 0
+              "market": 12
             }
           },
           "importanceLabel": "技術",
@@ -688,15 +691,16 @@
             "primaryReason": "技術的に重要",
             "labels": [
               "技術",
+              "事業",
               "実装"
             ],
             "reasons": [
               "技術的に重要",
-              "実装・運用に有益"
+              "事業・調達に影響"
             ],
             "axes": {
               "technical": 24,
-              "business": 0,
+              "business": 12,
               "regulatory": 0,
               "implementation": 12,
               "market": 0
@@ -742,6 +746,44 @@
           },
           "importanceLabel": "技術",
           "importanceReason": "技術的に重要"
+        },
+        {
+          "title": "From Brain Waves to Words: Brain2Qwerty Offers a New Path to Communication Without Surgery",
+          "titleJa": "脳波を言葉に変換する新技術の進展",
+          "summary": "Metaは、非侵襲的な脳記録からリアルタイムで文章を変換するBrain2Qwerty v2を発表しました。この技術は、脳の損傷に苦しむ多くの人々に新たなコミュニケーション手段を提供する可能性があります。",
+          "summaryStatus": "llm-ja",
+          "impact": "研究価値",
+          "source": "Meta AI Blog",
+          "type": "論文・技術文書",
+          "date": "2026-06-29",
+          "url": "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication",
+          "priority": 68,
+          "importance": {
+            "total": 68,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術",
+              "事業"
+            ],
+            "reasons": [
+              "技術的に重要",
+              "事業・調達に影響"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 12,
+              "regulatory": 0,
+              "implementation": 0,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要",
+          "scoreBasis": "技術的に重要。技術 / 事業 の観点で優先度を算定。",
+          "new": false,
+          "candidateId": "47fcf170ba7b0eaedec7d285"
         }
       ]
     },
@@ -827,7 +869,8 @@
             "primaryReason": "技術的に重要",
             "labels": [
               "技術",
-              "実装"
+              "実装",
+              "市場"
             ],
             "reasons": [
               "技術的に重要",
@@ -838,7 +881,7 @@
               "business": 0,
               "regulatory": 0,
               "implementation": 22,
-              "market": 0
+              "market": 12
             }
           },
           "importanceLabel": "技術",
@@ -969,33 +1012,34 @@
           "type": "公式発表",
           "date": "2026-06-03",
           "url": "https://www.anthropic.com/news/services-track-partner-hub",
-          "priority": 68,
+          "priority": 74,
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
           "candidateId": "c265f4d09da60a8497d8b1be",
           "importance": {
-            "total": 68,
-            "primaryAxis": "technical",
-            "primaryLabel": "技術",
-            "primaryReason": "技術的に重要",
+            "total": 74,
+            "primaryAxis": "implementation",
+            "primaryLabel": "実装",
+            "primaryReason": "実装・運用に有益",
             "labels": [
+              "実装",
               "技術",
               "事業"
             ],
             "reasons": [
-              "技術的に重要",
-              "事業・調達に影響"
+              "実装・運用に有益",
+              "技術的に重要"
             ],
             "axes": {
               "technical": 12,
               "business": 12,
               "regulatory": 0,
-              "implementation": 10,
-              "market": 0
+              "implementation": 22,
+              "market": 12
             }
           },
-          "importanceLabel": "技術",
-          "importanceReason": "技術的に重要"
+          "importanceLabel": "実装",
+          "importanceReason": "実装・運用に有益"
         },
         {
           "title": "Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem",
@@ -1057,15 +1101,16 @@
             "primaryReason": "技術的に重要",
             "labels": [
               "技術",
+              "事業",
               "規制"
             ],
             "reasons": [
               "技術的に重要",
-              "規制・リスク上重要"
+              "事業・調達に影響"
             ],
             "axes": {
               "technical": 12,
-              "business": 0,
+              "business": 12,
               "regulatory": 12,
               "implementation": 10,
               "market": 0
@@ -1147,6 +1192,44 @@
           "importanceReason": "事業・調達に影響"
         },
         {
+          "title": "NVIDIA and SK hynix Announce Multiyear Technology Partnership to Advance Memory for AI Factories",
+          "titleJa": "NVIDIAとSK hynixがAIメモリ技術で提携",
+          "summary": "NVIDIAとSK hynixは、AI工場向けメモリ技術の向上を目指す数年にわたるパートナーシップを発表しました。今回の提携により、最新のAIアプリケーションへの対応が期待され、メモリ技術の革新が促進される見込みです。",
+          "summaryStatus": "llm-ja",
+          "impact": "技術重要度",
+          "source": "NVIDIA Newsroom",
+          "type": "公式発表",
+          "date": "2026-06-22",
+          "url": "https://nvidianews.nvidia.com/news/sk-hynix-ai-factory",
+          "priority": 84,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "b365d87dc83b3c59af917100",
+          "importance": {
+            "total": 84,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業",
+              "市場"
+            ],
+            "reasons": [
+              "事業・調達に影響",
+              "市場・社会影響が大きい"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 34,
+              "regulatory": 0,
+              "implementation": 0,
+              "market": 22
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
+        },
+        {
           "title": "Europe Unveils a Record 35 New NVIDIA AI Supercomputers",
           "titleJa": "ヨーロッパ、NVIDIAの新AIスパコン35基を導入",
           "summary": "ヨーロッパではNVIDIAの最新のAIスパコン35基が発表され、AI研究と応用の加速が期待されています。この取り組みは、AI技術の進展を支え、各国の競争力向上に寄与するとみられます。",
@@ -1203,7 +1286,8 @@
             "primaryReason": "事業・調達に影響",
             "labels": [
               "事業",
-              "規制"
+              "規制",
+              "実装"
             ],
             "reasons": [
               "事業・調達に影響",
@@ -1213,7 +1297,7 @@
               "technical": 0,
               "business": 34,
               "regulatory": 12,
-              "implementation": 0,
+              "implementation": 12,
               "market": 10
             }
           },
@@ -1311,78 +1395,6 @@
           "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
           "new": false,
           "candidateId": "65c6ef60768a4c4d44a68647",
-          "importance": {
-            "total": 81,
-            "primaryAxis": "business",
-            "primaryLabel": "事業",
-            "primaryReason": "事業・調達に影響",
-            "labels": [
-              "事業"
-            ],
-            "reasons": [
-              "事業・調達に影響"
-            ],
-            "axes": {
-              "technical": 0,
-              "business": 34,
-              "regulatory": 0,
-              "implementation": 0,
-              "market": 10
-            }
-          },
-          "importanceLabel": "事業",
-          "importanceReason": "事業・調達に影響"
-        },
-        {
-          "title": "NVIDIA and SK hynix Announce Multiyear Technology Partnership to Advance Memory for AI Factories",
-          "titleJa": "NVIDIAとSK hynixがAIメモリ技術で提携",
-          "summary": "NVIDIAとSK hynixは、AI工場向けメモリ技術の向上を目指す数年にわたるパートナーシップを発表しました。今回の提携により、最新のAIアプリケーションへの対応が期待され、メモリ技術の革新が促進される見込みです。",
-          "summaryStatus": "llm-ja",
-          "impact": "技術重要度",
-          "source": "NVIDIA Newsroom",
-          "type": "公式発表",
-          "date": "2026-06-22",
-          "url": "https://nvidianews.nvidia.com/news/sk-hynix-ai-factory",
-          "priority": 81,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "b365d87dc83b3c59af917100",
-          "importance": {
-            "total": 81,
-            "primaryAxis": "business",
-            "primaryLabel": "事業",
-            "primaryReason": "事業・調達に影響",
-            "labels": [
-              "事業"
-            ],
-            "reasons": [
-              "事業・調達に影響"
-            ],
-            "axes": {
-              "technical": 0,
-              "business": 34,
-              "regulatory": 0,
-              "implementation": 0,
-              "market": 10
-            }
-          },
-          "importanceLabel": "事業",
-          "importanceReason": "事業・調達に影響"
-        },
-        {
-          "title": "NVIDIA Stockholder Meeting Set for June 24; Individuals Can Participate Online",
-          "titleJa": "NVIDIA、6月24日に株主総会を実施",
-          "summary": "NVIDIAは株主総会を6月24日に予定しており、一般の参加者はオンラインでの参加が可能です。この取り組みは、より多くの投資家に情報提供を行い、意見を反映させることを目的としています。",
-          "summaryStatus": "llm-ja",
-          "impact": "技術重要度",
-          "source": "NVIDIA Newsroom",
-          "type": "公式発表",
-          "date": "2026-06-07",
-          "url": "https://nvidianews.nvidia.com/news/nvidia-stockholder-meeting-set-for-june-24-individuals-can-participate-online",
-          "priority": 81,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "175dda63002511e0cb09e8fd",
           "importance": {
             "total": 81,
             "primaryAxis": "business",
@@ -1521,6 +1533,44 @@
           },
           "importanceLabel": "実装",
           "importanceReason": "実装・運用に有益"
+        },
+        {
+          "title": "NVIDIA Stockholder Meeting Set for June 24; Individuals Can Participate Online",
+          "titleJa": "NVIDIA、6月24日に株主総会を実施",
+          "summary": "NVIDIAは株主総会を6月24日に予定しており、一般の参加者はオンラインでの参加が可能です。この取り組みは、より多くの投資家に情報提供を行い、意見を反映させることを目的としています。",
+          "summaryStatus": "llm-ja",
+          "impact": "技術重要度",
+          "source": "NVIDIA Newsroom",
+          "type": "公式発表",
+          "date": "2026-06-07",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-stockholder-meeting-set-for-june-24-individuals-can-participate-online",
+          "priority": 77,
+          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
+          "new": false,
+          "candidateId": "175dda63002511e0cb09e8fd",
+          "importance": {
+            "total": 77,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業",
+              "市場"
+            ],
+            "reasons": [
+              "事業・調達に影響",
+              "市場・社会影響が大きい"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 22,
+              "regulatory": 0,
+              "implementation": 0,
+              "market": 22
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響"
         },
         {
           "title": "Boosting MoE Training Throughput with Advanced Fusion Kernels | NVIDIA Technical Blog",
