@@ -48,6 +48,20 @@ function makeId(...parts) {
   return crypto.createHash("sha256").update(parts.join("|")).digest("hex").slice(0, 16);
 }
 
+const hfPaperTitleOverrides = new Map([
+  ["DanceOPD: On-Policy Generative Field Distillation", "DanceOPD: オンポリシー生成フィールド蒸留"],
+  ["In-Context World Modeling for Robotic Control", "ロボット制御向けインコンテキスト世界モデル"],
+  ["OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning", "OPID: エージェント強化学習向けオンポリシースキル蒸留"],
+  ["Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation", "Qwen画像エージェント: 実世界画像生成の文脈ギャップを埋める"],
+  ["The Verification Horizon: No Silver Bullet for Coding Agent Rewards", "検証の限界: コーディングエージェント報酬に万能策なし"]
+]);
+
+function hfPaperTitleJa(title, index) {
+  const cleanTitle = String(title || "").replace(/\s+/g, " ").trim();
+  const translated = hfPaperTitleOverrides.get(cleanTitle);
+  return translated ? `HF上位論文 #${index + 1}: ${translated}` : "";
+}
+
 async function fetchText(url) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 12000);
@@ -86,19 +100,23 @@ async function collectHfPapers() {
     }
   }
 
-  return Array.from(byId.values()).slice(0, 5).map((paper, index) => ({
-    id: makeId("hf-paper", paper.id),
-    lane: "research",
-    tag: "Paper",
-    tone: "blue",
-    date: todayInTokyo(),
-    source: "Hugging Face Papers",
-    title: `HF Papers #${index + 1}: ${paper.title}`,
-    summary: "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-    text: `HF Papers #${index + 1}: ${paper.title}`,
-    url: paper.url,
-    priority: 95 - index
-  }));
+  return Array.from(byId.values()).slice(0, 5).map((paper, index) => {
+    const titleJa = hfPaperTitleJa(paper.title, index);
+    return {
+      id: makeId("hf-paper", paper.id),
+      lane: "research",
+      tag: "Paper",
+      tone: "blue",
+      date: todayInTokyo(),
+      source: "Hugging Face Papers",
+      title: `HF Papers #${index + 1}: ${paper.title}`,
+      ...(titleJa ? { titleJa } : {}),
+      summary: "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
+      text: titleJa || `HF Papers #${index + 1}: ${paper.title}`,
+      url: paper.url,
+      priority: 95 - index
+    };
+  });
 }
 
 function collectOfficialSotaSignals() {

@@ -480,6 +480,7 @@ function tickerTone(item) {
 // aiSignals の英語タグを日本語に。media/official はタグを持たないので tickerTag で導出。
 const SIGNAL_TAG_JA = { Paper: "論文", SOTA: "ベンチ", Research: "研究", Price: "価格" };
 function tickerTagLabel(item) {
+  if (item.tag === "Paper" && item.source === "Hugging Face Papers") return "HF論文";
   if (item.tag) return SIGNAL_TAG_JA[item.tag] || item.tag;
   return tickerTag(item);
 }

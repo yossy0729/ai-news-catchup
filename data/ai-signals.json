@@ -12,9 +12,10 @@
       "source": "Hugging Face Papers",
       "title": "HF Papers #1: DanceOPD: On-Policy Generative Field Distillation",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #1: DanceOPD: On-Policy Generative Field Distillation",
+      "text": "HF上位論文 #1: DanceOPD: オンポリシー生成フィールド蒸留",
       "url": "https://huggingface.co/papers/2606.27377",
-      "priority": 95
+      "priority": 95,
+      "titleJa": "HF上位論文 #1: DanceOPD: オンポリシー生成フィールド蒸留"
     },
     {
       "id": "2855a1b01cacfe3a",
@@ -25,9 +26,10 @@
       "source": "Hugging Face Papers",
       "title": "HF Papers #2: In-Context World Modeling for Robotic Control",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #2: In-Context World Modeling for Robotic Control",
+      "text": "HF上位論文 #2: ロボット制御向けインコンテキスト世界モデル",
       "url": "https://huggingface.co/papers/2606.26025",
-      "priority": 94
+      "priority": 94,
+      "titleJa": "HF上位論文 #2: ロボット制御向けインコンテキスト世界モデル"
     },
     {
       "id": "e402e792da41acf8",
@@ -38,9 +40,10 @@
       "source": "Hugging Face Papers",
       "title": "HF Papers #3: OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #3: OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning",
+      "text": "HF上位論文 #3: OPID: エージェント強化学習向けオンポリシースキル蒸留",
       "url": "https://huggingface.co/papers/2606.26790",
-      "priority": 93
+      "priority": 93,
+      "titleJa": "HF上位論文 #3: OPID: エージェント強化学習向けオンポリシースキル蒸留"
     },
     {
       "id": "fc6e4003579cd0f0",
@@ -51,9 +54,10 @@
       "source": "Hugging Face Papers",
       "title": "HF Papers #4: Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #4: Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation",
+      "text": "HF上位論文 #4: Qwen画像エージェント: 実世界画像生成の文脈ギャップを埋める",
       "url": "https://huggingface.co/papers/2606.26907",
-      "priority": 92
+      "priority": 92,
+      "titleJa": "HF上位論文 #4: Qwen画像エージェント: 実世界画像生成の文脈ギャップを埋める"
     },
     {
       "id": "6786d6dcd0a8bbe5",
@@ -64,9 +68,10 @@
       "source": "Hugging Face Papers",
       "title": "HF Papers #5: The Verification Horizon: No Silver Bullet for Coding Agent Rewards",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #5: The Verification Horizon: No Silver Bullet for Coding Agent Rewards",
+      "text": "HF上位論文 #5: 検証の限界: コーディングエージェント報酬に万能策なし",
       "url": "https://huggingface.co/papers/2606.26300",
-      "priority": 91
+      "priority": 91,
+      "titleJa": "HF上位論文 #5: 検証の限界: コーディングエージェント報酬に万能策なし"
     },
     {
       "id": "6cc848adcda7cc35",
