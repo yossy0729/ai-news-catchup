@@ -255,7 +255,7 @@ function itemMatchesQuery(item, query) {
 function appendTitle(titleElement, item) {
   titleElement.replaceChildren();
 
-  // 日本語タイトルがあれば主役として先頭に置き、英語原題は参照用に下へ。
+  // 日本語の独自見出しがあれば主役として先頭に置き、外国語原題だけ参照用に下へ。
   const hasJa = item.titleJa && normalizeText(item.titleJa) !== normalizeText(item.title);
   if (hasJa) {
     const translated = document.createElement("span");
@@ -263,6 +263,8 @@ function appendTitle(titleElement, item) {
     translated.textContent = item.titleJa;
     titleElement.append(translated);
   }
+
+  if (hasJa && /[ぁ-んァ-ヶ一-龠]/.test(item.title)) return;
 
   const original = document.createElement("span");
   original.className = "title-original";

@@ -65,16 +65,16 @@ function parseJsonText(text) {
 
 function promptFor(item) {
   return [
-    "次のAI関連一次情報を、日本語でダッシュボード向けに要約してください。",
+    "次のAI関連一次情報を、日本語で公開ダッシュボード向けのカード文面に書き換えてください。",
     "条件:",
-    "- 誇張しない",
-    "- 原文にない断定をしない",
-    "- summaryJaは60〜110字程度にする",
-    "- summaryJaは『何が起きたか』『何についての記事か』を具体的に書く",
+    "- 誇張しない。原文にない断定をしない",
+    "- titleJaは20〜40字程度の独自見出しにする。日本語タイトルでも元タイトルをそのまま写さず、意味を保って言い換える",
+    "- summaryJaは90〜150字程度・2文以内にする。短すぎる一言要約にしない",
+    "- summaryJaは『何が起きたか』『何についての記事か』『AI動向としての意味』を具体的に書く",
+    "- 元記事の見出しや本文の表現を長く引用・直訳しない。事実関係を自分の言葉で要約する",
     "- 汎用的な文言は禁止: 『確認する価値があります』『示唆があります』『見る材料になります』のような一般論を書かない",
     "- AIコンサルタントが一覧で世界の動きを把握できる文章にする",
-    "- titleJaは記事タイトルの日本語タイトルにする。英語タイトルの場合は、固有名詞・モデル名・論文名は必要に応じて残しつつ、日本語で主題が分かるタイトルを作る",
-    "- 元タイトルが日本語の場合、titleJaは元タイトルと同じでよい",
+    "- 固有名詞・モデル名・製品名は必要に応じて英語のまま残す",
     "- summaryJaとimpactJaは必ず日本語で書く。英語の原文をそのまま残さない",
     "- impactJaは『なぜ見るべきか』を短く書く",
     "- JSONのみを返す",
@@ -90,7 +90,6 @@ function promptFor(item) {
     `excerpt: ${compactText(item.excerpt, 1800)}`
   ].join("\n");
 }
-
 async function summarizeItem(item) {
   const response = await fetch("https://api.openai.com/v1/responses", {
     method: "POST",
@@ -103,7 +102,7 @@ async function summarizeItem(item) {
       input: [
         {
           role: "developer",
-          content: "You rewrite official AI news into concise, faithful Japanese dashboard summaries. Return only valid JSON."
+          content: "You rewrite AI news into original, faithful Japanese dashboard copy. Avoid close paraphrases of source wording, never invent facts, and return only valid JSON."
         },
         {
           role: "user",
@@ -124,7 +123,7 @@ async function summarizeItem(item) {
 
   return {
     llmTitle: compactText(parsed.titleJa || item.title, 120),
-    llmSummary: compactText(parsed.summaryJa || "", 220),
+    llmSummary: compactText(parsed.summaryJa || "", 260),
     llmImpact: compactText(parsed.impactJa || "", 120),
     llmModel: model,
     llmSummarizedAt: new Date().toISOString()

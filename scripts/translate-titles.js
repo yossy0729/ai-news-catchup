@@ -1,7 +1,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 
-// ティッカー/カードに出る英語見出しと英語要約を日本語化する。
+// ティッカー/カードに出る見出しと要約を、元表現のコピーではない日本語の独自見出し・独自要約へ整える。
 // - 対象: official-news / media-news / ai-signals の items[]（ティッカーはこれらを流す）。
 // - OPENAI_API_KEY があるときだけ実行。無ければ何もしない（=英語のままフォールバック）。
 // - 失敗(料金超過429など)はバッチ単位で握りつぶし、その分は英語のまま据え置く。
@@ -65,18 +65,19 @@ function parseJsonText(text) {
 
 function buildPrompt(batch) {
   const list = batch.map((entry, i) => {
-    const row = { i, title: entry.item.title };
-    // 英語要約を持つ項目は本文も渡して翻訳させる。
-    if (entry.needSummary) row.summary = compactText(entry.item.summary, 600);
+    const row = { i, source: entry.item.source || entry.item.vendorName || "", title: entry.item.title };
+    if (entry.needSummary) row.summary = compactText(entry.item.summary, 900);
     return row;
   });
   return [
-    "次のAI関連ニュースを日本語化してください。",
+    "次のAI関連ニュースを、公開ダッシュボード向けの日本語カード文面に書き換えてください。",
     "条件:",
-    "- titleJaは日本語の短い見出しに（各40字以内目安）",
-    "- summaryがある項目は、その要約も日本語に翻訳（summaryJa。80〜120字目安、誇張しない）",
+    "- titleJaは20〜40字程度の独自見出しにする。日本語タイトルでも元タイトルをそのまま写さず、意味を保って言い換える",
+    "- summaryがある項目は、summaryJaを90〜150字程度・2文以内で作る。短すぎる一言要約にしない",
+    "- summaryJaは、何が起きたか、誰・何に関係するか、なぜAI動向として見る価値があるかを具体的に書く",
+    "- 元記事の見出しや本文の表現を長く引用・直訳しない。事実関係を自分の言葉で要約する",
     "- 製品名・モデル名・企業名・論文名などの固有名詞は、自然な場合は英語のまま残す",
-    "- 原文にない情報を足さない",
+    "- 原文にない情報を足さない。推測や評価を断定しない",
     "- 入力と同じ i を付けてJSON配列のみで返す",
     "",
     'JSON schema: [{"i":0,"titleJa":"...","summaryJa":"..."}]（summaryが無い項目はsummaryJa省略可）',
@@ -84,7 +85,6 @@ function buildPrompt(batch) {
     `input: ${JSON.stringify(list)}`
   ].join("\n");
 }
-
 async function translateBatch(batch) {
   const response = await fetch("https://api.openai.com/v1/responses", {
     method: "POST",
@@ -98,11 +98,11 @@ async function translateBatch(batch) {
         {
           role: "developer",
           content:
-            "You translate English AI-news headlines and summaries into concise, faithful Japanese for a news dashboard. Keep proper nouns in English when natural. Return only a valid JSON array."
+            "You rewrite AI-news headlines and summaries into original, faithful Japanese dashboard copy. Avoid close paraphrases of source wording, do not invent facts, and return only a valid JSON array."
         },
         { role: "user", content: buildPrompt(batch) }
       ],
-      max_output_tokens: Math.max(500, batch.length * 140)
+      max_output_tokens: Math.max(700, batch.length * 240)
     })
   });
 
@@ -120,7 +120,7 @@ async function translateBatch(batch) {
     if (!target) continue;
     const titleJa = compactText(row.titleJa, 120);
     if (target.needTitle && titleJa) target.item.titleJa = titleJa;
-    const summaryJa = compactText(row.summaryJa, 200);
+    const summaryJa = compactText(row.summaryJa, 260);
     if (target.needSummary && summaryJa) target.item.summaryJa = summaryJa;
   }
 }
@@ -131,19 +131,23 @@ async function main() {
     return;
   }
 
-  // 全ファイルから「英語見出し かつ 未翻訳」の items を集める。
+  // 全ファイルから、カード表示用の独自見出し・独自要約が未生成の items を集める。
   const files = targetFiles
     .filter((filePath) => fs.existsSync(filePath))
     .map((filePath) => ({ filePath, data: readJson(filePath) }));
 
-  // 英語要約が残っている項目はタブを問わず日本語化する。
-  // 収集側ですでに日本語化された要約は hasJapanese で対象外になる。
+  // media/official は公開カードに直接出るため、日本語記事も独自見出し・独自要約の対象にする。
+  // ai-signals は従来どおり、英語が残っている項目だけを日本語化する。
   const pending = [];
   for (const file of files) {
+    const isPublicNewsFile = /(?:media|official)-news\.json$/i.test(file.filePath);
     for (const item of file.data.items || []) {
-      const needTitle = Boolean(item.title) && !hasJapanese(item.title) && (force || !item.titleJa);
-      const needSummary =
-        Boolean(item.summary) && !hasJapanese(item.summary) && (force || !item.summaryJa);
+      const needTitle = Boolean(item.title) && (isPublicNewsFile
+        ? (force || !item.titleJa)
+        : (!hasJapanese(item.title) && (force || !item.titleJa)));
+      const needSummary = Boolean(item.summary) && (isPublicNewsFile
+        ? (force || !item.summaryJa)
+        : (!hasJapanese(item.summary) && (force || !item.summaryJa)));
       if (needTitle || needSummary) pending.push({ item, needTitle, needSummary });
     }
   }

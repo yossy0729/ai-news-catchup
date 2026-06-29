@@ -217,7 +217,7 @@ function titleJaForItem(item, title, existingItem, localizedOverride) {
   const existingTitleJa = normalizeSpaces(existingItem?.titleJa);
   if (!llmTitle && overrideTitleJa) return sentenceTrim(overrideTitleJa, 120);
   if (!llmTitle && existingTitleJa) return sentenceTrim(existingTitleJa, 120);
-  if (!llmTitle || hasJapanese(title)) return "";
+  if (!llmTitle) return "";
   if (llmTitle.toLowerCase() === normalizeSpaces(title).toLowerCase()) return "";
   return sentenceTrim(llmTitle, 120);
 }

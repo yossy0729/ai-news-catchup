@@ -361,7 +361,7 @@ function main() {
   runStep("collect-ai-signals", "scripts/collect-ai-signals.js", signalArgs);
   runStep("collect-media-news", "scripts/collect-media-news.js", mediaArgs);
   runStep("collect", "scripts/collect-news.js", collectArgs);
-  // ティッカー/速報の英語見出しを日本語化（APIキーがあるときだけ。失敗時は英語のまま）。
+  // ティッカー/速報のカード文面を独自見出し・独自要約へ整形（APIキーがあるときだけ。失敗時は既存文面のまま）。
   if (llmSummary) {
     const translateArgs = [dryRun ? "--dry-run" : "--write"];
     runStep("translate-titles", "scripts/translate-titles.js", translateArgs);

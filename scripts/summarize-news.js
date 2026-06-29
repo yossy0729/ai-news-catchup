@@ -1,7 +1,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 
-// news.json（表示確定後）の「日本語要約が未生成」の記事を後追いで日本語要約する。
+// news.json（表示確定後）の記事を、カード向けの独自見出し・独自要約で後追い整形する。
 // - 蓄積モードで残る古い記事（APIキー設定前に昇格した分）は誰も再要約しないため、ここで埋める。
 // - 材料はタイトル/翻訳済みtitleJa/出典。review.json に同一URLの excerpt があれば補強。
 // - OPENAI_API_KEY があるときだけ実行。失敗(料金超過など)は1件ずつ握りつぶし、英語/未生成のまま据え置く。
@@ -63,33 +63,36 @@ function parseJsonText(text) {
   return JSON.parse(cleaned);
 }
 
-// 要約が必要な記事か（プレースホルダー or 日本語でない要約）。
-function needsSummary(item) {
+// カード文面の整形が必要な記事か（独自見出し不足、プレースホルダー、短すぎる/日本語でない要約）。
+function needsDashboardCopy(item) {
+  if (!item.titleJa) return true;
   if (item.summaryStatus === "missing-ja-summary") return true;
-  return !hasJapanese(item.summary);
+  if (!hasJapanese(item.summary)) return true;
+  return String(item.summary || "").trim().length < 70;
 }
 
 function promptFor(item, enrich) {
   return [
-    "次のAI関連ニュースを、日本語でダッシュボード向けに1文要約してください。",
+    "次のAI関連ニュースを、日本語で公開ダッシュボード向けのカード文面に書き換えてください。",
     "条件:",
-    "- 60〜110字程度",
-    "- 見出し(title/titleJa)が伝える主題を、誇張せず日本語で具体的に書く",
-    "- 原文・見出しにない事実を作らない（情報が見出しだけなら、その主題を日本語で言い換える）",
+    "- titleJaは20〜40字程度の独自見出しにする。日本語タイトルでも元タイトルをそのまま写さず、意味を保って言い換える",
+    "- summaryJaは90〜150字程度・2文以内にする。短すぎる一言要約にしない",
+    "- summaryJaは、何が起きたか、誰・何に関係するか、なぜAI動向として見る価値があるかを具体的に書く",
+    "- 元記事の見出しや本文の表現を長く引用・直訳しない。事実関係を自分の言葉で要約する",
+    "- 原文・見出しにない事実を作らない。情報が少ない場合は、分かる範囲を明示して簡潔に書く",
     "- 『確認する価値があります』『示唆があります』のような中身のない一般論は禁止",
     "- 固有名詞・モデル名・製品名は必要に応じて英語のまま残す",
-    "- titleJaが空なら日本語の見出しも作る",
     "- JSONのみを返す",
     "",
     'JSON schema: {"titleJa":"...","summaryJa":"..."}',
     "",
     `source: ${item.source || ""}`,
     `title: ${item.title || ""}`,
-    `titleJa: ${item.titleJa || ""}`,
-    `excerpt: ${compactText(enrich?.excerpt || enrich?.description || "", 1200)}`
+    `currentTitleJa: ${item.titleJa || ""}`,
+    `currentSummary: ${item.summary || ""}`,
+    `excerpt: ${compactText(enrich?.excerpt || enrich?.description || "", 1400)}`
   ].join("\n");
 }
-
 async function summarizeItem(item, enrich) {
   const response = await fetch("https://api.openai.com/v1/responses", {
     method: "POST",
@@ -103,11 +106,11 @@ async function summarizeItem(item, enrich) {
         {
           role: "developer",
           content:
-            "You rewrite AI news headlines into concise, faithful Japanese one-line dashboard summaries. Never invent facts. Return only valid JSON."
+            "You rewrite AI-news headlines and summaries into original, faithful Japanese dashboard copy. Avoid close paraphrases of source wording, do not invent facts, and return only valid JSON."
         },
         { role: "user", content: promptFor(item, enrich) }
       ],
-      max_output_tokens: 400
+      max_output_tokens: 600
     })
   });
 
@@ -120,7 +123,7 @@ async function summarizeItem(item, enrich) {
   const parsed = parseJsonText(responseText(json));
   return {
     titleJa: compactText(parsed.titleJa || item.titleJa || "", 120),
-    summaryJa: compactText(parsed.summaryJa || "", 170)
+    summaryJa: compactText(parsed.summaryJa || "", 260)
   };
 }
 
@@ -143,7 +146,7 @@ async function main() {
   const targets = [];
   for (const category of news.categories) {
     for (const item of category.items || []) {
-      if (force || needsSummary(item)) targets.push(item);
+      if (force || needsDashboardCopy(item)) targets.push(item);
     }
   }
   const slice = targets.slice(0, limit);
@@ -156,7 +159,7 @@ async function main() {
       if (result.summaryJa) {
         item.summary = result.summaryJa;
         item.summaryStatus = "llm-ja";
-        if (result.titleJa && !item.titleJa) item.titleJa = result.titleJa;
+        if (result.titleJa) item.titleJa = result.titleJa;
         done += 1;
       }
     } catch (error) {
