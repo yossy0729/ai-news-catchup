@@ -80,8 +80,8 @@
       "text": "Research: OpenAI and Broadcom unveil LLM-optimized inference chip / OpenAI News",
       "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
       "priority": 88,
-      "titleJa": "OpenAIとBroadcomが新AIチップ発表",
-      "summaryJa": "OpenAIとBroadcomは、LLMの推論に最適化されたAIチップJalapeñoを発表し、パフォーマンスと効率の向上を目指しています。"
+      "titleJa": "OpenAIとBroadcom、LLM最適化チップを発表",
+      "summaryJa": "OpenAIとBroadcomが新しいAIチップ「Jalapeño」を発表しました。このチップはLLMの推論性能を向上させるために設計され、AIシステムの効率化とスケールアップが期待されます。"
     },
     {
       "id": "281c9c8c57a2f979",
@@ -121,7 +121,7 @@
       "text": "Research: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 / Apple Machine Learning Research",
       "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
       "priority": 88,
-      "titleJa": "CVPR 2026開催予定"
+      "titleJa": "CVPR 2026に関する研究発表"
     },
     {
       "id": "7d95e1b1656fe4ae",
@@ -135,7 +135,7 @@
       "text": "Price: OpenAI 入力/出力トークン価格表を確認",
       "url": "https://openai.com/api/pricing/",
       "priority": 76,
-      "titleJa": "OpenAIのトークン価格"
+      "titleJa": "OpenAIのトークン価格の変化"
     },
     {
       "id": "da08ee3f7c1156ae",
@@ -149,7 +149,7 @@
       "text": "Price: Anthropic 入力/出力トークン価格表を確認",
       "url": "https://docs.anthropic.com/en/docs/about-claude/pricing",
       "priority": 76,
-      "titleJa": "Anthropicのトークン価格"
+      "titleJa": "Anthropicのトークン価格設定情報"
     },
     {
       "id": "acbe155951267feb",
@@ -163,7 +163,7 @@
       "text": "Price: Google Gemini 入力/出力トークン価格表を確認",
       "url": "https://ai.google.dev/gemini-api/docs/pricing",
       "priority": 76,
-      "titleJa": "Google Geminiのトークン価格"
+      "titleJa": "Google Geminiのトークン価格を発表"
     }
   ],
   "errors": [],
@@ -176,8 +176,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 5,
-      "lastCheckedAt": "2026-06-28T21:45:28.261Z",
-      "lastSuccessAt": "2026-06-28T21:45:28.261Z",
+      "lastCheckedAt": "2026-06-29T00:54:37.680Z",
+      "lastSuccessAt": "2026-06-29T00:54:37.680Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -189,8 +189,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 4,
-      "lastCheckedAt": "2026-06-28T21:45:28.262Z",
-      "lastSuccessAt": "2026-06-28T21:45:28.262Z",
+      "lastCheckedAt": "2026-06-29T00:54:37.681Z",
+      "lastSuccessAt": "2026-06-29T00:54:37.681Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -202,8 +202,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-06-28T21:45:29.587Z",
-      "lastSuccessAt": "2026-06-28T21:45:29.587Z",
+      "lastCheckedAt": "2026-06-29T00:54:38.888Z",
+      "lastSuccessAt": "2026-06-29T00:54:38.888Z",
       "lastFailureAt": null,
       "lastError": null
     }

@@ -45,50 +45,79 @@
   ],
   "items": [
     {
-      "id": "32d74d3e22752482",
-      "title": "AIによる価値創出が重視された「DX銘柄2026」──グランプリ受賞3社が明かす、組織変革の打開策",
-      "summary": "経済産業省、東京証券取引所、情報処理推進機構（以下、IPA）の3者は、デジタル技術を駆使して中長期的な企業価値向上を成し遂げている上場企業を選ぶ「DX銘柄2026」の選定企業発表会を2026年6月5日に開催した。前身となる「攻めのIT経営銘柄」を含めると10年...",
-      "url": "https://enterprisezine.jp/article/detail/24465",
+      "id": "eeed00380676327a",
+      "title": "AI活用企業で急浮上する“トークンコスト”問題 デル・テクノロジーズが示した解決策は",
+      "summary": "生成AIの業務利用が本格化する中、企業ではクラウドAIサービスの利用料である“トークンコスト”の急増が問題となっている。AIエージェント時代になれば、その問題はさらに深刻化するだろう。",
+      "url": "https://ascii.jp/elem/000/004/414/4414158/?rss",
+      "source": "ASCII.jp",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-29",
+      "publishedAt": "2026-06-29T00:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 0.9,
+      "relevanceScore": 6,
+      "priority": 92,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-29T00:54:44.294Z"
+      },
+      "titleJa": "生成AIが抱える「トークンコスト」問題",
+      "summaryJa": "AIの本格的な業務利用が進む中で、企業が直面する「トークンコスト」の急増が問題視されています。このコストがより深刻化することが予測され、企業のAI活用に大きな影響を与えるでしょう。"
+    },
+    {
+      "id": "d61ff769d63d7a8d",
+      "title": "AIの正答率を10％から94％に上げるメタデータの真価──“情報の付与”を実運用に乗せる3ステップ",
+      "summary": "生成AIやAIエージェントの活用が急速に広がる中、多くの企業で課題に挙がるのが「AIの精度」に係る問題です。その課題の根本原因はAIモデルではなく、AIに渡すデータの品質と管理にあります。その解決に向けたカギを握るのが「メタデータ」。連載「《脱・AI迷走》メタ...",
+      "url": "https://enterprisezine.jp/article/detail/24393",
       "source": "EnterpriseZine",
       "sourceType": "メディア",
       "category": "産業活用・導入事例",
       "categoryId": "industry",
       "accent": "adoption",
       "region": "日本",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-26T00:00:00.000Z",
-      "freshness": "recent",
-      "ageHours": 69.8,
-      "relevanceScore": 6,
-      "priority": 96,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:31.753Z"
-      }
-    },
-    {
-      "id": "19e1e645be8ef0cd",
-      "title": "Google Cloudの識者が解説──AIエージェントで変わる、データベース移行の最新事情",
-      "summary": "企業のシステム環境にパブリッククラウドが定着して久しい。維持コストの問題を十分に認識しつつも、10〜20年も「塩漬けシステム」を抱えざるを得ない悩みは、日本企業に特有のものではない。本稿では、レガシーシステムのモダナイゼーションの中でも難関の「データベースの移...",
-      "url": "https://enterprisezine.jp/article/detail/24546",
-      "source": "EnterpriseZine",
-      "sourceType": "メディア",
-      "category": "半導体・クラウド・基盤",
-      "categoryId": "infrastructure",
-      "accent": "infrastructure",
-      "region": "日本",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-25T23:00:00.000Z",
-      "freshness": "recent",
-      "ageHours": 70.8,
+      "date": "2026-06-29",
+      "publishedAt": "2026-06-29T00:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 0.9,
       "relevanceScore": 5,
       "priority": 96,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:31.753Z"
-      }
+        "checkedAt": "2026-06-29T00:54:41.263Z"
+      },
+      "titleJa": "メタデータによるAI精度向上の秘訣",
+      "summaryJa": "AIの精度向上の鍵は、データの品質と管理にあるとされています。その中で「メタデータ」の重要性が浮き彫りになり、実運用における具体的なステップが紹介されています。"
+    },
+    {
+      "id": "46a14d43e117ca8f",
+      "title": "AIは設計者を置き換えるのか Autodesk幹部に聞くCADと設計データの未来",
+      "summary": "AIの活用が設計／製造の現場にも広がる中、CADの操作や設計者の役割はどう変わるのか。米Autodesk 製品開発／製造ソリューション担当エグゼクティブバイスプレジデントのジェフ・キンダー氏に、AIが設計業務にもたらす変化、AI時代に求められる設計データの在り...",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2606/29/news008.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-29",
+      "publishedAt": "2026-06-28T23:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 1.9,
+      "relevanceScore": 4,
+      "priority": 104,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-29T00:54:39.847Z"
+      },
+      "titleJa": "設計業界におけるAIの変化と未来",
+      "summaryJa": "設計や製造分野へのAI導入が進む中、CAD操作や設計者の役割に変革が求められています。Autodeskのエグゼクティブが、その未来像と必要な資源について見解を示しました。"
     },
     {
       "id": "640e14a4e67ad28a",
@@ -104,14 +133,16 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-27T02:07:50.000Z",
       "freshness": "recent",
-      "ageHours": 43.6,
+      "ageHours": 46.8,
       "relevanceScore": 4,
       "priority": 104,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.367Z"
-      }
+        "checkedAt": "2026-06-29T00:54:39.848Z"
+      },
+      "titleJa": "AIモデル「ミュトス」の再提供が決定",
+      "summaryJa": "米Anthropicは、一時停止していたAIモデル「Claude Mythos 5」を、米国の特定の組織に限って再提供することを発表しました。これは、米政府からの許可を受けた結果です。"
     },
     {
       "id": "73ba764288cebe71",
@@ -127,14 +158,16 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T19:56:10.000Z",
       "freshness": "recent",
-      "ageHours": 49.8,
+      "ageHours": 53,
       "relevanceScore": 4,
       "priority": 104,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.368Z"
-      }
+        "checkedAt": "2026-06-29T00:54:39.849Z"
+      },
+      "titleJa": "OpenAIが新AIモデル「GPT-5.6」シリーズを限定公開",
+      "summaryJa": "米国のOpenAIが次世代AIモデル「GPT-5.6」シリーズを限定プレビューとして始めました。新たに「Sol」、「Terra」、「Luna」の3つのモデルを発表し、特に政府との調整を経て導入が進められています。"
     },
     {
       "id": "94003e92bca6f456",
@@ -149,15 +182,17 @@
       "region": "日本",
       "date": "2026-06-28",
       "publishedAt": "2026-06-27T22:15:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 23.5,
+      "freshness": "recent",
+      "ageHours": 26.7,
       "relevanceScore": 4,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.538Z"
-      }
+        "checkedAt": "2026-06-29T00:54:40.020Z"
+      },
+      "titleJa": "Anthropic、Mythosモデルの部分再開を米政府が認可",
+      "summaryJa": "米国のAnthropicは、輸出規制がかかっていたAIモデル「Claude Mythos 5」を一部の組織に再展開する許可を米政府から得たことを発表しました。一方で、別のモデル「Claude Fable 5」は引き続き停止中です。"
     },
     {
       "id": "11e34260ae456c7e",
@@ -173,16 +208,16 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T16:24:47.000Z",
       "freshness": "recent",
-      "ageHours": 53.3,
+      "ageHours": 56.5,
       "relevanceScore": 4,
       "priority": 94,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:35.889Z"
+        "checkedAt": "2026-06-29T00:54:45.145Z"
       },
-      "titleJa": "Anthropic対OpenAIの時代は終わり",
-      "summaryJa": "AIモデルの進化により、その能力が現実の政治的影響を持つようになってきている。これに伴う課題についての議論が進んでいる。"
+      "titleJa": "AIの政治的影響力が増す中の企業間競争",
+      "summaryJa": "AI技術の進展により、その能力が政治に与える影響が現実のものとなっています。これに伴い、AI企業間の競争は新たな局面に突入しています。"
     },
     {
       "id": "b0f1da588b5ca6e4",
@@ -198,14 +233,16 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-27T02:32:57.000Z",
       "freshness": "recent",
-      "ageHours": 43.2,
+      "ageHours": 46.4,
       "relevanceScore": 4,
       "priority": 86,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:35.792Z"
-      }
+        "checkedAt": "2026-06-29T00:54:45.118Z"
+      },
+      "titleJa": "アンソロピック、Mythos5を特定組織に再展開",
+      "summaryJa": "Anthropicは、米国の指示の下で公開を停止していた「Claude Mythos 5」を、重要なインフラを運用する組織へ再展開可能であると発表しました。特定の組織を対象とした重要な動きです。"
     },
     {
       "id": "b4b9946dfdf95b1b",
@@ -220,15 +257,42 @@
       "region": "日本",
       "date": "2026-06-28",
       "publishedAt": "2026-06-27T23:20:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 22.4,
+      "freshness": "recent",
+      "ageHours": 25.6,
       "relevanceScore": 3,
       "priority": 95,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.538Z"
-      }
+        "checkedAt": "2026-06-29T00:54:40.019Z"
+      },
+      "titleJa": "OpenAIが「GPT-5.6」モデルの限定プレビューを開始",
+      "summaryJa": "OpenAIは「GPT-5.6」シリーズのプレビューを開始しました。「Sol」を含む3つのモデルが発表され、米国政府の要請を受け、信頼できるパートナーと共に進められています。"
+    },
+    {
+      "id": "69c6fcc25b192532",
+      "title": "古豪OPSWAT、重要産業のセキュリティ強化に向けて独自AI技術を披露 未知の脅威も即座に解析してインテリジェンスに変換",
+      "summary": "サイバーセキュリティの古豪OPSWATが、2026年6月17日に都内で事業戦略説明会を行った。東京でのツアーイベント「OP/X Tokyo 2026」開催に合わせて来日していた、創業者兼CEOのベニ...",
+      "url": "https://enterprisezine.jp/news/detail/24571",
+      "source": "EnterpriseZine",
+      "sourceType": "メディア",
+      "category": "AIセキュリティ・リスク",
+      "categoryId": "security",
+      "accent": "security",
+      "region": "日本",
+      "date": "2026-06-29",
+      "publishedAt": "2026-06-28T23:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 1.9,
+      "relevanceScore": 3,
+      "priority": 93,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-29T00:54:41.263Z"
+      },
+      "titleJa": "OPSWAT、独自AIでセキュリティ強化を発表",
+      "summaryJa": "サイバーセキュリティの老舗企業OPSWATが、東京で事業戦略を発表しました。独自のAI技術を用いて未知の脅威への即応を図り、重要産業のセキュリティを強化する取り組みを進めています。"
     },
     {
       "id": "531f9c2784935552",
@@ -244,14 +308,16 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T10:16:00.000Z",
       "freshness": "recent",
-      "ageHours": 59.5,
+      "ageHours": 62.6,
       "relevanceScore": 3,
       "priority": 93,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:31.752Z"
-      }
+        "checkedAt": "2026-06-29T00:54:41.263Z"
+      },
+      "titleJa": "Linux FoundationがOSSセキュリティ強化のイニシアチブ発表",
+      "summaryJa": "Linux Foundationは、AIによる脆弱性発見を視野に入れたオープンソースソフトウェアのセキュリティ強化を図る新しいイニシアチブを発表しました。業界全体での協力強化が求められています。"
     },
     {
       "id": "9987c710773bf266",
@@ -267,14 +333,16 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T06:22:00.000Z",
       "freshness": "recent",
-      "ageHours": 63.4,
+      "ageHours": 66.5,
       "relevanceScore": 3,
       "priority": 93,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:31.752Z"
-      }
+        "checkedAt": "2026-06-29T00:54:41.264Z"
+      },
+      "titleJa": "日立、経営者向けサイバー脅威トレーニングを開始",
+      "summaryJa": "日立ソリューションズ・クリエイトが、経営層向けにサイバー脅威トレンド研修を開始しました。企業のサイバーセキュリティの強化を図る取り組みの一環として注目されています。"
     },
     {
       "id": "8ae8029396f79dbd",
@@ -290,16 +358,16 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-27T12:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 33.8,
+      "ageHours": 36.9,
       "relevanceScore": 3,
       "priority": 91,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:35.888Z"
+        "checkedAt": "2026-06-29T00:54:45.144Z"
       },
-      "titleJa": "アジアのAIスタートアップの動き",
-      "summaryJa": "アジアでは、輸出禁止を恐れずにMythosに類似した能力を持つ新モデルが登場している。地域のAIラボが新たな展開を見せる中、影響が広がっている。"
+      "titleJa": "アジアのAIスタートアップ、Mythos類似モデルを展開",
+      "summaryJa": "アジアのAI関連企業が、Anthropicの輸出禁止が続く中でMythos類似の新モデルを発表しています。これにより、米国のAIラボが市場回復を果たすのは容易でなくなる可能性があります。"
     },
     {
       "id": "57d52a15ab61cbeb",
@@ -315,16 +383,16 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T17:43:22.000Z",
       "freshness": "recent",
-      "ageHours": 52,
+      "ageHours": 55.2,
       "relevanceScore": 3,
       "priority": 91,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:35.889Z"
+        "checkedAt": "2026-06-29T00:54:45.144Z"
       },
-      "titleJa": "自社チップ開発の理由",
-      "summaryJa": "OpenAIやSpaceXを含む企業が自社チップを開発する理由は、Nvidiaへの依存を減らす狙いがあり、競争が熱を帯びている。"
+      "titleJa": "OpenAIと他企業、独自チップ開発に注力",
+      "summaryJa": "OpenAIをはじめとする企業が自社チップの開発に着手し、Nvidiaへの依存から脱却しようとしています。これにより、AIチップ市場に変革がもたらされる可能性があります。"
     },
     {
       "id": "77a648503e8cff20",
@@ -340,16 +408,91 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T14:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 55.8,
+      "ageHours": 58.9,
       "relevanceScore": 3,
       "priority": 91,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:35.889Z"
+        "checkedAt": "2026-06-29T00:54:45.145Z"
       },
-      "titleJa": "OpenAIのJalapeñoチップ",
-      "summaryJa": "OpenAIのJalapeñoチップは、Nvidiaからの脱却を目指す大手テック企業の重要な動きとされています。"
+      "titleJa": "OpenAIのJalapeñoチップが市場競争に影響",
+      "summaryJa": "OpenAIが発表したJalapeñoチップが、Nvidiaへの競争を激化させる動きを見せています。これにより、独自開発の流れが加速する可能性が高まります。"
+    },
+    {
+      "id": "a313910ebc408139",
+      "title": "AIの進化にオープンソースは追随できるのか ―― Red Hat APAC担当CTOに聞く",
+      "summary": "OpenAIやAnthropicといったプロプライエタリ勢の話題が先行するAI業界において、オープンソースを軸とするRed Hatはどのような立ち位置を描いているのか。",
+      "url": "https://ascii.jp/elem/000/004/413/4413370/?rss",
+      "source": "ASCII.jp",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-29",
+      "publishedAt": "2026-06-29T00:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 0.9,
+      "relevanceScore": 3,
+      "priority": 89,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-29T00:54:44.295Z"
+      },
+      "titleJa": "オープンソースとAI進化の関係性を探る",
+      "summaryJa": "AI業界でプロプライエタリ企業が注目を集める中、Red Hatがオープンソースの視点からどのように位置付けをしているのかを探ります。"
+    },
+    {
+      "id": "724265867938c614",
+      "title": "若手エンジニアの半数が「管理職になりたくない」理由は／AIコーディング普及で開発ボトルネックは「レビュー」へ／社内不正が増加傾向、ほか",
+      "summary": "今回（2026年6月20日～6月26日）は、AIコーディング（AI生成コード）の導入効果と今後の課題、日本企業の社内不正被害の実態、進んでいないランサムウェア被害への備え、若手ITエンジニアが「管理職になりたくない」意識の背景についてのデータを紹介します。",
+      "url": "https://ascii.jp/elem/000/004/414/4414160/?rss",
+      "source": "ASCII.jp",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-29",
+      "publishedAt": "2026-06-28T23:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 1.9,
+      "relevanceScore": 3,
+      "priority": 89,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-29T00:54:44.295Z"
+      },
+      "titleJa": "若手エンジニアが管理職を避ける背景と課題",
+      "summaryJa": "最近の調査で、若手ITエンジニアの多くが管理職を希望しない理由が明らかとなりました。また、AI導入による開発のボトルネックも浮き彫りになっています。"
+    },
+    {
+      "id": "8592041d0cda3c1c",
+      "title": "Anthropic、「Mythos 5」提供再開 米国の重要インフラ組織限定 Fable 5再開は依然協議中",
+      "summary": "米Anthropicは6月27日、AIモデル「Mythos 5」を米国の一部組織に向けて提供再開すると、公式X（旧Twitter）アカウントへの投稿で明らかにした。米政府が同日、重要インフラの運用や防衛にあたる米国の組織群に対し、Mythos 5を再展開してよ...",
+      "url": "https://japan.cnet.com/article/35249560/",
+      "source": "CNET Japan",
+      "sourceType": "メディア",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
+      "region": "日本",
+      "date": "2026-06-29",
+      "publishedAt": "2026-06-28T23:45:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 1.2,
+      "relevanceScore": 3,
+      "priority": 87,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-29T00:54:43.922Z"
+      },
+      "titleJa": "Anthropic、Mythos 5の提供を重要インフラ向けに再開",
+      "summaryJa": "Anthropicが「Mythos 5」を米国の重要インフラ組織に向けて再提供を開始したと発表しました。これにより、特定の組織が再度このAIモデルを使用できるようになります。"
     },
     {
       "id": "0a20c671f60560ff",
@@ -365,14 +508,41 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-27T01:57:44.000Z",
       "freshness": "recent",
-      "ageHours": 43.8,
+      "ageHours": 47,
       "relevanceScore": 3,
       "priority": 83,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:35.792Z"
-      }
+        "checkedAt": "2026-06-29T00:54:45.119Z"
+      },
+      "titleJa": "OpenAI、「GPT-5.6」モデルを政府要請で段階的に提供",
+      "summaryJa": "OpenAIが「GPT-5.6」シリーズのプレビューを発表し、特に「Sol」など3モデルの段階的な公開を進める方針を示しました。政府からの要請も影響しています。"
+    },
+    {
+      "id": "ad75d3f37a717b95",
+      "title": "製造現場のトラブル解消を「AI工場長」が支援？ 「エージェント型工場」とは",
+      "summary": "AccentureとAvanadeはMicrosoftと協働し、製造業向け工場インテリジェンスシステム「エージェント型工場」を開発したと発表した。",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2606/29/news055.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "AIエージェント・業務AI",
+      "categoryId": "agents",
+      "accent": "product",
+      "region": "日本",
+      "date": "2026-06-29",
+      "publishedAt": "2026-06-28T23:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 1.9,
+      "relevanceScore": 2,
+      "priority": 98,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-29T00:54:39.846Z"
+      },
+      "titleJa": "製造業をサポートするAIの新展開",
+      "summaryJa": "アクセンチュアとアバナードが、マイクロソフトと共同で「エージェント型工場」と呼ばれる製造業向けシステムを発表しました。これにより、製造現場のトラブル解消をAIが支援する時代が到来します。"
     },
     {
       "id": "c517719e9a6e94d2",
@@ -388,14 +558,16 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T23:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 46.8,
+      "ageHours": 49.9,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.367Z"
-      }
+        "checkedAt": "2026-06-29T00:54:39.848Z"
+      },
+      "titleJa": "孫正義氏、電力確保を目指す挑戦",
+      "summaryJa": "ソフトバンクグループの株主総会で、孫正義氏が「純資産価値1000兆円」達成を掲げ、東京電力への出資意欲を示しました。AIインフラの強化において重要な電力確保の戦略として注目です。"
     },
     {
       "id": "64abf4076fbbfa5a",
@@ -411,14 +583,16 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T09:15:00.000Z",
       "freshness": "recent",
-      "ageHours": 60.5,
+      "ageHours": 63.7,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.368Z"
-      }
+        "checkedAt": "2026-06-29T00:54:39.849Z"
+      },
+      "titleJa": "AI普及の課題、製品差別化に向けた対策",
+      "summaryJa": "生成AIの普及が企業の製品での差別化を困難にしています。FigmaはAI出力を人間が微調整する手法を提案し、自社のルールを全員で共有する取り組みを強化しています。"
     },
     {
       "id": "2406ef62096748dd",
@@ -434,14 +608,16 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T04:35:00.000Z",
       "freshness": "recent",
-      "ageHours": 65.2,
+      "ageHours": 68.3,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.368Z"
-      }
+        "checkedAt": "2026-06-29T00:54:39.849Z"
+      },
+      "titleJa": "防衛省が偽情報対策を強化",
+      "summaryJa": "防衛省が「認知戦」に対抗するための資料を公開し、AIを活用した情報発信の強化を目指しています。この取り組みは情報戦の重要性を認識させるものです。"
     },
     {
       "id": "9fd78763ae72e4bf",
@@ -457,14 +633,16 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T04:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 65.8,
+      "ageHours": 68.9,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.368Z"
-      }
+        "checkedAt": "2026-06-29T00:54:39.849Z"
+      },
+      "titleJa": "OpenAIとAWS提携で新たな可能性",
+      "summaryJa": "OpenAIがAmazon Web Servicesとの戦略的パートナーシップを拡大し、企業がAWS環境で「Codex」を利用可能にします。この動きは新たなAI活用を後押しします。"
     },
     {
       "id": "706b6615daa8c24b",
@@ -480,83 +658,16 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T02:00:17.000Z",
       "freshness": "recent",
-      "ageHours": 67.8,
+      "ageHours": 70.9,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.369Z"
-      }
-    },
-    {
-      "id": "026152e836a8ec32",
-      "title": "企業のAI支出そろそろ“様子見”は終わり？ Gartner予測、本格投資の行方は",
-      "summary": "Gartnerは2026年の世界AI支出が前年比47％増の2兆5956億ドルに達するとの予測を発表。2026年は企業によるAI支出が拡大局面へ移行する転換点になるとしている。",
-      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2606/26/news055.html",
-      "source": "ITmedia AI+",
-      "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "日本",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-26T02:00:00.000Z",
-      "freshness": "recent",
-      "ageHours": 67.8,
-      "relevanceScore": 2,
-      "priority": 98,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.369Z"
-      }
-    },
-    {
-      "id": "ec828723bbb77662",
-      "title": "ITインフラの要件に“大変化” なぜ「電力」と「冷却」にAI活用が縛られるのか？",
-      "summary": "AI時代の到来により、ITインフラの要件に大きな変化が訪れています。データセンターを「どこに置くか」「どうやって冷やすか」が、AI活用の制約になるのはなぜか。新しいITインフラの要件に、IT部門がどのように対応すべきでしょうか。",
-      "url": "https://www.itmedia.co.jp/enterprise/articles/2606/26/news023.html",
-      "source": "ITmedia AI+",
-      "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "日本",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-25T23:00:00.000Z",
-      "freshness": "recent",
-      "ageHours": 70.8,
-      "relevanceScore": 2,
-      "priority": 98,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.369Z"
-      }
-    },
-    {
-      "id": "ce14a4ddfa544602",
-      "title": "韓国発セキュリティ企業「S2W」が日本に本格進出──北朝鮮との最前線からAI駆動・リアルタイムで脅威インテリジェンスを届ける",
-      "summary": "韓国発のAI駆動型脅威インテリジェンスベンダー「S2W」が2026年6月23日、日本法人の設立にともなう国内での事業本格化を発表した。 S2Wは、2018年にダークウェブ基盤の安全保障インテリジ...",
-      "url": "https://enterprisezine.jp/news/detail/24561",
-      "source": "EnterpriseZine",
-      "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "日本",
-      "date": "2026-06-26",
-      "publishedAt": "2026-06-25T23:00:00.000Z",
-      "freshness": "recent",
-      "ageHours": 70.8,
-      "relevanceScore": 2,
-      "priority": 90,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:31.753Z"
-      }
+        "checkedAt": "2026-06-29T00:54:39.849Z"
+      },
+      "titleJa": "Amazon Bedrockがトークン処理量の新記録",
+      "summaryJa": "2026年第1四半期にAmazon Bedrockのトークン処理量が過去の累計を超えました。AI推論が増加する中で、信頼できるインフラの重要性が再認識されています。"
     },
     {
       "id": "6a67d1ff29592a77",
@@ -572,16 +683,16 @@
       "date": "2026-06-29",
       "publishedAt": "2026-06-28T19:05:39.000Z",
       "freshness": "fresh",
-      "ageHours": 2.7,
+      "ageHours": 5.8,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:35.887Z"
+        "checkedAt": "2026-06-29T00:54:45.142Z"
       },
-      "titleJa": "Fordがエンジニアを再雇用",
-      "summaryJa": "Fordは、AIの導入が期待した成果を上げられなかったため、経験豊富なエンジニアを再雇用したことを発表しました。"
+      "titleJa": "Ford、AI失敗後にエンジニアを再雇用",
+      "summaryJa": "FordがAI導入後の結果を受けて、経験豊富なエンジニアの再雇用を決定しました。AIの限界を理解し、より高品質な製品を目指す戦略の一環です。"
     },
     {
       "id": "8d8ce3887bca2a4d",
@@ -597,16 +708,16 @@
       "date": "2026-06-29",
       "publishedAt": "2026-06-28T15:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 6.8,
+      "ageHours": 9.9,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:35.887Z"
+        "checkedAt": "2026-06-29T00:54:45.143Z"
       },
-      "titleJa": "Micronが次のNvidiaに",
-      "summaryJa": "ウォール街の投資家たちは、米国のメモリメーカーMicronがNvidiaに匹敵する企業になるとの期待を寄せています。"
+      "titleJa": "ウォール街が注目する米メモリメーカー",
+      "summaryJa": "ウォール街がMicronに注目し、Nvidiaのような成功を期待しています。公に取引されるAI関連企業の中で新しいスター企業として有望視されています。"
     },
     {
       "id": "82635cb30cdb1692",
@@ -622,16 +733,16 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-27T14:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 31.8,
+      "ageHours": 34.9,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:35.888Z"
+        "checkedAt": "2026-06-29T00:54:45.143Z"
       },
-      "titleJa": "AIでがんと闘う創業者",
-      "summaryJa": "Connor Christou氏はがんと診断され、治療に役立つデータをAIに活用して闘っています。"
+      "titleJa": "がんと闘う創業者のAI活用法",
+      "summaryJa": "がんに直面したConnor Christou氏は、自身の治療に関するデータをAIで分析し、最適な戦略を構築しました。このケーススタディは医療AIの利用可能性を示します。"
     },
     {
       "id": "67481052fb25e69c",
@@ -647,62 +758,66 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T18:32:14.000Z",
       "freshness": "recent",
-      "ageHours": 51.2,
+      "ageHours": 54.4,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:35.889Z"
+        "checkedAt": "2026-06-29T00:54:45.144Z"
       },
-      "titleJa": "OpenAIがGPT-5.6の展開制限",
-      "summaryJa": "OpenAIは、政府の要請によりGPT-5.6の展開を制限し、このプロセスが長期的なデフォルトになるべきではないと述べています。"
+      "titleJa": "OpenAI、政府要請でGPT-5.6の配信を制限",
+      "summaryJa": "OpenAIは、政府の要請に応じてGPT-5.6の展開を制限すると発表しました。この決定は、長期的には標準となるべきではないとの意見が示されています。"
     },
     {
-      "id": "57d42f17c54ee6a1",
-      "title": "AMD Ryzen AI 7 350搭載の一体型デスクトップ「FMV WF3-L1」が、特価で24万円台！",
-      "summary": "FMVパソコン通販サイト「FMV Store」では、複数のモデルを対象にセールを開催中。",
-      "url": "https://ascii.jp/elem/000/004/413/4413750/?rss",
+      "id": "9cf538701fdd0ed5",
+      "title": "海域スキャン「RADAR GRiD」海運業界向けサービス提供開始、海上の障害物を自動で認識し可視化",
+      "summary": "アイディア株式会社は6月22日に、独自開発した海域スキャン「RADAR GRiD（レーダーグリッド）」の海運業界向けサービスの提供開始を発表した。「RADAR GRiD」は「海の可視化」をコンセプトに、レーダーやAIS（船舶自動識別装置）、カメラの情報をAIが...",
+      "url": "https://ascii.jp/elem/000/004/414/4414157/?rss",
       "source": "ASCII.jp",
       "sourceType": "メディア",
-      "category": "モデル・研究・プロダクト",
-      "categoryId": "models",
-      "accent": "research",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
       "region": "日本",
-      "date": "2026-06-28",
-      "publishedAt": "2026-06-28T13:00:00.000Z",
+      "date": "2026-06-29",
+      "publishedAt": "2026-06-28T22:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 8.8,
+      "ageHours": 2.9,
       "relevanceScore": 2,
       "priority": 86,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:34.951Z"
-      }
+        "checkedAt": "2026-06-29T00:54:44.296Z"
+      },
+      "titleJa": "海運業向けAIスキャンサービス開始",
+      "summaryJa": "アイディア株式会社が、海上の障害物を認識・可視化する「RADAR GRiD」を発表しました。これにより、海運業界の安全性向上が期待されています。"
     },
     {
-      "id": "83fd109a65d6803c",
-      "title": "Copilot+ PCが、FMV直販ならこの価格で手に入る！ 目玉品に注目！",
-      "summary": "FMVパソコン通販サイト「FMV Store」では、複数のモデルを対象にセールを開催中。",
-      "url": "https://ascii.jp/elem/000/004/414/4414140/?rss",
+      "id": "7a972c401d91ade4",
+      "title": "OPPO Reno15 Aは7000mAh超長持ちバッテリーが魅力の全部入りスマホ！の巻：スマホ総研定例会384",
+      "summary": "「OPPO Reno15 A」をいち早く実機レビュー。防水・防塵、FeliCaなど全部入りはこれまでと同じで、今回はさらに7000mAhの大容量バッテリーも搭載！ クラウドを活用したAI関連機能など、便利な要素一杯の1台を詳しく紹介！",
+      "url": "https://ascii.jp/elem/000/004/414/4414055/?rss",
       "source": "ASCII.jp",
       "sourceType": "メディア",
-      "category": "AIエージェント・業務AI",
-      "categoryId": "agents",
-      "accent": "product",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
       "region": "日本",
-      "date": "2026-06-28",
-      "publishedAt": "2026-06-28T07:00:00.000Z",
+      "date": "2026-06-29",
+      "publishedAt": "2026-06-28T22:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 14.8,
+      "ageHours": 2.9,
       "relevanceScore": 2,
       "priority": 86,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:34.952Z"
-      }
+        "checkedAt": "2026-06-29T00:54:44.296Z"
+      },
+      "titleJa": "OPPO、新モデルの魅力を実機レビュー",
+      "summaryJa": "OPPOの新型スマートフォン「Reno15 A」が、7000mAhの大容量バッテリーを搭載して登場しました。このモデルはクラウドを活用したAI機能も魅力です。"
     },
     {
       "id": "272f07ee97a45dc8",
@@ -718,14 +833,16 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T20:31:00.000Z",
       "freshness": "recent",
-      "ageHours": 49.2,
+      "ageHours": 52.4,
       "relevanceScore": 2,
       "priority": 84,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:34.719Z"
-      }
+        "checkedAt": "2026-06-29T00:54:43.923Z"
+      },
+      "titleJa": "OpenAIが次世代GPT-5.6シリーズを発表",
+      "summaryJa": "米OpenAIが「GPT-5.6」シリーズを発表し、最上位モデル「Sol」などの展開を計画しています。一部のパートナーには早期提供される予定です。"
     },
     {
       "id": "6b59cc78c6629038",
@@ -741,14 +858,16 @@
       "date": "2026-06-28",
       "publishedAt": "2026-06-28T04:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 17.8,
+      "ageHours": 20.9,
       "relevanceScore": 1,
       "priority": 95,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.366Z"
-      }
+        "checkedAt": "2026-06-29T00:54:39.848Z"
+      },
+      "titleJa": "ひろゆき氏がSIerの未来を予測",
+      "summaryJa": "ひろゆき氏がAIによるSIerの衰退予測を述べ、2026年に生き残るエンジニアの役割を分析しています。注目のAI話題がランキング形式で紹介されました。"
     },
     {
       "id": "4ffce1fe9275068a",
@@ -764,14 +883,16 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T22:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 47.8,
+      "ageHours": 50.9,
       "relevanceScore": 1,
       "priority": 95,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.368Z"
-      }
+        "checkedAt": "2026-06-29T00:54:39.848Z"
+      },
+      "titleJa": "フィジカルAIに政府が10.5兆円投資",
+      "summaryJa": "官民投資としてフィジカルAIに対する10.5兆円の動きが確認されました。実証から実装へ向けた強化が行われる見込みです。"
     },
     {
       "id": "bf4fb57dcc2490c2",
@@ -787,14 +908,16 @@
       "date": "2026-06-26",
       "publishedAt": "2026-06-26T06:30:00.000Z",
       "freshness": "recent",
-      "ageHours": 63.3,
+      "ageHours": 66.4,
       "relevanceScore": 1,
       "priority": 89,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:30.540Z"
-      }
+        "checkedAt": "2026-06-29T00:54:40.021Z"
+      },
+      "titleJa": "OpenAI、GPT-5.6は一部パートナー専用か",
+      "summaryJa": "ITmedia NEWSによると、OpenAIの次期モデルGPT-5.6のリリースは特定のパートナーにささやかれています。これにより、市場内の競争やパートナーシップの動向が影響を受けることが予想されます。"
     },
     {
       "id": "ba9677ef474e757f",
@@ -810,16 +933,16 @@
       "date": "2026-06-28",
       "publishedAt": "2026-06-27T16:45:09.000Z",
       "freshness": "recent",
-      "ageHours": 29,
+      "ageHours": 32.2,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:35.888Z"
+        "checkedAt": "2026-06-29T00:54:45.143Z"
       },
-      "titleJa": "Appleの幹部がOpenAIに移籍",
-      "summaryJa": "AppleのVision Pro担当副社長Paul Meade氏がOpenAIに移籍するとの報道があります。"
+      "titleJa": "AppleのVision Pro幹部がOpenAIへ転職か",
+      "summaryJa": "AppleのVision Proヘッドセットを担当する副社長、Paul MeadeがOpenAIに移籍するとの情報があります。この人事異動は、AI業界の競争力を高める可能性があります。"
     },
     {
       "id": "0bdf95932beada39",
@@ -835,16 +958,16 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-27T01:01:37.000Z",
       "freshness": "recent",
-      "ageHours": 44.7,
+      "ageHours": 47.9,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:35.888Z"
+        "checkedAt": "2026-06-29T00:54:45.144Z"
       },
-      "titleJa": "トランプ政権がAnthropic Mythosを解放",
-      "summaryJa": "100社以上の米国企業と政府機関が、非米国人社員も含めAnthropic Mythos 5の使用を許可されています。"
+      "titleJa": "トランプ政権、Anthropic Mythosを100社以上に提供",
+      "summaryJa": "米国のトランプ政権が、Anthropic Mythosの利用を100社以上に承認したとの報道があります。これにより、AI技術の利用範囲が広がり、ビジネスや行政の効率が向上する期待があります。"
     },
     {
       "id": "e3bab3fd464a0a28",
@@ -860,16 +983,91 @@
       "date": "2026-06-27",
       "publishedAt": "2026-06-26T18:19:36.000Z",
       "freshness": "recent",
-      "ageHours": 51.4,
+      "ageHours": 54.6,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-06-28T21:45:35.889Z"
+        "checkedAt": "2026-06-29T00:54:45.144Z"
       },
-      "titleJa": "OpenAIがインドでの活動を強化",
-      "summaryJa": "OpenAIはインディアのUberインドの責任者を雇用し、インド市場への進出を本格化させています。"
+      "titleJa": "OpenAI、インド市場に進出",
+      "summaryJa": "OpenAIがインド市場での拡大を目指し、Uberインドのトップを新たに迎え入れました。これにより、インドでのAIプロジェクトや事業展開が加速する見込みです。"
+    },
+    {
+      "id": "9b03a5cd7514d470",
+      "title": "「逆境を進化に変えよ」 アスクル社長、ランサム被害をバネに進めるAI駆動開発を語る",
+      "summary": "2025年10月、ランサムウェア被害に見舞われたアスクル。ECサイトは停止し、翌月の売上は95%減。全面復旧には3か月半もの期間を要した。現在、この逆境を“進化”に変えるべく、ゼロスタートで挑んでいるのが「AI-DLC（AI駆動開発ライフサイクル）」である。",
+      "url": "https://ascii.jp/elem/000/004/414/4414161/?rss",
+      "source": "ASCII.jp",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-29",
+      "publishedAt": "2026-06-28T23:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 1.9,
+      "relevanceScore": 1,
+      "priority": 83,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-29T00:54:44.295Z"
+      },
+      "titleJa": "アスクル社、ランサムウェア被害からの復活",
+      "summaryJa": "アスクル社は2025年にランサムウェアの被害に遭い、ECサイトが停止。その後、この逆境を契機に「AI-DLC（AI駆動開発ライフサイクル）」を導入し、AIを活用した新たな開発に挑んでいます。"
+    },
+    {
+      "id": "49953cebdc3dede8",
+      "title": "iPadやMacの値上げは本当に「不可避」だったのか--高い利益率、米議員はアップルを「強欲」と非難",
+      "summary": "米Appleが6月25日（現地時間）、「Mac」「iPad」「Vision Pro」「HomePod」「Apple TV」など多くの製品で15〜30%超の大幅な値上げに踏み切った。理由はAIブームによるメモリ不足。退任を控えるティム・クックCEOも、値上げは「...",
+      "url": "https://japan.cnet.com/article/35249555/",
+      "source": "CNET Japan",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-29",
+      "publishedAt": "2026-06-28T21:53:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 3,
+      "relevanceScore": 1,
+      "priority": 81,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-29T00:54:43.923Z"
+      },
+      "titleJa": "Appleの主要製品値上げ、背景にAIブーム",
+      "summaryJa": "Appleが複数製品で大幅な値上げを発表しました。AIブームによるメモリ不足が要因とされ、値上げの判断には業界の動向が強く影響しています。"
+    },
+    {
+      "id": "b8806e990b6f308c",
+      "title": "【西田宗千佳のイマトミライ】「AIを使う人はまだ少なすぎる」 Gensparkが目指す“ちょうどいい”AI文書作成",
+      "summary": "先週、筆者は米カリフォルニア州・パロアルトで取材をしていた。向かった先は、AIサービスを提供する「Genspark」の本社だ。",
+      "url": "https://www.watch.impress.co.jp/docs/series/nishida/2120628.html",
+      "source": "Impress Watch",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-06-29",
+      "publishedAt": "2026-06-28T23:20:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 1.6,
+      "relevanceScore": 1,
+      "priority": 77,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-29T00:54:45.118Z"
+      },
+      "titleJa": "Gensparkが目指すAI文書作成の未来",
+      "summaryJa": "Gensparkはカリフォルニア州パロアルトに本社を置くAIサービス提供企業です。最近の取材で、AIを利用した文書作成の取り組みが注目されています。"
     }
   ],
   "errors": [],
@@ -882,8 +1080,8 @@
       "url": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
       "status": "ok",
       "itemsFound": 11,
-      "lastCheckedAt": "2026-06-28T21:45:30.369Z",
-      "lastSuccessAt": "2026-06-28T21:45:30.369Z",
+      "lastCheckedAt": "2026-06-29T00:54:39.849Z",
+      "lastSuccessAt": "2026-06-29T00:54:39.849Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -895,8 +1093,8 @@
       "url": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-06-28T21:45:30.540Z",
-      "lastSuccessAt": "2026-06-28T21:45:30.540Z",
+      "lastCheckedAt": "2026-06-29T00:54:40.021Z",
+      "lastSuccessAt": "2026-06-29T00:54:40.021Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -907,9 +1105,9 @@
       "type": "rss",
       "url": "https://enterprisezine.jp/rss/new/20/index.xml",
       "status": "ok",
-      "itemsFound": 5,
-      "lastCheckedAt": "2026-06-28T21:45:31.754Z",
-      "lastSuccessAt": "2026-06-28T21:45:31.754Z",
+      "itemsFound": 4,
+      "lastCheckedAt": "2026-06-29T00:54:41.265Z",
+      "lastSuccessAt": "2026-06-29T00:54:41.265Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -920,9 +1118,9 @@
       "type": "rss",
       "url": "https://japan.cnet.com/rss/index.rdf",
       "status": "ok",
-      "itemsFound": 1,
-      "lastCheckedAt": "2026-06-28T21:45:34.721Z",
-      "lastSuccessAt": "2026-06-28T21:45:34.721Z",
+      "itemsFound": 3,
+      "lastCheckedAt": "2026-06-29T00:54:43.924Z",
+      "lastSuccessAt": "2026-06-29T00:54:43.924Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -933,9 +1131,9 @@
       "type": "rss",
       "url": "https://ascii.jp/rss.xml",
       "status": "ok",
-      "itemsFound": 2,
-      "lastCheckedAt": "2026-06-28T21:45:34.952Z",
-      "lastSuccessAt": "2026-06-28T21:45:34.952Z",
+      "itemsFound": 6,
+      "lastCheckedAt": "2026-06-29T00:54:44.296Z",
+      "lastSuccessAt": "2026-06-29T00:54:44.296Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -946,9 +1144,9 @@
       "type": "rss",
       "url": "https://www.watch.impress.co.jp/data/rss/1.0/ipw/feed.rdf",
       "status": "ok",
-      "itemsFound": 2,
-      "lastCheckedAt": "2026-06-28T21:45:35.793Z",
-      "lastSuccessAt": "2026-06-28T21:45:35.793Z",
+      "itemsFound": 3,
+      "lastCheckedAt": "2026-06-29T00:54:45.120Z",
+      "lastSuccessAt": "2026-06-29T00:54:45.120Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -960,8 +1158,8 @@
       "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
       "status": "ok",
       "itemsFound": 11,
-      "lastCheckedAt": "2026-06-28T21:45:35.889Z",
-      "lastSuccessAt": "2026-06-28T21:45:35.889Z",
+      "lastCheckedAt": "2026-06-29T00:54:45.145Z",
+      "lastSuccessAt": "2026-06-29T00:54:45.145Z",
       "lastFailureAt": null,
       "lastError": null
     }
