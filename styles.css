@@ -2462,7 +2462,23 @@ body {
 }
 
 .media-title-row {
-  padding-bottom: 12px;
+  padding-bottom: 8px;
+}
+
+.media-title-row > div {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.media-title-row .section-kicker {
+  flex-basis: 100%;
+}
+
+.media-title-row .section-note {
+  margin: 0;
+  white-space: nowrap;
 }
 
 .media-title-row h2 {
@@ -2472,7 +2488,7 @@ body {
 
 .media-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 12px;
 }
 
 .media-group {
@@ -2484,8 +2500,8 @@ body {
 }
 
 .media-group-head {
-  min-height: 34px;
-  padding: 6px 10px;
+  min-height: 32px;
+  padding: 5px 10px;
   background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 92%, #101815), color-mix(in srgb, var(--accent) 68%, #ffffff));
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 42%, #101815);
   min-width: 0;
@@ -2517,7 +2533,7 @@ body {
 
 .media-card {
   min-height: 0;
-  padding: 12px;
+  padding: 9px 11px;
   border: 0;
   border-left: 4px solid transparent;
   border-bottom: 1px solid #e2e8e4;
@@ -2542,11 +2558,11 @@ body {
 }
 
 .media-body {
-  gap: 7px;
+  gap: 5px;
 }
 
 .media-meta {
-  gap: 8px;
+  gap: 7px;
 }
 
 .media-source {
@@ -2557,9 +2573,9 @@ body {
 
 .media-card h3 {
   color: #101815;
-  font-size: 1.02rem;
+  font-size: 1.08rem;
   font-weight: 900;
-  line-height: 1.34;
+  line-height: 1.28;
   -webkit-line-clamp: 2;
 }
 
@@ -2567,7 +2583,7 @@ body {
   color: var(--muted);
   font-size: 0.86rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.42;
   -webkit-line-clamp: 2;
 }
 
@@ -2625,6 +2641,49 @@ body {
     grid-template-columns: 1fr;
     max-width: 100%;
     overflow-x: hidden;
+  }
+
+  .media-title-row > div {
+    display: block;
+  }
+
+  .media-title-row .section-note {
+    margin: 4px 0 0;
+    white-space: normal;
+  }
+
+  .media-title-row {
+    padding-bottom: 12px;
+  }
+
+  .media-grid {
+    gap: 14px;
+  }
+
+  .media-group-head {
+    min-height: 34px;
+    padding: 6px 10px;
+  }
+
+  .media-card {
+    padding: 12px;
+  }
+
+  .media-body {
+    gap: 7px;
+  }
+
+  .media-meta {
+    gap: 8px;
+  }
+
+  .media-card h3 {
+    font-size: 1.02rem;
+    line-height: 1.34;
+  }
+
+  .media-card p {
+    line-height: 1.5;
   }
 
   .official-radar,
