@@ -400,7 +400,7 @@ function renderHealth() {
 
   if (updateRule) {
     const updated = formatDateTime(healthData?.finishedAt || healthData?.generatedAt);
-    updateRule.textContent = updated ? `最終更新 ${updated}` : "毎日 7:00 自動更新";
+    updateRule.textContent = updated ? `最終更新 ${updated}` : "毎日 朝・昼 自動更新";
   }
 }
 
