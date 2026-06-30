@@ -346,6 +346,9 @@ function main() {
   const signalArgs = [`--limit=${signalLimit}`];
   signalArgs.push(dryRun ? "--dry-run" : "--write");
 
+  const pricingArgs = [];
+  if (!dryRun) pricingArgs.push("--write-review");
+
   const promoteArgs = [
     `--min-priority=${minPriority}`,
     `--max-age-days=${maxAgeDays}`,
@@ -359,6 +362,8 @@ function main() {
 
   runStep("collect-official-news", "scripts/collect-official-news.js", officialArgs);
   runStep("collect-ai-signals", "scripts/collect-ai-signals.js", signalArgs);
+  // Pricing is collected into a review file first; pricing.json is not auto-overwritten.
+  runStep("collect-pricing", "scripts/collect-pricing.js", pricingArgs);
   runStep("collect-media-news", "scripts/collect-media-news.js", mediaArgs);
   runStep("collect", "scripts/collect-news.js", collectArgs);
   // ティッカー/速報のカード文面を独自見出し・独自要約へ整形（APIキーがあるときだけ。失敗時は既存文面のまま）。
@@ -390,6 +395,7 @@ function main() {
     appendLog(skip);
   }
 
+  runStep("validate-pricing", "scripts/validate-pricing.js", []);
   runStep("validate-data", "scripts/validate-data.js", []);
   writeHealthFiles("ok");
 

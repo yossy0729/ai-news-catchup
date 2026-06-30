@@ -1,0 +1,687 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-30T06:48:57.106Z",
+  "generatedDate": "2026-06-30",
+  "pricingAsOf": "2026-06-21",
+  "sourcePolicy": "Official pricing pages are fetched into review data first. pricing.json is not overwritten unless a future verified apply step is explicitly enabled.",
+  "summary": {
+    "total": 9,
+    "matched": 0,
+    "matchedUnlabeled": 5,
+    "changed": 0,
+    "reviewRequired": 1,
+    "modelNotFound": 0,
+    "noPrices": 0,
+    "fetchFailed": 3
+  },
+  "items": [
+    {
+      "vendor": "OpenAI",
+      "model": "GPT-5.5",
+      "sourceUrl": "https://openai.com/api/pricing/",
+      "current": {
+        "inputPer1M": 5,
+        "cachedInputPer1M": 0.5,
+        "outputPer1M": 30,
+        "context": "標準≤270K"
+      },
+      "detected": {},
+      "status": "fetch_failed",
+      "confidence": "none",
+      "reasons": [
+        "HTTP 403"
+      ],
+      "fetchedAt": "2026-06-30T06:48:57.106Z"
+    },
+    {
+      "vendor": "OpenAI",
+      "model": "GPT-5.4",
+      "sourceUrl": "https://openai.com/api/pricing/",
+      "current": {
+        "inputPer1M": 2.5,
+        "cachedInputPer1M": 0.25,
+        "outputPer1M": 15,
+        "context": "標準≤270K"
+      },
+      "detected": {},
+      "status": "fetch_failed",
+      "confidence": "none",
+      "reasons": [
+        "HTTP 403"
+      ],
+      "fetchedAt": "2026-06-30T06:48:57.106Z"
+    },
+    {
+      "vendor": "OpenAI",
+      "model": "GPT-5.4 mini",
+      "sourceUrl": "https://openai.com/api/pricing/",
+      "current": {
+        "inputPer1M": 0.75,
+        "cachedInputPer1M": 0.075,
+        "outputPer1M": 4.5,
+        "context": "標準≤270K"
+      },
+      "detected": {},
+      "status": "fetch_failed",
+      "confidence": "none",
+      "reasons": [
+        "HTTP 403"
+      ],
+      "fetchedAt": "2026-06-30T06:48:57.106Z"
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "Claude Opus 4.8",
+      "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "current": {
+        "inputPer1M": 5,
+        "cachedInputPer1M": 0.5,
+        "outputPer1M": 25,
+        "context": "1M"
+      },
+      "detected": {
+        "inputPer1M": 10,
+        "cachedInputPer1M": null,
+        "outputPer1M": 10
+      },
+      "extractedAmounts": [
+        {
+          "value": 10,
+          "excerpt": "okens 5m Cache Writes 1h Cache Writes Cache Hits & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / M"
+        },
+        {
+          "value": 12.5,
+          "excerpt": "che Writes 1h Cache Writes Cache Hits & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / M"
+        },
+        {
+          "value": 20,
+          "excerpt": "Cache Writes Cache Hits & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opu"
+        },
+        {
+          "value": 1,
+          "excerpt": "s Cache Hits & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 /"
+        },
+        {
+          "value": 50,
+          "excerpt": "ts & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25"
+        },
+        {
+          "value": 5,
+          "excerpt": "d availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.7 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude O"
+        },
+        {
+          "value": 6.25,
+          "excerpt": "lity ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.7 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.6 $5"
+        },
+        {
+          "value": 0.5,
+          "excerpt": "/ MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.7 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.6 $5 / MTok $6.25 / MTok $10"
+        },
+        {
+          "value": 25,
+          "excerpt": "MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.7 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.6 $5 / MTok $6.25 / MTok $10 / MTok $0.50"
+        },
+        {
+          "value": 15,
+          "excerpt": "$5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 /"
+        },
+        {
+          "value": 18.75,
+          "excerpt": "$6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50"
+        },
+        {
+          "value": 30,
+          "excerpt": "10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 /"
+        },
+        {
+          "value": 1.5,
+          "excerpt": "0.50 / MTok $25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude"
+        },
+        {
+          "value": 75,
+          "excerpt": "25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $"
+        },
+        {
+          "value": 3,
+          "excerpt": "gle Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4.5 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude S"
+        },
+        {
+          "value": 3.75,
+          "excerpt": ") $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4.5 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4 ("
+        },
+        {
+          "value": 6,
+          "excerpt": "$18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4.5 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4 ( retired, exce"
+        },
+        {
+          "value": 0.3,
+          "excerpt": "Tok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4.5 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4 ( retired, except on Bedr"
+        },
+        {
+          "value": 1.25,
+          "excerpt": "oud ) $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Haiku 4.5 $1 / MTok $1.25 / MTok $2 / MTok $0.10 / MTok $5 / MTok Claude Haiku 3.5 ( retired, except on Bedrock and Google Cloud ) $0.80 / MTok $1 / MTok $1.60"
+        },
+        {
+          "value": 2,
+          "excerpt": "ok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Haiku 4.5 $1 / MTok $1.25 / MTok $2 / MTok $0.10 / MTok $5 / MTok Claude Haiku 3.5 ( retired, except on Bedrock and Google Cloud ) $0.80 / MTok $1 / MTok $1.60 / MTok $0.08"
+        }
+      ],
+      "status": "matched_unlabeled",
+      "confidence": "medium",
+      "reasons": [
+        "Current prices appear near the model name, but labels were not reliable enough for auto-apply."
+      ],
+      "fetchedAt": "2026-06-30T06:48:57.106Z"
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "Claude Sonnet 4.6",
+      "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "current": {
+        "inputPer1M": 3,
+        "cachedInputPer1M": 0.3,
+        "outputPer1M": 15,
+        "context": "1M"
+      },
+      "detected": {
+        "inputPer1M": 10,
+        "cachedInputPer1M": null,
+        "outputPer1M": 10
+      },
+      "extractedAmounts": [
+        {
+          "value": 10,
+          "excerpt": "okens 5m Cache Writes 1h Cache Writes Cache Hits & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / M"
+        },
+        {
+          "value": 12.5,
+          "excerpt": "che Writes 1h Cache Writes Cache Hits & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / M"
+        },
+        {
+          "value": 20,
+          "excerpt": "Cache Writes Cache Hits & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opu"
+        },
+        {
+          "value": 1,
+          "excerpt": "s Cache Hits & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 /"
+        },
+        {
+          "value": 50,
+          "excerpt": "ts & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25"
+        },
+        {
+          "value": 5,
+          "excerpt": "d availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.7 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude O"
+        },
+        {
+          "value": 6.25,
+          "excerpt": "lity ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.7 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.6 $5"
+        },
+        {
+          "value": 0.5,
+          "excerpt": "/ MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.7 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.6 $5 / MTok $6.25 / MTok $10"
+        },
+        {
+          "value": 25,
+          "excerpt": "MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.7 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.6 $5 / MTok $6.25 / MTok $10 / MTok $0.50"
+        },
+        {
+          "value": 15,
+          "excerpt": "$5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 /"
+        },
+        {
+          "value": 18.75,
+          "excerpt": "$6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50"
+        },
+        {
+          "value": 30,
+          "excerpt": "10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 /"
+        },
+        {
+          "value": 1.5,
+          "excerpt": "0.50 / MTok $25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude"
+        },
+        {
+          "value": 75,
+          "excerpt": "25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $"
+        },
+        {
+          "value": 3,
+          "excerpt": "gle Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4.5 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude S"
+        },
+        {
+          "value": 3.75,
+          "excerpt": ") $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4.5 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4 ("
+        },
+        {
+          "value": 6,
+          "excerpt": "$18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4.5 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4 ( retired, exce"
+        },
+        {
+          "value": 0.3,
+          "excerpt": "Tok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4.5 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4 ( retired, except on Bedr"
+        },
+        {
+          "value": 1.25,
+          "excerpt": "oud ) $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Haiku 4.5 $1 / MTok $1.25 / MTok $2 / MTok $0.10 / MTok $5 / MTok Claude Haiku 3.5 ( retired, except on Bedrock and Google Cloud ) $0.80 / MTok $1 / MTok $1.60"
+        },
+        {
+          "value": 2,
+          "excerpt": "ok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Haiku 4.5 $1 / MTok $1.25 / MTok $2 / MTok $0.10 / MTok $5 / MTok Claude Haiku 3.5 ( retired, except on Bedrock and Google Cloud ) $0.80 / MTok $1 / MTok $1.60 / MTok $0.08"
+        }
+      ],
+      "status": "matched_unlabeled",
+      "confidence": "medium",
+      "reasons": [
+        "Current prices appear near the model name, but labels were not reliable enough for auto-apply."
+      ],
+      "fetchedAt": "2026-06-30T06:48:57.106Z"
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "Claude Haiku 4.5",
+      "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "current": {
+        "inputPer1M": 1,
+        "cachedInputPer1M": 0.1,
+        "outputPer1M": 5,
+        "context": "200K"
+      },
+      "detected": {
+        "inputPer1M": 10,
+        "cachedInputPer1M": null,
+        "outputPer1M": 10
+      },
+      "extractedAmounts": [
+        {
+          "value": 10,
+          "excerpt": "okens 5m Cache Writes 1h Cache Writes Cache Hits & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / M"
+        },
+        {
+          "value": 12.5,
+          "excerpt": "che Writes 1h Cache Writes Cache Hits & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / M"
+        },
+        {
+          "value": 20,
+          "excerpt": "Cache Writes Cache Hits & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opu"
+        },
+        {
+          "value": 1,
+          "excerpt": "s Cache Hits & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 /"
+        },
+        {
+          "value": 50,
+          "excerpt": "ts & Refreshes Output Tokens Claude Fable 5 $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Mythos 5 ( limited availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25"
+        },
+        {
+          "value": 5,
+          "excerpt": "d availability ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.7 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude O"
+        },
+        {
+          "value": 6.25,
+          "excerpt": "lity ) $10 / MTok $12.50 / MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.7 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.6 $5"
+        },
+        {
+          "value": 0.5,
+          "excerpt": "/ MTok $20 / MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.7 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.6 $5 / MTok $6.25 / MTok $10"
+        },
+        {
+          "value": 25,
+          "excerpt": "MTok $1 / MTok $50 / MTok Claude Opus 4.8 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.7 $5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.6 $5 / MTok $6.25 / MTok $10 / MTok $0.50"
+        },
+        {
+          "value": 15,
+          "excerpt": "$5 / MTok $6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 /"
+        },
+        {
+          "value": 18.75,
+          "excerpt": "$6.25 / MTok $10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50"
+        },
+        {
+          "value": 30,
+          "excerpt": "10 / MTok $0.50 / MTok $25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 /"
+        },
+        {
+          "value": 1.5,
+          "excerpt": "0.50 / MTok $25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude"
+        },
+        {
+          "value": 75,
+          "excerpt": "25 / MTok Claude Opus 4.1 ( deprecated ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Opus 4 ( retired, except on Google Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $"
+        },
+        {
+          "value": 3,
+          "excerpt": "gle Cloud ) $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4.5 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude S"
+        },
+        {
+          "value": 3.75,
+          "excerpt": ") $15 / MTok $18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4.5 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4 ("
+        },
+        {
+          "value": 6,
+          "excerpt": "$18.75 / MTok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4.5 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4 ( retired, exce"
+        },
+        {
+          "value": 0.3,
+          "excerpt": "Tok $30 / MTok $1.50 / MTok $75 / MTok Claude Sonnet 4.6 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4.5 $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Sonnet 4 ( retired, except on Bedr"
+        },
+        {
+          "value": 1.25,
+          "excerpt": "oud ) $3 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Haiku 4.5 $1 / MTok $1.25 / MTok $2 / MTok $0.10 / MTok $5 / MTok Claude Haiku 3.5 ( retired, except on Bedrock and Google Cloud ) $0.80 / MTok $1 / MTok $1.60"
+        },
+        {
+          "value": 2,
+          "excerpt": "ok $3.75 / MTok $6 / MTok $0.30 / MTok $15 / MTok Claude Haiku 4.5 $1 / MTok $1.25 / MTok $2 / MTok $0.10 / MTok $5 / MTok Claude Haiku 3.5 ( retired, except on Bedrock and Google Cloud ) $0.80 / MTok $1 / MTok $1.60 / MTok $0.08"
+        }
+      ],
+      "status": "review_required",
+      "confidence": "low",
+      "reasons": [
+        "Potential input difference: current=1, detected=10",
+        "Potential output difference: current=5, detected=10",
+        "Generic page parsing found different labeled prices, but the mapping is not safe enough for auto-apply."
+      ],
+      "fetchedAt": "2026-06-30T06:48:57.106Z"
+    },
+    {
+      "vendor": "Google",
+      "model": "Gemini 3.1 Pro",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
+      "current": {
+        "inputPer1M": 2,
+        "cachedInputPer1M": 0.2,
+        "outputPer1M": 12,
+        "context": "1M"
+      },
+      "detected": {
+        "inputPer1M": 0.125,
+        "cachedInputPer1M": null,
+        "outputPer1M": 0.75
+      },
+      "extractedAmounts": [
+        {
+          "value": 14,
+          "excerpt": "shared across Gemini 3), then $14 / 1,000 search queries Grounding with Google Maps Not available 5,000 prompts per month (free, shared across Gemini 3), then $14 / 1,000"
+        },
+        {
+          "value": 0.125,
+          "excerpt": "products Yes No Flex Free Tier Paid Tier, per 1M tokens in USD Input price Free of charge $0.125 (text / image / video) $0.25 (audio) Output price (including thinking tokens) Free of charge $0.75 Context caching price Not availabl"
+        },
+        {
+          "value": 0.25,
+          "excerpt": "Paid Tier, per 1M tokens in USD Input price Free of charge $0.125 (text / image / video) $0.25 (audio) Output price (including thinking tokens) Free of charge $0.75 Context caching price Not available $0.0125 (text / image / vide"
+        },
+        {
+          "value": 0.75,
+          "excerpt": "xt / image / video) $0.25 (audio) Output price (including thinking tokens) Free of charge $0.75 Context caching price Not available $0.0125 (text / image / video) $0.025 (audio) $0.50 / 1,000,000 tokens per hour (storage price) Gr"
+        },
+        {
+          "value": 0.0125,
+          "excerpt": "rice (including thinking tokens) Free of charge $0.75 Context caching price Not available $0.0125 (text / image / video) $0.025 (audio) $0.50 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available"
+        },
+        {
+          "value": 0.025,
+          "excerpt": ") Free of charge $0.75 Context caching price Not available $0.0125 (text / image / video) $0.025 (audio) $0.50 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 prompts per month (free,"
+        },
+        {
+          "value": 0.5,
+          "excerpt": "e $0.75 Context caching price Not available $0.0125 (text / image / video) $0.025 (audio) $0.50 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 prompts per month (free, shared across"
+        },
+        {
+          "value": 0.45,
+          "excerpt": "ucts Yes No Priority Free Tier Paid Tier, per 1M tokens in USD Input price Free of charge $0.45 (text / image / video) $0.90 (audio) Output price (including thinking tokens) Free of charge $2.70 Context caching price Not available"
+        },
+        {
+          "value": 0.9,
+          "excerpt": "r Paid Tier, per 1M tokens in USD Input price Free of charge $0.45 (text / image / video) $0.90 (audio) Output price (including thinking tokens) Free of charge $2.70 Context caching price Not available $0.045 (text / image / video"
+        },
+        {
+          "value": 2.7,
+          "excerpt": "xt / image / video) $0.90 (audio) Output price (including thinking tokens) Free of charge $2.70 Context caching price Not available $0.045 (text / image / video) $0.09 (audio) $1.80 / 1,000,000 tokens per hour (storage price) Grou"
+        },
+        {
+          "value": 0.045,
+          "excerpt": "rice (including thinking tokens) Free of charge $2.70 Context caching price Not available $0.045 (text / image / video) $0.09 (audio) $1.80 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5"
+        },
+        {
+          "value": 0.09,
+          "excerpt": "s) Free of charge $2.70 Context caching price Not available $0.045 (text / image / video) $0.09 (audio) $1.80 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 prompts per month (free,"
+        },
+        {
+          "value": 1.8,
+          "excerpt": "rge $2.70 Context caching price Not available $0.045 (text / image / video) $0.09 (audio) $1.80 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 prompts per month (free, shared across"
+        },
+        {
+          "value": 2,
+          "excerpt": "vibe-coding. Standard Free Tier Paid Tier, per 1M tokens in USD Input price Not available $2.00, prompts $4.00, prompts > 200k tokens Output price (including thinking tokens) Not available $12.00, prompts $18.00, prompts > 200k Co"
+        },
+        {
+          "value": 4,
+          "excerpt": "andard Free Tier Paid Tier, per 1M tokens in USD Input price Not available $2.00, prompts $4.00, prompts > 200k tokens Output price (including thinking tokens) Not available $12.00, prompts $18.00, prompts > 200k Context caching p"
+        },
+        {
+          "value": 12,
+          "excerpt": "ompts $4.00, prompts > 200k tokens Output price (including thinking tokens) Not available $12.00, prompts $18.00, prompts > 200k Context caching price Not available $0.20, prompts $0.40, prompts > 200k $4.50 / 1,000,000 tokens per"
+        },
+        {
+          "value": 18,
+          "excerpt": "mpts > 200k tokens Output price (including thinking tokens) Not available $12.00, prompts $18.00, prompts > 200k Context caching price Not available $0.20, prompts $0.40, prompts > 200k $4.50 / 1,000,000 tokens per hour (storage p"
+        },
+        {
+          "value": 0.2,
+          "excerpt": "Not available $12.00, prompts $18.00, prompts > 200k Context caching price Not available $0.20, prompts $0.40, prompts > 200k $4.50 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 pr"
+        },
+        {
+          "value": 0.4,
+          "excerpt": "$12.00, prompts $18.00, prompts > 200k Context caching price Not available $0.20, prompts $0.40, prompts > 200k $4.50 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 prompts per month"
+        },
+        {
+          "value": 4.5,
+          "excerpt": ", prompts > 200k Context caching price Not available $0.20, prompts $0.40, prompts > 200k $4.50 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 prompts per month (free, shared across"
+        }
+      ],
+      "status": "matched_unlabeled",
+      "confidence": "medium",
+      "reasons": [
+        "Current prices appear near the model name, but labels were not reliable enough for auto-apply."
+      ],
+      "fetchedAt": "2026-06-30T06:48:57.106Z"
+    },
+    {
+      "vendor": "Google",
+      "model": "Gemini 3.5 Flash",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
+      "current": {
+        "inputPer1M": 1.5,
+        "cachedInputPer1M": 0.15,
+        "outputPer1M": 9,
+        "context": "1M"
+      },
+      "detected": {
+        "inputPer1M": 1.5,
+        "cachedInputPer1M": null,
+        "outputPer1M": 1.5
+      },
+      "extractedAmounts": [
+        {
+          "value": 1.5,
+          "excerpt": "grounding. Standard Free Tier Paid Tier, per 1M tokens in USD Input price Free of charge $1.50 Output price (including thinking tokens) Free of charge $9.00 Context caching price Free of charge $0.15 $1.00 / 1,000,000 tokens per"
+        },
+        {
+          "value": 9,
+          "excerpt": "Input price Free of charge $1.50 Output price (including thinking tokens) Free of charge $9.00 Context caching price Free of charge $0.15 $1.00 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not availa"
+        },
+        {
+          "value": 0.15,
+          "excerpt": "ice (including thinking tokens) Free of charge $9.00 Context caching price Free of charge $0.15 $1.00 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 prompts per month (free, shared a"
+        },
+        {
+          "value": 1,
+          "excerpt": "ncluding thinking tokens) Free of charge $9.00 Context caching price Free of charge $0.15 $1.00 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 prompts per month (free, shared across"
+        },
+        {
+          "value": 14,
+          "excerpt": "oogle Search * Not available 5,000 prompts per month (free, shared across Gemini 3), then $14 / 1,000 search queries Grounding with Google Maps Not available 5,000 prompts per month (free, shared across Gemini 3), then $14 / 1,000"
+        },
+        {
+          "value": 0.75,
+          "excerpt": "products Yes No Batch Free Tier Paid Tier, per 1M tokens in USD Input price Not available $0.75 Output price (including thinking tokens) Not available $4.50 Context caching price Not available $0.075 $1.00 / 1,000,000 tokens per h"
+        },
+        {
+          "value": 4.5,
+          "excerpt": "SD Input price Not available $0.75 Output price (including thinking tokens) Not available $4.50 Context caching price Not available $0.075 $1.00 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not availa"
+        },
+        {
+          "value": 0.075,
+          "excerpt": "price (including thinking tokens) Not available $4.50 Context caching price Not available $0.075 $1.00 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 requests per month (free, shared"
+        },
+        {
+          "value": 0.08,
+          "excerpt": "price (including thinking tokens) Not available $4.50 Context caching price Not available $0.08 $1.00 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 requests per month (free, shared"
+        },
+        {
+          "value": 2.7,
+          "excerpt": "ucts Yes No Priority Free Tier Paid Tier, per 1M tokens in USD Input price Free of charge $2.70 Output price (including thinking tokens) Free of charge $16.20 Context caching price Free of charge $0.27 $1.00 / 1,000,000 tokens per"
+        },
+        {
+          "value": 16.2,
+          "excerpt": "Input price Free of charge $2.70 Output price (including thinking tokens) Free of charge $16.20 Context caching price Free of charge $0.27 $1.00 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not avail"
+        },
+        {
+          "value": 0.27,
+          "excerpt": "ce (including thinking tokens) Free of charge $16.20 Context caching price Free of charge $0.27 $1.00 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 prompts per month (free, shared a"
+        },
+        {
+          "value": 3.5,
+          "excerpt": "ports 70+ languages. Free Tier Paid Tier, per 1M tokens in USD Input price Free of charge $3.50 or $0.0053/min * (audio) Output price (including thinking tokens) Free of charge $21.00 or $0.0315/min * (audio) Used to improve our p"
+        },
+        {
+          "value": 0.0053,
+          "excerpt": "languages. Free Tier Paid Tier, per 1M tokens in USD Input price Free of charge $3.50 or $0.0053/min * (audio) Output price (including thinking tokens) Free of charge $21.00 or $0.0315/min * (audio) Used to improve our products Y"
+        },
+        {
+          "value": 21,
+          "excerpt": "ge $3.50 or $0.0053/min * (audio) Output price (including thinking tokens) Free of charge $21.00 or $0.0315/min * (audio) Used to improve our products Yes No * Billing is based on total input and output audio token consumption, ca"
+        },
+        {
+          "value": 0.0315,
+          "excerpt": "r $0.0053/min * (audio) Output price (including thinking tokens) Free of charge $21.00 or $0.0315/min * (audio) Used to improve our products Yes No * Billing is based on total input and output audio token consumption, calculated a"
+        },
+        {
+          "value": 0.0368,
+          "excerpt": "a rate of 25 tokens per second of audio, equating to an effective price of approximately $0.0368 per minute. Gemini 3.1 Flash-Lite gemini-3.1-flash-lite Try it in Google AI Studio Our most cost-efficient model, optimized for high"
+        }
+      ],
+      "status": "matched_unlabeled",
+      "confidence": "medium",
+      "reasons": [
+        "Current prices appear near the model name, but labels were not reliable enough for auto-apply."
+      ],
+      "fetchedAt": "2026-06-30T06:48:57.106Z"
+    },
+    {
+      "vendor": "Google",
+      "model": "Gemini 3.1 Flash-Lite",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
+      "current": {
+        "inputPer1M": 0.25,
+        "cachedInputPer1M": 0.025,
+        "outputPer1M": 1.5,
+        "context": "1M"
+      },
+      "detected": {
+        "inputPer1M": 2.7,
+        "cachedInputPer1M": null,
+        "outputPer1M": 16.2
+      },
+      "extractedAmounts": [
+        {
+          "value": 14,
+          "excerpt": "ogle Search * Not available 5,000 requests per month (free, shared across Gemini 3), then $14 / 1,000 search queries Grounding with Google Maps Not available 5,000 requests per month (free, shared across Gemini 3), then $14 / 1,00"
+        },
+        {
+          "value": 2.7,
+          "excerpt": "ucts Yes No Priority Free Tier Paid Tier, per 1M tokens in USD Input price Free of charge $2.70 Output price (including thinking tokens) Free of charge $16.20 Context caching price Free of charge $0.27 $1.00 / 1,000,000 tokens per"
+        },
+        {
+          "value": 16.2,
+          "excerpt": "Input price Free of charge $2.70 Output price (including thinking tokens) Free of charge $16.20 Context caching price Free of charge $0.27 $1.00 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not avail"
+        },
+        {
+          "value": 0.27,
+          "excerpt": "ce (including thinking tokens) Free of charge $16.20 Context caching price Free of charge $0.27 $1.00 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 prompts per month (free, shared a"
+        },
+        {
+          "value": 1,
+          "excerpt": "cluding thinking tokens) Free of charge $16.20 Context caching price Free of charge $0.27 $1.00 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 prompts per month (free, shared across"
+        },
+        {
+          "value": 3.5,
+          "excerpt": "ports 70+ languages. Free Tier Paid Tier, per 1M tokens in USD Input price Free of charge $3.50 or $0.0053/min * (audio) Output price (including thinking tokens) Free of charge $21.00 or $0.0315/min * (audio) Used to improve our p"
+        },
+        {
+          "value": 0.0053,
+          "excerpt": "languages. Free Tier Paid Tier, per 1M tokens in USD Input price Free of charge $3.50 or $0.0053/min * (audio) Output price (including thinking tokens) Free of charge $21.00 or $0.0315/min * (audio) Used to improve our products Y"
+        },
+        {
+          "value": 21,
+          "excerpt": "ge $3.50 or $0.0053/min * (audio) Output price (including thinking tokens) Free of charge $21.00 or $0.0315/min * (audio) Used to improve our products Yes No * Billing is based on total input and output audio token consumption, ca"
+        },
+        {
+          "value": 0.0315,
+          "excerpt": "r $0.0053/min * (audio) Output price (including thinking tokens) Free of charge $21.00 or $0.0315/min * (audio) Used to improve our products Yes No * Billing is based on total input and output audio token consumption, calculated a"
+        },
+        {
+          "value": 0.0368,
+          "excerpt": "a rate of 25 tokens per second of audio, equating to an effective price of approximately $0.0368 per minute. Gemini 3.1 Flash-Lite gemini-3.1-flash-lite Try it in Google AI Studio Our most cost-efficient model, optimized for high"
+        },
+        {
+          "value": 0.25,
+          "excerpt": "processing. Standard Free Tier Paid Tier, per 1M tokens in USD Input price Free of charge $0.25 (text / image / video) $0.50 (audio) Output price (including thinking tokens) Free of charge $1.50 Context caching price Not available"
+        },
+        {
+          "value": 0.5,
+          "excerpt": "r Paid Tier, per 1M tokens in USD Input price Free of charge $0.25 (text / image / video) $0.50 (audio) Output price (including thinking tokens) Free of charge $1.50 Context caching price Not available $0.025 (text / image / video"
+        },
+        {
+          "value": 1.5,
+          "excerpt": "xt / image / video) $0.50 (audio) Output price (including thinking tokens) Free of charge $1.50 Context caching price Not available $0.025 (text / image / video) $0.05 (audio) $1.00 / 1,000,000 tokens per hour (storage price) Grou"
+        },
+        {
+          "value": 0.025,
+          "excerpt": "rice (including thinking tokens) Free of charge $1.50 Context caching price Not available $0.025 (text / image / video) $0.05 (audio) $1.00 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5"
+        },
+        {
+          "value": 0.05,
+          "excerpt": "s) Free of charge $1.50 Context caching price Not available $0.025 (text / image / video) $0.05 (audio) $1.00 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available 5,000 prompts per month (free,"
+        },
+        {
+          "value": 0.125,
+          "excerpt": "roducts Yes No Batch Free Tier Paid Tier, per 1M tokens in USD Input price Free of charge $0.125 (text / image / video) $0.25 (audio) Output price (including thinking tokens) Free of charge $0.75 Context caching price Not availabl"
+        },
+        {
+          "value": 0.75,
+          "excerpt": "xt / image / video) $0.25 (audio) Output price (including thinking tokens) Free of charge $0.75 Context caching price Not available $0.0125 (text / image / video) $0.025 (audio) $0.50 / 1,000,000 tokens per hour (storage price) Gr"
+        },
+        {
+          "value": 0.0125,
+          "excerpt": "rice (including thinking tokens) Free of charge $0.75 Context caching price Not available $0.0125 (text / image / video) $0.025 (audio) $0.50 / 1,000,000 tokens per hour (storage price) Grounding with Google Search * Not available"
+        },
+        {
+          "value": 0.45,
+          "excerpt": "ucts Yes No Priority Free Tier Paid Tier, per 1M tokens in USD Input price Free of charge $0.45 (text / image / video) $0.90 (audio) Output price (including thinking tokens) Free of charge $2.70 Context caching price Not available"
+        },
+        {
+          "value": 0.9,
+          "excerpt": "r Paid Tier, per 1M tokens in USD Input price Free of charge $0.45 (text / image / video) $0.90 (audio) Output price (including thinking tokens) Free of charge $2.70 Context caching price Not available $0.045 (text / image / video"
+        }
+      ],
+      "status": "matched_unlabeled",
+      "confidence": "medium",
+      "reasons": [
+        "Current prices appear near the model name, but labels were not reliable enough for auto-apply."
+      ],
+      "fetchedAt": "2026-06-30T06:48:57.106Z"
+    }
+  ]
+}
