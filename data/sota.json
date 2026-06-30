@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "asOf": "2026-06-29",
+  "asOf": "2026-06-30",
   "source": "paperswithcode.co API (/api/v1)",
   "note": "全研究分野の現SOTAを自動収集。各分野は評価件数最多のデータセットを代表ベンチとして表示。",
   "entries": [

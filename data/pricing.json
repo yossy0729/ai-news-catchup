@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-06-30",
+  "asOf": "2026-07-01",
   "currency": "USD",
   "unit": "per 1M tokens",
   "note": "標準モードの参考値。OpenAIはバッチ等で変動、GeminiはPro系で200K超は上位料金。Claudeのサブスク料金(Pro/Max等)はAPI単価ではないため対象外。",
@@ -12,7 +12,7 @@
       "cachedInputPer1M": 0.5,
       "outputPer1M": 30,
       "context": "標準≤270K",
-      "asOf": "2026-06-30",
+      "asOf": "2026-07-01",
       "sourceUrl": "https://openai.com/api/pricing/",
       "verified": true
     },
@@ -23,7 +23,7 @@
       "cachedInputPer1M": 0.25,
       "outputPer1M": 15,
       "context": "標準≤270K",
-      "asOf": "2026-06-30",
+      "asOf": "2026-07-01",
       "sourceUrl": "https://openai.com/api/pricing/",
       "verified": true
     },
@@ -34,7 +34,7 @@
       "cachedInputPer1M": 0.075,
       "outputPer1M": 4.5,
       "context": "標準≤270K",
-      "asOf": "2026-06-30",
+      "asOf": "2026-07-01",
       "sourceUrl": "https://openai.com/api/pricing/",
       "verified": true
     },
@@ -45,7 +45,7 @@
       "cachedInputPer1M": 0.5,
       "outputPer1M": 25,
       "context": "1M",
-      "asOf": "2026-06-30",
+      "asOf": "2026-07-01",
       "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
       "verified": true
     },
@@ -56,7 +56,7 @@
       "cachedInputPer1M": 0.3,
       "outputPer1M": 15,
       "context": "1M",
-      "asOf": "2026-06-30",
+      "asOf": "2026-07-01",
       "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
       "verified": true
     },
@@ -67,7 +67,7 @@
       "cachedInputPer1M": 0.1,
       "outputPer1M": 5,
       "context": "200K",
-      "asOf": "2026-06-30",
+      "asOf": "2026-07-01",
       "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
       "verified": true
     },
@@ -78,7 +78,7 @@
       "cachedInputPer1M": 0.2,
       "outputPer1M": 12,
       "context": "1M",
-      "asOf": "2026-06-30",
+      "asOf": "2026-07-01",
       "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
       "verified": true
     },
@@ -89,7 +89,7 @@
       "cachedInputPer1M": 0.15,
       "outputPer1M": 9,
       "context": "1M",
-      "asOf": "2026-06-30",
+      "asOf": "2026-07-01",
       "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
       "verified": true
     },

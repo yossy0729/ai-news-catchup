@@ -1,5 +1,5 @@
 {
-  "generatedDate": "2026-06-30",
+  "generatedDate": "2026-07-01",
   "categories": [
     {
       "id": "jp-cases",
@@ -438,6 +438,42 @@
           },
           "importanceLabel": "技術",
           "importanceReason": "技術的に重要"
+        },
+        {
+          "title": "Featuring Every Eval Ever Results on Hugging Face Model Pages",
+          "titleJa": "Hugging Faceモデルページで評価結果を総覧",
+          "summary": "Hugging Faceは、すべての評価結果を同プラットフォームのモデルページで公開しました。これは、AIの進展と民主化を目指すオープンサイエンスの一環として重要な一歩です。",
+          "summaryStatus": "llm-ja",
+          "impact": "研究価値",
+          "source": "Hugging Face Blog",
+          "type": "公式ブログ",
+          "date": "2026-06-30",
+          "url": "https://huggingface.co/blog/eee-community-evals",
+          "priority": 80,
+          "importance": {
+            "total": 80,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術"
+            ],
+            "reasons": [
+              "技術的に重要"
+            ],
+            "axes": {
+              "technical": 36,
+              "business": 0,
+              "regulatory": 0,
+              "implementation": 0,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要",
+          "scoreBasis": "技術的に重要。技術 / 事業 / 実装 の観点で優先度を算定。",
+          "new": false,
+          "candidateId": "326b5d51b877e9cf2d481fdb"
         },
         {
           "title": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel",
@@ -886,6 +922,44 @@
           },
           "importanceLabel": "技術",
           "importanceReason": "技術的に重要"
+        },
+        {
+          "title": "Introducing Claude Sonnet 5",
+          "titleJa": "新たに登場したClaude Sonnet 5",
+          "summary": "Claude Sonnet 5は、最もエージェント機能を強化したモデルで、独自に計画を立てたり、ブラウザやターミナルを使ったりできる能力を持ちます。デベロッパー向けに高いパフォーマンスを提供し、エージェントAIの新時代を象徴する存在です。",
+          "summaryStatus": "llm-ja",
+          "impact": "技術重要度",
+          "source": "Anthropic News",
+          "type": "公式発表",
+          "date": "2026-06-30",
+          "url": "https://www.anthropic.com/news/claude-sonnet-5",
+          "priority": 78,
+          "importance": {
+            "total": 78,
+            "primaryAxis": "implementation",
+            "primaryLabel": "実装",
+            "primaryReason": "実装・運用に有益",
+            "labels": [
+              "実装",
+              "技術"
+            ],
+            "reasons": [
+              "実装・運用に有益",
+              "技術的に重要"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 0,
+              "regulatory": 0,
+              "implementation": 22,
+              "market": 0
+            }
+          },
+          "importanceLabel": "実装",
+          "importanceReason": "実装・運用に有益",
+          "scoreBasis": "技術的に重要。技術 / 実装 / 事業 の観点で優先度を算定。",
+          "new": false,
+          "candidateId": "4307222bc7e5f2e471152174"
         },
         {
           "title": "Introducing Claude Corps",
