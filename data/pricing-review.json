@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-30T11:33:33.638Z",
+  "generatedAt": "2026-06-30T12:01:06.456Z",
   "generatedDate": "2026-06-30",
   "pricingAsOf": "2026-06-21",
-  "sourcePolicy": "Official pricing pages remain the display source. Secondary sources are used only as review evidence and pricing.json is not overwritten unless a future verified apply step is explicitly enabled.",
+  "sourcePolicy": "Official pricing pages remain the display source. Multiple agreeing secondary sources can update pricing.json values when the current manual values differ.",
   "summary": {
     "total": 9,
     "matched": 0,
@@ -32,7 +32,7 @@
       "reasons": [
         "Official page parsing was not conclusive, but multiple secondary sources agree with the current pricing values."
       ],
-      "fetchedAt": "2026-06-30T11:33:33.638Z",
+      "fetchedAt": "2026-06-30T12:01:06.456Z",
       "officialReview": {
         "status": "fetch_failed",
         "confidence": "none",
@@ -105,7 +105,7 @@
       "reasons": [
         "Official page parsing was not conclusive, but multiple secondary sources agree with the current pricing values."
       ],
-      "fetchedAt": "2026-06-30T11:33:33.638Z",
+      "fetchedAt": "2026-06-30T12:01:06.456Z",
       "officialReview": {
         "status": "fetch_failed",
         "confidence": "none",
@@ -178,7 +178,7 @@
       "reasons": [
         "Official page parsing was not conclusive, but multiple secondary sources agree with the current pricing values."
       ],
-      "fetchedAt": "2026-06-30T11:33:33.638Z",
+      "fetchedAt": "2026-06-30T12:01:06.456Z",
       "officialReview": {
         "status": "fetch_failed",
         "confidence": "none",
@@ -337,7 +337,7 @@
       "reasons": [
         "Current prices appear near the model name, but labels were not reliable enough for auto-apply."
       ],
-      "fetchedAt": "2026-06-30T11:33:33.638Z",
+      "fetchedAt": "2026-06-30T12:01:06.456Z",
       "officialReview": {
         "status": "matched_unlabeled",
         "confidence": "medium",
@@ -582,7 +582,7 @@
       "reasons": [
         "Current prices appear near the model name, but labels were not reliable enough for auto-apply."
       ],
-      "fetchedAt": "2026-06-30T11:33:33.638Z",
+      "fetchedAt": "2026-06-30T12:01:06.456Z",
       "officialReview": {
         "status": "matched_unlabeled",
         "confidence": "medium",
@@ -827,7 +827,7 @@
       "reasons": [
         "Official page parsing was not conclusive, but multiple secondary sources agree with the current pricing values."
       ],
-      "fetchedAt": "2026-06-30T11:33:33.638Z",
+      "fetchedAt": "2026-06-30T12:01:06.456Z",
       "officialReview": {
         "status": "review_required",
         "confidence": "low",
@@ -1074,7 +1074,7 @@
       "reasons": [
         "Current prices appear near the model name, but labels were not reliable enough for auto-apply."
       ],
-      "fetchedAt": "2026-06-30T11:33:33.638Z",
+      "fetchedAt": "2026-06-30T12:01:06.456Z",
       "officialReview": {
         "status": "matched_unlabeled",
         "confidence": "medium",
@@ -1307,7 +1307,7 @@
       "reasons": [
         "Current prices appear near the model name, but labels were not reliable enough for auto-apply."
       ],
-      "fetchedAt": "2026-06-30T11:33:33.638Z",
+      "fetchedAt": "2026-06-30T12:01:06.456Z",
       "officialReview": {
         "status": "matched_unlabeled",
         "confidence": "medium",
@@ -1540,7 +1540,7 @@
       "reasons": [
         "Current prices appear near the model name, but labels were not reliable enough for auto-apply."
       ],
-      "fetchedAt": "2026-06-30T11:33:33.638Z",
+      "fetchedAt": "2026-06-30T12:01:06.456Z",
       "officialReview": {
         "status": "matched_unlabeled",
         "confidence": "medium",
@@ -1683,5 +1683,9 @@
         ]
       }
     }
-  ]
+  ],
+  "applied": {
+    "priceUpdates": 0,
+    "verifiedUpdates": 9
+  }
 }

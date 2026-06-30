@@ -397,11 +397,11 @@ function applySecondaryConsensus(item, consensus) {
       "Official page parsing was not conclusive, but multiple secondary sources agree with the current pricing values."
     ];
   } else if (consensus.status === "differs_from_current") {
-    next.status = "review_required";
-    next.confidence = "low";
+    next.status = "changed";
+    next.confidence = "medium";
     next.reasons = [
       ...next.reasons,
-      "Multiple secondary sources agree with each other but differ from current pricing values."
+      "Multiple secondary sources agree with each other and differ from current pricing values."
     ];
   }
 
@@ -603,7 +603,7 @@ async function collect() {
     generatedAt: fetchedAt,
     generatedDate: todayInTokyo(),
     pricingAsOf: pricing.asOf || null,
-    sourcePolicy: "Official pricing pages remain the display source. Secondary sources are used only as review evidence and pricing.json is not overwritten unless a future verified apply step is explicitly enabled.",
+    sourcePolicy: "Official pricing pages remain the display source. Multiple agreeing secondary sources can update pricing.json values when the current manual values differ.",
     summary: summarize(items),
     items
   };
@@ -611,37 +611,68 @@ async function collect() {
 
 function applyVerifiedChanges(pricing, review) {
   const byKey = new Map(review.items.map((item) => [`${item.vendor}\u0000${item.model}`, item]));
-  let changed = 0;
+  const applied = {
+    priceUpdates: 0,
+    verifiedUpdates: 0
+  };
   for (const model of pricing.models || []) {
     const reviewItem = byKey.get(`${model.vendor}\u0000${model.model}`);
-    if (!reviewItem || reviewItem.status !== "changed" || reviewItem.confidence !== "high") continue;
-    model.inputPer1M = reviewItem.detected.inputPer1M;
-    model.outputPer1M = reviewItem.detected.outputPer1M;
-    if (reviewItem.detected.cachedInputPer1M !== null && reviewItem.detected.cachedInputPer1M !== undefined) {
-      model.cachedInputPer1M = reviewItem.detected.cachedInputPer1M;
+    if (!reviewItem) continue;
+
+    const consensusValue = reviewItem.secondaryConsensus?.value;
+    const canApplySecondaryChange =
+      reviewItem.status === "changed" &&
+      reviewItem.secondaryConsensus?.status === "differs_from_current" &&
+      reviewItem.secondaryConsensus?.sourceCount >= 2 &&
+      consensusValue &&
+      consensusValue.inputPer1M !== null &&
+      consensusValue.outputPer1M !== null;
+
+    if (canApplySecondaryChange) {
+      if (!samePrice(model.inputPer1M, consensusValue.inputPer1M)) {
+        model.inputPer1M = consensusValue.inputPer1M;
+        applied.priceUpdates += 1;
+      }
+      if (!samePrice(model.outputPer1M, consensusValue.outputPer1M)) {
+        model.outputPer1M = consensusValue.outputPer1M;
+        applied.priceUpdates += 1;
+      }
+      if (
+        consensusValue.cachedInputPer1M !== null &&
+        consensusValue.cachedInputPer1M !== undefined &&
+        !samePrice(model.cachedInputPer1M, consensusValue.cachedInputPer1M)
+      ) {
+        model.cachedInputPer1M = consensusValue.cachedInputPer1M;
+        applied.priceUpdates += 1;
+      }
+    } else if (!["matched", "matched_unlabeled", "secondary_consensus"].includes(reviewItem.status)) {
+      continue;
     }
-    model.asOf = review.generatedDate;
-    model.verified = true;
-    changed += 1;
+
+    if (model.asOf !== review.generatedDate || model.verified !== true) {
+      model.asOf = review.generatedDate;
+      model.verified = true;
+      applied.verifiedUpdates += 1;
+    }
   }
-  if (changed) {
+  if (applied.priceUpdates || applied.verifiedUpdates) {
     pricing.asOf = review.generatedDate;
     writeJson(pricingPath, pricing);
   }
-  return changed;
+  return applied;
 }
 
 async function main() {
   const review = await collect();
-  if (writeReview) writeJson(reviewPath, review);
-
-  let applied = 0;
+  let applied = { priceUpdates: 0, verifiedUpdates: 0 };
   if (applyVerified) {
     const pricing = readJson(pricingPath, { models: [] });
     applied = applyVerifiedChanges(pricing, review);
   }
+  review.applied = applied;
+  if (writeReview) writeJson(reviewPath, review);
 
-  console.log(`Pricing review ${writeReview ? "write" : "dry-run"}: total=${review.summary.total}, matched=${review.summary.matched}, matched_unlabeled=${review.summary.matchedUnlabeled}, secondary_consensus=${review.summary.secondaryConsensus}, changed=${review.summary.changed}, review_required=${review.summary.reviewRequired}, model_not_found=${review.summary.modelNotFound}, no_prices=${review.summary.noPrices}, fetch_failed=${review.summary.fetchFailed}, applied=${applied}`);
+  console.log(`Pricing review ${writeReview ? "write" : "dry-run"}: total=${review.summary.total}, matched=${review.summary.matched}, matched_unlabeled=${review.summary.matchedUnlabeled}, secondary_consensus=${review.summary.secondaryConsensus}, changed=${review.summary.changed}, review_required=${review.summary.reviewRequired}, model_not_found=${review.summary.modelNotFound}, no_prices=${review.summary.noPrices}, fetch_failed=${review.summary.fetchFailed}, applied_prices=${applied.priceUpdates}, applied_verified=${applied.verifiedUpdates}`);
 
   const notable = review.items.filter((item) => !["matched", "matched_unlabeled"].includes(item.status));
   for (const item of notable.slice(0, 12)) {

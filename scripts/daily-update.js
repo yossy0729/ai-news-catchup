@@ -347,7 +347,7 @@ function main() {
   signalArgs.push(dryRun ? "--dry-run" : "--write");
 
   const pricingArgs = [];
-  if (!dryRun) pricingArgs.push("--write-review");
+  if (!dryRun) pricingArgs.push("--write-review", "--apply-verified");
 
   const promoteArgs = [
     `--min-priority=${minPriority}`,
@@ -362,7 +362,7 @@ function main() {
 
   runStep("collect-official-news", "scripts/collect-official-news.js", officialArgs);
   runStep("collect-ai-signals", "scripts/collect-ai-signals.js", signalArgs);
-  // Pricing is collected into a review file first; pricing.json is not auto-overwritten.
+  // Pricing review keeps official links as display sources, while verified secondary consensus can update pricing.json.
   runStep("collect-pricing", "scripts/collect-pricing.js", pricingArgs);
   runStep("collect-media-news", "scripts/collect-media-news.js", mediaArgs);
   runStep("collect", "scripts/collect-news.js", collectArgs);
