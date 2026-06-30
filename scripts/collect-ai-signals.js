@@ -186,7 +186,9 @@ async function collectPriceSignals() {
       date: todayInTokyo(),
       source: `${source.provider} Pricing`,
       title: `${source.provider} token pricing`,
+      titleJa: `${source.provider}のトークン価格情報`,
       summary: detected,
+      summaryJa: detected,
       text: `Price: ${source.provider} 入力/出力トークン価格表を確認`,
       url: source.url,
       priority: 76

@@ -15,7 +15,7 @@
       "text": "HF Papers #1: PhysisForcing: Physics Reinforced World Simulator for Robotic Manipulation",
       "url": "https://huggingface.co/papers/2606.28128",
       "priority": 95,
-      "titleJa": "ロボティクス向け物理シミュレーションの新研究"
+      "titleJa": "#1: ロボット操作向け物理強化シミュレータ"
     },
     {
       "id": "e015bfb71f37a9ea",
@@ -29,7 +29,7 @@
       "text": "HF Papers #2: Formalizing Latent Thoughts: Four Axioms of Thought Representation in LLMs",
       "url": "https://huggingface.co/papers/2606.27378",
       "priority": 94,
-      "titleJa": "大規模モデルにおける思考表現の理論"
+      "titleJa": "#2: LLMの思考表現を形式化"
     },
     {
       "id": "3922a0fb3a3cafe2",
@@ -43,7 +43,7 @@
       "text": "HF Papers #3: Translation as a Bridging Action: Transferring Manipulation Skills from Humans to Robots",
       "url": "https://huggingface.co/papers/2606.28133",
       "priority": 93,
-      "titleJa": "人間からロボットへの技能移転"
+      "titleJa": "#3: 人間技能をロボット操作へ橋渡し"
     },
     {
       "id": "21656e045ee65969",
@@ -57,7 +57,7 @@
       "text": "HF Papers #4: Qwen-Image-2.0-RL Technical Report",
       "url": "https://huggingface.co/papers/2606.27608",
       "priority": 92,
-      "titleJa": "生成言語モデルの新技術"
+      "titleJa": "#4: Qwen画像2.0 RLの技術報告"
     },
     {
       "id": "c843c8fbeac5befc",
@@ -71,7 +71,7 @@
       "text": "HF Papers #5: MultiHashFormer: Hash-based Generative Language Models",
       "url": "https://huggingface.co/papers/2606.28057",
       "priority": 91,
-      "titleJa": "現実世界でのASR評価基準を導入"
+      "titleJa": "#5: ハッシュ型生成言語モデル"
     },
     {
       "id": "281c9c8c57a2f979",
@@ -85,7 +85,8 @@
       "text": "SOTA: Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World / Hugging Face Blog",
       "url": "https://huggingface.co/blog/ffasr-leaderboard",
       "priority": 88,
-      "titleJa": "CVPR 2026の開催について"
+      "titleJa": "FFASRリーダーボードの導入",
+      "summaryJa": "Hugging Faceがリアルな状況下でのASRの性能を評価するリーダーボードを紹介しました。モデル開発やコスト判断に役立つ情報が得られます。"
     },
     {
       "id": "2c255983884091d3",
@@ -99,7 +100,8 @@
       "text": "Research: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 / Apple Machine Learning Research",
       "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
       "priority": 88,
-      "titleJa": "OpenAIのトークン価格の詳細"
+      "titleJa": "CVPR2026でのAppleの発表",
+      "summaryJa": "Apple Machine LearningがAI研究に関する会議情報を発表。研究テーマや技術トレンドが議論の焦点となります。"
     },
     {
       "id": "7d95e1b1656fe4ae",
@@ -113,7 +115,8 @@
       "text": "Price: OpenAI 入力/出力トークン価格表を確認",
       "url": "https://openai.com/api/pricing/",
       "priority": 76,
-      "titleJa": "Anthropicのトークン価格について"
+      "titleJa": "OpenAIのトークン価格情報",
+      "summaryJa": "公式価格ページ。Node直取得は403になる場合があるため、現MVPではリンク確認シグナルとして扱います。"
     },
     {
       "id": "da08ee3f7c1156ae",
@@ -127,7 +130,8 @@
       "text": "Price: Anthropic 入力/出力トークン価格表を確認",
       "url": "https://docs.anthropic.com/en/docs/about-claude/pricing",
       "priority": 76,
-      "titleJa": "Google Geminiのトークン価格情報"
+      "titleJa": "Anthropicのトークン価格情報",
+      "summaryJa": "Claudeの入力/出力MTok単価を確認する公式価格表です。 検出例: $10 / MTok / $12.50 / MTok / $20 / MTok / $1 / MTok"
     },
     {
       "id": "acbe155951267feb",
@@ -140,7 +144,9 @@
       "summary": "Gemini APIの入力/出力トークン単価を確認する公式価格表です。 検出例: $1.50 / $9.00 / $0.15 / $1.00 / 1,000,000 tokens",
       "text": "Price: Google Gemini 入力/出力トークン価格表を確認",
       "url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "priority": 76
+      "priority": 76,
+      "titleJa": "Google Geminiのトークン価格情報",
+      "summaryJa": "Gemini APIの入力/出力トークン単価を確認する公式価格表です。 検出例: $1.50 / $9.00 / $0.15 / $1.00 / 1,000,000 tokens"
     }
   ],
   "errors": [],

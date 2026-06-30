@@ -62,6 +62,32 @@ const allowedHealthStatuses = new Set(["ok", "warning", "failed"]);
 const allowedSourceHealthStatuses = new Set(["ok", "no_items", "failed", "skipped", "unknown"]);
 const allowedImportanceAxes = new Set(["technical", "business", "regulatory", "implementation", "market"]);
 
+function priceSignalRule(item) {
+  const source = `${item.source || ""} ${item.title || ""}`;
+  const rules = [
+    { name: "OpenAI", source: /OpenAI/i, required: /OpenAI/i, forbidden: /Anthropic|Claude|Gemini|Google/i },
+    { name: "Anthropic", source: /Anthropic/i, required: /Anthropic|Claude/i, forbidden: /OpenAI|Gemini|Google/i },
+    { name: "Google Gemini", source: /Google|Gemini/i, required: /Google|Gemini/i, forbidden: /OpenAI|Anthropic|Claude/i }
+  ];
+  return rules.find((rule) => rule.source.test(source));
+}
+
+function validatePriceSignal(item) {
+  if (item.tag !== "Price") return null;
+  const rule = priceSignalRule(item);
+  if (!rule) return `${item.id || item.url}: unknown price signal source ${item.source || item.title}`;
+
+  const titleJa = String(item.titleJa || "");
+  if (!titleJa) return `${item.id || item.url}: missing titleJa for ${rule.name} price signal`;
+  if (!rule.required.test(titleJa)) {
+    return `${item.id || item.url}: titleJa does not mention ${rule.name}: ${titleJa}`;
+  }
+  if (rule.forbidden.test(titleJa)) {
+    return `${item.id || item.url}: titleJa mentions another provider: ${titleJa}`;
+  }
+  return null;
+}
+
 for (const source of sources.sources) {
   if (sourceIds.has(source.id)) {
     duplicateSourceIds.add(source.id);
@@ -163,6 +189,11 @@ const signalIds = new Set();
 for (const item of aiSignals.items || []) {
   if (!item.id || !item.lane || !item.tag || !item.text || !item.url || !item.source || !item.date) {
     invalidSignals.push(item.text || item.title || item.url || JSON.stringify(item).slice(0, 80));
+  }
+
+  const priceSignalError = validatePriceSignal(item);
+  if (priceSignalError) {
+    invalidSignals.push(priceSignalError);
   }
 
   if (signalIds.has(item.id)) {

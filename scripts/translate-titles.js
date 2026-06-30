@@ -43,6 +43,20 @@ function compactText(value, maxLength) {
   return `${text.slice(0, maxLength).replace(/[、。,. ]+$/u, "")}...`;
 }
 
+function signalTranslationLooksConsistent(item, titleJa) {
+  if (item.tag !== "Price") return true;
+  const title = String(titleJa || "");
+  const source = String(item.source || item.title || "");
+  const rules = [
+    { source: /OpenAI/i, required: /OpenAI/i, forbidden: /Anthropic|Claude|Gemini|Google/i },
+    { source: /Anthropic/i, required: /Anthropic|Claude/i, forbidden: /OpenAI|Gemini|Google/i },
+    { source: /Google|Gemini/i, required: /Google|Gemini/i, forbidden: /OpenAI|Anthropic|Claude/i }
+  ];
+  const rule = rules.find((entry) => entry.source.test(source));
+  if (!rule || !title) return true;
+  return rule.required.test(title) && !rule.forbidden.test(title);
+}
+
 function responseText(responseJson) {
   if (typeof responseJson.output_text === "string") return responseJson.output_text;
   const parts = [];
@@ -64,8 +78,8 @@ function parseJsonText(text) {
 }
 
 function buildPrompt(batch) {
-  const list = batch.map((entry, i) => {
-    const row = { i, source: entry.item.source || entry.item.vendorName || "", title: entry.item.title };
+  const list = batch.map((entry) => {
+    const row = { key: entry.key, source: entry.item.source || entry.item.vendorName || "", title: entry.item.title };
     if (entry.needSummary) row.summary = compactText(entry.item.summary, 900);
     return row;
   });
@@ -78,9 +92,9 @@ function buildPrompt(batch) {
     "- 元記事の見出しや本文の表現を長く引用・直訳しない。事実関係を自分の言葉で要約する",
     "- 製品名・モデル名・企業名・論文名などの固有名詞は、自然な場合は英語のまま残す",
     "- 原文にない情報を足さない。推測や評価を断定しない",
-    "- 入力と同じ i を付けてJSON配列のみで返す",
+    "- 入力と同じ key を付けてJSON配列のみで返す",
     "",
-    'JSON schema: [{"i":0,"titleJa":"...","summaryJa":"..."}]（summaryが無い項目はsummaryJa省略可）',
+    'JSON schema: [{"key":"...","titleJa":"...","summaryJa":"..."}]（summaryが無い項目はsummaryJa省略可）',
     "",
     `input: ${JSON.stringify(list)}`
   ].join("\n");
@@ -115,11 +129,14 @@ async function translateBatch(batch) {
   const parsed = parseJsonText(responseText(json));
   if (!Array.isArray(parsed)) throw new Error("translation response is not an array");
 
+  const byKey = new Map(batch.map((entry) => [entry.key, entry]));
   for (const row of parsed) {
-    const target = batch[row.i];
+    const target = byKey.get(String(row.key || ""));
     if (!target) continue;
     const titleJa = compactText(row.titleJa, 120);
-    if (target.needTitle && titleJa) target.item.titleJa = titleJa;
+    if (target.needTitle && titleJa && signalTranslationLooksConsistent(target.item, titleJa)) {
+      target.item.titleJa = titleJa;
+    }
     const summaryJa = compactText(row.summaryJa, 260);
     if (target.needSummary && summaryJa) target.item.summaryJa = summaryJa;
   }
@@ -141,14 +158,19 @@ async function main() {
   const pending = [];
   for (const file of files) {
     const isPublicNewsFile = /(?:media|official)-news\.json$/i.test(file.filePath);
-    for (const item of file.data.items || []) {
-      const needTitle = Boolean(item.title) && (isPublicNewsFile
+    const fileName = path.basename(file.filePath);
+    for (const [index, item] of (file.data.items || []).entries()) {
+      const isStructuredPriceSignal = fileName === "ai-signals.json" && item.tag === "Price";
+      const needTitle = !isStructuredPriceSignal && Boolean(item.title) && (isPublicNewsFile
         ? (force || !item.titleJa)
         : (!hasJapanese(item.title) && (force || !item.titleJa)));
-      const needSummary = Boolean(item.summary) && (isPublicNewsFile
+      const needSummary = !isStructuredPriceSignal && Boolean(item.summary) && (isPublicNewsFile
         ? (force || !item.summaryJa)
         : (!hasJapanese(item.summary) && (force || !item.summaryJa)));
-      if (needTitle || needSummary) pending.push({ item, needTitle, needSummary });
+      if (needTitle || needSummary) {
+        const key = `${fileName}:${item.id || item.url || index}`;
+        pending.push({ item, needTitle, needSummary, key });
+      }
     }
   }
 
