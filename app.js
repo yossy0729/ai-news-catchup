@@ -19,6 +19,7 @@ const pricingPath = "data/pricing.json";
 const sotaPath = "data/sota.json";
 const sotaPresetsPath = "data/sota-presets.json";
 const healthPath = "data/health.json";
+const readStorageKey = "ai-news-catchup.readItems.v1";
 const categoryGrid = document.querySelector("#categoryGrid");
 const categoryTemplate = document.querySelector("#categoryTemplate");
 const newsTemplate = document.querySelector("#newsTemplate");
@@ -62,6 +63,7 @@ let latestSourceSearch = null;
 let activeTickerLane = "core";
 let activeSotaDomain = "preset"; // 既定は前線プリセット表示
 let activeSotaQuery = "";
+let readItemIds = loadReadItems();
 
 // SOTAドメイン（PwCのarea）の表示順とラベル。sota.json の domain キーと対応。
 const sotaDomainLabels = {
@@ -250,6 +252,73 @@ function itemMatchesQuery(item, query) {
     .split(/\s+/)
     .filter(Boolean)
     .every((token) => tokenMatches(haystack, token));
+}
+
+function loadReadItems() {
+  try {
+    const raw = localStorage.getItem(readStorageKey);
+    const values = raw ? JSON.parse(raw) : [];
+    return new Set(Array.isArray(values) ? values.filter(Boolean) : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function persistReadItems() {
+  try {
+    localStorage.setItem(readStorageKey, JSON.stringify(Array.from(readItemIds).slice(-2000)));
+  } catch {
+    // localStorage may be unavailable in privacy modes; the UI still works for the current render.
+  }
+}
+
+function readItemKey(item) {
+  return String(item.url || item.candidateId || `${item.source || ""}|${item.title || ""}|${item.date || item.publishedAt || ""}`);
+}
+
+function isItemRead(item) {
+  return readItemIds.has(readItemKey(item));
+}
+
+function updateReadControl(control, read) {
+  control.classList.toggle("is-read", read);
+  control.textContent = read ? "\u2713" : "";
+  control.setAttribute("aria-pressed", String(read));
+  control.setAttribute("aria-label", read ? "\u65e2\u8aad\u3092\u89e3\u9664" : "\u65e2\u8aad\u306b\u3059\u308b");
+  control.title = read ? "\u65e2\u8aad\u3092\u89e3\u9664" : "\u65e2\u8aad\u306b\u3059\u308b";
+}
+
+function setCardReadState(card, control, item, read, persist = true) {
+  const key = readItemKey(item);
+  if (read) readItemIds.add(key);
+  else readItemIds.delete(key);
+  card.classList.toggle("is-read", read);
+  updateReadControl(control, read);
+  if (persist) persistReadItems();
+}
+
+function attachReadToggle(card, item) {
+  const control = document.createElement("span");
+  control.className = "read-toggle";
+  control.setAttribute("role", "button");
+  control.tabIndex = 0;
+  card.append(control);
+  setCardReadState(card, control, item, isItemRead(item), false);
+
+  const toggle = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setCardReadState(card, control, item, !isItemRead(item));
+  };
+
+  control.addEventListener("click", toggle);
+  control.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") toggle(event);
+  });
+  card.addEventListener("click", (event) => {
+    if (event.defaultPrevented || isItemRead(item)) return;
+    setCardReadState(card, control, item, true);
+  });
 }
 
 function appendTitle(titleElement, item) {
@@ -689,6 +758,7 @@ function renderMediaCard(item) {
     fragment.querySelector(".media-meta").prepend(chip);
   }
 
+  attachReadToggle(card, item);
   return card;
 }
 
@@ -863,6 +933,7 @@ function renderNewsCard(item, accent) {
   impact.textContent = item.importanceLabel || item.impact;
   impact.title = item.importanceReason || item.scoreBasis || "";
   fragment.querySelector(".source-name").textContent = item.source;
+  attachReadToggle(card, item);
   return fragment;
 }
 
