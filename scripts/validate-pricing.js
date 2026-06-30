@@ -7,6 +7,7 @@ const reviewPath = path.join(root, "data", "pricing-review.json");
 const allowedReviewStatuses = new Set([
   "matched",
   "matched_unlabeled",
+  "secondary_consensus",
   "changed",
   "review_required",
   "model_not_found",
@@ -87,6 +88,12 @@ function validateReview(review) {
     if (!item.current || typeof item.current !== "object") add(`${key}: current snapshot is missing`);
     if (!Array.isArray(item.reasons)) add(`${key}: reasons must be an array`);
     if (item.sourceUrl && !isHttpUrl(item.sourceUrl)) add(`${key}: review sourceUrl must be http(s)`);
+    if (item.secondaryConsensus) {
+      if (!Array.isArray(item.secondaryConsensus.sources)) add(`${key}: secondaryConsensus.sources must be an array`);
+      if (!["matches_current", "differs_from_current", "insufficient_sources"].includes(item.secondaryConsensus.status)) {
+        add(`${key}: invalid secondaryConsensus status ${item.secondaryConsensus.status}`);
+      }
+    }
   }
 }
 
