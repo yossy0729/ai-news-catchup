@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedDate": "2026-07-01",
+  "generatedDate": "2026-07-02",
   "sourcePolicy": "HF Papers、公式ベンダー発表、公式価格ページからAIシグナルを構造化。価格数値は取得できる公式ページのみ検出例として保存し、取得不能なページは公式リンク確認に留める。",
   "items": [
     {
@@ -8,70 +8,70 @@
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
-      "date": "2026-07-01",
+      "date": "2026-07-02",
       "source": "Hugging Face Papers",
       "title": "HF Papers #1: Orca: The World is in Your Mind",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
       "text": "HF Papers #1: Orca: The World is in Your Mind",
       "url": "https://huggingface.co/papers/2606.30534",
       "priority": 95,
-      "titleJa": "オルカ：思考を具現化するAIの可能性"
+      "titleJa": "Orca: 心の中の世界を探る研究"
     },
     {
       "id": "0db89053c0d629a7",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
-      "date": "2026-07-01",
+      "date": "2026-07-02",
       "source": "Hugging Face Papers",
       "title": "HF Papers #2: Dockerless: Environment-Free Program Verifier for Coding Agents",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
       "text": "HF Papers #2: Dockerless: Environment-Free Program Verifier for Coding Agents",
       "url": "https://huggingface.co/papers/2606.28436",
       "priority": 94,
-      "titleJa": "コードエージェントのための新たな検証手法"
-    },
-    {
-      "id": "d4a47f09807392a5",
-      "lane": "research",
-      "tag": "Paper",
-      "tone": "blue",
-      "date": "2026-07-01",
-      "source": "Hugging Face Papers",
-      "title": "HF Papers #3: BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding",
-      "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #3: BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding",
-      "url": "https://huggingface.co/papers/2606.31315",
-      "priority": 93,
-      "titleJa": "ブロックパイロット：適応型ポリシー学習手法"
+      "titleJa": "環境に依存しないプログラム検証ツール"
     },
     {
       "id": "674f4f431b210aae",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
-      "date": "2026-07-01",
+      "date": "2026-07-02",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #4: DOPD: Dual On-policy Distillation",
+      "title": "HF Papers #3: DOPD: Dual On-policy Distillation",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #4: DOPD: Dual On-policy Distillation",
+      "text": "HF Papers #3: DOPD: Dual On-policy Distillation",
       "url": "https://huggingface.co/papers/2606.30626",
-      "priority": 92,
-      "titleJa": "DOPD：新たなデュアルポリシー蒸留法"
+      "priority": 93,
+      "titleJa": "DOPD: 政策蒸留の新手法"
     },
     {
-      "id": "19e94af97060ed5b",
+      "id": "d4a47f09807392a5",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
-      "date": "2026-07-01",
+      "date": "2026-07-02",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #5: MemLearner: Learning to Query Context memory for Video World Models",
+      "title": "HF Papers #4: BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #5: MemLearner: Learning to Query Context memory for Video World Models",
-      "url": "https://huggingface.co/papers/2606.31734",
+      "text": "HF Papers #4: BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding",
+      "url": "https://huggingface.co/papers/2606.31315",
+      "priority": 92,
+      "titleJa": "BlockPilot: 拡散的デコーディングの適応学習"
+    },
+    {
+      "id": "6dc2561b0a5614f5",
+      "lane": "research",
+      "tag": "Paper",
+      "tone": "blue",
+      "date": "2026-07-02",
+      "source": "Hugging Face Papers",
+      "title": "HF Papers #5: Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models",
+      "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
+      "text": "HF Papers #5: Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models",
+      "url": "https://huggingface.co/papers/2606.19297",
       "priority": 91,
-      "titleJa": "メモリー学習：動画世界モデルのための新手法"
+      "titleJa": "VLAの常識理解を測る試み"
     },
     {
       "id": "b2cc70b4995f1432",
@@ -85,7 +85,7 @@
       "text": "SOTA: ScarfBench: Benchmarking AI Agents for Enterprise Java Framework Migration / Hugging Face Blog",
       "url": "https://huggingface.co/blog/ibm-research/scarfbench",
       "priority": 88,
-      "titleJa": "ScarfBench：Javaフレームワーク移行のベンチマーク"
+      "titleJa": "ScarfBench: エンタープライズJava移行の評価基準"
     },
     {
       "id": "9d621116983a3f3b",
@@ -99,8 +99,8 @@
       "text": "Research: Introducing GeneBench-Pro / OpenAI News",
       "url": "https://openai.com/index/introducing-genebench-pro",
       "priority": 88,
-      "titleJa": "GeneBench-Pro：ゲノム研究向けの新ベンチマーク",
-      "summaryJa": "GeneBench-Proが発表され、AIのゲノミクスや生物学的研究における性能を評価する新たな指標となります。複雑な実データセットを用いて、科学研究におけるAIの役割を強化することが目指されています。"
+      "titleJa": "GeneBench-Proが登場",
+      "summaryJa": "新たに発表されたGeneBench-Proは、ジェノミクスや生物学、科学研究におけるAI性能を評価するための基準を提供します。現実の複雑なデータセットを使用したテストによって、AIの適用可能性が広がります。"
     },
     {
       "id": "2c255983884091d3",
@@ -114,14 +114,14 @@
       "text": "Research: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 / Apple Machine Learning Research",
       "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
       "priority": 88,
-      "titleJa": "2026年CVPR：コンピュータビジョンの最前線"
+      "titleJa": "CVPR 2026: コンピュータビジョン会議の最新情報"
     },
     {
       "id": "7d95e1b1656fe4ae",
       "lane": "research",
       "tag": "Price",
       "tone": "amber",
-      "date": "2026-07-01",
+      "date": "2026-07-02",
       "source": "OpenAI Pricing",
       "title": "OpenAI token pricing",
       "titleJa": "OpenAIのトークン価格情報",
@@ -136,7 +136,7 @@
       "lane": "research",
       "tag": "Price",
       "tone": "amber",
-      "date": "2026-07-01",
+      "date": "2026-07-02",
       "source": "Anthropic Pricing",
       "title": "Anthropic token pricing",
       "titleJa": "Anthropicのトークン価格情報",
@@ -151,7 +151,7 @@
       "lane": "research",
       "tag": "Price",
       "tone": "amber",
-      "date": "2026-07-01",
+      "date": "2026-07-02",
       "source": "Google Gemini Pricing",
       "title": "Google Gemini token pricing",
       "titleJa": "Google Geminiのトークン価格情報",
@@ -172,8 +172,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 5,
-      "lastCheckedAt": "2026-07-01T07:19:23.530Z",
-      "lastSuccessAt": "2026-07-01T07:19:23.530Z",
+      "lastCheckedAt": "2026-07-01T20:53:24.796Z",
+      "lastSuccessAt": "2026-07-01T20:53:24.796Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -185,8 +185,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-07-01T07:19:23.531Z",
-      "lastSuccessAt": "2026-07-01T07:19:23.531Z",
+      "lastCheckedAt": "2026-07-01T20:53:24.797Z",
+      "lastSuccessAt": "2026-07-01T20:53:24.797Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -198,8 +198,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-07-01T07:19:24.341Z",
-      "lastSuccessAt": "2026-07-01T07:19:24.341Z",
+      "lastCheckedAt": "2026-07-01T20:53:25.945Z",
+      "lastSuccessAt": "2026-07-01T20:53:25.945Z",
       "lastFailureAt": null,
       "lastError": null
     }

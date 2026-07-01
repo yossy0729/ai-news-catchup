@@ -1,5 +1,5 @@
 {
-  "generatedDate": "2026-07-01",
+  "generatedDate": "2026-07-02",
   "categories": [
     {
       "id": "jp-cases",
@@ -125,6 +125,45 @@
           },
           "importanceLabel": "事業",
           "importanceReason": "事業・調達に影響"
+        },
+        {
+          "title": "Salesforceの「Forward Deployed Engineering Partner Network」に参画、Agentforceの成功を拡大",
+          "titleJa": "SalesforceパートナーシップでAgentforceの拡大",
+          "summary": "NTTデータグループは、Salesforceの「Forward Deployed Engineering Partner Network」に選ばれ、AIエージェント「Agentforce」の商用展開を加速していきます。この新たなパートナーシップにより、AI活用の実用化と企業のビジネス成果創出を目指します。",
+          "summaryStatus": "llm-ja",
+          "impact": "社会的影響",
+          "source": "NTT DATA ニュース",
+          "type": "公式発表",
+          "date": "2026-06-30",
+          "url": "https://www.nttdata.com/global/ja/news/evaluation/2026/063000",
+          "priority": 77,
+          "importance": {
+            "total": 77,
+            "primaryAxis": "business",
+            "primaryLabel": "事業",
+            "primaryReason": "事業・調達に影響",
+            "labels": [
+              "事業",
+              "実装",
+              "技術"
+            ],
+            "reasons": [
+              "事業・調達に影響",
+              "実装・運用に有益"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 22,
+              "regulatory": 0,
+              "implementation": 22,
+              "market": 0
+            }
+          },
+          "importanceLabel": "事業",
+          "importanceReason": "事業・調達に影響",
+          "scoreBasis": "実装・運用に有益。実装 / 規制 / 事業 の観点で優先度を算定。",
+          "new": false,
+          "candidateId": "89487e3e207727a6f60324c3"
         },
         {
           "title": "パロアルトネットワークスのManaged Security Service Providersで最高ランクに認定",
