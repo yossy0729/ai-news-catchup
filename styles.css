@@ -1876,9 +1876,10 @@ body {
 }
 
 .official-item {
+  position: relative;
   display: grid;
   gap: 6px;
-  padding: 11px 12px;
+  padding: 11px 42px 11px 12px;
   border-bottom: 1px solid #e2e8e4;
   border-left: 4px solid transparent;
   color: var(--ink);
@@ -2085,18 +2086,21 @@ body {
 }
 
 .media-card.is-read,
-.news-card.is-read {
+.news-card.is-read,
+.official-item.is-read {
   background: #f7faf8;
   opacity: 0.72;
 }
 
 .media-card.is-read h3,
-.news-card.is-read h4 {
+.news-card.is-read h4,
+.official-item.is-read h3 {
   color: #4a5750;
 }
 
 .media-card.is-read p,
-.news-card.is-read p {
+.news-card.is-read p,
+.official-item.is-read p {
   color: #66736c;
 }
 

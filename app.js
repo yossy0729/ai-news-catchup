@@ -811,6 +811,7 @@ function renderOfficialCard(item, vendor) {
   source.textContent = item.source;
 
   link.append(meta, title, summary, source);
+  attachReadToggle(link, item);
   return link;
 }
 
