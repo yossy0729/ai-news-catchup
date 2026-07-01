@@ -383,7 +383,14 @@ async function handleUpdate(request, response) {
 }
 
 function resolveRequestPath(urlPath) {
-  const decoded = decodeURIComponent(urlPath.split("?")[0]);
+  let decoded;
+  try {
+    decoded = decodeURIComponent(urlPath.split("?")[0]);
+  } catch {
+    // 不正なパーセントエンコーディング(/% や /%ZZ 等)。例外を伝播させると
+    // unhandledRejection経由でプロセスが終了するため、ここで無効パス扱いにする。
+    return null;
+  }
   const requestPath = decoded === "/" ? "/index.html" : decoded;
   const absolutePath = path.resolve(root, `.${requestPath}`);
 
