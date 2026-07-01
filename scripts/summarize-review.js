@@ -136,6 +136,12 @@ async function main() {
     return;
   }
 
+  // review.json はローカル生成物。まだ生成されていない環境では要約対象なしとして終了する。
+  if (!fs.existsSync(reviewPath)) {
+    console.log("LLM summary skipped: data/review.json not found.");
+    return;
+  }
+
   const review = readJson(reviewPath);
   const targets = review.items
     .filter((item) => item.status === "accepted" || item.status === "needs_review")

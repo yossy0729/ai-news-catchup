@@ -14,8 +14,14 @@ function fail(message) {
 
 const news = readJson("data/news.json");
 const sources = readJson("data/sources.json");
-const candidates = readJson("data/candidates.json");
-const review = readJson("data/review.json");
+// candidates/review はローカル生成物（.gitignoreで除外）のため、クリーンな環境には存在しない。
+// 無い場合は空として検証を継続する（日次更新後は生成された実ファイルを検証する）。
+const candidates = fs.existsSync(path.join(root, "data/candidates.json"))
+  ? readJson("data/candidates.json")
+  : { items: [] };
+const review = fs.existsSync(path.join(root, "data/review.json"))
+  ? readJson("data/review.json")
+  : { items: [] };
 const mediaNews = fs.existsSync(path.join(root, "data/media-news.json"))
   ? readJson("data/media-news.json")
   : { items: [] };

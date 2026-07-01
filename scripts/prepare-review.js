@@ -2,7 +2,6 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const root = path.resolve(__dirname, "..");
-const candidatesPath = path.join(root, "data", "candidates.json");
 const reviewPath = path.join(root, "data", "review.json");
 const args = new Set(process.argv.slice(2));
 const limitArg = process.argv.find((arg) => arg.startsWith("--limit="));
@@ -122,7 +121,12 @@ async function fetchCandidate(candidate) {
 }
 
 async function main() {
-  const candidates = JSON.parse(fs.readFileSync(candidatesPath, "utf8"));
+  // candidates.json はローカル生成物。dry-run等でまだ生成されていない環境でも落とさない。
+  const candidates = readJson("data/candidates.json", {
+    schemaVersion: 1,
+    updatedDate: new Date().toISOString().slice(0, 10),
+    items: []
+  });
   const existingReview = readJson("data/review.json", {
     schemaVersion: 1,
     updatedDate: new Date().toISOString().slice(0, 10),
