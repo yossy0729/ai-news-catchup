@@ -100,7 +100,7 @@
       "cachedInputPer1M": 0.025,
       "outputPer1M": 1.5,
       "context": "1M",
-      "asOf": "2026-06-30",
+      "asOf": "2026-07-01",
       "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
       "verified": true
     }

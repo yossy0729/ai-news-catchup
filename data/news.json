@@ -235,6 +235,42 @@
           },
           "importanceLabel": "注目",
           "importanceReason": "AI関連の一次情報"
+        },
+        {
+          "title": "NTTデータとダイキン、AIでサーバー内部の熱状態を予測しデータセンター冷却を最適化する共同検証を開始",
+          "titleJa": "サーバー熱状態予測による冷却最適化の取り組み",
+          "summary": "NTTデータとダイキンが共同で、AIを用いたサーバー内部の熱状態予測の検証を2026年7月から開始します。この取り組みは、AIサーバーの冷却効率向上を図り、データセンターのエネルギー利用を最適化することを目的としています。",
+          "summaryStatus": "llm-ja",
+          "impact": "社会的影響",
+          "source": "NTT DATA ニュース",
+          "type": "公式発表",
+          "date": "2026-06-29",
+          "url": "https://www.nttdata.com/global/ja/news/release/2026/062900",
+          "priority": 67,
+          "importance": {
+            "total": 67,
+            "primaryAxis": "business",
+            "primaryLabel": "注目",
+            "primaryReason": "AI関連の一次情報",
+            "labels": [
+              "注目"
+            ],
+            "reasons": [
+              "AI関連の一次情報として確認"
+            ],
+            "axes": {
+              "technical": 0,
+              "business": 10,
+              "regulatory": 0,
+              "implementation": 10,
+              "market": 0
+            }
+          },
+          "importanceLabel": "注目",
+          "importanceReason": "AI関連の一次情報",
+          "scoreBasis": "事業・調達に影響。事業 / 実装 / 規制 の観点で優先度を算定。",
+          "new": false,
+          "candidateId": "c6551c0446bcfb7623a9fb6a"
         }
       ]
     },
@@ -933,9 +969,9 @@
           "type": "公式発表",
           "date": "2026-06-30",
           "url": "https://www.anthropic.com/news/claude-sonnet-5",
-          "priority": 78,
+          "priority": 74,
           "importance": {
-            "total": 78,
+            "total": 74,
             "primaryAxis": "implementation",
             "primaryLabel": "実装",
             "primaryReason": "実装・運用に有益",
