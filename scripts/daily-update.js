@@ -366,6 +366,9 @@ function main() {
   runStep("collect-pricing", "scripts/collect-pricing.js", pricingArgs);
   runStep("collect-media-news", "scripts/collect-media-news.js", mediaArgs);
   runStep("collect", "scripts/collect-news.js", collectArgs);
+  // 候補キューの期限切れ処理（14日未検出でexpired、30日超のexpiredを削除）。
+  // 収集直後に実行することで、当日再検出された候補を誤って期限切れにしない。
+  runStep("prune-candidates", "scripts/prune-candidates.js", dryRun ? [] : ["--write"]);
   // ティッカー/速報のカード文面を独自見出し・独自要約へ整形（APIキーがあるときだけ。失敗時は既存文面のまま）。
   if (llmSummary) {
     const translateArgs = [dryRun ? "--dry-run" : "--write"];

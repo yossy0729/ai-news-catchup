@@ -15,6 +15,12 @@ function daysBetween(now, value) {
   return Math.floor((now.getTime() - date.getTime()) / 86_400_000);
 }
 
+// candidates.json はローカル生成物（Git管理外）。未生成の環境では処理対象なしとして正常終了する。
+if (!fs.existsSync(candidatesPath)) {
+  console.log("Candidate prune skipped: data/candidates.json not found.");
+  process.exit(0);
+}
+
 const candidates = JSON.parse(fs.readFileSync(candidatesPath, "utf8"));
 const now = new Date();
 let expired = 0;
