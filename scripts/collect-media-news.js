@@ -381,6 +381,76 @@ function mediaSort(a, b) {
     String(b.publishedAt || b.date).localeCompare(String(a.publishedAt || a.date))
   );
 }
+function mediaItemKey(item) {
+  return item.url || item.id || normalizeKey(item.title);
+}
+
+function isFdeMediaItem(item) {
+  const text = [item.title, item.titleJa, item.summary, item.summaryJa, item.category, item.categoryId]
+    .filter(Boolean)
+    .join(" ");
+  return item.categoryId === "fde" || /\bFDE\b|Forward[-\s]+Deployed(?:[-\s]+Engineer(?:s)?)?/i.test(text);
+}
+
+function refreshRetainedItem(item, nowMs = Date.now()) {
+  const publishedAtDate = new Date(item.publishedAt);
+  if (Number.isNaN(publishedAtDate.getTime())) return null;
+
+  const ageHours = (nowMs - publishedAtDate.getTime()) / 3_600_000;
+  if (ageHours < 0 || ageHours > maxAgeHours) return null;
+
+  return {
+    ...item,
+    freshness: ageHours < 24 ? "fresh" : "recent",
+    ageHours: Math.round(ageHours * 10) / 10,
+    retained: true,
+    retentionReason: "priority_category_within_72h"
+  };
+}
+
+function readPreviousMediaItems() {
+  try {
+    if (!fs.existsSync(outputPath)) return [];
+    const previous = JSON.parse(fs.readFileSync(outputPath, "utf8"));
+    return Array.isArray(previous.items) ? previous.items : [];
+  } catch {
+    return [];
+  }
+}
+
+function mergeRetainedPriorityItems(byKey) {
+  for (const item of readPreviousMediaItems()) {
+    if (!isFdeMediaItem(item)) continue;
+    const retained = refreshRetainedItem(item);
+    if (!retained) continue;
+
+    const key = normalizeKey(retained.title);
+    const targetKey = findSimilarKey(byKey, key) || key;
+    if (!byKey.has(targetKey)) byKey.set(targetKey, retained);
+  }
+}
+
+function selectMediaItems(byKey) {
+  mergeRetainedPriorityItems(byKey);
+
+  const sorted = Array.from(byKey.values()).sort(mediaSort);
+  const protectedItems = sorted.filter(isFdeMediaItem).slice(0, 4);
+  const protectedKeys = new Set(protectedItems.map(mediaItemKey));
+  const selected = new Map();
+
+  for (const item of sorted.slice(0, limit)) selected.set(mediaItemKey(item), item);
+  for (const item of protectedItems) selected.set(mediaItemKey(item), item);
+
+  const result = Array.from(selected.values()).sort(mediaSort);
+  while (result.length > limit) {
+    const removeIndex = result.map(mediaItemKey).findLastIndex((key) => !protectedKeys.has(key));
+    if (removeIndex < 0) break;
+    result.splice(removeIndex, 1);
+  }
+
+  return result.sort(mediaSort);
+}
+
 
 async function collect() {
   const collected = [];
@@ -432,7 +502,7 @@ async function collect() {
     if (!existing || mediaSort(item, existing) < 0) byKey.set(targetKey, item);
   }
 
-  const items = Array.from(byKey.values()).sort(mediaSort).slice(0, limit);
+  const items = selectMediaItems(byKey);
 
   return {
     schemaVersion: 2,

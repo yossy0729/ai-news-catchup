@@ -469,7 +469,7 @@ function renderHealth() {
 
   if (updateRule) {
     const updated = formatDateTime(healthData?.finishedAt || healthData?.generatedAt);
-    updateRule.textContent = updated ? `最終更新 ${updated}` : "毎日 7:00 / 14:00 ごろ更新";
+    updateRule.textContent = updated ? `最終更新 ${updated}` : "毎日 朝・日中に更新";
   }
 }
 

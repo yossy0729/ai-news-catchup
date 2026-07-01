@@ -9,9 +9,9 @@ name: Daily update & deploy
 on:
   schedule:
     # 朝の表示は7:00 JSTまでの公開を目標にし、GitHub Actions の遅延を見込んで早めに起動する。
-    # 04:10 JST = 19:10 UTC（前日）。12:10 JST = 03:10 UTC。cronはUTC基準。
+    # 04:10 JST = 19:10 UTC（前日）。10:10 JST = 01:10 UTC。cronはUTC基準。
     - cron: "10 19 * * *"
-    - cron: "10 3 * * *"
+    - cron: "10 1 * * *"
   workflow_dispatch: {} # 手動実行（データ生成＋公開）。スクリプト修正の動作確認にも使う。
   # mainへのpushでは「公開のみ」を更新（コード/データの変更を即反映。データ生成はしない）。
   push:

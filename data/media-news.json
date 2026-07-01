@@ -220,6 +220,33 @@
       "summaryJa": "サイバーセキュリティクラウドが実施した調査によると、業務で生成AIを用いる社員の約40%は、禁止措置が取られた後も利用を続ける意向を示しています。この結果は、生成AIが業務においても重要な役割を果たしていることを示唆しています。"
     },
     {
+      "id": "63cc128ac3d12464",
+      "title": "Amazon launches new $1 billion FDE org, following OpenAI and Anthropic",
+      "summary": "Engineers on the new team will embed within companies to deploy purpose-built agents, focusing on fast deployments and customer se...",
+      "url": "https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/",
+      "source": "TechCrunch (AI)",
+      "sourceType": "メディア",
+      "category": "FDE",
+      "categoryId": "fde",
+      "accent": "business",
+      "region": "海外",
+      "date": "2026-07-01",
+      "publishedAt": "2026-06-30T15:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 17.4,
+      "relevanceScore": 4,
+      "priority": 94,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-06-30T22:04:03.862Z"
+      },
+      "titleJa": "Amazonが新たなFDEチームを設立",
+      "summaryJa": "新チームは、目的に特化したエージェントを企業に展開することに集中し、迅速な導入と顧客サービスの向上を目指しています。",
+      "retained": true,
+      "retentionReason": "priority_category_within_72h"
+    },
+    {
       "id": "e54f3fd99b39f995",
       "title": "「Claude Sonnet 5」公開--Opus 4.8に迫る性能を低価格で エージェント性も付与",
       "summary": "Anthropicは6月30日、AIモデル「Claude Sonnet 5」を発表した。自分で計画を立て、ブラウザやターミナルといったツールを使いこなし、複数の手順を最後まで自律的に進める。同社が「これまでで最もエージェント的なSonnet」と位置づける新モデ...",
