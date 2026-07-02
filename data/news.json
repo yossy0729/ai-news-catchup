@@ -1,5 +1,5 @@
 {
-  "generatedDate": "2026-07-02",
+  "generatedDate": "2026-07-03",
   "categories": [
     {
       "id": "jp-cases",
@@ -385,46 +385,7 @@
       ],
       "group": "海外",
       "title": "AI活用・成果事例",
-      "items": [
-        {
-          "title": "AI alone won't change your business. The system running it will. - The Official Microsoft Blog",
-          "titleJa": "AI導入の成否はモデル単体ではなく運用システムが左右する",
-          "summary": "Microsoftは、企業がAI-firstへ移行するにはモデル単体ではなく、エージェント基盤や業務システム全体の設計が重要だと提示。AI導入ロードマップや業務変革の論点になります。",
-          "summaryStatus": "manual-ja",
-          "impact": "社会的影響",
-          "source": "Microsoft AI Blog",
-          "type": "公式ブログ",
-          "date": "2026-06-02",
-          "url": "https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will",
-          "priority": 77,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "8e5019b6c9475b8ead966f42",
-          "importance": {
-            "total": 77,
-            "primaryAxis": "business",
-            "primaryLabel": "事業",
-            "primaryReason": "事業・調達に影響",
-            "labels": [
-              "事業",
-              "実装"
-            ],
-            "reasons": [
-              "事業・調達に影響",
-              "実装・運用に有益"
-            ],
-            "axes": {
-              "technical": 0,
-              "business": 22,
-              "regulatory": 0,
-              "implementation": 22,
-              "market": 0
-            }
-          },
-          "importanceLabel": "事業",
-          "importanceReason": "事業・調達に影響"
-        }
-      ]
+      "items": []
     },
     {
       "id": "global-research",
@@ -1267,6 +1228,42 @@
           },
           "importanceLabel": "技術",
           "importanceReason": "技術的に重要"
+        },
+        {
+          "title": "Claude Science, an AI workbench for scientists",
+          "titleJa": "科学者のためのAIワークベンチ、Claude Scienceが登場",
+          "summary": "Claude Scienceは科学者向けのカスタマイズ可能なアプリで、研究者がよく使用するツールやパッケージを統合しています。また、監査可能な成果物を生成し、柔軟なコンピューティングリソースへのアクセスを提供します。",
+          "summaryStatus": "llm-ja",
+          "impact": "技術重要度",
+          "source": "Anthropic News",
+          "type": "公式発表",
+          "date": "2026-06-30",
+          "url": "https://www.anthropic.com/news/claude-science-ai-workbench",
+          "priority": 68,
+          "importance": {
+            "total": 68,
+            "primaryAxis": "technical",
+            "primaryLabel": "技術",
+            "primaryReason": "技術的に重要",
+            "labels": [
+              "技術"
+            ],
+            "reasons": [
+              "技術的に重要"
+            ],
+            "axes": {
+              "technical": 12,
+              "business": 0,
+              "regulatory": 0,
+              "implementation": 10,
+              "market": 0
+            }
+          },
+          "importanceLabel": "技術",
+          "importanceReason": "技術的に重要",
+          "scoreBasis": "技術的に重要。技術 / 規制 / 実装 の観点で優先度を算定。",
+          "new": false,
+          "candidateId": "a577f205a73beafce77aadea"
         }
       ]
     },
@@ -1637,45 +1634,6 @@
               "technical": 12,
               "business": 22,
               "regulatory": 0,
-              "implementation": 24,
-              "market": 10
-            }
-          },
-          "importanceLabel": "実装",
-          "importanceReason": "実装・運用に有益"
-        },
-        {
-          "title": "Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA | NVIDIA Technical Blog",
-          "titleJa": "MicrosoftとNVIDIAの新ツールでWindows PC上に個人AIエージェントを構築",
-          "summary": "NVIDIAは、Microsoftとの連携ツールによりWindows PC上で個人AIエージェントを構築する方法を紹介。ローカルAI、PC活用、開発者向けエージェント実装の動向です。",
-          "summaryStatus": "manual-ja",
-          "impact": "技術重要度",
-          "source": "NVIDIA Technical Blog AI",
-          "type": "公式ブログ",
-          "date": "2026-06-02",
-          "url": "https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia",
-          "priority": 78,
-          "scoreBasis": "注目テーマ判定。公開日が今日で、AIエージェント、規制、研究採択、社会実装、基盤モデル、セキュリティなどのAI関連テーマに該当する記事を優先。",
-          "new": false,
-          "candidateId": "6c1843b0c650dfcc0a7f37d9",
-          "importance": {
-            "total": 78,
-            "primaryAxis": "implementation",
-            "primaryLabel": "実装",
-            "primaryReason": "実装・運用に有益",
-            "labels": [
-              "実装",
-              "事業",
-              "技術"
-            ],
-            "reasons": [
-              "実装・運用に有益",
-              "事業・調達に影響"
-            ],
-            "axes": {
-              "technical": 12,
-              "business": 22,
-              "regulatory": 12,
               "implementation": 24,
               "market": 10
             }

@@ -125,6 +125,130 @@
           "verified": true
         }
       ]
+    },
+    {
+      "date": "2026-07-03",
+      "sota": [
+        {
+          "slug": "automatic-speech-recognition",
+          "task": "音声認識",
+          "benchmark": "Open ASR Leaderboard (英語・8データセット平均)",
+          "metric": "WER (%)",
+          "topModel": "CohereLabs/cohere-transcribe-03-2026",
+          "score": 5.42,
+          "asOf": "2026-06-27"
+        },
+        {
+          "slug": "coding-agents",
+          "task": "コーディングエージェント",
+          "benchmark": "SWE-bench Verified",
+          "metric": "解決率 (%)",
+          "topModel": "live-SWE-agent + Claude 4.5 Opus medium (20251101)",
+          "score": 79.2,
+          "asOf": "2025-12-15"
+        },
+        {
+          "slug": "llm-arena",
+          "task": "LLM対話(Arena)",
+          "benchmark": "LMArena (Text Arena)",
+          "metric": "Arena Elo",
+          "topModel": "gemini-3-pro",
+          "score": 1487,
+          "asOf": "2026-06-27"
+        },
+        {
+          "slug": "image-understanding",
+          "task": "画像理解",
+          "benchmark": "LMArena (Vision Arena)",
+          "metric": "Arena Elo",
+          "topModel": "gemini-3-pro",
+          "score": 1330,
+          "asOf": "2026-06-27"
+        },
+        {
+          "slug": "image-generation",
+          "task": "画像生成",
+          "benchmark": "LMArena (Image Arena)",
+          "metric": "Arena Elo",
+          "topModel": "gemini-3-pro-image-preview-2k (nano-banana-pro)",
+          "score": 1234,
+          "asOf": "2026-06-27"
+        }
+      ],
+      "pricing": [
+        {
+          "vendor": "OpenAI",
+          "model": "GPT-5.5",
+          "inputPer1M": 5,
+          "cachedInputPer1M": 0.5,
+          "outputPer1M": 30,
+          "verified": true
+        },
+        {
+          "vendor": "OpenAI",
+          "model": "GPT-5.4",
+          "inputPer1M": 2.5,
+          "cachedInputPer1M": 0.25,
+          "outputPer1M": 15,
+          "verified": true
+        },
+        {
+          "vendor": "OpenAI",
+          "model": "GPT-5.4 mini",
+          "inputPer1M": 0.75,
+          "cachedInputPer1M": 0.075,
+          "outputPer1M": 4.5,
+          "verified": true
+        },
+        {
+          "vendor": "Anthropic",
+          "model": "Claude Opus 4.8",
+          "inputPer1M": 5,
+          "cachedInputPer1M": 0.5,
+          "outputPer1M": 25,
+          "verified": true
+        },
+        {
+          "vendor": "Anthropic",
+          "model": "Claude Sonnet 4.6",
+          "inputPer1M": 3,
+          "cachedInputPer1M": 0.3,
+          "outputPer1M": 15,
+          "verified": true
+        },
+        {
+          "vendor": "Anthropic",
+          "model": "Claude Haiku 4.5",
+          "inputPer1M": 1,
+          "cachedInputPer1M": 0.1,
+          "outputPer1M": 5,
+          "verified": true
+        },
+        {
+          "vendor": "Google",
+          "model": "Gemini 3.1 Pro",
+          "inputPer1M": 2,
+          "cachedInputPer1M": 0.2,
+          "outputPer1M": 12,
+          "verified": true
+        },
+        {
+          "vendor": "Google",
+          "model": "Gemini 3.5 Flash",
+          "inputPer1M": 1.5,
+          "cachedInputPer1M": 0.15,
+          "outputPer1M": 9,
+          "verified": true
+        },
+        {
+          "vendor": "Google",
+          "model": "Gemini 3.1 Flash-Lite",
+          "inputPer1M": 0.25,
+          "cachedInputPer1M": 0.025,
+          "outputPer1M": 1.5,
+          "verified": true
+        }
+      ]
     }
   ],
   "changes": []
