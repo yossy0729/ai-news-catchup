@@ -49,6 +49,15 @@ jobs:
         with:
           node-version: "22"
 
+      # 検品(CI): 構文チェックとデータ検証に合格したときだけ先へ進む。
+      # 不合格ならここで停止し、壊れたコード/データは公開されない（前回の公開がそのまま残る）。
+      - name: Validate code and data
+        run: |
+          node --check app.js
+          node --check serve.js
+          for f in scripts/*.js; do node --check "$f"; done
+          npm run validate
+
       # データ生成は schedule / 手動のときだけ。push(コード変更)ではスキップして高速・無課金にする。
       # OPENAI_API_KEY が登録されているときだけ LLM 翻訳/要約を有効化（鍵は -n で存在チェックのみ。ログに出さない）。
       - name: Generate data
