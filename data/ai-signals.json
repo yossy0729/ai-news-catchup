@@ -15,7 +15,7 @@
       "text": "HF Papers #1: Orca: The World is in Your Mind",
       "url": "https://huggingface.co/papers/2606.30534",
       "priority": 95,
-      "titleJa": "Orca: 心の中の世界を探る研究"
+      "titleJa": "HF Papers #1: Orca - あなたの思考の中にある世界"
     },
     {
       "id": "0db89053c0d629a7",
@@ -29,7 +29,7 @@
       "text": "HF Papers #2: Dockerless: Environment-Free Program Verifier for Coding Agents",
       "url": "https://huggingface.co/papers/2606.28436",
       "priority": 94,
-      "titleJa": "環境に依存しないプログラム検証ツール"
+      "titleJa": "HF Papers #2: Dockerless - 環境依存しないプログラム検証ツール"
     },
     {
       "id": "674f4f431b210aae",
@@ -43,7 +43,7 @@
       "text": "HF Papers #3: DOPD: Dual On-policy Distillation",
       "url": "https://huggingface.co/papers/2606.30626",
       "priority": 93,
-      "titleJa": "DOPD: 政策蒸留の新手法"
+      "titleJa": "HF Papers #3: DOPD - デュアルポリシー蒸留"
     },
     {
       "id": "d4a47f09807392a5",
@@ -57,7 +57,7 @@
       "text": "HF Papers #4: BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding",
       "url": "https://huggingface.co/papers/2606.31315",
       "priority": 92,
-      "titleJa": "BlockPilot: 拡散的デコーディングの適応学習"
+      "titleJa": "HF Papers #4: BlockPilot - 生成拡散モデルの適応的ポリシー学習"
     },
     {
       "id": "6dc2561b0a5614f5",
@@ -71,7 +71,7 @@
       "text": "HF Papers #5: Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models",
       "url": "https://huggingface.co/papers/2606.19297",
       "priority": 91,
-      "titleJa": "VLAの常識理解を測る試み"
+      "titleJa": "HF Papers #5: VLAの基礎知識保持能力を測定する研究"
     },
     {
       "id": "b2cc70b4995f1432",
@@ -85,7 +85,7 @@
       "text": "SOTA: ScarfBench: Benchmarking AI Agents for Enterprise Java Framework Migration / Hugging Face Blog",
       "url": "https://huggingface.co/blog/ibm-research/scarfbench",
       "priority": 88,
-      "titleJa": "ScarfBench: エンタープライズJava移行の評価基準"
+      "titleJa": "HF Papers: ScarfBench - 企業Javaフレームワーク移行のAIエージェント評価"
     },
     {
       "id": "9d621116983a3f3b",
@@ -99,8 +99,8 @@
       "text": "Research: Introducing GeneBench-Pro / OpenAI News",
       "url": "https://openai.com/index/introducing-genebench-pro",
       "priority": 88,
-      "titleJa": "GeneBench-Proが登場",
-      "summaryJa": "新たに発表されたGeneBench-Proは、ジェノミクスや生物学、科学研究におけるAI性能を評価するための基準を提供します。現実の複雑なデータセットを使用したテストによって、AIの適用可能性が広がります。"
+      "titleJa": "GeneBench-Proの発表 - ゲノム研究向けAI性能評価",
+      "summaryJa": "GeneBench-Proが新たに発表され、ゲノム、バイオロジー、科学研究におけるAIの性能を評価するベンチマークとして注目されています。"
     },
     {
       "id": "2c255983884091d3",
@@ -114,7 +114,7 @@
       "text": "Research: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 / Apple Machine Learning Research",
       "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
       "priority": 88,
-      "titleJa": "CVPR 2026: コンピュータビジョン会議の最新情報"
+      "titleJa": "IEEE/CVF 2026年のコンピュータビジョン会議"
     },
     {
       "id": "7d95e1b1656fe4ae",
@@ -172,8 +172,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 5,
-      "lastCheckedAt": "2026-07-01T20:53:24.796Z",
-      "lastSuccessAt": "2026-07-01T20:53:24.796Z",
+      "lastCheckedAt": "2026-07-02T00:57:01.127Z",
+      "lastSuccessAt": "2026-07-02T00:57:01.127Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -185,8 +185,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-07-01T20:53:24.797Z",
-      "lastSuccessAt": "2026-07-01T20:53:24.797Z",
+      "lastCheckedAt": "2026-07-02T00:57:01.128Z",
+      "lastSuccessAt": "2026-07-02T00:57:01.128Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -198,8 +198,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-07-01T20:53:25.945Z",
-      "lastSuccessAt": "2026-07-01T20:53:25.945Z",
+      "lastCheckedAt": "2026-07-02T00:57:02.013Z",
+      "lastSuccessAt": "2026-07-02T00:57:02.013Z",
       "lastFailureAt": null,
       "lastError": null
     }

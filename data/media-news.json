@@ -57,17 +57,42 @@
       "region": "日本",
       "date": "2026-07-01",
       "publishedAt": "2026-06-30T23:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 21.9,
+      "freshness": "recent",
+      "ageHours": 26,
       "relevanceScore": 7,
       "priority": 96,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:29.666Z"
+        "checkedAt": "2026-07-02T00:57:05.116Z"
       },
-      "titleJa": "フロンティアAI時代のセキュリティ課題",
-      "summaryJa": "NECの淵上氏がフロンティアモデルの進化によるセキュリティ上の新たな課題について解説しました。企業のセキュリティ対策が急務となっています。"
+      "titleJa": "フロンティアAI時代におけるセキュリティ課題",
+      "summaryJa": "NECのCISOがフロンティアモデルの進化と企業のセキュリティ部門の準備の必要性について解説。サイバー攻撃自動化のリスクを考慮すべき時です。"
+    },
+    {
+      "id": "b87292f99fc8b24e",
+      "title": "AIに「相手に電気ショックを与えろ」と命じ続けたらボタンを押すのか？ 11のLLMで“ミルグラム実験” 抵抗できたのは……",
+      "summary": "エストニアとフィリピンに住む独立系研究者らが発表した論文「Open-source LLMs administer maximum electric shocks in a Milgram-like obedience experiment」は、AIは権威からの...",
+      "url": "https://www.itmedia.co.jp/news/articles/2607/02/news029.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
+      "region": "日本",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-01T23:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 2,
+      "relevanceScore": 5,
+      "priority": 104,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-07-02T00:57:03.925Z"
+      },
+      "titleJa": "AIの権威に対する従属の実験結果",
+      "summaryJa": "独立した研究者らがAIに対する権威からの命令が従属にどう影響を与えるかを調査。ミルグラム実験方式での結果が注目されています。"
     },
     {
       "id": "832061d839764e7a",
@@ -83,91 +108,166 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T07:52:21.000Z",
       "freshness": "fresh",
-      "ageHours": 13,
+      "ageHours": 17.1,
       "relevanceScore": 5,
       "priority": 104,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:28.710Z"
+        "checkedAt": "2026-07-02T00:57:03.927Z"
       },
-      "titleJa": "Sakana AI、Google Cloudを選んだ理由",
-      "summaryJa": "Sakana AIがマルチエージェントシステム「Fugu」の基盤としてGoogle Cloudの使用を選定しました。これはDeepMindの影響だけでなく、戦略的な決定でもあります。"
+      "titleJa": "Sakana AI、Google Cloudの選定理由を説明",
+      "summaryJa": "Sakana AIがマルチエージェントシステム「Sakana Fugu」の基盤にGoogle Cloudを選んだ理由について詳述。技術的要因だけではない背景があります。"
     },
     {
-      "id": "0cda13d45fed91e1",
-      "title": "Anthropic、科学研究向けAIワークベンチ「Claude Science」を発表──NVIDIAのBioNeMoツールキットと連携",
-      "summary": "Anthropicは、科学者が計算研究を一貫して行えるAI実行環境「Claude Science」を発表した。データベースやツールを1つのインタフェースに統合し、文献分析から論文執筆、図表作成まで対応する。NVIDIAのツールキットとも連携し、機密データを外部...",
-      "url": "https://www.itmedia.co.jp/aiplus/article/2607/01/2000000145/",
-      "source": "ITmedia AI+",
+      "id": "c8b40cd6ad3d9146",
+      "title": "パナソニック コネクト／NTTドコモに見る、Snowflakeを駆使した“AI現場実装”の最先端",
+      "summary": "AIは概念実証（PoC）の段階を超えて日々の現場業務に組み込まれ、ビジネスの価値に直結させるフェーズに突入しつつある。2026年6月1日から4日にかけて米サンフランシスコで開催された「Snowflake Summit 26」に登壇したパナソニック コネクトと、...",
+      "url": "https://enterprisezine.jp/article/detail/24567",
+      "source": "EnterpriseZine",
       "sourceType": "メディア",
-      "category": "モデル・研究・プロダクト",
-      "categoryId": "models",
-      "accent": "research",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
       "region": "日本",
-      "date": "2026-07-01",
-      "publishedAt": "2026-07-01T00:54:25.000Z",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-02T00:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 20,
+      "ageHours": 1,
       "relevanceScore": 5,
-      "priority": 104,
+      "priority": 96,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:28.710Z"
+        "checkedAt": "2026-07-02T00:57:05.114Z"
       },
-      "titleJa": "Anthropicが新AIツールを発表",
-      "summaryJa": "科学者向けのAIワークベンチ「Claude Science」がAnthropicから発表され、NVIDIAのBioNeMoと連携しています。このツールは研究活動を効率化します。"
+      "titleJa": "Snowflakeを活用したAI実装の最前線",
+      "summaryJa": "パナソニック コネクトとNTTドコモが、Snowflakeを活用したAI実装の最先端について語る。AIは日常業務に組み込まれ始めています。"
     },
     {
-      "id": "08d84e96a021ae4d",
-      "title": "Claude Fable 5、日本で明日再開もサブスクで使えるのは「1週間限定」",
-      "summary": "米Anthropicは6月30日（現地時間、以下同）、提供再開を発表したAIモデル「Claude Fable 5」について、7月1日から日本を含む全世界のユーザーが使えるようになると発表した。ただしサブスクリプションプランで使えるのは7日まで。",
-      "url": "https://www.itmedia.co.jp/aiplus/article/2607/01/2000000148/",
+      "id": "3382daa0da8efa05",
+      "title": "日立、ミッションクリティカル領域におけるAI活用を支援 「Hitachi iQ Studio」の3つの特徴",
+      "summary": "日立製作所のグループ会社が、企業の基幹業務へのAI適用を支援する新プラットフォーム「Hitachi iQ Studio」の国内販売を開始した。ミッションクリティカル領域での展開を狙うこのソフトウェアの3つの特徴とは。",
+      "url": "https://www.itmedia.co.jp/enterprise/articles/2607/02/news026.html",
       "source": "ITmedia AI+",
       "sourceType": "メディア",
-      "category": "モデル・研究・プロダクト",
-      "categoryId": "models",
-      "accent": "research",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
       "region": "日本",
-      "date": "2026-07-01",
-      "publishedAt": "2026-07-01T04:59:01.000Z",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-01T23:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 15.9,
+      "ageHours": 2,
       "relevanceScore": 4,
       "priority": 104,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:28.710Z"
+        "checkedAt": "2026-07-02T00:57:03.925Z"
       },
-      "titleJa": "Claude Fable 5、再開が迫る",
-      "summaryJa": "AnthropicはAIモデル「Claude Fable 5」を再開し、日本を含むユーザーが利用できるようにする予定です。ただし、サブスクリプションは期間限定となっています。"
+      "titleJa": "Hitachi iQ StudioでミッションクリティカルなAI支援",
+      "summaryJa": "日立が新プラットフォーム「Hitachi iQ Studio」を発表。ミッションクリティカルな業務へのAI適用を支援することを目指しています。"
     },
     {
-      "id": "e4cddfb6fa9191b3",
-      "title": "AIで“ゲームキャラの出産二次創作”を何千回と生成する人も……ChatGPTの会話57万件から見えたヘビーな利用実態",
-      "summary": "米ワシントン大学などに所属する研究者らが発表した論文「AI Fiction in the Wild」は、AIチャットとの会話データを分析し、ユーザーがAIを使ってどれだけフィクションを生成しているのかを調べた研究報告だ。",
-      "url": "https://www.itmedia.co.jp/news/articles/2607/01/news027.html",
+      "id": "fc3957fb828f9d61",
+      "title": "「AIによる業務効率化」だけで満足する企業が、サプライチェーン競争で負ける理由",
+      "summary": "MONOistが開催したセミナー「MONOist AI Forum 2026 本格実装フェーズに入った製造業AI、現場課題解決の最前線」において、ローランド・ベルガー パートナーの小野塚征志氏が登壇した。本稿ではその内容の一部を紹介する。",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2607/02/news023.html",
       "source": "ITmedia AI+",
       "sourceType": "メディア",
-      "category": "モデル・研究・プロダクト",
-      "categoryId": "models",
-      "accent": "research",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
       "region": "日本",
-      "date": "2026-07-01",
-      "publishedAt": "2026-06-30T23:00:00.000Z",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-01T23:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 21.9,
+      "ageHours": 2,
       "relevanceScore": 4,
       "priority": 104,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:28.711Z"
+        "checkedAt": "2026-07-02T00:57:03.925Z"
       },
-      "titleJa": "AIとユーザーの利用実態調査",
-      "summaryJa": "AIを利用してフィクションを生成する実態を調査した研究が発表されました。特に、ゲームキャラクターに関する創作が盛んであることが分かりました。"
+      "titleJa": "サプライチェーン競争に挑む企業が陥りがちな間違い",
+      "summaryJa": "MONOistが開催したセミナーで、ローランド・ベルガーの小野塚征志氏は、AIによる業務効率化に満足する企業のリスクについて警鐘を鳴らしました。この観点から、製造業のAI活用がサプライチェーン競争に与える影響が議論されました。"
+    },
+    {
+      "id": "6c288432b6abb24a",
+      "title": "Anthropicの営業はAIエージェントをこう使う！ 日本法人メンバーが明かす手の内",
+      "summary": "Anthropicの社員自身はどのようにAIエージェントを業務に役立てているのか──「AWS Summit Japan 2026」のAnthropicブースで、日本法人で営業担当を務めるイブラギモブ・シャボズさんが「自身の業務で使うAIエージェント」をテーマに...",
+      "url": "https://www.itmedia.co.jp/news/articles/2607/02/news017.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "AIエージェント・業務AI",
+      "categoryId": "agents",
+      "accent": "product",
+      "region": "日本",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-01T22:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 3,
+      "relevanceScore": 4,
+      "priority": 104,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-07-02T00:57:03.925Z"
+      },
+      "titleJa": "Anthropicが営業活動で使うAIエージェントの実態を披露",
+      "summaryJa": "AWS Summit Japan 2026で、Anthropicの営業担当者イブラギモブ・シャボズさんが、自身の業務におけるAIエージェントの利用方法を明かしました。実際の活用例を通じて、AIが業務に与える効果が紹介されました。"
+    },
+    {
+      "id": "1782b75de33caad0",
+      "title": "「ねこ」検索で「手押し一輪車」表示――モノタロウが守った、生成AIに“譲れない”購買体験",
+      "summary": "AI検索の台頭で、自社の強みが薄れる――この危機感を抱えた通販の「モノタロウ」運営元は、購買AIエージェントを内製した。その効果についてCTO（最高技術責任者）が語った。",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/02/news015.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "AIエージェント・業務AI",
+      "categoryId": "agents",
+      "accent": "product",
+      "region": "日本",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-01T22:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 3,
+      "relevanceScore": 4,
+      "priority": 104,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-07-02T00:57:03.926Z"
+      },
+      "titleJa": "「ねこ」検索でのユニークな購買体験を追求するモノタロウ",
+      "summaryJa": "生成AIの進化により、自社の強みを守るために購買AIエージェントを開発したモノタロウ。CTOがその背景と効果を語り、顧客体験の向上を目指す姿勢が伺えました。"
+    },
+    {
+      "id": "625b982d4821376e",
+      "title": "Googleの「Gemini Spark」がmacOSに対応──Canvaなど外部アプリとの連携も",
+      "summary": "Googleは、自律型AIエージェント「Gemini Spark」のアップデートを発表した。macOS版アプリへの対応に加え、CanvaやDropboxなど外部アプリとの連携を拡充。独自のMCPサーバの接続もサポートする。さらに、ニュースや天気、プロスポーツな...",
+      "url": "https://www.itmedia.co.jp/news/articles/2607/02/news058.html",
+      "source": "ITmedia NEWS",
+      "sourceType": "メディア",
+      "category": "AIエージェント・業務AI",
+      "categoryId": "agents",
+      "accent": "product",
+      "region": "日本",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-02T00:13:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 0.7,
+      "relevanceScore": 4,
+      "priority": 98,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-07-02T00:57:04.074Z"
+      },
+      "titleJa": "GoogleのAIエージェントがmacOSに対応、連携機能も強化",
+      "summaryJa": "Googleが自律型AIエージェント「Gemini Spark」のアップデートを発表しました。macOSアプリへの対応が新たに加わり、CanvaやDropboxとの連携も強化されることになりました。"
     },
     {
       "id": "3d3f8db30fea61c7",
@@ -183,16 +283,16 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T06:15:00.000Z",
       "freshness": "fresh",
-      "ageHours": 14.6,
+      "ageHours": 18.7,
       "relevanceScore": 4,
       "priority": 96,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:29.665Z"
+        "checkedAt": "2026-07-02T00:57:05.115Z"
       },
-      "titleJa": "生成AI利用続行の社員が約40％",
-      "summaryJa": "サイバーセキュリティクラウドが発表した調査によると、業務で生成AIを使用している360人の社員の約4割が、禁止後も利用を続ける意向を示しています。これは、企業のAI導入の実態やリスク管理の重要性を考える上で注目されます。"
+      "titleJa": "サイバーセキュリティクラウドの調査、ほぼ4割の社員が生成AIを使用",
+      "summaryJa": "業務で生成AIを利用する意向に関する調査によれば、360人の回答者の約4割が禁止後も利用を続ける可能性があるとされています。この調査結果はAIの使用に関する企業の方針への影響を示唆しています。"
     },
     {
       "id": "63cc128ac3d12464",
@@ -208,7 +308,7 @@
       "date": "2026-07-01",
       "publishedAt": "2026-06-30T15:00:00.000Z",
       "freshness": "recent",
-      "ageHours": 29.9,
+      "ageHours": 34,
       "relevanceScore": 4,
       "priority": 94,
       "dateVerification": {
@@ -235,41 +335,41 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T08:44:00.000Z",
       "freshness": "fresh",
-      "ageHours": 12.2,
+      "ageHours": 16.2,
       "relevanceScore": 4,
       "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:30.846Z"
+        "checkedAt": "2026-07-02T00:57:07.343Z"
       },
-      "titleJa": "「Claude Fable 5」提供再開のお知らせ",
-      "summaryJa": "米AnthropicがAIモデル「Claude Fable 5」の提供を再開し、月額ユーザーは7月7日まで無料で利用できます。これは、輸出規制解除の影響を受けたもので、注目のAIモデルを再び利用可能にします。"
+      "titleJa": "米国で再開されたAIモデル「Claude Fable 5」の利用詳細",
+      "summaryJa": "AnthropicがAIモデル「Claude Fable 5」の提供を再開することを発表。これは米政府による輸出規制が解除されたことによるもので、ユーザーは特定の期間に無料で利用可能です。"
     },
     {
-      "id": "e54f3fd99b39f995",
-      "title": "「Claude Sonnet 5」公開--Opus 4.8に迫る性能を低価格で エージェント性も付与",
-      "summary": "Anthropicは6月30日、AIモデル「Claude Sonnet 5」を発表した。自分で計画を立て、ブラウザやターミナルといったツールを使いこなし、複数の手順を最後まで自律的に進める。同社が「これまでで最もエージェント的なSonnet」と位置づける新モデ...",
-      "url": "https://japan.cnet.com/article/35249829/",
-      "source": "CNET Japan",
+      "id": "b24c26001c823a76",
+      "title": "アンソロピック「Fable 5」が復活 7月7日まではサブスクでも使える",
+      "summary": "Anthropicは1日(米国時間)、米国政府の指示により公開停止していた最上位AIモデル「Claude Fable 5」(フェイブル5)の提供を再開した。",
+      "url": "https://www.watch.impress.co.jp/docs/news/2121727.html",
+      "source": "Impress Watch",
       "sourceType": "メディア",
-      "category": "AIエージェント・業務AI",
-      "categoryId": "agents",
-      "accent": "product",
+      "category": "モデル・研究・プロダクト",
+      "categoryId": "models",
+      "accent": "research",
       "region": "日本",
-      "date": "2026-07-01",
-      "publishedAt": "2026-07-01T01:51:00.000Z",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-02T00:45:17.000Z",
       "freshness": "fresh",
-      "ageHours": 19,
+      "ageHours": 0.2,
       "relevanceScore": 4,
-      "priority": 90,
+      "priority": 86,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:30.847Z"
+        "checkedAt": "2026-07-02T00:57:08.452Z"
       },
-      "titleJa": "新型AI「Claude Sonnet 5」が登場",
-      "summaryJa": "Anthropicから新たなAIモデル「Claude Sonnet 5」が発表され、自律的にタスクを遂行できる能力を持っています。このモデルは、エージェント的な性能を強化し、業務の効率化に寄与することが期待されます。"
+      "titleJa": "「Claude Fable 5」の提供が再開、サブスクでも利用可能に",
+      "summaryJa": "米国政府の指示により公開を停止していた「Claude Fable 5」が再開され、サブスクリプションユーザーは一定期間無料で使えることになりました。"
     },
     {
       "id": "6b3858bf54322802",
@@ -285,16 +385,41 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T09:41:01.000Z",
       "freshness": "fresh",
-      "ageHours": 11.2,
+      "ageHours": 15.3,
       "relevanceScore": 4,
       "priority": 86,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:31.939Z"
+        "checkedAt": "2026-07-02T00:57:08.454Z"
       },
-      "titleJa": "AIエージェント「Gemini Spark」がmacOS対応",
-      "summaryJa": "Googleは「Gemini Spark」をアップデートし、macOSアプリを含む連携アプリが増加しました。また、リアルタイムでのトピック追跡機能も強化されています。これにより、ユーザーの利便性が向上しています。"
+      "titleJa": "Gemini SparkがmacOS対応、リアルタイム機能も拡充",
+      "summaryJa": "Googleが「Gemini Spark」のアップデートを発表し、macOSアプリに対応した他、リアルタイムトピック追跡機能の強化も行いました。新機能は順次提供予定です。"
+    },
+    {
+      "id": "bf6dd1250cc270c5",
+      "title": "AIアシスタントで設計検証を迅速化、3D CAD「Creo」最新版を提供開始",
+      "summary": "PTCは、オンプレミス版の3D CADソリューション「Creo 13」と、SaaS版の「Creo+ 13.3」の提供開始を発表した。新たにAIアシスタント機能を導入した他、設計、シミュレーション、製造の各領域で機能を強化している。",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2607/02/news006.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-02T00:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 1,
+      "relevanceScore": 3,
+      "priority": 101,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-07-02T00:57:03.923Z"
+      },
+      "titleJa": "PTCがAIアシスタント機能を搭載した最新の3D CADを発表",
+      "summaryJa": "PTCは「Creo 13」及び「Creo+ 13.3」の提供を開始しました。新機能としてAIアシスタントが追加され、設計やシミュレーション、製造向けの機能が強化されています。"
     },
     {
       "id": "4cae7c6f40205a4a",
@@ -310,116 +435,41 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T08:55:01.000Z",
       "freshness": "fresh",
-      "ageHours": 12,
+      "ageHours": 16,
       "relevanceScore": 3,
       "priority": 101,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:28.709Z"
+        "checkedAt": "2026-07-02T00:57:03.926Z"
       },
-      "titleJa": "任天堂がAI利用に関する見解を発表",
-      "summaryJa": "任天堂の古川社長が、AI技術がゲーム開発にどのように寄与するかについて語りました。一方、AIの権利侵害リスクについても懸念を示しており、業界の動向が注目されます。"
+      "titleJa": "任天堂社長が生成AIに対する見解を発表",
+      "summaryJa": "任天堂の株主総会で古川俊太郎社長が、ゲーム開発とAI技術の関係について語り、生成AIの活用についてのリスクと可能性に触れました。"
     },
     {
-      "id": "7e1157e9b902c300",
-      "title": "「Claude Sonnet 5」新登場 低コストでOpus 4.8に匹敵とうたうも、タスク当たりコスト増加との評価も",
-      "summary": "Anthropicが新モデル「Claude Sonnet 5」を発表した。上位の「Opus 4.8」に迫る性能を低価格で実現するとうたう。一方、第三者機関の評価ではトークン使用量が多く、1タスク当たりコストはOpus 4.8を上回るとの指摘もある。",
-      "url": "https://www.itmedia.co.jp/aiplus/article/2607/01/2000000147/",
-      "source": "ITmedia AI+",
-      "sourceType": "メディア",
-      "category": "モデル・研究・プロダクト",
-      "categoryId": "models",
-      "accent": "research",
-      "region": "日本",
-      "date": "2026-07-01",
-      "publishedAt": "2026-07-01T03:18:58.000Z",
-      "freshness": "fresh",
-      "ageHours": 17.6,
-      "relevanceScore": 3,
-      "priority": 101,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:28.710Z"
-      },
-      "titleJa": "新たなAI「Claude Sonnet 5」登場も費用増加の懸念",
-      "summaryJa": "Anthropicの新モデル「Claude Sonnet 5」は、低価格で良好な性能を実現するとしていますが、タスク当たりのコストが増加するとの見解もあります。ユーザーは性能と費用のバランスを考える必要があります。"
-    },
-    {
-      "id": "459f7aaef35bb410",
-      "title": "「Claude Fable 5」が帰ってくる 「Mythos 5」含む輸出規制解除へ Anthropic発表",
-      "summary": "Anthropicは6月30日（現地時間）、「Claude Fable 5」「Mythos 5」への輸出規制が解除されたと明らかにした。7月1日からアクセスを回復し、詳細は近日中に発表するとしている。",
-      "url": "https://www.itmedia.co.jp/news/articles/2607/01/news068.html",
-      "source": "ITmedia AI+",
-      "sourceType": "メディア",
-      "category": "規制・倫理・著作権",
-      "categoryId": "regulation",
-      "accent": "governance",
-      "region": "日本",
-      "date": "2026-07-01",
-      "publishedAt": "2026-07-01T01:50:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 19.1,
-      "relevanceScore": 3,
-      "priority": 101,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:28.710Z"
-      },
-      "titleJa": "「Claude Fable 5」と「Mythos 5」輸出規制解除",
-      "summaryJa": "Anthropicが「Claude Fable 5」と「Mythos 5」の輸出規制解除を発表しました。これにより、AIモデルへのアクセスが7月1日から再開され、多くの企業にとって重要なステップとなります。"
-    },
-    {
-      "id": "3eeca624dfc99f4e",
-      "title": "CAD連携AIで設計レビュー工数を最大40％削減、検図や見積作成も自動化",
-      "summary": "Archaicは、製造業の設計業務を自動化するAIソリューションの販売を開始した。SOLIDWORKSなどのCADと直接連携し、確認作業や検図、見積作成を自動化して、設計者の工数削減を支援する。",
-      "url": "https://monoist.itmedia.co.jp/mn/articles/2607/01/news016.html",
-      "source": "ITmedia AI+",
-      "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
-      "region": "日本",
-      "date": "2026-07-01",
-      "publishedAt": "2026-07-01T00:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 20.9,
-      "relevanceScore": 3,
-      "priority": 101,
-      "dateVerification": {
-        "status": "verified",
-        "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:28.711Z"
-      },
-      "titleJa": "CAD連携AIで設計レビューを効率化",
-      "summaryJa": "Archaicが新しいAIソリューションを発表し、CADと連携することで設計レビュー工数を最大40％削減することが可能に。効率的な作業を支援するこの技術は、製造業界での導入が期待されています。"
-    },
-    {
-      "id": "404978a1bd287829",
-      "title": "ランサムで売上95％減──アスクルの“システム再構築”支えた生成AI活用 復旧までの3.5カ月、社長が語る舞台裏",
-      "summary": "ランサムウェア攻撃で通販を全面停止し、月次売上は前年同月比95.1％減。事業を丸ごと止められたアスクルは、どう立て直し、なぜ開発の主役をAIに委ねたのか。同社の吉岡晃社長CEOが「AWS Summit Japan 2026」で語った。",
-      "url": "https://www.itmedia.co.jp/news/articles/2607/01/news098.html",
+      "id": "f63e8ad3b57cfe66",
+      "title": "「インターネットの父」ヴィント・サーフ氏、Googleを退任へ",
+      "summary": "Googleの副社長兼チーフ・インターネット・エバンジェリストを務めるヴィント・サーフ氏が、近く同社を退任することがカンファレンスで明らかになった。サーフ氏はTCP/IPを開発した「インターネットの父」の1人。在籍20年での退任となり、イベントではAIエージェ...",
+      "url": "https://www.itmedia.co.jp/news/articles/2607/02/news057.html",
       "source": "ITmedia NEWS",
       "sourceType": "メディア",
-      "category": "産業活用・導入事例",
-      "categoryId": "industry",
-      "accent": "adoption",
+      "category": "AIエージェント・業務AI",
+      "categoryId": "agents",
+      "accent": "product",
       "region": "日本",
-      "date": "2026-07-01",
-      "publishedAt": "2026-07-01T04:01:00.000Z",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-01T23:16:00.000Z",
       "freshness": "fresh",
-      "ageHours": 16.9,
+      "ageHours": 1.7,
       "relevanceScore": 3,
       "priority": 95,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:28.820Z"
+        "checkedAt": "2026-07-02T00:57:04.074Z"
       },
-      "titleJa": "アスクル、生成AI活用で復旧を果たす",
-      "summaryJa": "ランサムウェア攻撃を受けたアスクルは、売上が前年同月比で95％減少しました。しかし、AIを活用したシステム再構築により復旧を図り、社長がその背景を語っています。"
+      "titleJa": "インターネットの父、ヴィント・サーフがGoogleを退任へ",
+      "summaryJa": "Googleの副社長ヴィント・サーフ氏が近く同社を退任することが明らかになりました。彼はTCP/IPを開発した著名な人物で、在籍20年となります。"
     },
     {
       "id": "58dcaac039798353",
@@ -435,16 +485,16 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T07:39:00.000Z",
       "freshness": "fresh",
-      "ageHours": 13.2,
+      "ageHours": 17.3,
       "relevanceScore": 3,
       "priority": 93,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:29.665Z"
+        "checkedAt": "2026-07-02T00:57:05.115Z"
       },
-      "titleJa": "Anthropic、新たに「Fable 5」を提供予定",
-      "summaryJa": "Anthropicは「Fable 5」の提供再開を発表し、詳細は近日中に発表される予定です。輸出規制解除を受けたこの動きは、AI市場に大きな影響を与えると考えられています。"
+      "titleJa": "Anthropic、輸出規制解除で「Fable 5」の提供再開を発表",
+      "summaryJa": "Anthropicが、米政府による輸出規制の解除を受け、高性能AIモデル「Fable 5」のグローバルな提供を再開することを発表。"
     },
     {
       "id": "acaa034b6bafc6c5",
@@ -460,16 +510,16 @@
       "date": "2026-06-30",
       "publishedAt": "2026-06-30T08:30:00.000Z",
       "freshness": "recent",
-      "ageHours": 36.4,
+      "ageHours": 40.5,
       "relevanceScore": 3,
       "priority": 93,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:29.666Z"
+        "checkedAt": "2026-07-02T00:57:05.116Z"
       },
-      "titleJa": "国産LLM「Sarashina3」の提供開始",
-      "summaryJa": "ソフトバンク傘下のSB Intuitionsが国産LLM「Sarashina3」を発表しました。高品質なデータと独自の検証により、日本語処理能力を強化したこのモデルの活用が期待されています。"
+      "titleJa": "Okta CEOがAIエージェント管理の重要性を強調",
+      "summaryJa": "OktaのCEO、トッド・マッキノン氏が来日し、企業内でのAIエージェント管理の方法についての記者説明会を開きました。急増するAIエージェントの安全な管理の必要性が議題となりました。"
     },
     {
       "id": "d2173188809189b3",
@@ -485,14 +535,16 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T14:20:19.000Z",
       "freshness": "fresh",
-      "ageHours": 6.6,
+      "ageHours": 10.6,
       "relevanceScore": 3,
       "priority": 91,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:32.056Z"
-      }
+        "checkedAt": "2026-07-02T00:57:08.478Z"
+      },
+      "titleJa": "Googleのエージェント「Gemini Spark」がMacに対応",
+      "summaryJa": "Googleのエージェント「Gemini Spark」がMacに対応し、リアルタイムトラッキングなどの機能が向上しました。"
     },
     {
       "id": "db29b41735cedd9b",
@@ -508,14 +560,16 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T13:43:07.000Z",
       "freshness": "fresh",
-      "ageHours": 7.2,
+      "ageHours": 11.2,
       "relevanceScore": 3,
       "priority": 91,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:32.056Z"
-      }
+        "checkedAt": "2026-07-02T00:57:08.478Z"
+      },
+      "titleJa": "MetaがAIコンピューティングの売却計画を練る",
+      "summaryJa": "Metaは、AIコンピューティングのクラウドインフラビジネスへの計画を進めており、AI計算能力とモデルの販売を考えています。"
     },
     {
       "id": "549c606d39f77791",
@@ -531,14 +585,66 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T02:16:06.000Z",
       "freshness": "fresh",
-      "ageHours": 18.6,
+      "ageHours": 22.7,
       "relevanceScore": 3,
       "priority": 91,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:32.056Z"
-      }
+        "checkedAt": "2026-07-02T00:57:08.478Z"
+      },
+      "titleJa": "トランプ政権、Anthropicのモデルに対する規制を撤廃",
+      "summaryJa": "トランプ政権は、AI政策における一貫性の欠如が影響し、業界全体に混乱をもたらしている。特にAnthropicのMythosやFableモデルに関する規制が撤廃されたことで、企業は新たな展開に期待を寄せている。"
+    },
+    {
+      "id": "f99de4a67bba6e58",
+      "title": "棚卸特化型SaaS 「ラクだな」 正式リリース、写真とAIで棚卸業務を支援",
+      "summary": "株式会社ソトバコは6月26日に、写真とAIを活用することで棚卸を完了するという棚卸特化型SaaS「ラクだな」の正式リリースを発表した。スマートフォンで商品を撮影し数量を入力することで、これまで現場や事務所で費やしていた棚卸作業の手間と時間の削減に貢献するという...",
+      "url": "https://ascii.jp/elem/000/004/415/4415532/?rss",
+      "source": "ASCII.jp",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-01T22:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 3,
+      "relevanceScore": 3,
+      "priority": 89,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-07-02T00:57:07.549Z"
+      },
+      "titleJa": "棚卸業務を支援する「ラクだな」が正式リリース",
+      "summaryJa": "株式会社ソトバコは、新しい棚卸特化型SaaS「ラクだな」を6月26日に正式リリースした。このサービスは写真とAIを活用し、スマートフォンで商品の撮影と数量入力を通じて棚卸作業の効率化を図る。"
+    },
+    {
+      "id": "0d1508f20b211566",
+      "title": "AI活用、実際どれくらい評価・昇進に影響するの？ 調査で管理職の意識が明らかに",
+      "summary": "管理職・経営層は社内のAI活用をどのように評価しているのか。意識調査で、AI活用が上層部の評価や昇進にどの程度影響しているのかが明らかとなった。同時に、管理職自身の活用不足や、AI活用の世代差、研修や利用ルールの未整備の実態も判明した。",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2607/02/news025.html",
+      "source": "ITmedia AI+",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-01T22:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 3,
+      "relevanceScore": 2,
+      "priority": 98,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-07-02T00:57:03.926Z"
+      },
+      "titleJa": "管理職のAI評価に関する調査結果を公開",
+      "summaryJa": "管理職がAIの活用をどの程度評価しているかが明らかにされた。この調査では、評価や昇進に与える影響や、AI活用の世代差、研修体制の未整備が浮き彫りとなっている。"
     },
     {
       "id": "ad08a70361ab8d22",
@@ -554,39 +660,41 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T08:04:48.000Z",
       "freshness": "fresh",
-      "ageHours": 12.8,
+      "ageHours": 16.9,
       "relevanceScore": 2,
       "priority": 98,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:28.709Z"
-      }
+        "checkedAt": "2026-07-02T00:57:03.927Z"
+      },
+      "titleJa": "新たな国産LLM「Sarashina3」が登場",
+      "summaryJa": "ソフトバンク傘下のSB Intuitionsが新しい国産LLM「Sarashina3シリーズ」を提供開始。高品質なデータセットと独自の検証プロセスにより、日本語の処理能力を強化している。"
     },
     {
-      "id": "14cf9924652966bb",
-      "title": "米政府「Fable 5／Mythos 5」の輸出規制解除 Anthropic「明日からアクセス回復」",
-      "summary": "「ユーザーの辛抱に感謝するとともに、モデルの再展開に協力いただいたすべての方々に感謝する」",
-      "url": "https://www.itmedia.co.jp/aiplus/article/2607/01/2000000146/",
-      "source": "ITmedia AI+",
+      "id": "2e20b29b2013ca54",
+      "title": "AMDのCIOに尋ねる──企業の価値をAIが左右する今、その裏方を支えるIT部門をどう評価すべきか？",
+      "summary": "AIが普及する一方で、ITインフラの運用には新たな重荷が課されている。そして、その実行を担うIT部門はどうなってしまうのか。また、膨らむ負荷とコストをどう統制すればよいのか。米国ラスベガスで開催された「Cisco Live! 2026」にて、AMDのCIOとC...",
+      "url": "https://enterprisezine.jp/article/detail/24578",
+      "source": "EnterpriseZine",
       "sourceType": "メディア",
-      "category": "モデル・研究・プロダクト",
-      "categoryId": "models",
-      "accent": "research",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
       "region": "日本",
-      "date": "2026-07-01",
-      "publishedAt": "2026-07-01T00:59:03.000Z",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-01T23:00:00.000Z",
       "freshness": "fresh",
-      "ageHours": 19.9,
+      "ageHours": 2,
       "relevanceScore": 2,
-      "priority": 98,
+      "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:28.710Z"
+        "checkedAt": "2026-07-02T00:57:05.114Z"
       },
-      "titleJa": "米政府がAnthropicに輸出規制解除",
-      "summaryJa": "Anthropicは、モデルの再展開に感謝の意を表し、サービスへのアクセスを再開することを発表しました。この動きは、AI企業の成長を促進する重要な一歩といえます。"
+      "titleJa": "AIの評価におけるIT部門の重要性を探る",
+      "summaryJa": "AIの普及が進む中、ITインフラの運用担当者に求められる役割が増している。米国ラスベガスで行われた「Cisco Live! 2026」にて、AMDのCIOがその課題について考察した。"
     },
     {
       "id": "bb1fa23ac85fe6e0",
@@ -602,16 +710,16 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T09:02:00.000Z",
       "freshness": "fresh",
-      "ageHours": 11.9,
+      "ageHours": 15.9,
       "relevanceScore": 2,
       "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:29.665Z"
+        "checkedAt": "2026-07-02T00:57:05.114Z"
       },
-      "titleJa": "レッドハット、AI戦略を大きく転換",
-      "summaryJa": "レッドハットは、JALデジタルや三井住友カードとの取り組みを通じて、新たなAIネイティブ時代の戦略を発表しました。これにより、ビジネスのデジタル変革が進むことが期待されています。"
+      "titleJa": "レッドハット、AI時代の戦略を発表",
+      "summaryJa": "レッドハットは、JALデジタルや三井住友カードとの共同事例を通じて、AIネイティブ時代に向けた新たな戦略を打ち出した。業界変革の一環としての取り組みが期待される。"
     },
     {
       "id": "c33bbc51397291c0",
@@ -627,16 +735,16 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T06:30:00.000Z",
       "freshness": "fresh",
-      "ageHours": 14.4,
+      "ageHours": 18.5,
       "relevanceScore": 2,
       "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:29.665Z"
+        "checkedAt": "2026-07-02T00:57:05.115Z"
       },
-      "titleJa": "Zoomが新たな「AI Productivity Suite」を導入",
-      "summaryJa": "Zoomは新サービスとして「AI Productivity Suite」の提供を開始しました。このサービスは、日本でもすぐに利用可能で、業務効率化が期待されます。"
+      "titleJa": "Zoomが「AI Productivity Suite」を発表",
+      "summaryJa": "Zoom Communicationsは新サービス「AI Productivity Suite」を発表し、既に日本での利用も可能。AIを活用した生産性向上を目指している。"
     },
     {
       "id": "7f39d66c093ecb29",
@@ -651,17 +759,17 @@
       "region": "日本",
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T00:00:00.000Z",
-      "freshness": "fresh",
-      "ageHours": 20.9,
+      "freshness": "recent",
+      "ageHours": 25,
       "relevanceScore": 2,
       "priority": 90,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:29.666Z"
+        "checkedAt": "2026-07-02T00:57:05.115Z"
       },
-      "titleJa": "データ活用の3つの仕組みを提案",
-      "summaryJa": "新たな連載が、AI時代に必要なデータの「把握」「整備」「活用」という3段階のアプローチを提案しています。これにより、組織がAIに適応するための具体的な方法が示されています。"
+      "titleJa": "AI活用に向けたデータ整備メソッドを紹介",
+      "summaryJa": "本連載ではAI時代におけるデータ利用の具体的な方法を3つのフェーズに分けて解説しており、最終回ではAIを効果的に活用するための具体策が提案される。"
     },
     {
       "id": "5a9fdae457126709",
@@ -677,16 +785,16 @@
       "date": "2026-07-02",
       "publishedAt": "2026-07-01T17:48:37.000Z",
       "freshness": "fresh",
-      "ageHours": 3.1,
+      "ageHours": 7.1,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:32.055Z"
+        "checkedAt": "2026-07-02T00:57:08.477Z"
       },
-      "titleJa": "Cloudflare、新方針でAI企業に影響を与える",
-      "summaryJa": "Cloudflareは、AI企業にコンテンツへの支払いやウェブクロールの分離を求める新政策を発表しました。この変更により、オンラインコンテンツの利用法が変わる可能性があります。"
+      "titleJa": "Cloudflare、AI企業に新方針を通知",
+      "summaryJa": "Cloudflareは、AI企業に対し、ウェブクローラーをAI訓練と検索のために分ける措置を9月15日までに講じるよう求めている。"
     },
     {
       "id": "812a1800c11fb1e0",
@@ -702,16 +810,16 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T14:25:23.000Z",
       "freshness": "fresh",
-      "ageHours": 6.5,
+      "ageHours": 10.5,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:32.056Z"
+        "checkedAt": "2026-07-02T00:57:08.478Z"
       },
       "titleJa": "Venice AIがユニコーン企業に成長",
-      "summaryJa": "Venice AIはシリーズAで6500万ドルを調達し、月間売上は7000万ドルを超える黒字企業に成長しました。これはプライバシー重視のAIが市場で認められた結果です。"
+      "summaryJa": "Venice AIは、年間収益が7000万ドルを超えるなどすでに利益を上げており、プライバシー重視のAIプラットフォームが成功を収めている。"
     },
     {
       "id": "baefd214f28bba2e",
@@ -726,17 +834,67 @@
       "region": "海外",
       "date": "2026-07-01",
       "publishedAt": "2026-06-30T21:53:28.000Z",
-      "freshness": "fresh",
-      "ageHours": 23,
+      "freshness": "recent",
+      "ageHours": 27.1,
       "relevanceScore": 2,
       "priority": 88,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:32.057Z"
+        "checkedAt": "2026-07-02T00:57:08.479Z"
       },
-      "titleJa": "OpenClawがAndroidとiOSに登場",
-      "summaryJa": "OpenClawが無料のオープンソースアプリケーションとして、ついにスマートフォンにインストール可能になりました。これにより、ユーザーに新たな利便性を提供します。"
+      "titleJa": "OpenClawがAndroidとiOSで利用可能に",
+      "summaryJa": "無料のオープンソースプログラムOpenClawが、ついにスマートフォンで利用可能になった。ユーザーの体験が一新される。"
+    },
+    {
+      "id": "9e7e4d7c07765c2b",
+      "title": "ASRock、ローカルAI構築を数分で実現する「Claw Quickset」を無料提供",
+      "summary": "ASRockは、Windows向けローカルAI構築支援ツール「Claw Quickset」の無償提供を開始。AIモデルの導入や設定を自動化し、数分でローカルAI環境を構築可能。OpenClaw対応や安全設計、対応機種などの特徴を紹介します。",
+      "url": "https://ascii.jp/elem/000/004/415/4415544/?rss",
+      "source": "ASCII.jp",
+      "sourceType": "メディア",
+      "category": "AIエージェント・業務AI",
+      "categoryId": "agents",
+      "accent": "product",
+      "region": "日本",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-02T00:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 1,
+      "relevanceScore": 2,
+      "priority": 86,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-07-02T00:57:07.547Z"
+      },
+      "titleJa": "ASRockが「Claw Quickset」を無償提供",
+      "summaryJa": "ASRockは、ローカルAI構築を数分で可能にするWindows向けツール「Claw Quickset」の無償提供を開始した。AIモデルの導入が容易になり、利用者の負担軽減が期待される。"
+    },
+    {
+      "id": "7a6292ec1d9bd934",
+      "title": "法人向け健康経営支援サービス「Welly Compass」提供開始、健康データの一元管理から施策までを支援",
+      "summary": "ASCII.jpが報じたAI活用・導入事例のニュースです。市場動向、業務適用、PoCから本番展開への流れを把握できます。",
+      "url": "https://ascii.jp/elem/000/004/415/4415504/?rss",
+      "source": "ASCII.jp",
+      "sourceType": "メディア",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
+      "region": "日本",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-01T22:00:00.000Z",
+      "freshness": "fresh",
+      "ageHours": 3,
+      "relevanceScore": 2,
+      "priority": 86,
+      "dateVerification": {
+        "status": "verified",
+        "method": "direct_rss_pubDate",
+        "checkedAt": "2026-07-02T00:57:07.549Z"
+      },
+      "titleJa": "法人向け健康管理サービス「Welly Compass」を発表",
+      "summaryJa": "新たに提供される法人向け健康経営支援サービス「Welly Compass」は、健康データの集中管理と施策の立案を支援し、企業の健康経営を後押しする。"
     },
     {
       "id": "f3f56186b4ed38c9",
@@ -752,16 +910,16 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T07:48:00.000Z",
       "freshness": "fresh",
-      "ageHours": 13.1,
+      "ageHours": 17.2,
       "relevanceScore": 2,
       "priority": 84,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:30.846Z"
+        "checkedAt": "2026-07-02T00:57:07.343Z"
       },
-      "titleJa": "職場でのChatGPT利用、注意が必要",
-      "summaryJa": "ChatGPTを業務に利用することは便利ですが、不適切な情報を与えることが問題を引き起こす可能性があります。適切な使い方を理解することが重要です。"
+      "titleJa": "職場でのシャドーAI使用に関する注意喚起",
+      "summaryJa": "「ChatGPT」を仕事に利用する際のリスクについて、取り扱う情報や使用法が不適切だと大きな問題を引き起こす可能性があることが警告されている。"
     },
     {
       "id": "31589101641c49d8",
@@ -777,41 +935,41 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T07:04:08.000Z",
       "freshness": "fresh",
-      "ageHours": 13.8,
+      "ageHours": 17.9,
       "relevanceScore": 2,
       "priority": 80,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:31.940Z"
+        "checkedAt": "2026-07-02T00:57:08.454Z"
       },
-      "titleJa": "Yahoo!ニュースでプレスリリースが可能に",
-      "summaryJa": "LINEヤフーは、企業のプレスリリースを掲載できる新サービスを開始しました。これにより、情報発信の効率が向上することが期待されます。"
+      "titleJa": "Yahoo!ニュースに新プレスリリースサービス開始",
+      "summaryJa": "LINEヤフーは新たに「Yahoo!ニュース」にプレスリリースを掲載するサービス「ニュースPR by LINEヤフー」を開始。料金は1掲載3万円（税抜）からのオプションが用意されている。"
     },
     {
-      "id": "b7291e73dbf3f397",
-      "title": "日本語翻訳特化の「PLaMo翻訳」にビジネス向け「Proプラン」追加",
-      "summary": "Preferred Networks(PFN)は、日本語に特化したAI翻訳サービス「PLaMo翻訳」において、利用上限を大幅に引き上げた新料金プラン「Proプラン」「Proチームプラン」の提供を開始した。料金はProプランが月額3,278円(キャンペーンで8月...",
-      "url": "https://www.watch.impress.co.jp/docs/news/2121535.html",
-      "source": "Impress Watch",
+      "id": "86f15a905359550f",
+      "title": "「Fable 5」再開までの裏側、Anthropicが明かす “支払った代償”は",
+      "summary": "米政府の命令による「Fable 5」の提供停止から再開まで、米Anthropicは何に取り組んできたのか。",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2607/02/2000000151/",
+      "source": "ITmedia AI+",
       "sourceType": "メディア",
-      "category": "モデル・研究・プロダクト",
-      "categoryId": "models",
-      "accent": "research",
+      "category": "産業活用・導入事例",
+      "categoryId": "industry",
+      "accent": "adoption",
       "region": "日本",
-      "date": "2026-07-01",
-      "publishedAt": "2026-07-01T06:15:11.000Z",
+      "date": "2026-07-02",
+      "publishedAt": "2026-07-01T21:55:00.000Z",
       "freshness": "fresh",
-      "ageHours": 14.6,
-      "relevanceScore": 2,
-      "priority": 80,
+      "ageHours": 3,
+      "relevanceScore": 1,
+      "priority": 95,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:31.940Z"
+        "checkedAt": "2026-07-02T00:57:03.926Z"
       },
-      "titleJa": "「PLaMo翻訳」に新たなビジネスプランが追加",
-      "summaryJa": "Preferred Networksが提供するAI翻訳サービス「PLaMo翻訳」は、ビジネス向けの「Proプラン」を発表しました。利用制限を大幅に引き上げ、多くのユーザーに対応します。"
+      "titleJa": "Anthropicが語る「Fable 5」再開に向けた取り組み",
+      "summaryJa": "米国の指示により一時停止していた「Fable 5」のサービス。この再開に向けて、Anthropicはどのような課題に取り組んできたのかを詳述しています。"
     },
     {
       "id": "ae7e352b0ea7d6de",
@@ -827,16 +985,16 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T09:10:00.000Z",
       "freshness": "fresh",
-      "ageHours": 11.7,
+      "ageHours": 15.8,
       "relevanceScore": 1,
       "priority": 95,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:28.708Z"
+        "checkedAt": "2026-07-02T00:57:03.926Z"
       },
-      "titleJa": "ソフトバンクG、OpenAIにさらに出資",
-      "summaryJa": "ソフトバンクグループは、OpenAIへの追加出資の第2弾として約1兆6273億円を実施しました。これにより、AI開発のさらなる推進が見込まれます。"
+      "titleJa": "ソフトバンクG、OpenAIに総額300億ドルの出資を発表",
+      "summaryJa": "ソフトバンクグループは7月にOpenAIへの追加出資を行い、残りの資金は10月に予定されています。この動向はAI市場における新たな投資の流れを反映しています。"
     },
     {
       "id": "1c0aa22a68ca595c",
@@ -852,16 +1010,16 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T05:02:00.000Z",
       "freshness": "fresh",
-      "ageHours": 15.9,
+      "ageHours": 19.9,
       "relevanceScore": 1,
       "priority": 87,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:29.666Z"
+        "checkedAt": "2026-07-02T00:57:05.115Z"
       },
-      "titleJa": "Cognition AIが日本で事業を本格展開",
-      "summaryJa": "Cognition AIが日本法人を設立し、自律型AIソフトウェア「Devin」の提供を開始しました。国内市場における戦略が注目されています。"
+      "titleJa": "Cognition AI、日本法人設立でDevinを推進",
+      "summaryJa": "Cognition AIは日本法人を設立し、自律型AIソフトウェアエンジニア「Devin」に特化した事業戦略を発表しました。国内市場での競争力を高める狙いがあります。"
     },
     {
       "id": "224190e512b31f4f",
@@ -877,16 +1035,16 @@
       "date": "2026-07-02",
       "publishedAt": "2026-07-01T18:54:18.000Z",
       "freshness": "fresh",
-      "ageHours": 2,
+      "ageHours": 6,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:32.055Z"
+        "checkedAt": "2026-07-02T00:57:08.477Z"
       },
-      "titleJa": "SpaceX、AIデバイスのプロトタイプ公開",
-      "summaryJa": "SpaceXが投資家に対して、携帯電話に似たデザインのAIデバイスのプロトタイプを公開しました。この発表は、同社の新しい展開を示唆しています。"
+      "titleJa": "SpaceXが投資家にAIデバイスのプロトタイプを披露",
+      "summaryJa": "SpaceXが公開前に投資家に「ハンドセット型」AIデバイスを提示したとされています。これは、同社が新たな市場拡大を目指している可能性を示唆しています。"
     },
     {
       "id": "e3c34b8d65286396",
@@ -902,16 +1060,16 @@
       "date": "2026-07-02",
       "publishedAt": "2026-07-01T18:47:22.000Z",
       "freshness": "fresh",
-      "ageHours": 2.1,
+      "ageHours": 6.2,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:32.055Z"
+        "checkedAt": "2026-07-02T00:57:08.477Z"
       },
-      "titleJa": "アシュトン・カッチャーが新VC会社設立へ",
-      "summaryJa": "アシュトン・カッチャーは、Sound Venturesを離れ、新たなベンチャーキャピタルファームの設立を発表しました。AIラボに強い新たな投資戦略が期待されます。"
+      "titleJa": "アシュトン・カッチャーがファンド設立へ、Sound Venturesを退職",
+      "summaryJa": "アシュトン・カッチャーは新たにベンチャーキャピタルファンドを立ち上げる予定で、Sound Venturesから離れました。AIラボへの投資を重視するこの動きは注目されます。"
     },
     {
       "id": "5659a8075a767838",
@@ -927,16 +1085,16 @@
       "date": "2026-07-01",
       "publishedAt": "2026-07-01T02:04:40.000Z",
       "freshness": "fresh",
-      "ageHours": 18.8,
+      "ageHours": 22.9,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:32.057Z"
+        "checkedAt": "2026-07-02T00:57:08.479Z"
       },
-      "titleJa": "Wayveが従業員引き抜きのための提案を開始",
-      "summaryJa": "Wayveは、戦略的に従業員を引き留めるためのTender Offerを発表しました。これはAIスタートアップの新たなトレンドを反映しています。"
+      "titleJa": "Wayveが8500万ドルの社員オファーを発表",
+      "summaryJa": "Wayveは、社員を対象に8500万ドルのオファーを発表しました。これはAIスタートアップが人材確保のための戦略として採用する新たな流れとされています。"
     },
     {
       "id": "5a8271fa63a7348c",
@@ -952,16 +1110,16 @@
       "date": "2026-07-01",
       "publishedAt": "2026-06-30T20:33:48.000Z",
       "freshness": "recent",
-      "ageHours": 24.3,
+      "ageHours": 28.4,
       "relevanceScore": 1,
       "priority": 85,
       "dateVerification": {
         "status": "verified",
         "method": "direct_rss_pubDate",
-        "checkedAt": "2026-07-01T20:53:32.058Z"
+        "checkedAt": "2026-07-02T00:57:08.480Z"
       },
-      "titleJa": "ポーカーAI開発者の新たな成功事例",
-      "summaryJa": "元DeepMindの研究者3人が設立したプラハのAIラボ、EquiLibre Technologiesは、現在5億ドル以上の評価を得ており、量子ヘッジファンド向けに利益を上げています。AIが金融分野に与える影響を示す事例として注目されます。"
+      "titleJa": "元DeepMind研究者のチームが新たに資金調達",
+      "summaryJa": "プラハに拠点を置くEquiLibre Technologiesは、元DeepMindの研究者三人によって設立され、現在の評価額は5億ドルを超えています。AI分野での影響力が高まっています。"
     }
   ],
   "errors": [],
@@ -973,9 +1131,9 @@
       "type": "rss",
       "url": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
       "status": "ok",
-      "itemsFound": 11,
-      "lastCheckedAt": "2026-07-01T20:53:28.711Z",
-      "lastSuccessAt": "2026-07-01T20:53:28.711Z",
+      "itemsFound": 12,
+      "lastCheckedAt": "2026-07-02T00:57:03.927Z",
+      "lastSuccessAt": "2026-07-02T00:57:03.927Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -986,9 +1144,9 @@
       "type": "rss",
       "url": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
       "status": "ok",
-      "itemsFound": 2,
-      "lastCheckedAt": "2026-07-01T20:53:28.820Z",
-      "lastSuccessAt": "2026-07-01T20:53:28.820Z",
+      "itemsFound": 5,
+      "lastCheckedAt": "2026-07-02T00:57:04.076Z",
+      "lastSuccessAt": "2026-07-02T00:57:04.076Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -999,9 +1157,9 @@
       "type": "rss",
       "url": "https://enterprisezine.jp/rss/new/20/index.xml",
       "status": "ok",
-      "itemsFound": 8,
-      "lastCheckedAt": "2026-07-01T20:53:29.667Z",
-      "lastSuccessAt": "2026-07-01T20:53:29.667Z",
+      "itemsFound": 10,
+      "lastCheckedAt": "2026-07-02T00:57:05.116Z",
+      "lastSuccessAt": "2026-07-02T00:57:05.116Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -1012,9 +1170,9 @@
       "type": "rss",
       "url": "https://japan.cnet.com/rss/index.rdf",
       "status": "ok",
-      "itemsFound": 3,
-      "lastCheckedAt": "2026-07-01T20:53:30.848Z",
-      "lastSuccessAt": "2026-07-01T20:53:30.848Z",
+      "itemsFound": 2,
+      "lastCheckedAt": "2026-07-02T00:57:07.344Z",
+      "lastSuccessAt": "2026-07-02T00:57:07.344Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -1024,10 +1182,10 @@
       "group": "media",
       "type": "rss",
       "url": "https://ascii.jp/rss.xml",
-      "status": "no_items",
-      "itemsFound": 0,
-      "lastCheckedAt": "2026-07-01T20:53:31.286Z",
-      "lastSuccessAt": "2026-07-01T20:53:31.286Z",
+      "status": "ok",
+      "itemsFound": 3,
+      "lastCheckedAt": "2026-07-02T00:57:07.549Z",
+      "lastSuccessAt": "2026-07-02T00:57:07.549Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -1039,8 +1197,8 @@
       "url": "https://www.watch.impress.co.jp/data/rss/1.0/ipw/feed.rdf",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-07-01T20:53:31.941Z",
-      "lastSuccessAt": "2026-07-01T20:53:31.941Z",
+      "lastCheckedAt": "2026-07-02T00:57:08.454Z",
+      "lastSuccessAt": "2026-07-02T00:57:08.454Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -1052,8 +1210,8 @@
       "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
       "status": "ok",
       "itemsFound": 10,
-      "lastCheckedAt": "2026-07-01T20:53:32.058Z",
-      "lastSuccessAt": "2026-07-01T20:53:32.058Z",
+      "lastCheckedAt": "2026-07-02T00:57:08.480Z",
+      "lastSuccessAt": "2026-07-02T00:57:08.480Z",
       "lastFailureAt": null,
       "lastError": null
     }

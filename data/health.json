@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "status": "warning",
-  "generatedAt": "2026-07-01T20:58:05.837Z",
+  "generatedAt": "2026-07-02T01:01:40.125Z",
   "generatedDate": "2026-07-02",
-  "startedAt": "2026-07-01T20:52:36.631Z",
-  "finishedAt": "2026-07-01T20:58:05.837Z",
-  "durationSeconds": 329,
+  "startedAt": "2026-07-02T00:56:35.113Z",
+  "finishedAt": "2026-07-02T01:01:40.126Z",
+  "durationSeconds": 305,
   "error": null,
   "summary": {
-    "mediaItems": 37,
+    "mediaItems": 43,
     "primaryCategories": 10,
     "primaryItems": 43,
     "officialItems": 25,
@@ -17,9 +17,9 @@
     "candidates": 37,
     "reviewItems": 20,
     "sourceTotal": 54,
-    "sourceOk": 31,
+    "sourceOk": 32,
     "sourceFailed": 3,
-    "sourceNoItems": 15,
+    "sourceNoItems": 14,
     "failedSteps": 0
   },
   "steps": [
@@ -27,73 +27,79 @@
       "name": "collect-official-news",
       "commandLine": "node scripts/collect-official-news.js --limit=36 --write",
       "exitCode": 0,
-      "durationMs": 47830
+      "durationMs": 25756
     },
     {
       "name": "collect-ai-signals",
       "commandLine": "node scripts/collect-ai-signals.js --limit=32 --write",
       "exitCode": 0,
-      "durationMs": 1450
+      "durationMs": 1117
     },
     {
       "name": "collect-pricing",
       "commandLine": "node scripts/collect-pricing.js --write-review --apply-verified",
       "exitCode": 0,
-      "durationMs": 1119
+      "durationMs": 1193
     },
     {
       "name": "collect-media-news",
       "commandLine": "node scripts/collect-media-news.js --limit=45 --write",
       "exitCode": 0,
-      "durationMs": 4996
+      "durationMs": 5276
     },
     {
       "name": "collect",
       "commandLine": "node scripts/collect-news.js --write --per-source=3 --max-candidates=50",
       "exitCode": 0,
-      "durationMs": 22760
+      "durationMs": 20059
+    },
+    {
+      "name": "prune-candidates",
+      "commandLine": "node scripts/prune-candidates.js --write",
+      "exitCode": 0,
+      "durationMs": 30
     },
     {
       "name": "translate-titles",
       "commandLine": "node scripts/translate-titles.js --write",
       "exitCode": 0,
-      "durationMs": 108001
+      "durationMs": 114805
     },
     {
       "name": "prepare-review",
       "commandLine": "node scripts/prepare-review.js --limit=20 --write",
       "exitCode": 0,
-      "durationMs": 11602
+      "durationMs": 12513
     },
     {
       "name": "summarize-review",
       "commandLine": "node scripts/summarize-review.js --limit=20 --write",
       "exitCode": 0,
-      "durationMs": 58712
+      "durationMs": 61775
     },
     {
       "name": "promote-review",
       "commandLine": "node scripts/promote-review.js --min-priority=60 --max-age-days=30 --max-items=12 --write --accept",
       "exitCode": 0,
-      "durationMs": 53
+      "durationMs": 58
     },
     {
       "name": "summarize-news",
       "commandLine": "node scripts/summarize-news.js --limit=40 --write",
       "exitCode": 0,
-      "durationMs": 29
+      "durationMs": 28
     },
     {
       "name": "collect-sota",
       "commandLine": "node scripts/collect-sota.js --write",
       "exitCode": 0,
-      "durationMs": 72543
+      "durationMs": 62296
     },
     {
       "name": "validate-pricing",
       "commandLine": "node scripts/validate-pricing.js",
       "exitCode": 0,
-      "durationMs": 30
+      "durationMs": 31
     },
     {
       "name": "validate-data",
