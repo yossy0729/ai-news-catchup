@@ -2822,3 +2822,34 @@ body {
 .view-only #saveCandidates {
   display: none;
 }
+
+/* カテゴリ別カードを速報(.media-card)・公式(.official-item)と同じ「リスト行」方式に統一。
+   旧来の枠線ボックス方式は、後段レイヤーで背景が白に上書きされた結果、
+   白地に白カード＋極薄枠線となり仕切りが判別できなくなっていた。
+   行間0＋下境界線＋先頭行アクセントに揃え、3タブの視覚言語を統一する。 */
+.news-list {
+  gap: 0;
+  padding-right: 0;
+}
+
+.news-card {
+  min-height: 0;
+  /* 右42pxは既読マーカー(.read-toggle 右上絶対配置)の逃げ。official-itemと同じ。 */
+  padding: 9px 42px 9px 11px;
+  border: 0;
+  border-left: 4px solid transparent;
+  border-bottom: 1px solid #e2e8e4;
+  background: #ffffff;
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.news-card:first-child {
+  border-left-color: var(--accent);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 14%, #fff), #fff 50%);
+}
+
+.news-card:hover {
+  border-color: #e2e8e4;
+  background: color-mix(in srgb, var(--accent) 7%, #ffffff);
+  box-shadow: inset 4px 0 0 var(--accent);
+}
