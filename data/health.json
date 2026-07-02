@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "status": "warning",
-  "generatedAt": "2026-07-02T01:01:40.125Z",
+  "generatedAt": "2026-07-02T01:25:34.728Z",
   "generatedDate": "2026-07-02",
-  "startedAt": "2026-07-02T00:56:35.113Z",
-  "finishedAt": "2026-07-02T01:01:40.126Z",
-  "durationSeconds": 305,
+  "startedAt": "2026-07-02T01:11:28.699Z",
+  "finishedAt": "2026-07-02T01:25:34.728Z",
+  "durationSeconds": 846,
   "error": null,
   "summary": {
     "mediaItems": 43,
@@ -27,31 +27,31 @@
       "name": "collect-official-news",
       "commandLine": "node scripts/collect-official-news.js --limit=36 --write",
       "exitCode": 0,
-      "durationMs": 25756
+      "durationMs": 36195
     },
     {
       "name": "collect-ai-signals",
       "commandLine": "node scripts/collect-ai-signals.js --limit=32 --write",
       "exitCode": 0,
-      "durationMs": 1117
+      "durationMs": 1804
     },
     {
       "name": "collect-pricing",
       "commandLine": "node scripts/collect-pricing.js --write-review --apply-verified",
       "exitCode": 0,
-      "durationMs": 1193
+      "durationMs": 1077
     },
     {
       "name": "collect-media-news",
       "commandLine": "node scripts/collect-media-news.js --limit=45 --write",
       "exitCode": 0,
-      "durationMs": 5276
+      "durationMs": 4279
     },
     {
       "name": "collect",
       "commandLine": "node scripts/collect-news.js --write --per-source=3 --max-candidates=50",
       "exitCode": 0,
-      "durationMs": 20059
+      "durationMs": 520459
     },
     {
       "name": "prune-candidates",
@@ -63,49 +63,49 @@
       "name": "translate-titles",
       "commandLine": "node scripts/translate-titles.js --write",
       "exitCode": 0,
-      "durationMs": 114805
+      "durationMs": 117301
     },
     {
       "name": "prepare-review",
       "commandLine": "node scripts/prepare-review.js --limit=20 --write",
       "exitCode": 0,
-      "durationMs": 12513
+      "durationMs": 19108
     },
     {
       "name": "summarize-review",
       "commandLine": "node scripts/summarize-review.js --limit=20 --write",
       "exitCode": 0,
-      "durationMs": 61775
+      "durationMs": 55840
     },
     {
       "name": "promote-review",
       "commandLine": "node scripts/promote-review.js --min-priority=60 --max-age-days=30 --max-items=12 --write --accept",
       "exitCode": 0,
-      "durationMs": 58
+      "durationMs": 56
     },
     {
       "name": "summarize-news",
       "commandLine": "node scripts/summarize-news.js --limit=40 --write",
       "exitCode": 0,
-      "durationMs": 28
+      "durationMs": 29
     },
     {
       "name": "collect-sota",
       "commandLine": "node scripts/collect-sota.js --write",
       "exitCode": 0,
-      "durationMs": 62296
+      "durationMs": 89336
     },
     {
       "name": "validate-pricing",
       "commandLine": "node scripts/validate-pricing.js",
       "exitCode": 0,
-      "durationMs": 31
+      "durationMs": 32
     },
     {
       "name": "validate-data",
       "commandLine": "node scripts/validate-data.js",
       "exitCode": 0,
-      "durationMs": 30
+      "durationMs": 33
     }
   ]
 }

@@ -15,7 +15,7 @@
       "text": "HF Papers #1: Orca: The World is in Your Mind",
       "url": "https://huggingface.co/papers/2606.30534",
       "priority": 95,
-      "titleJa": "HF Papers #1: Orca - あなたの思考の中にある世界"
+      "titleJa": "HF Papers #1: Orca: あなたの心の中の世界"
     },
     {
       "id": "0db89053c0d629a7",
@@ -29,7 +29,7 @@
       "text": "HF Papers #2: Dockerless: Environment-Free Program Verifier for Coding Agents",
       "url": "https://huggingface.co/papers/2606.28436",
       "priority": 94,
-      "titleJa": "HF Papers #2: Dockerless - 環境依存しないプログラム検証ツール"
+      "titleJa": "HF Papers #2: Dockerless: 環境不要のプログラム検証ツール"
     },
     {
       "id": "674f4f431b210aae",
@@ -43,7 +43,7 @@
       "text": "HF Papers #3: DOPD: Dual On-policy Distillation",
       "url": "https://huggingface.co/papers/2606.30626",
       "priority": 93,
-      "titleJa": "HF Papers #3: DOPD - デュアルポリシー蒸留"
+      "titleJa": "HF Papers #3: DOPD: デュアルオンポリシー蒸留"
     },
     {
       "id": "d4a47f09807392a5",
@@ -57,7 +57,7 @@
       "text": "HF Papers #4: BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding",
       "url": "https://huggingface.co/papers/2606.31315",
       "priority": 92,
-      "titleJa": "HF Papers #4: BlockPilot - 生成拡散モデルの適応的ポリシー学習"
+      "titleJa": "HF Papers #4: BlockPilot: 拡散ベースの推測デコーディング用インスタンス適応型ポリシー学習"
     },
     {
       "id": "6dc2561b0a5614f5",
@@ -71,7 +71,7 @@
       "text": "HF Papers #5: Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models",
       "url": "https://huggingface.co/papers/2606.19297",
       "priority": 91,
-      "titleJa": "HF Papers #5: VLAの基礎知識保持能力を測定する研究"
+      "titleJa": "HF Papers #5: VLAは基本を理解しているか？視覚・言語・行動モデルの知識保持を測定"
     },
     {
       "id": "b2cc70b4995f1432",
@@ -85,7 +85,7 @@
       "text": "SOTA: ScarfBench: Benchmarking AI Agents for Enterprise Java Framework Migration / Hugging Face Blog",
       "url": "https://huggingface.co/blog/ibm-research/scarfbench",
       "priority": 88,
-      "titleJa": "HF Papers: ScarfBench - 企業Javaフレームワーク移行のAIエージェント評価"
+      "titleJa": "HF Papers: ScarfBench: 企業Javaフレームワーク移行のためのAIエージェント評価"
     },
     {
       "id": "9d621116983a3f3b",
@@ -99,8 +99,8 @@
       "text": "Research: Introducing GeneBench-Pro / OpenAI News",
       "url": "https://openai.com/index/introducing-genebench-pro",
       "priority": 88,
-      "titleJa": "GeneBench-Proの発表 - ゲノム研究向けAI性能評価",
-      "summaryJa": "GeneBench-Proが新たに発表され、ゲノム、バイオロジー、科学研究におけるAIの性能を評価するベンチマークとして注目されています。"
+      "titleJa": "GeneBench-Proを発表、ゲノム研究におけるAI性能を評価",
+      "summaryJa": "GeneBench-Proは、ゲノム、生物学、科学研究におけるAI性能を複雑な実世界データセットを使って評価するための新しいベンチマークである。"
     },
     {
       "id": "2c255983884091d3",
@@ -114,7 +114,7 @@
       "text": "Research: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 / Apple Machine Learning Research",
       "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
       "priority": 88,
-      "titleJa": "IEEE/CVF 2026年のコンピュータビジョン会議"
+      "titleJa": "IEEE/CVF会議、CVPR 2026に関するお知らせ"
     },
     {
       "id": "7d95e1b1656fe4ae",
@@ -155,8 +155,8 @@
       "source": "Google Gemini Pricing",
       "title": "Google Gemini token pricing",
       "titleJa": "Google Geminiのトークン価格情報",
-      "summary": "Gemini APIの入力/出力トークン単価を確認する公式価格表です。 検出例: $1.50 / $9.00 / $0.15 / $1.00 / 1,000,000 tokens",
-      "summaryJa": "Gemini APIの入力/出力トークン単価を確認する公式価格表です。 検出例: $1.50 / $9.00 / $0.15 / $1.00 / 1,000,000 tokens",
+      "summary": "Gemini APIの入力/出力トークン単価を確認する公式価格表です。 検出例: $1 / $9 / $0 / $1",
+      "summaryJa": "Gemini APIの入力/出力トークン単価を確認する公式価格表です。 検出例: $1 / $9 / $0 / $1",
       "text": "Price: Google Gemini 入力/出力トークン価格表を確認",
       "url": "https://ai.google.dev/gemini-api/docs/pricing",
       "priority": 76
@@ -172,8 +172,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 5,
-      "lastCheckedAt": "2026-07-02T00:57:01.127Z",
-      "lastSuccessAt": "2026-07-02T00:57:01.127Z",
+      "lastCheckedAt": "2026-07-02T01:12:05.556Z",
+      "lastSuccessAt": "2026-07-02T01:12:05.556Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -185,8 +185,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-07-02T00:57:01.128Z",
-      "lastSuccessAt": "2026-07-02T00:57:01.128Z",
+      "lastCheckedAt": "2026-07-02T01:12:05.557Z",
+      "lastSuccessAt": "2026-07-02T01:12:05.557Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -198,8 +198,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-07-02T00:57:02.013Z",
-      "lastSuccessAt": "2026-07-02T00:57:02.013Z",
+      "lastCheckedAt": "2026-07-02T01:12:07.127Z",
+      "lastSuccessAt": "2026-07-02T01:12:07.127Z",
       "lastFailureAt": null,
       "lastError": null
     }

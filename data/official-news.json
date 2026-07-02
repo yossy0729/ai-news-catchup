@@ -60,7 +60,7 @@
       "accent": "infrastructure",
       "homepage": "https://blog.google/technology/ai/",
       "title": "The latest AI news we announced in June 2026",
-      "titleJa": "2026年6月のGoogleの最新AIニュース",
+      "titleJa": "2026年6月に発表されたGoogleの最新AIニュース",
       "summary": "Here are Google’s latest AI updates from June 2026.",
       "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026",
       "source": "Google AI Blog",
@@ -73,9 +73,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:56:52.911Z"
+        "checkedAt": "2026-07-02T01:11:57.319Z"
       },
-      "summaryJa": "Googleが2026年6月に発表したAIに関する最新の情報を整理しました。新しい技術や進展が盛り込まれています。"
+      "summaryJa": "Googleは2026年6月に最新のAIアップデートを発表しました。今後の技術革新に向けた重要な情報が含まれています。"
     },
     {
       "id": "2e307d13e238e5e9",
@@ -84,7 +84,7 @@
       "accent": "infrastructure",
       "homepage": "https://developer.nvidia.com/blog/category/generative-ai/",
       "title": "Mastering Agentic Techniques: AI Agent Reinforcement Learning",
-      "titleJa": "AIエージェントの強化学習技術の習得",
+      "titleJa": "AIエージェント強化学習技術に関するNVIDIAの新たな提案",
       "summary": "NVIDIA TechnicalがAIエージェント関連の技術・安全性・評価に関する情報を公開。実装設計、ツール利用、リスク管理の観点で追うべき内容です。",
       "url": "https://developer.nvidia.com/blog/mastering-agentic-techniques-ai-agent-reinforcement-learning",
       "source": "NVIDIA Technical Blog AI",
@@ -97,9 +97,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "atom",
-        "checkedAt": "2026-07-02T00:57:00.449Z"
+        "checkedAt": "2026-07-02T01:12:05.104Z"
       },
-      "summaryJa": "NVIDIA TechnicalがAIエージェントの技術や安全性、評価についての情報を公開しました。これには実装設計やリスク管理が含まれています。"
+      "summaryJa": "NVIDIA Technicalは、AIエージェントの安全性や評価に関する新しい技術情報を公開しました。企業のAI導入に向けた重要な観点が紹介されています。"
     },
     {
       "id": "6fd8930d6b8f9618",
@@ -108,7 +108,7 @@
       "accent": "infrastructure",
       "homepage": "https://blog.google/technology/ai/",
       "title": "New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.",
-      "titleJa": "教育者と業界リーダーがAI教育の未来を議論",
+      "titleJa": "GoogleオフィスでAI教育サミット、業界リーダーが集結",
       "summary": "Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.",
       "url": "https://blog.google/products-and-platforms/products/education/nyc-ai-summit",
       "source": "Google AI Blog",
@@ -121,9 +121,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:56:52.911Z"
+        "checkedAt": "2026-07-02T01:11:57.320Z"
       },
-      "summaryJa": "Googleのオフィスで行われたAIサミットには、ニューヨークの教育者や業界リーダー150人が集まりました。AIが教室でどのように活用されるかが議論されています。"
+      "summaryJa": "Googleは、ニューヨークで150人以上の教育者と業界リーダーを集めたAIサミットを開催しました。教育界におけるAIの未来を考える重要なイベントです。"
     },
     {
       "id": "3e8bd9fed419edda",
@@ -132,7 +132,7 @@
       "accent": "research",
       "homepage": "https://huggingface.co/blog",
       "title": "Hugging Face and Cerebras bring Gemma 4 to real-time voice AI",
-      "titleJa": "リアルタイム音声AIにGemma 4を導入",
+      "titleJa": "Hugging FaceとCerebrasがGemma 4をリアルタイム音声AIに導入",
       "summary": "Hugging Face Blogの公式情報です。発表内容、対象プロダクト、企業導入・研究・安全性への影響を確認するための一次情報として扱います。",
       "url": "https://huggingface.co/blog/cerebras-gemma4-voice-ai",
       "source": "Hugging Face Blog",
@@ -145,9 +145,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:57:00.576Z"
+        "checkedAt": "2026-07-02T01:12:05.245Z"
       },
-      "summaryJa": "Hugging Faceが新たなプロダクトGemma 4を発表し、リアルタイム音声AIにおける影響や利点について情報提供を行います。"
+      "summaryJa": "Hugging Face Blogは、Gemma 4をリアルタイム音声AIに活用する情報を発表。その影響や技術の進展について解説しています。"
     },
     {
       "id": "5ff2cc8326868ea2",
@@ -156,7 +156,7 @@
       "accent": "research",
       "homepage": "https://huggingface.co/blog",
       "title": "ScarfBench: Benchmarking AI Agents for Enterprise Java Framework Migration",
-      "titleJa": "企業向けJavaフレームワーク移行のAIエージェント評価",
+      "titleJa": "エンタープライズ向けJavaフレームワーク移行のAIエージェントベンチマーク",
       "summary": "Hugging FaceがAIエージェント関連の技術・安全性・評価に関する情報を公開。実装設計、ツール利用、リスク管理の観点で追うべき内容です。",
       "url": "https://huggingface.co/blog/ibm-research/scarfbench",
       "source": "Hugging Face Blog",
@@ -169,9 +169,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:57:00.576Z"
+        "checkedAt": "2026-07-02T01:12:05.246Z"
       },
-      "summaryJa": "Hugging FaceがAIエージェントの技術や評価、セキュリティに関するウェブサイトを公開しました。実装やリスク管理についての情報も得られます。"
+      "summaryJa": "Hugging Faceは、AIエージェントの新たなベンチマークであるScarfBenchを発表しました。企業向けの移行に役立つツールと視点を提供します。"
     },
     {
       "id": "72964de20b69f82c",
@@ -180,7 +180,7 @@
       "accent": "infrastructure",
       "homepage": "https://blog.google/technology/ai/",
       "title": "Start building with Nano Banana 2 Lite and Gemini Omni Flash",
-      "titleJa": "Nano Banana 2 LiteとGemini Omni Flashが登場",
+      "titleJa": "Nano Banana 2 LiteとGemini Omni FlashのAIモデル開発更新",
       "summary": "Google DeepMindがAIモデルまたは開発者向け機能に関する更新を発表。利用可能モデル、開発体験、プロダクト選定への影響を確認できます。",
       "url": "https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash",
       "source": "Google DeepMind Blog",
@@ -193,9 +193,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:56:53.223Z"
+        "checkedAt": "2026-07-02T01:11:57.755Z"
       },
-      "summaryJa": "Google DeepMindが新しいAIモデルや開発者向け機能の更新を発表し、これらの影響について確認できる情報を提供しています。"
+      "summaryJa": "Google DeepMindが、新たなAIモデルや開発者向け機能に関する更新情報を発表。これにより、開発体験が進化する可能性があります。"
     },
     {
       "id": "01074ef856779fff",
@@ -204,7 +204,7 @@
       "accent": "research",
       "homepage": "https://openai.com/news/",
       "title": "How ChatGPT adoption has expanded",
-      "titleJa": "ChatGPTの利用拡大の背景",
+      "titleJa": "ChatGPTの普及とその影響についての最新情報",
       "summary": "OpenAIがAIモデルまたは開発者向け機能に関する更新を発表。利用可能モデル、開発体験、プロダクト選定への影響を確認できます。",
       "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded",
       "source": "OpenAI News",
@@ -217,9 +217,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:56:35.639Z"
+        "checkedAt": "2026-07-02T01:11:29.435Z"
       },
-      "summaryJa": "OpenAIがChatGPTの採用状況を更新し、その動向や影響の分析を行っています。具体的な事例をもとに解説されています。"
+      "summaryJa": "OpenAIは、ChatGPTの採用状況に関する最新の情報を発表しました。AIモデルの今後の展望に注目が集まっています。"
     },
     {
       "id": "350e9a34328daea8",
@@ -228,7 +228,7 @@
       "accent": "infrastructure",
       "homepage": "https://blog.google/technology/ai/",
       "title": "Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers",
-      "titleJa": "AI革新による生産性向上を目指すUKの計画",
+      "titleJa": "AIを活用した英国経済の次の時代への展望",
       "summary": "Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.",
       "url": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers",
       "source": "Google AI Blog",
@@ -241,9 +241,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:56:52.911Z"
+        "checkedAt": "2026-07-02T01:11:57.320Z"
       },
-      "summaryJa": "Google UKが最近発表した経済影響レポートでは、AIを活用した新しい生産性向上策が紹介され、より多くの人々がその利益を享受できる方法が検討されています。"
+      "summaryJa": "Google UKが最新の経済影響レポートを発表し、AI技術の利点を多くの人に広げる方法について議論しています。"
     },
     {
       "id": "b57ab8a6973321c2",
@@ -252,7 +252,7 @@
       "accent": "research",
       "homepage": "https://openai.com/news/",
       "title": "Inside Genebench-Pro",
-      "titleJa": "GeneBench-Proの詳細に迫る",
+      "titleJa": "GeneBench-Proの内部概要を探る",
       "summary": "OpenAI Newsの公式情報です。発表内容、対象プロダクト、企業導入・研究・安全性への影響を確認するための一次情報として扱います。",
       "url": "https://openai.com/index/genebench-pro/case-studies",
       "source": "OpenAI News",
@@ -265,9 +265,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:56:35.641Z"
+        "checkedAt": "2026-07-02T01:11:29.439Z"
       },
-      "summaryJa": "OpenAIニュースからの情報で、GeneBench-Proの発表や用途について詳細が明らかにされ、企業や研究における効果が期待されています。"
+      "summaryJa": "OpenAI Newsは、GeneBench-Proに関する詳細な情報を紹介。AIパフォーマンスの評価に関連する重要なデータを提供します。"
     },
     {
       "id": "afdd2342c1791c51",
@@ -276,7 +276,7 @@
       "accent": "research",
       "homepage": "https://openai.com/news/",
       "title": "Introducing GeneBench-Pro",
-      "titleJa": "GeneBench-Proの導入",
+      "titleJa": "GeneBench-Proの新しいベンチマークテストを発表",
       "summary": "Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.",
       "url": "https://openai.com/index/introducing-genebench-pro",
       "source": "OpenAI News",
@@ -289,9 +289,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:56:35.641Z"
+        "checkedAt": "2026-07-02T01:11:29.440Z"
       },
-      "summaryJa": "GeneBench-Proは、ゲノミクスや生物学、科学研究におけるAIパフォーマンスを評価する新たな基準を提供します。"
+      "summaryJa": "GeneBench-Proが登場し、ゲノムや生物学、科学研究におけるAI性能をテストします。実世界データセットを使用した評価が特徴です。"
     },
     {
       "id": "cc33913237d56502",
@@ -300,7 +300,7 @@
       "accent": "research",
       "homepage": "https://openai.com/news/",
       "title": "Core dump epidemiology: fixing an 18-year-old bug",
-      "titleJa": "18年前のバグを修正するためのコアダンプ解析",
+      "titleJa": "18年前のバグを修正したコアダンプの疫学",
       "summary": "OpenAI engineers used large-scale core dump analysis to debug rare infrastructure crashes, uncovering both a hardware fault and a long-standing softwa...",
       "url": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug",
       "source": "OpenAI News",
@@ -313,9 +313,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:56:35.642Z"
+        "checkedAt": "2026-07-02T01:11:29.441Z"
       },
-      "summaryJa": "OpenAIのエンジニアが大規模なコアダンプ解析を用いて、インフラのクラッシュをデバッグし、ハードウェアの故障とソフトウェアの問題を解明しました。"
+      "summaryJa": "OpenAIのエンジニアがコアダンプ分析を駆使して、インフラの希少クラッシュの原因を特定しました。ハードウェア故障とソフトウェアの問題を発見しています。"
     },
     {
       "id": "62e0e9317b546196",
@@ -324,7 +324,7 @@
       "accent": "research",
       "homepage": "https://huggingface.co/blog",
       "title": "Featuring Every Eval Ever Results on Hugging Face Model Pages",
-      "titleJa": "Hugging Faceの評価結果更新",
+      "titleJa": "Hugging Faceモデルページの評価結果を強化",
       "summary": "Hugging FaceがAIモデルまたは開発者向け機能に関する更新を発表。利用可能モデル、開発体験、プロダクト選定への影響を確認できます。",
       "url": "https://huggingface.co/blog/eee-community-evals",
       "source": "Hugging Face Blog",
@@ -337,9 +337,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:57:00.576Z"
+        "checkedAt": "2026-07-02T01:12:05.246Z"
       },
-      "summaryJa": "Hugging FaceがAIモデルの最新動向や開発者向け機能についての情報を発表し、実装の影響や選定基準を理解するためのリソースを提供しています。"
+      "summaryJa": "Hugging Faceは、AIモデルや開発者向け機能の最新情報を発表しました。これにより、モデル選定や開発体験がより充実します。"
     },
     {
       "id": "a5954c6971c55887",
@@ -348,7 +348,7 @@
       "accent": "infrastructure",
       "homepage": "https://blog.google/technology/ai/",
       "title": "Ask an AI expert: What exactly is the full stack?",
-      "titleJa": "AIにおけるフルスタックアプローチとは",
+      "titleJa": "AIフルスタックアプローチの正体を解明",
       "summary": "A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.",
       "url": "https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer",
       "source": "Google AI Blog",
@@ -361,9 +361,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:56:52.912Z"
+        "checkedAt": "2026-07-02T01:11:57.320Z"
       },
-      "summaryJa": "Googleの専門家が、AIにおけるフルスタックアプローチの意味と、その重要性について解説しています。このアプローチが長年の基盤である理由も説明されています。"
+      "summaryJa": "Googleの専門家が、フルスタックアプローチの意味と、その重要性について詳しく解説しています。AI開発の基盤として注目されています。"
     },
     {
       "id": "fffbc020b313dcb2",
@@ -372,7 +372,7 @@
       "accent": "infrastructure",
       "homepage": "https://developer.nvidia.com/blog/category/generative-ai/",
       "title": "How to Govern Autonomous Agents in Enterprise AI Factories",
-      "titleJa": "自律エージェントを企業AI工場で管理する方法",
+      "titleJa": "企業AI工場における自律エージェントのガバナンス方法",
       "summary": "NVIDIA TechnicalがAIエージェント関連の技術・安全性・評価に関する情報を公開。実装設計、ツール利用、リスク管理の観点で追うべき内容です。",
       "url": "https://developer.nvidia.com/blog/how-to-govern-autonomous-agents-in-enterprise-ai-factories",
       "source": "NVIDIA Technical Blog AI",
@@ -385,9 +385,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "atom",
-        "checkedAt": "2026-07-02T00:57:00.449Z"
+        "checkedAt": "2026-07-02T01:12:05.104Z"
       },
-      "summaryJa": "NVIDIA Technicalが自律エージェントに関する新しい管理手法とその取り組みを発表し、実装やリスクに関する情報を整備しました。"
+      "summaryJa": "NVIDIA Technicalが、自律エージェントのガバナンスに関する重要な技術情報を公開。リスク管理や実装設計の視点から分析しています。"
     },
     {
       "id": "d94530e3c9b787d7",
@@ -396,7 +396,7 @@
       "accent": "infrastructure",
       "homepage": "https://developer.nvidia.com/blog/category/generative-ai/",
       "title": "Deploy a Production-Ready NVIDIA AI-Q Blueprint on Oracle Cloud Infrastructure",
-      "titleJa": "Oracle CloudでNVIDIA AI-Q Blueprintを展開",
+      "titleJa": "Oracle Cloud InfrastructureでのNVIDIA AI-Q Blueprintの導入",
       "summary": "AI agents have changed a lot in the last two years. The first could only answer one question at a time. Then came multi-turn chat, where the model cou...",
       "url": "https://developer.nvidia.com/blog/deploy-a-production-ready-nvidia-ai-q-blueprint-on-oracle-cloud-infrastructure",
       "source": "NVIDIA Technical Blog AI",
@@ -409,9 +409,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "atom",
-        "checkedAt": "2026-07-02T00:57:00.450Z"
+        "checkedAt": "2026-07-02T01:12:05.105Z"
       },
-      "summaryJa": "AIエージェントの進化を追い、検証プロセスや実際の運用に関する重要な情報が共有されています。"
+      "summaryJa": "NVIDIAが、最新のAIエージェント技術の進化に関する情報を発信。従来のモデルからの変化とその応用可能性が議論されています。"
     },
     {
       "id": "23857691f0c32095",
@@ -420,7 +420,7 @@
       "accent": "infrastructure",
       "homepage": "https://developer.nvidia.com/blog/category/generative-ai/",
       "title": "Creating the NVIDIA Nemotron 3 Ultra NVFP4 Checkpoint with NVIDIA Model Optimizer",
-      "titleJa": "NVIDIAが新しいモデル最適化ツールを発表",
+      "titleJa": "NVIDIA Model OptimizerでNemotron 3 Ultra NVFP4チェックポイントを作成",
       "summary": "NVIDIA TechnicalがAIモデルまたは開発者向け機能に関する更新を発表。利用可能モデル、開発体験、プロダクト選定への影響を確認できます。",
       "url": "https://developer.nvidia.com/blog/creating-the-nvidia-nemotron-3-ultra-nvfp4-checkpoint-with-nvidia-model-optimizer",
       "source": "NVIDIA Technical Blog AI",
@@ -433,9 +433,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "atom",
-        "checkedAt": "2026-07-02T00:57:00.450Z"
+        "checkedAt": "2026-07-02T01:12:05.105Z"
       },
-      "summaryJa": "NVIDIAがModel Optimizerを使ってNemotron 3 Ultra NVFP4チェックポイントの作成を発表。これにより、AIモデルの開発プロセスが革新されることが期待されます。"
+      "summaryJa": "NVIDIAが新しいAIモデルや開発者向け機能に関するアップデートを発表し、最適化ツールやプロダクト選定への影響が期待されます。"
     },
     {
       "id": "f767a822fc05ccd3",
@@ -444,7 +444,7 @@
       "accent": "infrastructure",
       "homepage": "https://blog.google/technology/ai/",
       "title": "Introducing computer use in Gemini 3.5 Flash",
-      "titleJa": "Gemini 3.5 Flashにおけるコンピュータ利用の紹介",
+      "titleJa": "Gemini 3.5 Flashでのコンピュータ使用を導入",
       "summary": "Google DeepMindがAIモデルまたは開発者向け機能に関する更新を発表。利用可能モデル、開発体験、プロダクト選定への影響を確認できます。",
       "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash",
       "source": "Google DeepMind Blog",
@@ -457,9 +457,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:56:53.223Z"
+        "checkedAt": "2026-07-02T01:11:57.755Z"
       },
-      "summaryJa": "Google DeepMindがGemini 3.5 Flashの新機能を発表。これにより、AIモデルの開発体験が大きく向上することが見込まれています。"
+      "summaryJa": "Google DeepMindが新しいAIモデルの更新を行い、開発体験やプロダクト選定に影響を与える可能性があります。"
     },
     {
       "id": "4e694b48693490d7",
@@ -468,7 +468,7 @@
       "accent": "research",
       "homepage": "https://machinelearning.apple.com/",
       "title": "Metric-Dependent Annotation Saturation for Learning from Label Distributions",
-      "titleJa": "ラベル分布学習のための注釈 saturation の研究",
+      "titleJa": "ラベル分布から学ぶためのメトリック依存アノテーション飽和",
       "summary": "When annotators disagree on a label, the disagreement itself carries signal—and the number of annotators needed to capture it depends on the evaluatio...",
       "url": "https://machinelearning.apple.com/research/metric-dependent-annotation-saturation",
       "source": "Apple Machine Learning Research",
@@ -481,9 +481,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:57:00.887Z"
+        "checkedAt": "2026-07-02T01:12:05.316Z"
       },
-      "summaryJa": "研究者たちは、アノテーター間の意見の相違が持つ信号の重要性を検証。評価基準によって必要なアノテーター数が変わることが示されています。"
+      "summaryJa": "アノテーター間で意見の不一致があると、その信号が重要になり、評価のために必要なアノテーターの数は評価指標に依存します。"
     },
     {
       "id": "95be2cca50cb09f5",
@@ -492,7 +492,7 @@
       "accent": "research",
       "homepage": "https://machinelearning.apple.com/",
       "title": "Nine Judges, Two Effective Votes: Correlated Errors Undermine LLM Evaluation Panels",
-      "titleJa": "LLM評価パネルにおける相関エラーの影響",
+      "titleJa": "関連エラーによるLLM評価パネルの信頼性低下",
       "summary": "LLM-as-a-judge panels aggregate votes from multiple models, with the expectation that diverse models yield more reliable evaluations. We develop a fra...",
       "url": "https://machinelearning.apple.com/research/correlated-llm-evaluation-panels",
       "source": "Apple Machine Learning Research",
@@ -505,9 +505,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:57:00.887Z"
+        "checkedAt": "2026-07-02T01:12:05.316Z"
       },
-      "summaryJa": "複数モデルからの投票集計において、相関エラーが評価結果の信頼性を損なうことを示す研究が進行中です。この問題の解決策が求められています。"
+      "summaryJa": "複数のモデルからの投票を集約するLLM評価パネルが、意図した多様性からの信頼性低下を引き起こす可能性があります。"
     },
     {
       "id": "672705bbbaa68d52",
@@ -516,7 +516,7 @@
       "accent": "infrastructure",
       "homepage": "https://blog.google/technology/ai/",
       "title": "Unlocking UK house-building with AI-accelerated planning",
-      "titleJa": "AIによるUKの住宅建設計画の加速",
+      "titleJa": "AI加速プランニングでUKの住宅建設を解放",
       "summary": "Google DeepMindが企業・産業利用に関するAI活用情報を公開。業務変革、導入ロードマップ、事業インパクトを見る材料になります。",
       "url": "https://deepmind.google/blog/unlocking-uk-house-building-with-ai-accelerated-planning",
       "source": "Google DeepMind Blog",
@@ -529,9 +529,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:56:53.223Z"
+        "checkedAt": "2026-07-02T01:11:57.755Z"
       },
-      "summaryJa": "Google DeepMindがAIを駆使した住宅建設計画の情報を発表。業界における効率を高め、新しいビジネス機会の創出が期待されています。"
+      "summaryJa": "Google DeepMindがAI技術の企業利用に関する情報を公開し、業務変革や導入の影響を探ります。"
     },
     {
       "id": "a7529d764ed439dc",
@@ -540,7 +540,7 @@
       "accent": "infrastructure",
       "homepage": "https://blog.google/technology/ai/",
       "title": "Securing the future of AI agents",
-      "titleJa": "AIエージェントの未来を守るための取り組み",
+      "titleJa": "AIエージェントの未来を守る技術と安全性",
       "summary": "Google DeepMindがAIエージェント関連の技術・安全性・評価に関する情報を公開。実装設計、ツール利用、リスク管理の観点で追うべき内容です。",
       "url": "https://deepmind.google/blog/securing-the-future-of-ai-agents",
       "source": "Google DeepMind Blog",
@@ -553,9 +553,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:56:53.223Z"
+        "checkedAt": "2026-07-02T01:11:57.755Z"
       },
-      "summaryJa": "Google DeepMindがAIエージェントの技術的、安全性、評価に関連する情報を公開。今後のアプローチやリスク管理の重要性が強調されています。"
+      "summaryJa": "Google DeepMindがAIエージェントに関する技術と評価の最新情報を発表し、リスク管理の重要性を強調しています。"
     },
     {
       "id": "409446136b416a71",
@@ -564,7 +564,7 @@
       "accent": "adoption",
       "homepage": "https://blogs.microsoft.com/ai/",
       "title": "AI, jobs, and the next generation",
-      "titleJa": "AIがもたらす雇用の変化と次世代の展望",
+      "titleJa": "AIが仕事と次世代に与える影響",
       "summary": "Microsoftが企業・産業利用に関するAI活用情報を公開。業務変革、導入ロードマップ、事業インパクトを見る材料になります。",
       "url": "https://blogs.microsoft.com/on-the-issues/2026/06/10/ai-jobs-and-the-next-generation",
       "source": "Microsoft AI Blog",
@@ -577,9 +577,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "html_meta",
-        "checkedAt": "2026-07-02T00:56:54.045Z"
+        "checkedAt": "2026-07-02T01:11:58.307Z"
       },
-      "summaryJa": "MicrosoftがAIの企業活用に関する報告を発表。業務の変革や導入ロードマップに焦点を当て、業界への影響を探ります。"
+      "summaryJa": "MicrosoftがAIの企業利用に関する情報を提供し、業務変革に向けた導入の影響に注目しています。"
     },
     {
       "id": "be8b4314b6f0acd3",
@@ -588,7 +588,7 @@
       "accent": "research",
       "homepage": "https://machinelearning.apple.com/",
       "title": "Introducing the Third Generation of Apple’s Foundation Models",
-      "titleJa": "Appleが新世代の基盤モデルを発表",
+      "titleJa": "Appleのファウンデーションモデル第3世代を発表",
       "summary": "Apple Machine LearningがAIモデルまたは開発者向け機能に関する更新を発表。利用可能モデル、開発体験、プロダクト選定への影響を確認できます。",
       "url": "https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models",
       "source": "Apple Machine Learning Research",
@@ -601,9 +601,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:57:00.887Z"
+        "checkedAt": "2026-07-02T01:12:05.317Z"
       },
-      "summaryJa": "Apple Machine Learningが新しいAIモデルの発表を行い、開発者向けの機能やモデル選択に関する情報も含まれています。"
+      "summaryJa": "Apple Machine Learningが新しいAIモデルの更新を発表し、開発体験やプロダクト選定に影響を及ぼす可能性があります。"
     },
     {
       "id": "52479df039aa5453",
@@ -612,7 +612,7 @@
       "accent": "adoption",
       "homepage": "https://blogs.microsoft.com/ai/",
       "title": "AI alone won't change your business. The system running it will. - The Official Microsoft Blog",
-      "titleJa": "ビジネス変革にはAIだけでなくシステムが必要",
+      "titleJa": "AIだけではビジネスは変わらない、そのシステムが必要だ",
       "summary": "Microsoftが企業・産業利用に関するAI活用情報を公開。業務変革、導入ロードマップ、事業インパクトを見る材料になります。",
       "url": "https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will",
       "source": "Microsoft AI Blog",
@@ -625,9 +625,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "html_meta",
-        "checkedAt": "2026-07-02T00:56:53.688Z"
+        "checkedAt": "2026-07-02T01:11:58.163Z"
       },
-      "summaryJa": "Microsoftが企業の成果を上げるためには、AIだけでなく、それを支えるシステムも重要であると強調しています。"
+      "summaryJa": "MicrosoftがAIの企業利用に関する情報を提供し、導入の影響やビジネス変革のあり方について考察しています。"
     },
     {
       "id": "73bd16619fc1368e",
@@ -636,7 +636,7 @@
       "accent": "research",
       "homepage": "https://machinelearning.apple.com/",
       "title": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026",
-      "titleJa": "2026年第28回CVPR学会についての情報",
+      "titleJa": "2026年CVPR会議の詳細を発表",
       "summary": "Apple Machine LearningがAI研究・学会発表に関する情報を公開。研究テーマ、モデル評価、技術トレンドを把握する材料になります。",
       "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
       "source": "Apple Machine Learning Research",
@@ -649,9 +649,9 @@
       "dateVerification": {
         "status": "verified",
         "method": "rss",
-        "checkedAt": "2026-07-02T00:57:00.888Z"
+        "checkedAt": "2026-07-02T01:12:05.317Z"
       },
-      "summaryJa": "Apple Machine LearningがCVPR 2026に関する詳細を発信。研究テーマや技術トレンドについて把握するための重要な機会です。"
+      "summaryJa": "Apple Machine LearningがAI研究や学会発表に関する情報を提供し、重要な研究テーマや技術トレンドを把握するための材料を示しています。"
     }
   ],
   "errors": [],
@@ -666,8 +666,8 @@
       "url": "https://openai.com/news/rss.xml",
       "status": "ok",
       "itemsFound": 4,
-      "lastCheckedAt": "2026-07-02T00:56:35.642Z",
-      "lastSuccessAt": "2026-07-02T00:56:35.642Z",
+      "lastCheckedAt": "2026-07-02T01:11:29.441Z",
+      "lastSuccessAt": "2026-07-02T01:11:29.441Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -681,8 +681,8 @@
       "url": "https://openai.com/blog/rss.xml",
       "status": "ok",
       "itemsFound": 4,
-      "lastCheckedAt": "2026-07-02T00:56:36.234Z",
-      "lastSuccessAt": "2026-07-02T00:56:36.234Z",
+      "lastCheckedAt": "2026-07-02T01:11:29.717Z",
+      "lastSuccessAt": "2026-07-02T01:11:29.717Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -696,8 +696,8 @@
       "url": "https://www.anthropic.com/news",
       "status": "no_items",
       "itemsFound": 0,
-      "lastCheckedAt": "2026-07-02T00:56:43.039Z",
-      "lastSuccessAt": "2026-07-02T00:56:43.039Z",
+      "lastCheckedAt": "2026-07-02T01:11:42.747Z",
+      "lastSuccessAt": "2026-07-02T01:11:42.747Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -711,8 +711,8 @@
       "url": "https://www.anthropic.com/research",
       "status": "no_items",
       "itemsFound": 0,
-      "lastCheckedAt": "2026-07-02T00:56:52.632Z",
-      "lastSuccessAt": "2026-07-02T00:56:52.632Z",
+      "lastCheckedAt": "2026-07-02T01:11:56.987Z",
+      "lastSuccessAt": "2026-07-02T01:11:56.987Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -726,8 +726,8 @@
       "url": "https://blog.google/technology/ai/rss/",
       "status": "ok",
       "itemsFound": 4,
-      "lastCheckedAt": "2026-07-02T00:56:52.912Z",
-      "lastSuccessAt": "2026-07-02T00:56:52.912Z",
+      "lastCheckedAt": "2026-07-02T01:11:57.320Z",
+      "lastSuccessAt": "2026-07-02T01:11:57.320Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -741,8 +741,8 @@
       "url": "https://deepmind.google/blog/rss.xml",
       "status": "ok",
       "itemsFound": 4,
-      "lastCheckedAt": "2026-07-02T00:56:53.224Z",
-      "lastSuccessAt": "2026-07-02T00:56:53.224Z",
+      "lastCheckedAt": "2026-07-02T01:11:57.755Z",
+      "lastSuccessAt": "2026-07-02T01:11:57.755Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -756,8 +756,8 @@
       "url": "https://blogs.microsoft.com/ai/",
       "status": "ok",
       "itemsFound": 2,
-      "lastCheckedAt": "2026-07-02T00:56:54.045Z",
-      "lastSuccessAt": "2026-07-02T00:56:54.045Z",
+      "lastCheckedAt": "2026-07-02T01:11:58.307Z",
+      "lastSuccessAt": "2026-07-02T01:11:58.307Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -771,8 +771,8 @@
       "url": "https://ai.meta.com/blog/",
       "status": "no_items",
       "itemsFound": 0,
-      "lastCheckedAt": "2026-07-02T00:56:59.658Z",
-      "lastSuccessAt": "2026-07-02T00:56:59.658Z",
+      "lastCheckedAt": "2026-07-02T01:12:04.757Z",
+      "lastSuccessAt": "2026-07-02T01:12:04.757Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -786,8 +786,8 @@
       "url": "https://developer.nvidia.com/blog/category/generative-ai/feed/",
       "status": "ok",
       "itemsFound": 4,
-      "lastCheckedAt": "2026-07-02T00:57:00.450Z",
-      "lastSuccessAt": "2026-07-02T00:57:00.450Z",
+      "lastCheckedAt": "2026-07-02T01:12:05.105Z",
+      "lastSuccessAt": "2026-07-02T01:12:05.105Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -801,8 +801,8 @@
       "url": "https://huggingface.co/blog/feed.xml",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-07-02T00:57:00.576Z",
-      "lastSuccessAt": "2026-07-02T00:57:00.576Z",
+      "lastCheckedAt": "2026-07-02T01:12:05.246Z",
+      "lastSuccessAt": "2026-07-02T01:12:05.246Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -816,8 +816,8 @@
       "url": "https://machinelearning.apple.com/rss.xml",
       "status": "ok",
       "itemsFound": 4,
-      "lastCheckedAt": "2026-07-02T00:57:00.888Z",
-      "lastSuccessAt": "2026-07-02T00:57:00.888Z",
+      "lastCheckedAt": "2026-07-02T01:12:05.317Z",
+      "lastSuccessAt": "2026-07-02T01:12:05.317Z",
       "lastFailureAt": null,
       "lastError": null
     }
