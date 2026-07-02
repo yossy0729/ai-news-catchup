@@ -21,6 +21,8 @@ on:
       - "index.html"
       - "app.js"
       - "styles.css"
+      - "archive.html"
+      - "archive.js"
       - ".github/workflows/daily-update.yml"
 
 # 公開の同時実行は1つに制限（実行中の公開を壊さない）。
@@ -95,7 +97,7 @@ jobs:
       - name: Assemble static site
         run: |
           mkdir -p _site
-          cp index.html app.js styles.css .nojekyll _site/
+          cp index.html app.js styles.css archive.html archive.js .nojekyll _site/
           cp -r data _site/data
 
       - name: Setup Pages

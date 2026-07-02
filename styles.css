@@ -2894,6 +2894,171 @@ body {
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 42%, #101815);
 }
 
+/* ==== 過去記事アーカイブページ（archive.html。日次4タブとは別の「調べる時の動線」） ====
+   index.html の .app-shell は固定コマンドバー前提で padding-top 158px を持つため流用せず、
+   アーカイブ専用のシンプルな器を使う。カード行は他タブと同じリスト行の視覚言語に揃える。 */
+.archive-shell {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.archive-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.archive-top h1 {
+  margin: 2px 0 4px;
+  font-size: 1.4rem;
+}
+
+.archive-note {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.archive-back {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.archive-back:hover {
+  text-decoration: underline;
+}
+
+.archive-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.archive-themes {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.theme-chip {
+  padding: 5px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.theme-chip:hover {
+  border-color: var(--accent);
+}
+
+.theme-chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.archive-search {
+  min-width: 260px;
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.archive-status {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.archive-month {
+  margin-top: 20px;
+}
+
+.archive-month h2 {
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent-border);
+  font-size: 1rem;
+}
+
+.archive-row {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 9px 4px;
+  border-bottom: 1px solid #e2e8e4;
+}
+
+.archive-date {
+  min-width: 44px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.archive-body {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.archive-body a {
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.archive-body a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.archive-meta {
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.archive-empty {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* セクション見出し右側のリンク＋チップの並び */
+.section-title-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* カテゴリ別タブからアーカイブへの導線リンク */
+.archive-link {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.archive-link:hover {
+  text-decoration: underline;
+}
+
 .news-list {
   margin-top: 0;
 }

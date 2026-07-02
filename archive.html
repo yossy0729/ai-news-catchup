@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>過去記事アーカイブ | AI News Catchup</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="archive-page">
+    <div class="archive-shell">
+      <header class="archive-top">
+        <div>
+          <p class="eyebrow">AI Daily Intelligence</p>
+          <h1>過去記事アーカイブ</h1>
+          <p class="archive-note">日次表示から間引かれた記事もここに残ります（蓄積開始: 2026-07-02）。</p>
+        </div>
+        <a class="archive-back" href="index.html">&larr; 日次ダッシュボードへ戻る</a>
+      </header>
+
+      <div class="archive-controls">
+        <div id="themeChips" class="archive-themes" role="tablist" aria-label="テーマ絞り込み"></div>
+        <input id="archiveSearch" type="search" class="archive-search" placeholder="キーワードで絞り込み（例: エージェント 規制）" aria-label="キーワード検索">
+      </div>
+      <p id="archiveStatus" class="archive-status">読み込み中…</p>
+
+      <main id="archiveList" aria-live="polite"></main>
+    </div>
+    <script src="archive.js"></script>
+  </body>
+</html>

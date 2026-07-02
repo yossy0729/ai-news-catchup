@@ -1485,6 +1485,94 @@ function renderSota() {
   sotaTable.replaceChildren(table);
 }
 
+// SOTA変動ログ（data/history/YYYY-MM.json の changes[]）を指標タブ下部に表示する。
+// 本体データの読み込みとは分離した後付け読み込みとし、履歴が無い環境でもページ全体には影響させない。
+const HISTORY_START_MONTH = "2026-07";
+
+function historyMonths(count = 3) {
+  const months = [];
+  const now = new Date();
+  let year = now.getFullYear();
+  let month = now.getMonth() + 1;
+  for (let i = 0; i < count; i += 1) {
+    const key = `${year}-${String(month).padStart(2, "0")}`;
+    if (key < HISTORY_START_MONTH) break;
+    months.push(key);
+    month -= 1;
+    if (month === 0) {
+      month = 12;
+      year -= 1;
+    }
+  }
+  return months;
+}
+
+const SOTA_CHANGE_KIND_LABELS = {
+  sota_changed: "首位・スコア更新",
+  benchmark_changed: "代表ベンチ変更",
+  new_field: "新規計測"
+};
+
+async function renderSotaChanges() {
+  const list = document.querySelector("#sotaChangesList");
+  const chip = document.querySelector("#sotaChangesFreshness");
+  if (!list) return;
+
+  const files = await Promise.all(
+    historyMonths().map((month) => loadJson(`data/history/${month}.json`, null))
+  );
+  const changes = files.filter(Boolean).flatMap((file) => file.changes || []);
+  changes.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+
+  if (chip) {
+    chip.textContent = changes.length ? `変動 ${changes.length}件` : "記録中";
+    chip.classList.toggle("good", changes.length > 0);
+    chip.classList.toggle("stale", changes.length === 0);
+  }
+
+  if (!changes.length) {
+    const empty = document.createElement("div");
+    empty.className = "empty-note";
+    empty.textContent = "まだ変動はありません。首位交代やスコア更新が起きると、ここに日付つきで並びます。";
+    list.replaceChildren(empty);
+    return;
+  }
+
+  const table = document.createElement("table");
+  table.className = "pricing-table";
+  const thead = document.createElement("thead");
+  const headRow = document.createElement("tr");
+  ["日付", "研究分野", "ベンチマーク", "変化", "種別"].forEach((label) => {
+    const th = document.createElement("th");
+    th.textContent = label;
+    headRow.append(th);
+  });
+  thead.append(headRow);
+
+  const tbody = document.createElement("tbody");
+  changes.slice(0, 20).forEach((change) => {
+    const row = document.createElement("tr");
+    const cells = [
+      change.date,
+      change.task,
+      change.benchmark || "—",
+      change.prev
+        ? `${change.prev.topModel}（${change.prev.score ?? "—"}）→ ${change.topModel}（${change.score ?? "—"}）`
+        : `${change.topModel}（${change.score ?? "—"}）`,
+      SOTA_CHANGE_KIND_LABELS[change.kind] || change.kind
+    ];
+    cells.forEach((text) => {
+      const td = document.createElement("td");
+      td.textContent = String(text);
+      row.append(td);
+    });
+    tbody.append(row);
+  });
+
+  table.append(thead, tbody);
+  list.replaceChildren(table);
+}
+
 // 指標タブのティッカー: 実値のあるSOTAのハイライトを流す。
 // （価格改定やSOTA順位交代の検知は将来機能。今は現値のハイライト表示。）
 function renderMetricsTicker() {
@@ -1686,6 +1774,7 @@ function renderApp(newsData, mediaData, officialData, signalData, pricing, sota,
   renderPriority();
   renderPricing();
   renderSota();
+  renderSotaChanges().catch((error) => console.error("SOTA変動ログの読み込みに失敗", error));
   renderMetricsTicker();
   renderCategoryTicker();
   setActiveTab(document.querySelector(".tab.active")?.dataset.tab || "all");

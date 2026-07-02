@@ -122,7 +122,10 @@
               <p class="section-kicker">primary sources</p>
               <h2>カテゴリ別ニュース（一次情報）</h2>
             </div>
-            <span class="status-chip good">一次情報</span>
+            <div class="section-title-actions">
+              <a class="archive-link" href="archive.html">過去記事を探す &rarr;</a>
+              <span class="status-chip good">一次情報</span>
+            </div>
           </div>
           <p class="pricing-note">公式発表・論文・導入事例などの一次情報をカテゴリ別に整理します。速報と違い毎日は更新されないため、数日〜数週間前の項目が並ぶことがあります（一次情報の性質によるもので、古い＝未更新ではありません）。</p>
           <div class="tabs" role="tablist" aria-label="研究分野">
@@ -207,6 +210,18 @@
           </div>
           <div id="sotaTabs" class="sota-tabs" role="tablist" aria-label="SOTAドメイン"></div>
           <div id="sotaTable" class="pricing-table-wrap" aria-live="polite"></div>
+        </section>
+
+        <section class="sota-board" aria-label="SOTA変動ログ">
+          <div class="section-title-row">
+            <div>
+              <p class="section-kicker">change log</p>
+              <h2>SOTA変動ログ</h2>
+            </div>
+            <span id="sotaChangesFreshness" class="status-chip stale">記録中</span>
+          </div>
+          <p class="pricing-note">全分野の首位モデル・スコア・代表ベンチの変化を毎日記録しています（記録開始: 2026-07-02）。</p>
+          <div id="sotaChangesList" class="pricing-table-wrap" aria-live="polite"></div>
         </section>
         </div>
       </main>
