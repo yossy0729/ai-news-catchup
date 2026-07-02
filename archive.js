@@ -13,7 +13,9 @@ const THEMES = [
   { id: "adoption", label: "産業導入・業務AI", cats: ["jp-cases", "global-cases", "business", "industry", "agents", "fde"] },
   { id: "governance", label: "規制・ガバナンス", cats: ["jp-governance", "global-governance", "regulation"] },
   { id: "security", label: "セキュリティ", cats: ["security"] },
-  { id: "infrastructure", label: "インフラ・基盤", cats: ["infrastructure"] }
+  { id: "infrastructure", label: "インフラ・基盤", cats: ["infrastructure"] },
+  // 公式動向はベンダー軸（カテゴリ軸に属さない）のため、originで束ねる専用テーマにする。
+  { id: "official", label: "公式動向", origin: "official" }
 ];
 
 const themeChips = document.querySelector("#themeChips");
@@ -71,11 +73,19 @@ function itemMatchesQuery(item, query) {
 function itemMatchesTheme(item, themeId) {
   if (themeId === "all") return true;
   const theme = THEMES.find((t) => t.id === themeId);
-  return Boolean(theme?.cats?.includes(item.categoryId));
+  if (!theme) return false;
+  if (theme.origin) return item.origin === theme.origin;
+  return Boolean(theme.cats?.includes(item.categoryId));
 }
 
-function itemMonth(item) {
-  return String(item.date || item.archivedDate || "").slice(0, 7);
+function itemDate(item) {
+  return String(item.date || item.archivedDate || "").slice(0, 10);
+}
+
+function formatDateHeading(date) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
+  if (!match) return "日付不明";
+  return `${match[1]}年${Number(match[2])}月${Number(match[3])}日`;
 }
 
 function renderThemeChips() {
@@ -116,7 +126,8 @@ function renderRow(item) {
 
   const meta = document.createElement("span");
   meta.className = "archive-meta";
-  const origin = item.origin === "primary" ? "一次情報" : "メディア";
+  const originLabels = { primary: "一次情報", media: "メディア", official: "公式" };
+  const origin = originLabels[item.origin] || "";
   meta.textContent = [item.source, item.region, origin, item.category].filter(Boolean).join(" ・ ");
 
   body.append(link, meta);
@@ -142,19 +153,20 @@ function render() {
     return;
   }
 
-  const byMonth = new Map();
+  // 日付単位でグルーピング（一覧として読みやすい塊にする）。新しい日付が上。
+  const byDate = new Map();
   for (const item of filtered) {
-    const month = itemMonth(item) || "日付不明";
-    if (!byMonth.has(month)) byMonth.set(month, []);
-    byMonth.get(month).push(item);
+    const date = itemDate(item) || "日付不明";
+    if (!byDate.has(date)) byDate.set(date, []);
+    byDate.get(date).push(item);
   }
 
   listEl.replaceChildren(
-    ...Array.from(byMonth.entries()).map(([month, items]) => {
+    ...Array.from(byDate.entries()).map(([date, items]) => {
       const section = document.createElement("section");
       section.className = "archive-month";
       const heading = document.createElement("h2");
-      heading.textContent = month === "日付不明" ? month : `${month.replace("-", "年")}月（${items.length}件）`;
+      heading.textContent = `${formatDateHeading(date)}（${items.length}件）`;
       const rows = document.createElement("div");
       items.forEach((item) => rows.append(renderRow(item)));
       section.append(heading, rows);

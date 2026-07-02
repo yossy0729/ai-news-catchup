@@ -2,8 +2,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 // 記事の月次アーカイブ（テーマ別アーカイブの土台）。
-// news.json は30日/カテゴリ12件で間引かれ、media-news.json は72時間で消えるため、
-// 表示中のアイテムを毎日 data/archive/YYYY-MM.json へ退避して「捨てない」ようにする。
+// news.json は30日/カテゴリ12件、media-news.json は72時間、official-news.json は36件で
+// 回転して消えるため、表示中のアイテムを毎日 data/archive/YYYY-MM.json へ退避して「捨てない」ようにする。
 // - URLで重複排除。アイテム寿命(最大30日)は月をまたいでも2ファイルまでなので、前月ファイルも確認する。
 // - 閲覧ページは後続フェーズ。このスクリプトはデータを失わないことだけを担保する。
 
@@ -60,6 +60,25 @@ function collectPrimaryItems(news) {
   return items;
 }
 
+function collectOfficialItems(official) {
+  return (official.items || [])
+    .filter((item) => item.url)
+    .map((item) => ({
+      origin: "official",
+      url: item.url,
+      title: item.title || "",
+      titleJa: item.titleJa || "",
+      summary: item.summaryJa || item.summary || "",
+      source: item.source || "",
+      type: item.type || "公式",
+      date: item.date || "",
+      region: "",
+      categoryId: `official:${item.vendorId || ""}`,
+      category: item.vendorName || "",
+      importanceLabel: ""
+    }));
+}
+
 function collectMediaItems(media) {
   return (media.items || [])
     .filter((item) => item.url)
@@ -82,6 +101,7 @@ function collectMediaItems(media) {
 function main() {
   const news = readJson(path.join(root, "data", "news.json"), { categories: [] });
   const media = readJson(path.join(root, "data", "media-news.json"), { items: [] });
+  const official = readJson(path.join(root, "data", "official-news.json"), { items: [] });
 
   const today = todayInTokyo();
   const month = today.slice(0, 7);
@@ -95,7 +115,7 @@ function main() {
   ]);
 
   let added = 0;
-  for (const item of [...collectPrimaryItems(news), ...collectMediaItems(media)]) {
+  for (const item of [...collectPrimaryItems(news), ...collectMediaItems(media), ...collectOfficialItems(official)]) {
     if (knownUrls.has(item.url)) continue;
     knownUrls.add(item.url);
     monthly.items.push({ ...item, archivedDate: today });
