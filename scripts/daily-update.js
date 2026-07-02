@@ -388,12 +388,32 @@ function main() {
     runStep("summarize-news", "scripts/summarize-news.js", summarizeNewsArgs);
   }
 
+  // 表示データ確定後の保全ステップ。記事が間引かれる前に月次アーカイブへ退避する。
+  // 新機能のため分離実行とし、失敗しても日次更新全体は止めない。
+  try {
+    runStep("archive-news", "scripts/archive-news.js", dryRun ? [] : ["--write"]);
+  } catch (error) {
+    const skip = `archive-news skipped: ${error.message}`;
+    console.error(skip);
+    appendLog(skip);
+  }
+
   // SOTA収集は外部API(paperswithcode.co)依存のため、失敗してもニュース更新は止めない。
   // 1位交代時のみ前回値へ退避するので毎日実行で履歴が自然に蓄積する。
   try {
     runStep("collect-sota", "scripts/collect-sota.js", dryRun ? [] : ["--write"]);
   } catch (error) {
     const skip = `collect-sota skipped: ${error.message}`;
+    console.error(skip);
+    appendLog(skip);
+  }
+
+  // 指標履歴のスナップショット（SOTA収集後の最新値を対象にする）。
+  // 出典側に履歴が残らないソース（LMArena系・Open ASR・価格）だけを日次退避する。分離実行。
+  try {
+    runStep("snapshot-history", "scripts/snapshot-history.js", dryRun ? [] : ["--write"]);
+  } catch (error) {
+    const skip = `snapshot-history skipped: ${error.message}`;
     console.error(skip);
     appendLog(skip);
   }
