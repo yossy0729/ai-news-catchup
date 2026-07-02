@@ -2853,3 +2853,49 @@ body {
   background: color-mix(in srgb, var(--accent) 7%, #ffffff);
   box-shadow: inset 4px 0 0 var(--accent);
 }
+
+/* カテゴリ別の列ヘッダーを速報タブ(.media-group-head)と同じ色帯様式に統一。
+   冗長だった「分野」ラベル（全列共通の固定文言）は廃止し、ヘッダーを1行にして
+   記事エリアを広く取る。帯を列の端まで届かせるため列自体のpaddingは0にする
+   （カード行はリスト行方式で自前の余白・境界線を持つため影響なし）。 */
+.category-column {
+  padding: 0;
+}
+
+.category-head {
+  align-items: center;
+  min-height: 32px;
+  padding: 5px 10px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 92%, #101815), color-mix(in srgb, var(--accent) 68%, #ffffff));
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 42%, #101815);
+}
+
+.category-head h3 {
+  color: #ffffff;
+  font-size: 0.96rem;
+  font-weight: 900;
+  line-height: 1.15;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
+}
+
+.category-head .status-chip {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--accent);
+  padding: 2px 7px;
+  font-size: 0.68rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* 折りたたみ列でも帯の形を保つ（旧ルールのpadding-bottom:0を打ち消す） */
+.category-column.is-collapsed .category-head {
+  padding: 5px 10px;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 42%, #101815);
+}
+
+.news-list {
+  margin-top: 0;
+}
+
+.category-column .empty-note {
+  padding: 0 10px 10px;
+}

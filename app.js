@@ -1003,7 +1003,6 @@ function renderCategories(nextTab = "all") {
       // 0件分野は折りたたみ表示（網羅性は残しつつ視覚的に小さく）。
       column.classList.toggle("is-collapsed", isEmpty);
 
-      fragment.querySelector(".category-group").textContent = "分野";
       fragment.querySelector("h3").textContent = fg.title;
       status.textContent = hasToday ? "本日更新" : fg.items.length ? "最近の動向" : "未取得";
       status.classList.add(hasToday ? "good" : "stale");
