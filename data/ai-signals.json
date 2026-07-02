@@ -4,74 +4,74 @@
   "sourcePolicy": "HF Papers、公式ベンダー発表、公式価格ページからAIシグナルを構造化。価格数値は取得できる公式ページのみ検出例として保存し、取得不能なページは公式リンク確認に留める。",
   "items": [
     {
-      "id": "5741f41b15525e29",
+      "id": "4e75e53cf5c7c66c",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
       "date": "2026-07-02",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #1: Orca: The World is in Your Mind",
+      "title": "HF Papers #1: TurboServe: Serving Streaming Video Generation Efficiently and Economically",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #1: Orca: The World is in Your Mind",
-      "url": "https://huggingface.co/papers/2606.30534",
+      "text": "HF Papers #1: TurboServe: Serving Streaming Video Generation Efficiently and Economically",
+      "url": "https://huggingface.co/papers/2606.19271",
       "priority": 95,
-      "titleJa": "HF Papers #1: Orca: あなたの心の中の世界"
+      "titleJa": "TurboServe: 効率的且つ経済的な動画生成の提供法に関する提案"
     },
     {
-      "id": "0db89053c0d629a7",
+      "id": "372e131854cdcec4",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
       "date": "2026-07-02",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #2: Dockerless: Environment-Free Program Verifier for Coding Agents",
+      "title": "HF Papers #2: Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #2: Dockerless: Environment-Free Program Verifier for Coding Agents",
-      "url": "https://huggingface.co/papers/2606.28436",
+      "text": "HF Papers #2: Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts",
+      "url": "https://huggingface.co/papers/2607.00666",
       "priority": 94,
-      "titleJa": "HF Papers #2: Dockerless: 環境不要のプログラム検証ツール"
+      "titleJa": "Domain Arithmetic: 環境変化におけるワンショットVLA適応手法の考察"
     },
     {
-      "id": "674f4f431b210aae",
+      "id": "60b2729fe5290274",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
       "date": "2026-07-02",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #3: DOPD: Dual On-policy Distillation",
+      "title": "HF Papers #3: CausalMix: Data Mixture as Causal Inference for Language Model Training",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #3: DOPD: Dual On-policy Distillation",
-      "url": "https://huggingface.co/papers/2606.30626",
+      "text": "HF Papers #3: CausalMix: Data Mixture as Causal Inference for Language Model Training",
+      "url": "https://huggingface.co/papers/2607.01104",
       "priority": 93,
-      "titleJa": "HF Papers #3: DOPD: デュアルオンポリシー蒸留"
+      "titleJa": "CausalMix: データ混合を用いた言語モデルトレーニングの因果推論"
     },
     {
-      "id": "d4a47f09807392a5",
+      "id": "ae6adb1ef6cb09b1",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
       "date": "2026-07-02",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #4: BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding",
+      "title": "HF Papers #4: BioInsight: Multi-Agent Orchestration for Interactive Biomedical Knowledge Discovery",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #4: BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding",
-      "url": "https://huggingface.co/papers/2606.31315",
+      "text": "HF Papers #4: BioInsight: Multi-Agent Orchestration for Interactive Biomedical Knowledge Discovery",
+      "url": "https://huggingface.co/papers/2606.20997",
       "priority": 92,
-      "titleJa": "HF Papers #4: BlockPilot: 拡散ベースの推測デコーディング用インスタンス適応型ポリシー学習"
+      "titleJa": "BioInsight: インタラクティブな生物医学的知識発見のためのマルチエージェント調整"
     },
     {
-      "id": "6dc2561b0a5614f5",
+      "id": "34bc04d501cb6f86",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
       "date": "2026-07-02",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #5: Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models",
+      "title": "HF Papers #5: Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #5: Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models",
-      "url": "https://huggingface.co/papers/2606.19297",
+      "text": "HF Papers #5: Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning",
+      "url": "https://huggingface.co/papers/2607.01191",
       "priority": 91,
-      "titleJa": "HF Papers #5: VLAは基本を理解しているか？視覚・言語・行動モデルの知識保持を測定"
+      "titleJa": "Perceive-to-Reason: 知覚と推論を分けた視覚的推論手法について"
     },
     {
       "id": "b2cc70b4995f1432",
@@ -85,7 +85,7 @@
       "text": "SOTA: ScarfBench: Benchmarking AI Agents for Enterprise Java Framework Migration / Hugging Face Blog",
       "url": "https://huggingface.co/blog/ibm-research/scarfbench",
       "priority": 88,
-      "titleJa": "HF Papers: ScarfBench: 企業Javaフレームワーク移行のためのAIエージェント評価"
+      "titleJa": "ScarfBench: エンタープライズJavaフレームワークの移行を評価するAIエージェントのベンチマーク"
     },
     {
       "id": "9d621116983a3f3b",
@@ -99,8 +99,8 @@
       "text": "Research: Introducing GeneBench-Pro / OpenAI News",
       "url": "https://openai.com/index/introducing-genebench-pro",
       "priority": 88,
-      "titleJa": "GeneBench-Proを発表、ゲノム研究におけるAI性能を評価",
-      "summaryJa": "GeneBench-Proは、ゲノム、生物学、科学研究におけるAI性能を複雑な実世界データセットを使って評価するための新しいベンチマークである。"
+      "titleJa": "GeneBench-Proの導入: ジェノム研究におけるAI性能評価の新基準",
+      "summaryJa": "新たに導入されたGeneBench-Proは、複雑な実世界データセットを活用して、ジェノムや生物学的研究におけるAIのパフォーマンスを評価するためのベンチマークです。"
     },
     {
       "id": "2c255983884091d3",
@@ -114,7 +114,7 @@
       "text": "Research: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 / Apple Machine Learning Research",
       "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
       "priority": 88,
-      "titleJa": "IEEE/CVF会議、CVPR 2026に関するお知らせ"
+      "titleJa": "2026年コンピュータービジョンとパターン認識に関するIEEE/CVF会議"
     },
     {
       "id": "7d95e1b1656fe4ae",
@@ -155,8 +155,8 @@
       "source": "Google Gemini Pricing",
       "title": "Google Gemini token pricing",
       "titleJa": "Google Geminiのトークン価格情報",
-      "summary": "Gemini APIの入力/出力トークン単価を確認する公式価格表です。 検出例: $1 / $9 / $0 / $1",
-      "summaryJa": "Gemini APIの入力/出力トークン単価を確認する公式価格表です。 検出例: $1 / $9 / $0 / $1",
+      "summary": "Gemini APIの入力/出力トークン単価を確認する公式価格表です。 検出例: $1.50 / $9.00 / $0.15 / $1.00 / 1,000,000 tokens",
+      "summaryJa": "Gemini APIの入力/出力トークン単価を確認する公式価格表です。 検出例: $1.50 / $9.00 / $0.15 / $1.00 / 1,000,000 tokens",
       "text": "Price: Google Gemini 入力/出力トークン価格表を確認",
       "url": "https://ai.google.dev/gemini-api/docs/pricing",
       "priority": 76
@@ -172,8 +172,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 5,
-      "lastCheckedAt": "2026-07-02T01:12:05.556Z",
-      "lastSuccessAt": "2026-07-02T01:12:05.556Z",
+      "lastCheckedAt": "2026-07-02T05:07:10.517Z",
+      "lastSuccessAt": "2026-07-02T05:07:10.517Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -185,8 +185,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-07-02T01:12:05.557Z",
-      "lastSuccessAt": "2026-07-02T01:12:05.557Z",
+      "lastCheckedAt": "2026-07-02T05:07:10.518Z",
+      "lastSuccessAt": "2026-07-02T05:07:10.518Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -198,8 +198,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-07-02T01:12:07.127Z",
-      "lastSuccessAt": "2026-07-02T01:12:07.127Z",
+      "lastCheckedAt": "2026-07-02T05:07:11.557Z",
+      "lastSuccessAt": "2026-07-02T05:07:11.557Z",
       "lastFailureAt": null,
       "lastError": null
     }
