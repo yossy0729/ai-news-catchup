@@ -324,16 +324,17 @@ function attachReadToggle(card, item) {
 function appendTitle(titleElement, item) {
   titleElement.replaceChildren();
 
-  // 日本語の独自見出しがあれば主役として先頭に置き、外国語原題だけ参照用に下へ。
+  // 日本語の独自見出しがあればそれだけを表示する（原文はホバーのツールチップで参照可能）。
+  // 翻訳が無い項目は原文をそのまま表示し、白紙カードを避ける。検索は原文タイトルも対象のまま。
   const hasJa = item.titleJa && normalizeText(item.titleJa) !== normalizeText(item.title);
   if (hasJa) {
     const translated = document.createElement("span");
     translated.className = "title-ja";
     translated.textContent = item.titleJa;
     titleElement.append(translated);
+    titleElement.title = item.title;
+    return;
   }
-
-  if (hasJa && /[ぁ-んァ-ヶ一-龠]/.test(item.title)) return;
 
   const original = document.createElement("span");
   original.className = "title-original";
