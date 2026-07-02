@@ -4,18 +4,60 @@
   "sourcePolicy": "HF Papers、公式ベンダー発表、公式価格ページからAIシグナルを構造化。価格数値は取得できる公式ページのみ検出例として保存し、取得不能なページは公式リンク確認に留める。",
   "items": [
     {
+      "id": "9c64f9804c005271",
+      "lane": "research",
+      "tag": "Paper",
+      "tone": "blue",
+      "date": "2026-07-02",
+      "source": "Hugging Face Papers",
+      "title": "HF Papers #1: PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception",
+      "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
+      "text": "HF Papers #1: PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception",
+      "url": "https://huggingface.co/papers/2606.28322",
+      "priority": 95,
+      "titleJa": "HF Papers #1: PerceptionRubrics - マルチモーダル評価のベンチマーク"
+    },
+    {
       "id": "4e75e53cf5c7c66c",
       "lane": "research",
       "tag": "Paper",
       "tone": "blue",
       "date": "2026-07-02",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #1: TurboServe: Serving Streaming Video Generation Efficiently and Economically",
+      "title": "HF Papers #2: TurboServe: Serving Streaming Video Generation Efficiently and Economically",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #1: TurboServe: Serving Streaming Video Generation Efficiently and Economically",
+      "text": "HF Papers #2: TurboServe: Serving Streaming Video Generation Efficiently and Economically",
       "url": "https://huggingface.co/papers/2606.19271",
-      "priority": 95,
-      "titleJa": "TurboServe: 効率的且つ経済的な動画生成の提供法に関する提案"
+      "priority": 94,
+      "titleJa": "HF Papers #2: TurboServe - 効率的な動画生成配信"
+    },
+    {
+      "id": "eef469f105b6778f",
+      "lane": "research",
+      "tag": "Paper",
+      "tone": "blue",
+      "date": "2026-07-02",
+      "source": "Hugging Face Papers",
+      "title": "HF Papers #3: MemSyco-Bench: Benchmarking Sycophancy in Agent Memory",
+      "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
+      "text": "HF Papers #3: MemSyco-Bench: Benchmarking Sycophancy in Agent Memory",
+      "url": "https://huggingface.co/papers/2607.01071",
+      "priority": 93,
+      "titleJa": "HF Papers #3: MemSyco-Bench - エージェントの記憶におけるシコファンシー評価"
+    },
+    {
+      "id": "b8e4e3162547da3b",
+      "lane": "research",
+      "tag": "Paper",
+      "tone": "blue",
+      "date": "2026-07-02",
+      "source": "Hugging Face Papers",
+      "title": "HF Papers #4: ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
+      "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
+      "text": "HF Papers #4: ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
+      "url": "https://huggingface.co/papers/2607.00466",
+      "priority": 92,
+      "titleJa": "HF Papers #4: ELDR - PD-分散MoEサービング向けの専門知識に基づくルーティング"
     },
     {
       "id": "372e131854cdcec4",
@@ -24,54 +66,12 @@
       "tone": "blue",
       "date": "2026-07-02",
       "source": "Hugging Face Papers",
-      "title": "HF Papers #2: Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts",
+      "title": "HF Papers #5: Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts",
       "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #2: Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts",
+      "text": "HF Papers #5: Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts",
       "url": "https://huggingface.co/papers/2607.00666",
-      "priority": 94,
-      "titleJa": "Domain Arithmetic: 環境変化におけるワンショットVLA適応手法の考察"
-    },
-    {
-      "id": "60b2729fe5290274",
-      "lane": "research",
-      "tag": "Paper",
-      "tone": "blue",
-      "date": "2026-07-02",
-      "source": "Hugging Face Papers",
-      "title": "HF Papers #3: CausalMix: Data Mixture as Causal Inference for Language Model Training",
-      "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #3: CausalMix: Data Mixture as Causal Inference for Language Model Training",
-      "url": "https://huggingface.co/papers/2607.01104",
-      "priority": 93,
-      "titleJa": "CausalMix: データ混合を用いた言語モデルトレーニングの因果推論"
-    },
-    {
-      "id": "ae6adb1ef6cb09b1",
-      "lane": "research",
-      "tag": "Paper",
-      "tone": "blue",
-      "date": "2026-07-02",
-      "source": "Hugging Face Papers",
-      "title": "HF Papers #4: BioInsight: Multi-Agent Orchestration for Interactive Biomedical Knowledge Discovery",
-      "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #4: BioInsight: Multi-Agent Orchestration for Interactive Biomedical Knowledge Discovery",
-      "url": "https://huggingface.co/papers/2606.20997",
-      "priority": 92,
-      "titleJa": "BioInsight: インタラクティブな生物医学的知識発見のためのマルチエージェント調整"
-    },
-    {
-      "id": "34bc04d501cb6f86",
-      "lane": "research",
-      "tag": "Paper",
-      "tone": "blue",
-      "date": "2026-07-02",
-      "source": "Hugging Face Papers",
-      "title": "HF Papers #5: Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning",
-      "summary": "Hugging Face Papersの日次上位論文です。研究テーマ、実装可能性、評価タスクの変化を確認する候補として扱います。",
-      "text": "HF Papers #5: Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning",
-      "url": "https://huggingface.co/papers/2607.01191",
       "priority": 91,
-      "titleJa": "Perceive-to-Reason: 知覚と推論を分けた視覚的推論手法について"
+      "titleJa": "HF Papers #5: Domain Arithmetic - 環境変化のもとでの一回のVLA適応"
     },
     {
       "id": "b2cc70b4995f1432",
@@ -85,7 +85,7 @@
       "text": "SOTA: ScarfBench: Benchmarking AI Agents for Enterprise Java Framework Migration / Hugging Face Blog",
       "url": "https://huggingface.co/blog/ibm-research/scarfbench",
       "priority": 88,
-      "titleJa": "ScarfBench: エンタープライズJavaフレームワークの移行を評価するAIエージェントのベンチマーク"
+      "titleJa": "HF Papers: ScarfBench - エンタープライズJavaフレームワーク移行の評価基準"
     },
     {
       "id": "9d621116983a3f3b",
@@ -99,8 +99,8 @@
       "text": "Research: Introducing GeneBench-Pro / OpenAI News",
       "url": "https://openai.com/index/introducing-genebench-pro",
       "priority": 88,
-      "titleJa": "GeneBench-Proの導入: ジェノム研究におけるAI性能評価の新基準",
-      "summaryJa": "新たに導入されたGeneBench-Proは、複雑な実世界データセットを活用して、ジェノムや生物学的研究におけるAIのパフォーマンスを評価するためのベンチマークです。"
+      "titleJa": "GeneBench-Proの紹介 - ゲノム分野でのAI性能評価基準",
+      "summaryJa": "GeneBench-Proは、複雑な現実データセットを用いてゲノムや生物学、科学研究におけるAIのパフォーマンスを評価する新しいベンチマークです。"
     },
     {
       "id": "2c255983884091d3",
@@ -114,7 +114,7 @@
       "text": "Research: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 / Apple Machine Learning Research",
       "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026",
       "priority": 88,
-      "titleJa": "2026年コンピュータービジョンとパターン認識に関するIEEE/CVF会議"
+      "titleJa": "IEEE/CVFコンファレンス - 2026年のコンピュータビジョンとパターン認識"
     },
     {
       "id": "7d95e1b1656fe4ae",
@@ -172,8 +172,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 5,
-      "lastCheckedAt": "2026-07-02T05:07:10.517Z",
-      "lastSuccessAt": "2026-07-02T05:07:10.517Z",
+      "lastCheckedAt": "2026-07-02T10:15:43.415Z",
+      "lastSuccessAt": "2026-07-02T10:15:43.415Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -185,8 +185,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-07-02T05:07:10.518Z",
-      "lastSuccessAt": "2026-07-02T05:07:10.518Z",
+      "lastCheckedAt": "2026-07-02T10:15:43.416Z",
+      "lastSuccessAt": "2026-07-02T10:15:43.416Z",
       "lastFailureAt": null,
       "lastError": null
     },
@@ -198,8 +198,8 @@
       "url": "",
       "status": "ok",
       "itemsFound": 3,
-      "lastCheckedAt": "2026-07-02T05:07:11.557Z",
-      "lastSuccessAt": "2026-07-02T05:07:11.557Z",
+      "lastCheckedAt": "2026-07-02T10:15:44.348Z",
+      "lastSuccessAt": "2026-07-02T10:15:44.348Z",
       "lastFailureAt": null,
       "lastError": null
     }
