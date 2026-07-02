@@ -1932,7 +1932,11 @@ body {
 }
 
 .official-source {
-  color: var(--accent);
+  /* 出典はベンダーのブランド色に合わせる（ヘッダー帯と同じ思想）。
+     白背景の小さい文字でも読めるよう黒と50%混合で暗色化する
+     （Hugging Face黄・NVIDIA黄緑の低コントラスト対策）。
+     ブランド色が無いベンダーは従来の意味アクセント色にフォールバック。 */
+  color: color-mix(in srgb, var(--brand, var(--accent)) 50%, black);
   font-size: 0.72rem;
   font-weight: 900;
 }
