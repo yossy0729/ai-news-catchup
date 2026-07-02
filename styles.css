@@ -2849,7 +2849,9 @@ body {
 }
 
 .news-card:hover {
-  border-color: #e2e8e4;
+  /* ホバー枠は速報カードと同じ分野系統色（--accent-borderはdata-accentごとに再定義される）。
+     固定灰色にするとヘッダー帯・左ストライプの分野色と食い違う。 */
+  border-color: var(--accent-border);
   background: color-mix(in srgb, var(--accent) 7%, #ffffff);
   box-shadow: inset 4px 0 0 var(--accent);
 }
