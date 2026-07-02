@@ -87,6 +87,8 @@ function buildPrompt(batch) {
       titleLang: hasJapanese(entry.item.title) ? "ja" : "foreign"
     };
     if (entry.needSummary) row.summary = compactText(entry.item.summary, 900);
+    // 検品で不合格になった見出しの作り直し依頼。前回の出力をフィードバックとして渡す。
+    if (entry.rework) row.previousTitleJa = entry.item.titleJa;
     return row;
   });
   return [
@@ -100,6 +102,7 @@ function buildPrompt(batch) {
     "      良い例「11のLLMでミルグラム実験を再現、AIが権威の命令に従うかを検証」（32字・固有情報が残る）",
     "      悪い例「AIの権威への従属の実験結果」（短すぎる・実験名と規模が消えている）",
     "  - foreign（外国語記事）: 意味を変えずに忠実に日本語へ翻訳する。日本語として自然になる範囲でのみ整え、情報の追加・省略・誇張をしない",
+    "- previousTitleJa がある項目は、その見出しが短すぎて不合格だったもの。元タイトルから固有名詞・数字を拾い直し、30〜50字で作り直す",
     "- summaryがある項目は、summaryJaを90〜150字程度・2文以内で作る。短すぎる一言要約にしない",
     "- summaryJaは、何が起きたか、誰・何に関係するか、なぜAI動向として見る価値があるかを具体的に書く",
     "- 元記事の見出しや本文の表現を長く引用・直訳しない。事実関係を自分の言葉で要約する",
@@ -148,7 +151,9 @@ async function translateBatch(batch) {
     const target = byKey.get(String(row.key || ""));
     if (!target) continue;
     const titleJa = compactText(row.titleJa, 120);
-    if (target.needTitle && titleJa && signalTranslationLooksConsistent(target.item, titleJa)) {
+    // 作り直し(rework)では、前回より長くなったときだけ差し替える（改悪の上書きを防ぐ）。
+    const improves = !target.rework || titleJa.length > String(target.item.titleJa || "").length;
+    if (target.needTitle && titleJa && improves && signalTranslationLooksConsistent(target.item, titleJa)) {
       target.item.titleJa = titleJa;
     }
     const summaryJa = compactText(row.summaryJa, 260);
@@ -217,6 +222,30 @@ async function main() {
         console.log(`NG retry batch ${i / batchSize}: ${error.message}`);
       }
     }
+  }
+
+  // 品質検品: 日本語記事なのに見出しが30字未満のものは、フィードバック付きで1回だけ作り直しを依頼する。
+  // 元タイトル自体が短い記事（35字未満）は、無理に引き伸ばすと事実の捏造を誘発するため対象外。
+  const needsRework = (entry) =>
+    entry.needTitle &&
+    hasJapanese(entry.item.title) &&
+    String(entry.item.title).length >= 35 &&
+    entry.item.titleJa &&
+    entry.item.titleJa.length < 30;
+  const rework = pending.filter(needsRework);
+  if (rework.length) {
+    console.log(`Rework short ja titles: ${rework.length} items`);
+    for (const entry of rework) entry.rework = true;
+    for (let i = 0; i < rework.length; i += batchSize) {
+      const batch = rework.slice(i, i + batchSize);
+      try {
+        await translateBatch(batch);
+      } catch (error) {
+        console.log(`NG rework batch ${i / batchSize}: ${error.message}`);
+      }
+    }
+    const fixed = rework.filter((entry) => !needsRework(entry)).length;
+    console.log(`Rework result: fixed ${fixed}/${rework.length}`);
   }
 
   const done = pending.filter((entry) => !isStillPending(entry)).length;
