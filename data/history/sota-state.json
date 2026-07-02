@@ -1,0 +1,518 @@
+{
+  "schemaVersion": 1,
+  "updatedDate": "2026-07-02",
+  "slugs": {
+    "audio-classification": {
+      "task": "音声分類",
+      "benchmark": "AudioSet",
+      "metric": "mAP",
+      "topModel": "HTS-AT (Ensemble)",
+      "score": 0.487,
+      "asOf": "2022-02-02"
+    },
+    "audio-understanding": {
+      "task": "音声理解",
+      "benchmark": "MMAU",
+      "metric": "Accuracy",
+      "topModel": "Qwen3.5-Omni-Plus",
+      "score": 82.2,
+      "asOf": "2026-04-17"
+    },
+    "automatic-speech-recognition": {
+      "task": "音声認識",
+      "benchmark": "Open ASR Leaderboard (英語・8データセット平均)",
+      "metric": "WER (%)",
+      "topModel": "CohereLabs/cohere-transcribe-03-2026",
+      "score": 5.42,
+      "asOf": "2026-06-27"
+    },
+    "agents": {
+      "task": "AIエージェント",
+      "benchmark": "BrowseComp",
+      "metric": "Accuracy",
+      "topModel": "Claude Mythos 5 (multi-agent)",
+      "score": 93.3,
+      "asOf": "2026-06-09"
+    },
+    "omni-models": {
+      "task": "オムニ(統合)モデル",
+      "benchmark": "WorldSense",
+      "metric": "Accuracy",
+      "topModel": "Qwen3.5-Omni-Plus",
+      "score": 62.8,
+      "asOf": "2026-04-17"
+    },
+    "coding-agents": {
+      "task": "コーディングエージェント",
+      "benchmark": "SWE-bench Verified",
+      "metric": "解決率 (%)",
+      "topModel": "live-SWE-agent + Claude 4.5 Opus medium (20251101)",
+      "score": 79.2,
+      "asOf": "2025-12-15"
+    },
+    "computer-use-agents": {
+      "task": "コンピュータ操作エージェント",
+      "benchmark": "ScreenSpot-Pro",
+      "metric": "Accuracy",
+      "topModel": "Claude Opus 4.8 (w/ tools)",
+      "score": 87.9,
+      "asOf": "2026-05-28"
+    },
+    "scene-text-recognition": {
+      "task": "シーン文字認識",
+      "benchmark": "SVTP",
+      "metric": "Accuracy",
+      "topModel": "DTrOCR 105M",
+      "score": 98.6,
+      "asOf": "2023-08-30"
+    },
+    "robotics": {
+      "task": "ロボティクス",
+      "benchmark": "LIBERO",
+      "metric": "Success Rate",
+      "topModel": "LingBot-VA",
+      "score": 98.5,
+      "asOf": "2026-01-29"
+    },
+    "world-models": {
+      "task": "世界モデル",
+      "benchmark": "Cityscapes Video Prediction",
+      "metric": "delta1",
+      "topModel": "Re2Pix",
+      "score": 0.8572,
+      "asOf": "2026-04-13"
+    },
+    "embedding-models": {
+      "task": "埋め込みモデル",
+      "benchmark": "MTEB",
+      "metric": "MTEB Score",
+      "topModel": "QZhou-Embedding",
+      "score": 75.97,
+      "asOf": "2025-08-29"
+    },
+    "reasoning": {
+      "task": "推論",
+      "benchmark": "BBH",
+      "metric": "Accuracy",
+      "topModel": "ERNIE-4.5-300B-A47B",
+      "score": 94.3,
+      "asOf": "2025-06-29"
+    },
+    "ocr": {
+      "task": "文字認識(OCR)",
+      "benchmark": "OCRBench",
+      "metric": "Score",
+      "topModel": "Qwen3.5-397B-A17B",
+      "score": 931,
+      "asOf": "2026-02-16"
+    },
+    "document-understanding": {
+      "task": "文書理解",
+      "benchmark": "DocVQA",
+      "metric": "ANLS",
+      "topModel": "Qwen3-VL-235B-A22B-Instruct",
+      "score": 97.1,
+      "asOf": "2025-11-26"
+    },
+    "llm-arena": {
+      "task": "LLM対話(Arena)",
+      "benchmark": "LMArena (Text Arena)",
+      "metric": "Arena Elo",
+      "topModel": "gemini-3-pro",
+      "score": 1487,
+      "asOf": "2026-06-27"
+    },
+    "text-to-sql": {
+      "task": "Text-to-SQL",
+      "benchmark": "Spider",
+      "metric": "Accuracy",
+      "topModel": "TaBERT Large (K=3)",
+      "score": 65.2,
+      "asOf": "2020-05-17"
+    },
+    "entity-typing": {
+      "task": "エンティティ型付け",
+      "benchmark": "Open Entity",
+      "metric": "F1",
+      "topModel": "LUKE",
+      "score": 78.2,
+      "asOf": "2020-10-02"
+    },
+    "text-classification": {
+      "task": "テキスト分類",
+      "benchmark": "SST-2 (GLUE dev)",
+      "metric": "Accuracy",
+      "topModel": "ELECTRA-1.75M",
+      "score": 96.9,
+      "asOf": "2020-03-23"
+    },
+    "part-of-speech-tagging": {
+      "task": "品詞タグ付け",
+      "benchmark": "Universal Dependencies",
+      "metric": "F1",
+      "topModel": "RemBERT",
+      "score": 76.5,
+      "asOf": "2020-10-24"
+    },
+    "named-entity-recognition": {
+      "task": "固有表現抽出",
+      "benchmark": "CoNLL NER",
+      "metric": "F1",
+      "topModel": "LUKE",
+      "score": 94.3,
+      "asOf": "2020-10-02"
+    },
+    "machine-translation": {
+      "task": "機械翻訳",
+      "benchmark": "WMT 2014 English->French (newstest2014)",
+      "metric": "BLEU",
+      "topModel": "M2M-100",
+      "score": 43.8,
+      "asOf": "2020-10-21"
+    },
+    "table-question-answering": {
+      "task": "表形式質問応答",
+      "benchmark": "WikiTableQuestions",
+      "metric": "Accuracy",
+      "topModel": "TAPEX",
+      "score": 57.5,
+      "asOf": "2021-07-16"
+    },
+    "summarization": {
+      "task": "要約",
+      "benchmark": "CNN/DailyMail",
+      "metric": "ROUGE-L",
+      "topModel": "PEGASUS Large (mixed, stochastic)",
+      "score": 41.3,
+      "asOf": "2019-12-18"
+    },
+    "question-answering": {
+      "task": "質問応答",
+      "benchmark": "Natural Questions",
+      "metric": "Accuracy",
+      "topModel": "Darwin-27B-Opus",
+      "score": 76,
+      "asOf": "2026-05-14"
+    },
+    "relation-extraction": {
+      "task": "関係抽出",
+      "benchmark": "DDI",
+      "metric": "F1",
+      "topModel": "BioGPT-Large",
+      "score": 44.89,
+      "asOf": "2022-10-19"
+    },
+    "coding": {
+      "task": "コーディング",
+      "benchmark": "EvalPlus",
+      "metric": "Accuracy",
+      "topModel": "Qwen3-Coder-Next",
+      "score": 86.56,
+      "asOf": "2026-02-28"
+    },
+    "long-context": {
+      "task": "ロングコンテキスト",
+      "benchmark": "LongBench v2",
+      "metric": "Accuracy",
+      "topModel": "Hy3 preview",
+      "score": 65.4,
+      "asOf": "2026-04-23"
+    },
+    "world-knowledge": {
+      "task": "世界知識",
+      "benchmark": "GPQA Diamond",
+      "metric": "Accuracy",
+      "topModel": "GPT-5.4 Pro",
+      "score": 94.4,
+      "asOf": "2026-03-05"
+    },
+    "classic-language-modeling": {
+      "task": "古典的言語モデリング",
+      "benchmark": "LAMBADA",
+      "metric": "Accuracy",
+      "topModel": "GPT-3",
+      "score": 86.4,
+      "asOf": "2020-05-28"
+    },
+    "safety-and-grounding": {
+      "task": "安全性・幻覚抑制",
+      "benchmark": "TruthfulQA",
+      "metric": "MC2Acc",
+      "topModel": "MAI-Thinking-1",
+      "score": 88,
+      "asOf": "2026-06-02"
+    },
+    "instruction-following": {
+      "task": "指示追従",
+      "benchmark": "IFEval",
+      "metric": "Accuracy",
+      "topModel": "Qwen3.5-27B",
+      "score": 95,
+      "asOf": "2026-02-16"
+    },
+    "math": {
+      "task": "数学",
+      "benchmark": "AIME 2025",
+      "metric": "Accuracy",
+      "topModel": "GPT-5.2",
+      "score": 100,
+      "asOf": "2025-12-11"
+    },
+    "time-series-forecasting": {
+      "task": "時系列予測",
+      "benchmark": "ILI (36 -> 60)",
+      "metric": "MSE",
+      "topModel": "Autoformer",
+      "score": 2.77,
+      "asOf": "2021-06-24"
+    },
+    "retrieval": {
+      "task": "検索・リトリーバル",
+      "benchmark": "BEIR",
+      "metric": "NDCG@10",
+      "topModel": "ModernBERT Large + ColBERT",
+      "score": 52.4,
+      "asOf": "2024-12-18"
+    },
+    "biology": {
+      "task": "生物学・バイオ",
+      "benchmark": "Perturbation Bench",
+      "metric": "Accuracy",
+      "topModel": "Carbon-8B (synonymous codon)",
+      "score": 91.46,
+      "asOf": "2026-05-19"
+    },
+    "cross-view-object-correspondence": {
+      "task": "Cross-view object correspondence",
+      "benchmark": "Ego-Exo4D (Exo→Ego)",
+      "metric": "IoU",
+      "topModel": "VGGT-S",
+      "score": 68,
+      "asOf": "2026-04-16"
+    },
+    "video-segmentation": {
+      "task": "動画セグメンテーション",
+      "benchmark": "DAVIS",
+      "metric": "J&F",
+      "topModel": "SAM 3 (zero-shot)",
+      "score": 92.2,
+      "asOf": "2025-11-20"
+    },
+    "video-matting": {
+      "task": "動画マッティング",
+      "benchmark": "YouTubeMatte",
+      "metric": "Gradient",
+      "topModel": "SAM2-Matte",
+      "score": 3.464,
+      "asOf": "2026-01-20"
+    },
+    "video-classification": {
+      "task": "動画分類",
+      "benchmark": "Kinetics-400",
+      "metric": "Accuracy",
+      "topModel": "EVA",
+      "score": 89.7,
+      "asOf": "2022-11-14"
+    },
+    "video-restoration": {
+      "task": "動画復元",
+      "benchmark": "YouHQ40",
+      "metric": "LPIPS",
+      "topModel": "Upscale-A-Video",
+      "score": 0.268,
+      "asOf": "2023-12-11"
+    },
+    "video-understanding": {
+      "task": "動画理解",
+      "benchmark": "Video-MME-v2",
+      "metric": "Score",
+      "topModel": "Gemini-3-Pro",
+      "score": 49.4,
+      "asOf": "2025-11-18"
+    },
+    "object-tracking": {
+      "task": "物体追跡",
+      "benchmark": "LaSOT",
+      "metric": "AUC",
+      "topModel": "MCITrack-L384",
+      "score": 76.6,
+      "asOf": "2024-12-15"
+    },
+    "3d-instance-segmentation": {
+      "task": "3Dインスタンスセグメンテーション",
+      "benchmark": "ScanNet",
+      "metric": "AP50",
+      "topModel": "Volt-B + SPFormer",
+      "score": 82.7,
+      "asOf": "2026-04-21"
+    },
+    "3d-understanding": {
+      "task": "3Dシーン理解",
+      "benchmark": "7-Scenes",
+      "metric": "Pointmap Accuracy",
+      "topModel": "Fast3R",
+      "score": 0.0158,
+      "asOf": "2025-01-23"
+    },
+    "3d-semantic-segmentation": {
+      "task": "3Dセマンティックセグメンテーション",
+      "benchmark": "ScanNet",
+      "metric": "mIoU",
+      "topModel": "Volt-B",
+      "score": 80.5,
+      "asOf": "2026-04-21"
+    },
+    "3d-object-detection": {
+      "task": "3D物体検出",
+      "benchmark": "nuScenes",
+      "metric": "NDS",
+      "topModel": "BEVFusion-e",
+      "score": 76,
+      "asOf": "2022-05-26"
+    },
+    "document-layout-analysis": {
+      "task": "Document Layout Analysis",
+      "benchmark": "PubLayNet",
+      "metric": "mAP",
+      "topModel": "VGT",
+      "score": 96.2,
+      "asOf": "2023-08-29"
+    },
+    "earth-observation": {
+      "task": "Earth Observation",
+      "benchmark": "GEO-Bench",
+      "metric": "mIoU",
+      "topModel": "Panopticon ViT-B",
+      "score": 76.2,
+      "asOf": "2025-03-13"
+    },
+    "face-verification": {
+      "task": "Face Verification",
+      "benchmark": "LFW",
+      "metric": "Accuracy",
+      "topModel": "ViT-8R",
+      "score": 99.83,
+      "asOf": "2026-06-10"
+    },
+    "motion-generation": {
+      "task": "Motion Generation",
+      "benchmark": "KIT Motion-Language",
+      "metric": "FID",
+      "topModel": "ReMoDiffuse",
+      "score": 0.155,
+      "asOf": "2023-04-03"
+    },
+    "zero-shot-segmentation": {
+      "task": "ゼロショットセグメンテーション",
+      "benchmark": "Segmentation in the Wild",
+      "metric": "Mean AP",
+      "topModel": "Grounded HQ-SAM",
+      "score": 49.6,
+      "asOf": "2023-06-02"
+    },
+    "semi-supervised-image-classification": {
+      "task": "半教師あり画像分類",
+      "benchmark": "ImageNet - 10% labeled data",
+      "metric": "Top-1 Accuracy",
+      "topModel": "Meta Co-Training",
+      "score": 85.8,
+      "asOf": "2023-11-29"
+    },
+    "pose-estimation": {
+      "task": "姿勢推定",
+      "benchmark": "COCO val2017 Keypoints",
+      "metric": "mAP",
+      "topModel": "ViTPose-H (multi-dataset)",
+      "score": 79.5,
+      "asOf": "2022-04-26"
+    },
+    "depth-estimation": {
+      "task": "深度推定",
+      "benchmark": "ETH3D (relative)",
+      "metric": "delta1",
+      "topModel": "VGGT-Omega (10B)",
+      "score": 0.998,
+      "asOf": "2026-05-14"
+    },
+    "object-counting": {
+      "task": "物体カウント",
+      "benchmark": "FSC-147",
+      "metric": "RMSE",
+      "topModel": null,
+      "score": 18.79,
+      "asOf": "2025-12-29"
+    },
+    "object-detection": {
+      "task": "物体検出",
+      "benchmark": "COCO val2017",
+      "metric": "mAP",
+      "topModel": "DINOv3 + Plain-DETR + TTA",
+      "score": 66.1,
+      "asOf": "2025-08-13"
+    },
+    "image-segmentation": {
+      "task": "画像セグメンテーション",
+      "benchmark": "ADE20K",
+      "metric": "mIoU",
+      "topModel": "DINOv3 + Mask2Former (TTA)",
+      "score": 63,
+      "asOf": "2025-08-13"
+    },
+    "image-matching": {
+      "task": "画像マッチング",
+      "benchmark": "MegaDepth-1500",
+      "metric": "AUC@20",
+      "topModel": "RoMa",
+      "score": 86.3,
+      "asOf": "2023-05-24"
+    },
+    "image-matting": {
+      "task": "画像マッティング",
+      "benchmark": "Distinctions-646",
+      "metric": "SAD",
+      "topModel": "ViTMatte-B",
+      "score": 17.05,
+      "asOf": "2023-05-24"
+    },
+    "image-classification": {
+      "task": "画像分類",
+      "benchmark": "Imagenet-1k (ILSVRC-2012)",
+      "metric": "Accuracy",
+      "topModel": "CoCa (finetuned)",
+      "score": 91,
+      "asOf": "2022-05-04"
+    },
+    "image-understanding": {
+      "task": "画像理解",
+      "benchmark": "LMArena (Vision Arena)",
+      "metric": "Arena Elo",
+      "topModel": "gemini-3-pro",
+      "score": 1330,
+      "asOf": "2026-06-27"
+    },
+    "image-generation": {
+      "task": "画像生成",
+      "benchmark": "LMArena (Image Arena)",
+      "metric": "Arena Elo",
+      "topModel": "gemini-3-pro-image-preview-2k (nano-banana-pro)",
+      "score": 1234,
+      "asOf": "2026-06-27"
+    },
+    "image-editing": {
+      "task": "画像編集",
+      "benchmark": "PICABench",
+      "metric": "Accuracy",
+      "topModel": "Seedream 4.0",
+      "score": 61.91,
+      "asOf": "2025-09-24"
+    },
+    "image-super-resolution": {
+      "task": "画像超解像",
+      "benchmark": "Set5 - 2x upscaling",
+      "metric": "PSNR",
+      "topModel": "DRCT-L",
+      "score": 39.82,
+      "asOf": "2024-03-31"
+    }
+  }
+}
