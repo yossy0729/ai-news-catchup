@@ -79,14 +79,22 @@ function parseJsonText(text) {
 
 function buildPrompt(batch) {
   const list = batch.map((entry) => {
-    const row = { key: entry.key, source: entry.item.source || entry.item.vendorName || "", title: entry.item.title };
+    const row = {
+      key: entry.key,
+      source: entry.item.source || entry.item.vendorName || "",
+      title: entry.item.title,
+      // 見出しの作り方を言語で分岐させるためのフラグ（ja=独自見出し / foreign=忠実な翻訳）。
+      titleLang: hasJapanese(entry.item.title) ? "ja" : "foreign"
+    };
     if (entry.needSummary) row.summary = compactText(entry.item.summary, 900);
     return row;
   });
   return [
     "次のAI関連ニュースを、公開ダッシュボード向けの日本語カード文面に書き換えてください。",
     "条件:",
-    "- titleJaは20〜40字程度の独自見出しにする。日本語タイトルでも元タイトルをそのまま写さず、意味を保って言い換える",
+    "- titleJaの作り方は各項目の titleLang で分ける:",
+    "  - ja（日本語記事）: 元タイトルを丸写しせず、企業名・製品名・何が起きたかを押さえた30〜50字程度の独自見出しに言い換える",
+    "  - foreign（外国語記事）: 意味を変えずに忠実に日本語へ翻訳する。日本語として自然になる範囲でのみ整え、情報の追加・省略・誇張をしない",
     "- summaryがある項目は、summaryJaを90〜150字程度・2文以内で作る。短すぎる一言要約にしない",
     "- summaryJaは、何が起きたか、誰・何に関係するか、なぜAI動向として見る価値があるかを具体的に書く",
     "- 元記事の見出しや本文の表現を長く引用・直訳しない。事実関係を自分の言葉で要約する",
@@ -116,7 +124,8 @@ async function translateBatch(batch) {
         },
         { role: "user", content: buildPrompt(batch) }
       ],
-      max_output_tokens: Math.max(700, batch.length * 240)
+      // 応答の途中切れはバッチ全体のJSON解析失敗（=全件英語のまま）につながるため、余裕を持たせる。
+      max_output_tokens: Math.max(900, batch.length * 320)
     })
   });
 
@@ -179,21 +188,35 @@ async function main() {
     return;
   }
 
-  let done = 0;
-  let failed = 0;
   for (let i = 0; i < pending.length; i += batchSize) {
     const batch = pending.slice(i, i + batchSize);
     try {
       await translateBatch(batch);
-      done += batch.filter((entry) => entry.item.titleJa || entry.item.summaryJa).length;
     } catch (error) {
-      failed += batch.length;
       console.log(`NG batch ${i / batchSize}: ${error.message}`);
     }
   }
 
+  // LLMが応答から項目を欠落させる（keyが返ってこない）ことがあるため、
+  // 未反映の項目だけを集めて1回だけ再試行する。ここで直らなければ英語のまま表示にフォールバック。
+  const isStillPending = (entry) =>
+    (entry.needTitle && !entry.item.titleJa) || (entry.needSummary && !entry.item.summaryJa);
+  const remaining = pending.filter(isStillPending);
+  if (remaining.length) {
+    console.log(`Retry untranslated: ${remaining.length} items`);
+    for (let i = 0; i < remaining.length; i += batchSize) {
+      const batch = remaining.slice(i, i + batchSize);
+      try {
+        await translateBatch(batch);
+      } catch (error) {
+        console.log(`NG retry batch ${i / batchSize}: ${error.message}`);
+      }
+    }
+  }
+
+  const done = pending.filter((entry) => !isStillPending(entry)).length;
   console.log(
-    `Translate titles ${write ? "write" : "dry-run"}: translated ${done}, failed ${failed}, targets ${pending.length}`
+    `Translate titles ${write ? "write" : "dry-run"}: translated ${done}, leftover ${pending.length - done}, targets ${pending.length}`
   );
 
   if (write) {
